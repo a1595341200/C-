@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.10)
+add_subdirectory("dlopen")
+
+# add_subdirectory("backtrace")
+# add_subdirectory("syslog")
+# add_subdirectory("memory")
+# add_subdirectory("new")
+add_subdirectory("getopt")
+add_subdirectory("rpc")
+add_subdirectory("rpcexp")
