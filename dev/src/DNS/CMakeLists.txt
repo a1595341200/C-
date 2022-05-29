@@ -7,13 +7,9 @@ set(CMAKE_CXX_FLAGS "-O0 -g3")
 
 file(GLOB_RECURSE SRC *.cpp)
 
-# add_subdirectory("backward-cpp")
 add_executable(${PROJECT_N} ${SRC})
-
 target_link_libraries(${PROJECT_N}
     dw
 )
 set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin")
-
-# target_sources(DNS PUBLIC ${BACKWARD_ENABLE})
 add_backward(DNS)

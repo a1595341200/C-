@@ -49,7 +49,7 @@ int dns(int argc, char **argv) {
 }
 
 int main(int argc, char **argv) {
-  std::vector<int> v;
+  // std::vector<int> v;
   // std::thread t([]() {
   //   while (1) {
   //     sleep(1);
@@ -62,6 +62,7 @@ int main(int argc, char **argv) {
   // });
   // t.join();
   // t2.join();
-  v.at(14);
+  // v.at(14);
+  dns(argc, argv);
   return 0;
 }
