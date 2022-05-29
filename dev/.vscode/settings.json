@@ -71,7 +71,8 @@
         "any": "cpp",
         "codecvt": "cpp",
         "filesystem": "cpp",
-        "future": "cpp"
+        "future": "cpp",
+        "source_location": "cpp"
     },
     "files.autoSave": "onWindowChange",
     "editor.formatOnSave": true
