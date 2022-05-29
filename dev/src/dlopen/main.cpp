@@ -36,14 +36,13 @@ void __register1(Test1 *p) {
 int main(void) {
 
   void *handle = NULL;
-  std::string myso =
-      "/media/xieyao/65F33762C14D581B/newC++/dlopen/build/lib/libtest.so";
+  std::string myso = "lib/libtest.so";
   if ((handle = dlopen(myso.c_str(), RTLD_NOW)) == NULL) {
     printf("dlopen - %s \n", dlerror());
     exit(-1);
   }
-  // auto ptr = (int (*)(int, int))dlsym(handle, "add");
-  // ptr(1, 2);
+  auto ptr = (int (*)(int, int))dlsym(handle, "add");
+  ptr(1, 2);
 
   return 0;
 }

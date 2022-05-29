@@ -1,11 +1,18 @@
 cmake_minimum_required(VERSION 3.10)
-add_subdirectory("dlopen")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(PROJECT_N_HEADER_DIRS
+    ${CMAKE_SOURCE_DIR}/framework/
+    ${CMAKE_SOURCE_DIR}/framework/rest_rpc/include
+)
 
-# add_subdirectory("backtrace")
-# add_subdirectory("syslog")
-# add_subdirectory("memory")
-# add_subdirectory("new")
-# add_subdirectory("getopt")
+include_directories(${PROJECT_N_HEADER_DIRS})
+add_subdirectory("dlopen")
+add_subdirectory("backtrace")
+add_subdirectory("syslog")
+add_subdirectory("memory")
+add_subdirectory("new")
+add_subdirectory("getopt")
 add_subdirectory("rpc")
 add_subdirectory("rpcexp")
 add_subdirectory("sharedPtr")
