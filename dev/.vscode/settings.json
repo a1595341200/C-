@@ -72,7 +72,9 @@
         "codecvt": "cpp",
         "filesystem": "cpp",
         "future": "cpp",
-        "source_location": "cpp"
+        "source_location": "cpp",
+        "regex": "cpp",
+        "shared_mutex": "cpp"
     },
     "files.autoSave": "onWindowChange",
     "editor.formatOnSave": true
