@@ -1,2 +1,2 @@
 # C-
-git remote set-url origin https://B33np7/pHdMyWWr6ARF+jMOD6L7ihbdJufDJIBf1hh4@github.com/a1595341200/C-.git
+git remote set-url origin https://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@github.com/a1595341200/C-.git
