@@ -20,6 +20,9 @@ set(PROJECT_N_HEADER_DIRS
     ${CMAKE_CURRENT_SOURCE_DIR}/../include
     ${CMAKE_CURRENT_SOURCE_DIR}/../rest_rpc/
     ${CMAKE_CURRENT_SOURCE_DIR}/../sqlite3pp/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/../rest_rpc/thirdparty/msgpack-c/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/../rest_rpc/thirdparty/asio
+    "/usr/local/include"
 )
 file(GLOB SQLITE ${CMAKE_CURRENT_SOURCE_DIR}/../sqlite3pp/src/*.cpp)
 add_library(${PROJECT_N} SHARED ${SRCS} ${SQLITE})

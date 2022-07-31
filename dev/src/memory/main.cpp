@@ -43,5 +43,6 @@ int main()
     std::thread d(read_y_then_x);
     a.join(); b.join(); c.join(); d.join();
     assert(z.load() != 0);  // will never happen
-    std::cout << sizeof(std::string()) << std::endl;
+    std::string str;
+    std::cout << sizeof(str) << std::endl;
 }

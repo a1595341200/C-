@@ -11,5 +11,8 @@ add_executable(${PROJECT_N} ${SRC})
 target_link_libraries(${PROJECT_N}
     dw
 )
+
+target_include_directories(${PROJECT_N} PUBLIC "/usr/local/include")
+
 set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin")
 add_backward(DNS)

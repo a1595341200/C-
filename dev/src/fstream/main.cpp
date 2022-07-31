@@ -3,6 +3,7 @@
 #include <iterator>
 #include <regex>
 #include <string>
+#include <sstream>
 int main() {
   auto filename = "/etc/resolv.conf";
   std::ifstream in(filename, std::ios::in);
