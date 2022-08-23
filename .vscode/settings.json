@@ -1,4 +1,9 @@
 {
     "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "aiXcoder.showTrayIcon": true
+    "aiXcoder.showTrayIcon": true,
+    "files.associations": {
+        "iostream": "cpp",
+        "unordered_set": "cpp",
+        "algorithm": "cpp"
+    }
 }

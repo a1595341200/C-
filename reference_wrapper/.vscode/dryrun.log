@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/e/git/C-/reference_wrapper'
+make: Leaving directory '/mnt/e/git/C-/reference_wrapper'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

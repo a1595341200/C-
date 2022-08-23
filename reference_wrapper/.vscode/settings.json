@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "unordered_set": "cpp",
+        "ostream": "cpp"
+    },
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.guides.bracketPairs": true
+}
