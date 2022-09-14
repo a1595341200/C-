@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.10)
 
-set(PROJECT_N 1277)
+set(PROJECT_N xiecheng)
 project(${PROJECT_N} VERSION 1.0)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-set(CMAKE_CXX_FLAGES "-O0 -g3")
 
 file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
