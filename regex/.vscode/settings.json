@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "regex": "cpp",
+        "ostream": "cpp",
+        "string": "cpp",
+        "utility": "cpp",
+        "iosfwd": "cpp",
+        "vector": "cpp",
+        "__config": "cpp",
+        "iostream": "cpp",
+        "chrono": "cpp"
+    }
+}
