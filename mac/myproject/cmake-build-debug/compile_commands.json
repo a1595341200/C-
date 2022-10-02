@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/Users/xieyao/Desktop/git/C-/mac/myproject/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dframework_EXPORTS -I/Users/xieyao/Desktop/git/C-/mac/myproject/libframework/framework/include -I/opt/homebrew/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fPIC -std=gnu++17 -o libframework/framework/CMakeFiles/framework.dir/src/Utils.cpp.o -c /Users/xieyao/Desktop/git/C-/mac/myproject/libframework/framework/src/Utils.cpp",
+  "file": "/Users/xieyao/Desktop/git/C-/mac/myproject/libframework/framework/src/Utils.cpp"
+},
+{
+  "directory": "/Users/xieyao/Desktop/git/C-/mac/myproject/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -I/Users/xieyao/Desktop/git/C-/mac/myproject/src/Test/include -I/Users/xieyao/Desktop/git/C-/mac/myproject/libframework/framework/include -I/opt/homebrew/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++17 -o src/Test/CMakeFiles/Test.dir/src/main.cpp.o -c /Users/xieyao/Desktop/git/C-/mac/myproject/src/Test/src/main.cpp",
+  "file": "/Users/xieyao/Desktop/git/C-/mac/myproject/src/Test/src/main.cpp"
+},
+{
+  "directory": "/Users/xieyao/Desktop/git/C-/mac/myproject/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -I/Users/xieyao/Desktop/git/C-/mac/myproject/src/EnumClass/include -I/Users/xieyao/Desktop/git/C-/mac/myproject/libframework/framework/include -I/opt/homebrew/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++17 -o src/EnumClass/CMakeFiles/EnumClass.dir/src/main.cpp.o -c /Users/xieyao/Desktop/git/C-/mac/myproject/src/EnumClass/src/main.cpp",
+  "file": "/Users/xieyao/Desktop/git/C-/mac/myproject/src/EnumClass/src/main.cpp"
+},
+{
+  "directory": "/Users/xieyao/Desktop/git/C-/mac/myproject/cmake-build-debug",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -I/Users/xieyao/Desktop/git/C-/mac/myproject/src/weakPtr/include -I/Users/xieyao/Desktop/git/C-/mac/myproject/libframework/framework/include -I/opt/homebrew/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++17 -o src/weakPtr/CMakeFiles/weakPtr.dir/src/main.cpp.o -c /Users/xieyao/Desktop/git/C-/mac/myproject/src/weakPtr/src/main.cpp",
+  "file": "/Users/xieyao/Desktop/git/C-/mac/myproject/src/weakPtr/src/main.cpp"
+}
+]
