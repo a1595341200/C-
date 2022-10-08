@@ -15,7 +15,7 @@ foreach(file ${SRCS})
         message(STATUS ${file})
 endforeach()
 
-add_library(${PROJECT_N} SHARED ${SRCS})
+add_library(${PROJECT_N} SHARED ${SRCS} include/framework/dbg.h include/framework/ThreadPool.h include/framework/Timer.h src/ThreadPool.cpp src/Timer.cpp)
 target_include_directories(${PROJECT_N} PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         ${Boost_INCLUDE_DIRS}

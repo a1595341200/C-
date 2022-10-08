@@ -14,7 +14,8 @@ foreach(file ${SRCS})
         message(STATUS ${file})
 endforeach()
 
-add_executable(${PROJECT_N} ${SRCS})
+add_executable(${PROJECT_N} ${SRCS} include/Macros.h include/ParseInternalTupleType.h include/FieldInfo.h include/FieldContraint.h include/utils.h include/SetFieldValueFn.h include/BindFieldValueFn.h include/Condition.h include/SqliteDB.h)
 
-target_include_directories(${PROJECT_N} PUBLIC ${PROJECT_SOURCE_DIR}/include)
-target_link_libraries(${PROJECT_N} PUBLIC framework)
+target_include_directories(${PROJECT_N} PUBLIC ${PROJECT_SOURCE_DIR}/include /opt/homebrew/opt/sqlite/include)
+target_link_libraries(${PROJECT_N} PUBLIC framework sqlite3)
+target_link_directories(${PROJECT_N} PUBLIC /opt/homebrew/opt/sqlite/lib)

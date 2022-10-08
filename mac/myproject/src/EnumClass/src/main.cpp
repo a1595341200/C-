@@ -9,8 +9,10 @@ enum class E : int {
 
 int main(int argc, char const *argv[])
 {
-//    int a =toUType(E::A);
+    int a =toUType(E::A);
     std::cout<< toUType(E::A) << std::endl;
-//    lookType(a);
+    lookType(a);
+    auto f = []{};
+    lookType(f);
     return 0;
 }

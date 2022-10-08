@@ -9,6 +9,7 @@
 #include <iostream>
 #include <memory>
 #include <type_traits>
+#include <chrono>
 
 void p();
 
@@ -23,3 +24,12 @@ template<typename E>
 constexpr auto toUType(E e) noexcept{
     return static_cast<std::underlying_type_t<E>>(e);
 }
+
+class Timer {
+public:
+    void start();
+    void end();
+    static void printTime(const std::string& file,int line);
+private:
+    std::chrono::time_point<std::chrono::system_clock> mStart;
+};

@@ -61,4 +61,4 @@ class code_gen():
 
 
 if __name__ == '__main__':
-    p = code_gen("shared_ptr")
+    p = code_gen("type")
