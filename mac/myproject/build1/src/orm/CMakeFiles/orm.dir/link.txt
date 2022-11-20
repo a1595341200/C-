@@ -1,1 +1,0 @@
-/usr/bin/c++  -save-temps=obj CMakeFiles/orm.dir/src/main.cpp.o -o ../../bin/orm  -Wl,-rpath,/media/psf/Home/Desktop/git/C-/mac/myproject/build1/lib:/usr/local/lib ../../lib/libframework.so -lsqlite3 /usr/lib/aarch64-linux-gnu/libsqlite3.so /usr/local/lib/libevent.so 
