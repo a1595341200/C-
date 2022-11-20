@@ -1,5 +1,6 @@
 #include <framework/Timer.h>
 #include <iostream>
+
 int main() {
     Timer t(std::chrono::microseconds(500000), []() {
         std::cout << "/* message */" << std::endl;

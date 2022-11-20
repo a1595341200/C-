@@ -20,5 +20,6 @@ target_include_directories(${PROJECT_N} PUBLIC
         ${PROJECT_SOURCE_DIR}/include
         ${CMAKE_SOURCE_DIR}/rest_rpc/thirdparty/msgpack-c/include
         ${CMAKE_SOURCE_DIR}/rest_rpc/include
+        ${CMAKE_SOURCE_DIR}/rest_rpc/thirdparty/asio/
         )
 target_link_libraries(${PROJECT_N} PUBLIC framework)

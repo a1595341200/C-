@@ -148,7 +148,6 @@ static constexpr size_t SUFFIX_LENGTH = sizeof(">(void)") - 1;
 // Implementation of 'type_name<T>()'
 
     template <typename T> const char *type_name_impl() {
-        std::cout << "/* type_name_impl */" << std::endl;
         return DBG_MACRO_PRETTY_FUNCTION;
     }
 
@@ -157,9 +156,7 @@ static constexpr size_t SUFFIX_LENGTH = sizeof(">(void)") - 1;
     template <int &... ExplicitArgumentBarrier, typename T>
     std::string get_type_name(type_tag<T>) {
         namespace pf = pretty_function;
-        std::cout << "/* get_type_name */" << std::endl;
         std::string type = type_name_impl<T>();
-        std::cout << type << std::endl;
         return type.substr(pf::PREFIX_LENGTH,
                            type.size() - pf::PREFIX_LENGTH - pf::SUFFIX_LENGTH);
     }

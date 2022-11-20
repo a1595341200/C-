@@ -379,7 +379,7 @@ private:
       }
 
       if (ec) {
-        // std::cout << ec.message() << std::endl;
+         std::cout << ec.message() << std::endl;
 
         has_connected_ = false;
 
@@ -393,7 +393,7 @@ private:
 
         async_reconnect();
       } else {
-        // std::cout<<"connected ok"<<std::endl;
+         std::cout<<"connected ok"<<std::endl;
         if (is_ssl()) {
           handshake();
           return;

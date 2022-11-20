@@ -7,13 +7,14 @@
 #include <sqlite3.h>
 #include <string>
 #include <utils.h>
+#include <sstream>
+#include <algorithm>
 
 class SqliteDB
 {
 public:
     SqliteDB()
     {
-
     }
 
     ~SqliteDB()
@@ -21,7 +22,7 @@ public:
         close();
     }
 
-    void Open(const std::string& fileName)
+    void Open(const std::string &fileName)
     {
         std::string utf8FileName;
         ConvertStringToUTF8String(fileName, utf8FileName);
@@ -44,59 +45,59 @@ public:
         Execute("commit transaction;");
     }
 
-    template<class T>
-    void CreateTableIfNotExist(const std::vector<FieldContraint>& vecFieldContraint)
+    template <class T>
+    void CreateTableIfNotExist(const std::vector<FieldContraint> &vecFieldContraint)
     {
-        std::string&& strUtf8CreateSql = GenUtf8CreateSql<std::decay_t<T>>(vecFieldContraint);
+        std::string &&strUtf8CreateSql = GenUtf8CreateSql<std::decay_t<T>>(vecFieldContraint);
         Execute(strUtf8CreateSql);
     }
 
-    template<class T>
-    void Insert(T&& t)
+    template <class T>
+    void Insert(T &&t)
     {
-        static std::string&& strUtf8PreInsertSql = GenUtf8InsertSql<std::decay_t<T>>();
+        static std::string &&strUtf8PreInsertSql = GenUtf8InsertSql<std::decay_t<T>>();
 
         Prepare(strUtf8PreInsertSql);
-        BindFieldVal(db,m_statement,t);
+        BindFieldVal(db, m_statement, t);
         ExecuteParparseSQL();
     }
 
-    template<typename T, typename Out>
-    void Quary(Out& out)
+    template <typename T, typename Out>
+    void Quary(Out &out)
     {
-        static std::string&& strUtf8SelectSql = GenUtf8SelectSql<std::decay_t<T>>();
+        static std::string &&strUtf8SelectSql = GenUtf8SelectSql<std::decay_t<T>>();
 
-        Prepare(strUtf8SelectSql);
-
-        GetT<T,Out>(out);
-    }
-
-    template<typename T,typename Out>
-    void Quary(const Condition& condi, Out& out)
-    {
-        std::string&& strUtf8SelectSql = GenUtf8SelectSql<std::decay_t<T>>(condi);
         Prepare(strUtf8SelectSql);
 
         GetT<T, Out>(out);
     }
 
-    template<typename T>
-    void Delete(const Condition& condi)
+    template <typename T, typename Out>
+    void Quary(const Condition &condi, Out &out)
+    {
+        std::string &&strUtf8SelectSql = GenUtf8SelectSql<std::decay_t<T>>(condi);
+        Prepare(strUtf8SelectSql);
+
+        GetT<T, Out>(out);
+    }
+
+    template <typename T>
+    void Delete(const Condition &condi)
     {
         std::string strUtf8DelSql = GenUtf8DeleteSql<T>(condi);
         Execute(strUtf8DelSql);
     }
 
-    template<typename Entity,typename Field>
-    void Update(Entity&& t,Field std::decay_t<Entity>::* p)
+    template <typename Entity, typename Field>
+    void Update(Entity &&t, Field std::decay_t<Entity>::*p)
     {
-        static std::string&& strUtf8UpdatePreSql = GenUtf8UpdatePreSql(t,p);
+        static std::string &&strUtf8UpdatePreSql = GenUtf8UpdatePreSql(t, p);
         Prepare(strUtf8UpdatePreSql);
         BindFieldVal(db, m_statement, t);
         ExecuteParparseSQL();
     }
 
-    void Prepare(const std::string& sql)
+    void Prepare(const std::string &sql)
     {
         m_code = sqlite3_prepare_v2(db, sql.data(), -1, &m_statement, nullptr);
 
@@ -114,13 +115,13 @@ public:
         if (m_code != SQLITE_DONE)
         {
             throw std::runtime_error(
-                    std::string("SQL error: execute PrepareSQL failed! '") + sqlite3_errmsg(db) + "'");
+                std::string("SQL error: execute PrepareSQL failed! '") + sqlite3_errmsg(db) + "'");
         }
     }
 
-    void Execute(const std::string& cmd)
+    void Execute(const std::string &cmd)
     {
-        char* zErrMsg = NULL;
+        char *zErrMsg = NULL;
         int rc = SQLITE_OK;
 
         for (size_t iTry = 0; iTry < MAX_TRIAL; iTry++)
@@ -141,12 +142,11 @@ public:
         }
     }
 
-
     int GetColumnIntValue(int iColumnIdx)
     {
         CheckColumnValueType(iColumnIdx, SQLITE_INTEGER);
 
-        return sqlite3_column_int(m_statement,iColumnIdx);
+        return sqlite3_column_int(m_statement, iColumnIdx);
     }
 
     double GetColumnDoubleValue(int iColumnIdx)
@@ -156,30 +156,31 @@ public:
         return sqlite3_column_double(m_statement, iColumnIdx);
     }
 
-    const char* GetColumnText(int iColumnIdx)
+    const char *GetColumnText(int iColumnIdx)
     {
         CheckColumnValueType(iColumnIdx, SQLITE_TEXT);
 
-        return (const char*)sqlite3_column_text(m_statement, iColumnIdx);
+        return (const char *)sqlite3_column_text(m_statement, iColumnIdx);
     }
+
 private:
-    template<typename T>
-    std::string GenUtf8CreateSql(const std::vector<FieldContraint>& vecFieldContraint)
+    template <typename T>
+    std::string GenUtf8CreateSql(const std::vector<FieldContraint> &vecFieldContraint)
     {
         std::stringstream os;
         static std::vector<FieldInfo> vecFileInfo = GetStructFieldInfos<std::decay_t<T>>();
         static std::string strTableName = GetTableName<std::decay_t<T>>();
 
-        os << "CREATE TABLE IF NOT EXISTS "<<strTableName<<"(";
+        os << "CREATE TABLE IF NOT EXISTS " << strTableName << "(";
 
         for (int i = 0; i < (int)vecFileInfo.size(); i++)
         {
-            auto& fieldInfo = vecFileInfo.at(i);
+            auto &fieldInfo = vecFileInfo.at(i);
 
-            auto iter = std::find_if(vecFieldContraint.begin(),vecFieldContraint.end(),
-                                     [&](const FieldContraint& fieldContraint)
+            auto iter = std::find_if(vecFieldContraint.begin(), vecFieldContraint.end(),
+                                     [&](const FieldContraint &fieldContraint)
                                      {
-                                         if(fieldContraint.m_strFieldName == fieldInfo.m_strFieldName)
+                                         if (fieldContraint.m_strFieldName == fieldInfo.m_strFieldName)
                                              return true;
                                          return false;
                                      });
@@ -194,7 +195,7 @@ private:
             os << fieldInfo.m_strFieldName;
             if (fieldInfo.m_valueType == ValueType::INTEGER || fieldInfo.m_valueType == ValueType::BOOL)
             {
-                os << " INT"<< strContraint;
+                os << " INT" << strContraint;
             }
             else if (fieldInfo.m_valueType == ValueType::REAL)
             {
@@ -202,20 +203,20 @@ private:
             }
             else if (fieldInfo.m_valueType == ValueType::TEXT)
             {
-                os <<" TEXT" << strContraint;
+                os << " TEXT" << strContraint;
             }
         }
 
         os.seekp(os.tellp() - std::streamoff(1));
         os << ")";
 
-        std::string&& strCreateSql = os.str();
+        std::string &&strCreateSql = os.str();
         std::string strUtf8CreateSql;
         ConvertStringToUTF8String(strCreateSql, strUtf8CreateSql);
         return strUtf8CreateSql;
     }
 
-    template<typename T>
+    template <typename T>
     std::string GenUtf8InsertSql()
     {
         std::stringstream os;
@@ -223,34 +224,34 @@ private:
         static std::vector<FieldInfo> vecFileInfo = GetStructFieldInfos<std::decay_t<T>>();
         static std::string strTableName = GetTableName<std::decay_t<T>>();
 
-        os<<"INSERT INTO " <<strTableName << " (";
+        os << "INSERT INTO " << strTableName << " (";
 
         for (int i = 0; i < (int)vecFileInfo.size(); i++)
         {
-            os << vecFileInfo.at(i).m_strFieldName<<",";
-            osVal<<"?,";
+            os << vecFileInfo.at(i).m_strFieldName << ",";
+            osVal << "?,";
         }
 
         os.seekp(os.tellp() - std::streamoff(1));
         osVal.seekp(osVal.tellp() - std::streamoff(1));
 
-        osVal << ");";  // To Enable Seekp...
+        osVal << ");"; // To Enable Seekp...
         os << ") VALUES (" << osVal.str();
 
-        std::string&& strInsertSql = os.str();
+        std::string &&strInsertSql = os.str();
         std::string strUtf8InsertSql;
         ConvertStringToUTF8String(strInsertSql, strUtf8InsertSql);
         return strUtf8InsertSql;
     }
 
-    template<typename T>
+    template <typename T>
     std::string GenUtf8SelectSql()
     {
         std::stringstream os;
         static std::vector<FieldInfo> vecFileInfo = GetStructFieldInfos<std::decay_t<T>>();
         static std::string strTableName = GetTableName<std::decay_t<T>>();
 
-        os << "SELECT " ;
+        os << "SELECT ";
 
         for (int i = 0; i < (int)vecFileInfo.size(); i++)
         {
@@ -259,16 +260,16 @@ private:
 
         os.seekp(os.tellp() - std::streamoff(1));
 
-        os << " FROM "<<strTableName;
+        os << " FROM " << strTableName;
 
-        std::string&& strSelectSql = os.str();
+        std::string &&strSelectSql = os.str();
         std::string strUtf8SelectSql;
         ConvertStringToUTF8String(strSelectSql, strUtf8SelectSql);
         return strUtf8SelectSql;
     }
 
-    template<typename T>
-    std::string GenUtf8SelectSql(const Condition& codin)
+    template <typename T>
+    std::string GenUtf8SelectSql(const Condition &codin)
     {
         std::string strWhere(" Where ");
         strWhere.append(codin.strCondition);
@@ -281,8 +282,8 @@ private:
         return strSelectSql.append(strUtf8Where);
     }
 
-    template<typename T>
-    std::string GenUtf8DeleteSql(const Condition& codin)
+    template <typename T>
+    std::string GenUtf8DeleteSql(const Condition &codin)
     {
         std::string strDelSql = "Delete FROM ";
         strDelSql.append(GetTableName<std::decay_t<T>>());
@@ -294,18 +295,18 @@ private:
         return strUtf8DelSql;
     }
 
-    template<typename T,typename Field>
-    std::string GenUtf8UpdatePreSql(T&& t, Field std::decay_t<T>::* pField)
+    template <typename T, typename Field>
+    std::string GenUtf8UpdatePreSql(T &&t, Field std::decay_t<T>::*pField)
     {
         std::stringstream os;
         os << "UPDATE ";
-        os << GetTableName <std::decay_t<T>>();
+        os << GetTableName<std::decay_t<T>>();
         os << " SET ";
 
         static std::vector<FieldInfo> vecFileInfo = GetStructFieldInfos<std::decay_t<T>>();
         for (int i = 0; i < (int)vecFileInfo.size(); i++)
         {
-            FieldInfo& fieldInfo = vecFileInfo.at(i);
+            FieldInfo &fieldInfo = vecFileInfo.at(i);
             os << fieldInfo.m_strFieldName;
             os << "=?,";
         }
@@ -314,19 +315,19 @@ private:
         os << " WHERE ";
 
         FieldInfo fieldInfo = GetStructFieldInfo(pField);
-        os << fieldInfo.m_strFieldName<<"=";
+        os << fieldInfo.m_strFieldName << "=";
 
-        auto& fieldValue = t.*pField;
+        auto &fieldValue = t.*pField;
 
-        os << fieldValue <<";";
+        os << fieldValue << ";";
 
         std::string strUtf8UpdateSql;
         ConvertStringToUTF8String(os.str(), strUtf8UpdateSql);
         return strUtf8UpdateSql;
     }
 
-    template<typename T,typename Out>
-    void GetT(Out& out)
+    template <typename T, typename Out>
+    void GetT(Out &out)
     {
         do
         {
@@ -341,11 +342,12 @@ private:
             out.push_back(entity);
             auto it = out.end();
             it--;
-            T& entityR = *it;
+            T &entityR = *it;
 
             SetFieldVal(db, m_statement, entityR);
         } while (true);
     }
+
 private:
     void CheckColumnValueType(int iColumnIdx, int iDataType)
     {
@@ -360,14 +362,14 @@ private:
         while (code == SQLITE_BUSY)
         {
             code = SQLITE_OK;
-            sqlite3_stmt* stmt = sqlite3_next_stmt(db,NULL);
+            sqlite3_stmt *stmt = sqlite3_next_stmt(db, NULL);
 
-            if(stmt == nullptr)
+            if (stmt == nullptr)
                 break;
 
             code = sqlite3_finalize(stmt);
 
-            if(code == SQLITE_OK)
+            if (code == SQLITE_OK)
                 code = sqlite3_close(db);
         }
 
@@ -376,10 +378,10 @@ private:
 
     bool close()
     {
-        if(db == nullptr)
+        if (db == nullptr)
             return true;
 
-        if(m_statement != nullptr)
+        if (m_statement != nullptr)
             sqlite3_finalize(m_statement);
 
         m_code = CloseDBHandle();
@@ -391,13 +393,13 @@ private:
     }
 
 private:
-    SqliteDB(const SqliteDB&) = delete;
-    SqliteDB& operator=(const SqliteDB&) = delete;
+    SqliteDB(const SqliteDB &) = delete;
+    SqliteDB &operator=(const SqliteDB &) = delete;
 
 private:
-    sqlite3* db = nullptr;
+    sqlite3 *db = nullptr;
     const static size_t MAX_TRIAL = 16;
-    sqlite3_stmt* m_statement = nullptr;
+    sqlite3_stmt *m_statement = nullptr;
     int m_code;
 };
-#endif //DEV_SQLITEDB_H
+#endif // DEV_SQLITEDB_H

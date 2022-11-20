@@ -10,11 +10,12 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 message("src files:")
+
 foreach(file ${SRCS})
         message(STATUS ${file})
 endforeach()
 
 add_executable(${PROJECT_N} ${SRCS})
 
-target_include_directories(${PROJECT_N} PUBLIC ${PROJECT_SOURCE_DIR}/include /opt/homebrew/opt/sqlite/includ)
-target_link_libraries(${PROJECT_N} PUBLIC framework sqlite3)
+target_include_directories(${PROJECT_N} PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(${PROJECT_N} PUBLIC framework)

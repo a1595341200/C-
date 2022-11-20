@@ -1,0 +1,12 @@
+{
+  "version" : "1",
+  "apnConfig" : "apn1",
+  "apn1":{
+    "name": "...",
+    "user" : "...",
+    "passwd" : "...",
+    "authpref" : "...",
+    "ip_ver" : "....",
+    "priority" : "..."
+  }
+}

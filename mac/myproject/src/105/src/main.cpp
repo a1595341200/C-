@@ -1,8 +1,10 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
-struct TreeNode {
+struct TreeNode
+{
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -10,17 +12,20 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
-class Solution {
+class Solution
+{
 public:
-    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        vector<int> v(*std::max_element(inorder.begin(),inorder.end()), 0);
+    TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder)
+    {
+        vector<int> v(*std::max_element(inorder.begin(), inorder.end()), 0);
         for (int i = 0; i < preorder.size(); i++)
         {
             v[inorder[i]] = i;
         }
-        return help(0,preorder.size()-1,0,inorder.size()-1,preorder,v);
+        return help(0, preorder.size() - 1, 0, inorder.size() - 1, preorder, v);
     }
-    TreeNode* help(int left,int right,int rleft,int rright,vector<int>& preorder, vector<int>& v){
+    TreeNode *help(int left, int right, int rleft, int rright, vector<int> &preorder, vector<int> &v)
+    {
         if (left > right)
         {
             return nullptr;
@@ -44,6 +49,6 @@ int main(int argc, char const *argv[])
     Solution s;
     vector preorder{3, 9, 20, 15, 7};
     vector inorder{9, 3, 15, 20, 7};
-    auto res = s.buildTree(preorder,inorder);
+    auto res = s.buildTree(preorder, inorder);
     return 0;
 }

@@ -21,7 +21,6 @@ MSGPACK_API_VERSION_NAMESPACE(v1) {
 /// @endcond
 namespace type {
 
-
 template <>
 struct define_array<> {
     typedef define_array<> value_type;

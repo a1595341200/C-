@@ -10,12 +10,20 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 message("src files:")
+
 foreach(file ${SRCS})
         message(STATUS ${file})
 endforeach()
 
 add_executable(${PROJECT_N} ${SRCS} include/Macros.h include/ParseInternalTupleType.h include/FieldInfo.h include/FieldContraint.h include/utils.h include/SetFieldValueFn.h include/BindFieldValueFn.h include/Condition.h include/SqliteDB.h)
-
-target_include_directories(${PROJECT_N} PUBLIC ${PROJECT_SOURCE_DIR}/include /opt/homebrew/opt/sqlite/include)
 target_link_libraries(${PROJECT_N} PUBLIC framework sqlite3)
-target_link_directories(${PROJECT_N} PUBLIC /opt/homebrew/opt/sqlite/lib)
+
+if(APPLE)
+        target_include_directories(${PROJECT_N} PUBLIC ${PROJECT_SOURCE_DIR}/include)
+        target_link_directories(${PROJECT_N} PUBLIC /opt/homebrew/opt/sqlite/lib)
+
+elseif(UNIX)
+        target_include_directories(${PROJECT_N} PUBLIC ${PROJECT_SOURCE_DIR}/include)
+
+        # target_link_directories(${PROJECT_N} PUBLIC /opt/homebrew/opt/sqlite/lib)
+endif()

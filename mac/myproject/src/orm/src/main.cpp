@@ -39,11 +39,17 @@ int main()
     FieldContraint fielContraint(&SimpleStruct::m_id,PK|NOT_NULL| UNQUE);
     db.CreateTableIfNotExist<SimpleStruct>({ fielContraint });
 
-    for (int i = 0; i < 100; i++)
-    {
-        SimpleStruct ss1 = { i,i,(double)i,"yao"};
+//    for (int i = 0; i < 100; i++)
+//    {
+//        SimpleStruct ss1 = { i,i,(double)i,"yao"};
+        SimpleStruct ss1 = { 0,0,(double)12,"yao"};
+        cout<<&ss1.m_id<<endl;
+        cout<<&ss1.m_iAge<<endl;
+        cout<<&ss1.m_strName<<endl;
+//        printf("%p",&SimpleStruct::m_id);
+        cout<<&SimpleStruct::m_id<<endl;
         db.Insert(ss1);
-    }
+//    }
 
     Condition condit1 = {&SimpleStruct::m_iAge,CondtionType::GREATER,"98"};
 

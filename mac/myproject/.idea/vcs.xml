@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Android_Framework" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gdbus-codegen-glibmm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/looper" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sqlite3pp" vcs="Git" />
   </component>
 </project>
