@@ -61,4 +61,4 @@ class code_gen():
 
 
 if __name__ == '__main__':
-    p = code_gen("char")
+    p = code_gen("Throw_an_exception_at_destructor_time")

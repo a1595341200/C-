@@ -39,6 +39,7 @@ if(APPLE)
                 PUBLIC
                 ${SQLite3_LIBRARIES}
                 /opt/homebrew/Cellar/libevent/2.1.12/lib/libevent.dylib
+                subprocess
         )
 elseif(UNIX)
         message("UNIX")
@@ -46,5 +47,6 @@ elseif(UNIX)
                 PUBLIC
                 ${SQLite3_LIBRARIES}
                 /usr/local/lib/libevent.so
+                subprocess
         )
 endif()
