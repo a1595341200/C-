@@ -36,7 +36,7 @@ namespace subprocess {
 
     /** Creates a copy of current environment variables and returns the map */
     EnvMap current_env_copy();
-    /** Gives an environment block used in Windows APIs. Each item is null
+    /** Gives an environment block used in Window APIs. Each item is null
         terminated, end of list is double null-terminated and conforms to
         expectations of various windows API.
     */

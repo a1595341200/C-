@@ -60,7 +60,7 @@ int close(int d, state_type& state, asio::error_code& ec)
       // According to UNIX Network Programming Vol. 1, it is possible for
       // close() to fail with EWOULDBLOCK under certain circumstances. What
       // isn't clear is the state of the descriptor after this error. The one
-      // current OS where this behaviour is seen, Windows, says that the socket
+      // current OS where this behaviour is seen, Window, says that the socket
       // remains open. Therefore we'll put the descriptor back into blocking
       // mode and have another attempt at closing it.
 #if defined(__SYMBIAN32__) || defined(__EMSCRIPTEN__)

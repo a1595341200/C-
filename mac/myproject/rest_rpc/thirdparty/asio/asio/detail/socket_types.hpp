@@ -227,7 +227,7 @@ struct sockaddr_un_type { u_short sun_family; char sun_path[108]; };
 # define ASIO_OS_DEF_MSG_OOB MSG_OOB
 # define ASIO_OS_DEF_MSG_PEEK MSG_PEEK
 # define ASIO_OS_DEF_MSG_DONTROUTE MSG_DONTROUTE
-# define ASIO_OS_DEF_MSG_EOR 0 // Not supported on Windows.
+# define ASIO_OS_DEF_MSG_EOR 0 // Not supported on Window.
 # define ASIO_OS_DEF_SHUT_RD SD_RECEIVE
 # define ASIO_OS_DEF_SHUT_WR SD_SEND
 # define ASIO_OS_DEF_SHUT_RDWR SD_BOTH

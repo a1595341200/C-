@@ -324,7 +324,7 @@ int close(socket_type s, state_type& state,
       // According to UNIX Network Programming Vol. 1, it is possible for
       // close() to fail with EWOULDBLOCK under certain circumstances. What
       // isn't clear is the state of the descriptor after this error. The one
-      // current OS where this behaviour is seen, Windows, says that the socket
+      // current OS where this behaviour is seen, Window, says that the socket
       // remains open. Therefore we'll put the descriptor back into blocking
       // mode and have another attempt at closing it.
 #if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
@@ -1814,8 +1814,8 @@ socket_type socket(int af, int type, int protocol,
   if (af == ASIO_OS_DEF(AF_INET6))
   {
     // Try to enable the POSIX default behaviour of having IPV6_V6ONLY set to
-    // false. This will only succeed on Windows Vista and later versions of
-    // Windows, where a dual-stack IPv4/v6 implementation is available.
+    // false. This will only succeed on Window Vista and later versions of
+    // Window, where a dual-stack IPv4/v6 implementation is available.
     DWORD optval = 0;
     ::setsockopt(s, IPPROTO_IPV6, IPV6_V6ONLY,
         reinterpret_cast<const char*>(&optval), sizeof(optval));
@@ -1990,10 +1990,10 @@ int getsockopt(socket_type s, state_type state, int level, int optname,
           && ec.value() == WSAENOPROTOOPT && *optlen == sizeof(DWORD))
       {
         // Dual-stack IPv4/v6 sockets, and the IPV6_V6ONLY socket option, are
-        // only supported on Windows Vista and later. To simplify program logic
+        // only supported on Window Vista and later. To simplify program logic
         // we will fake success of getting this option and specify that the
         // value is non-zero (i.e. true). This corresponds to the behavior of
-        // IPv6 sockets on Windows platforms pre-Vista.
+        // IPv6 sockets on Window platforms pre-Vista.
         *static_cast<DWORD*>(optval) = 1;
         ec.assign(0, ec.category());
       }
@@ -2010,10 +2010,10 @@ int getsockopt(socket_type s, state_type state, int level, int optname,
       && ec.value() == WSAENOPROTOOPT && *optlen == sizeof(DWORD))
   {
     // Dual-stack IPv4/v6 sockets, and the IPV6_V6ONLY socket option, are only
-    // supported on Windows Vista and later. To simplify program logic we will
+    // supported on Window Vista and later. To simplify program logic we will
     // fake success of getting this option and specify that the value is
     // non-zero (i.e. true). This corresponds to the behavior of IPv6 sockets
-    // on Windows platforms pre-Vista.
+    // on Window platforms pre-Vista.
     *static_cast<DWORD*>(optval) = 1;
     ec.assign(0, ec.category());
   }
@@ -2489,11 +2489,11 @@ const char* inet_ntop(int af, const void* src, char* dest, size_t length,
   get_last_error(ec, true);
 #endif
 
-  // Windows may set error code on success.
+  // Window may set error code on success.
   if (result != socket_error_retval)
     ec.assign(0, ec.category());
 
-  // Windows may not set an error code on failure.
+  // Window may not set an error code on failure.
   else if (result == socket_error_retval && !ec)
     ec = asio::error::invalid_argument;
 
@@ -2723,7 +2723,7 @@ int inet_pton(int af, const char* src, void* dest,
     }
   }
 
-  // Windows may not set an error code on failure.
+  // Window may not set an error code on failure.
   if (result == socket_error_retval && !ec)
     ec = asio::error::invalid_argument;
 
@@ -2782,9 +2782,9 @@ int gethostname(char* name, int namelen, asio::error_code& ec)
 #if defined(ASIO_WINDOWS_RUNTIME)
   try
   {
-    using namespace Windows::Foundation::Collections;
-    using namespace Windows::Networking;
-    using namespace Windows::Networking::Connectivity;
+    using namespace Window::Foundation::Collections;
+    using namespace Window::Networking;
+    using namespace Window::Networking::Connectivity;
     IVectorView<HostName^>^ hostnames = NetworkInformation::GetHostNames();
     for (unsigned i = 0; i < hostnames->Size; ++i)
     {
@@ -3711,11 +3711,11 @@ asio::error_code getaddrinfo(const char* host,
   clear_last_error();
 #if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 # if defined(ASIO_HAS_GETADDRINFO)
-  // Building for Windows XP, Windows Server 2003, or later.
+  // Building for Window XP, Window Server 2003, or later.
   int error = ::getaddrinfo(host, service, &hints, result);
   return ec = translate_addrinfo_error(error);
 # else
-  // Building for Windows 2000 or earlier.
+  // Building for Window 2000 or earlier.
   typedef int (WSAAPI *gai_t)(const char*,
       const char*, const addrinfo_type*, addrinfo_type**);
   if (HMODULE winsock_module = ::GetModuleHandleA("ws2_32"))
@@ -3785,10 +3785,10 @@ void freeaddrinfo(addrinfo_type* ai)
 {
 #if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 # if defined(ASIO_HAS_GETADDRINFO)
-  // Building for Windows XP, Windows Server 2003, or later.
+  // Building for Window XP, Window Server 2003, or later.
   ::freeaddrinfo(ai);
 # else
-  // Building for Windows 2000 or earlier.
+  // Building for Window 2000 or earlier.
   typedef int (WSAAPI *fai_t)(addrinfo_type*);
   if (HMODULE winsock_module = ::GetModuleHandleA("ws2_32"))
   {
@@ -3813,14 +3813,14 @@ asio::error_code getnameinfo(const socket_addr_type* addr,
 {
 #if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 # if defined(ASIO_HAS_GETADDRINFO)
-  // Building for Windows XP, Windows Server 2003, or later.
+  // Building for Window XP, Window Server 2003, or later.
   clear_last_error();
   int error = ::getnameinfo(addr, static_cast<socklen_t>(addrlen),
       host, static_cast<DWORD>(hostlen),
       serv, static_cast<DWORD>(servlen), flags);
   return ec = translate_addrinfo_error(error);
 # else
-  // Building for Windows 2000 or earlier.
+  // Building for Window 2000 or earlier.
   typedef int (WSAAPI *gni_t)(const socket_addr_type*,
       int, char*, DWORD, char*, DWORD, int);
   if (HMODULE winsock_module = ::GetModuleHandleA("ws2_32"))

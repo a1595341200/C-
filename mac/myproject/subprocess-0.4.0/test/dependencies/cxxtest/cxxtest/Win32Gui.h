@@ -30,7 +30,7 @@
 
 #include <cxxtest/Gui.h>
 
-#include <windows.h>
+#include <window.h>
 #include <commctrl.h>
 
 namespace CxxTest

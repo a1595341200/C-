@@ -108,7 +108,7 @@ public:
   template <typename Protocol>
   void resize(const Protocol&, std::size_t s)
   {
-    // On some platforms (e.g. Windows Vista), the getsockopt function will
+    // On some platforms (e.g. Window Vista), the getsockopt function will
     // return the size of a boolean socket option as one byte, even though a
     // four byte integer was passed in.
     switch (s)

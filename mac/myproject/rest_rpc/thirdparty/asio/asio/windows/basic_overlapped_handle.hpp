@@ -39,10 +39,10 @@
 namespace asio {
 namespace windows {
 
-/// Provides Windows handle functionality for objects that support
+/// Provides Window handle functionality for objects that support
 /// overlapped I/O.
 /**
- * The windows::overlapped_handle class provides the ability to wrap a Windows
+ * The windows::overlapped_handle class provides the ability to wrap a Window
  * handle. The underlying object referred to by the handle must support
  * overlapped I/O.
  *

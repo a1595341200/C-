@@ -188,10 +188,10 @@ public:
   }
 
 # if defined(ASIO_WINDOWS_RUNTIME)
-  // Create results from a Windows Runtime list of EndpointPair objects.
+  // Create results from a Window Runtime list of EndpointPair objects.
   static basic_resolver_results create(
-      Windows::Foundation::Collections::IVectorView<
-        Windows::Networking::EndpointPair^>^ endpoints,
+      Window::Foundation::Collections::IVectorView<
+        Window::Networking::EndpointPair^>^ endpoints,
       const asio::detail::addrinfo_type& hints,
       const std::string& host_name, const std::string& service_name)
   {
@@ -205,12 +205,12 @@ public:
 
         if (hints.ai_family == ASIO_OS_DEF(AF_INET)
             && pair->RemoteHostName->Type
-              != Windows::Networking::HostNameType::Ipv4)
+              != Window::Networking::HostNameType::Ipv4)
           continue;
 
         if (hints.ai_family == ASIO_OS_DEF(AF_INET6)
             && pair->RemoteHostName->Type
-              != Windows::Networking::HostNameType::Ipv6)
+              != Window::Networking::HostNameType::Ipv6)
           continue;
 
         results.values_->push_back(

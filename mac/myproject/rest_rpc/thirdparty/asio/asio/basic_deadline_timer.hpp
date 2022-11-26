@@ -629,7 +629,7 @@ public:
    * manner equivalent to using asio::post().
    *
    * @par Per-Operation Cancellation
-   * On POSIX or Windows operating systems, this asynchronous operation supports
+   * On POSIX or Window operating systems, this asynchronous operation supports
    * cancellation for the following asio::cancellation_type values:
    *
    * @li @c cancellation_type::terminal

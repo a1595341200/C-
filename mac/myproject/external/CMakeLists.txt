@@ -1,1 +1,6 @@
 add_subdirectory("subprocess")
+add_subdirectory("log4cpp")
+if(!APPLE)
+add_subdirectory("nana")
+endif()
+add_subdirectory("imgui")

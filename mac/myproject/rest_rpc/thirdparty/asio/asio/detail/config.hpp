@@ -1330,7 +1330,7 @@
 # endif // !defined(ASIO_DISABLE_SOURCE_LOCATION)
 #endif // !defined(ASIO_HAS_SOURCE_LOCATION)
 
-// Windows App target. Windows but with a limited API.
+// Window App target. Window but with a limited API.
 #if !defined(ASIO_WINDOWS_APP)
 # if defined(_WIN32_WINNT) && (_WIN32_WINNT >= 0x0603)
 #  include <winapifamily.h>
@@ -1343,7 +1343,7 @@
 # endif // defined(_WIN32_WINNT) && (_WIN32_WINNT >= 0x0603)
 #endif // !defined(ASIO_WINDOWS_APP)
 
-// Legacy WinRT target. Windows App is preferred.
+// Legacy WinRT target. Window App is preferred.
 #if !defined(ASIO_WINDOWS_RUNTIME)
 # if !defined(ASIO_WINDOWS_APP)
 #  if defined(__cplusplus_winrt)
@@ -1357,7 +1357,7 @@
 # endif // !defined(ASIO_WINDOWS_APP)
 #endif // !defined(ASIO_WINDOWS_RUNTIME)
 
-// Windows target. Excludes WinRT but includes Windows App targets.
+// Window target. Excludes WinRT but includes Window App targets.
 #if !defined(ASIO_WINDOWS)
 # if !defined(ASIO_WINDOWS_RUNTIME)
 #  if defined(ASIO_HAS_BOOST_CONFIG) && defined(BOOST_WINDOWS)
@@ -1370,7 +1370,7 @@
 # endif // !defined(ASIO_WINDOWS_RUNTIME)
 #endif // !defined(ASIO_WINDOWS)
 
-// Windows: target OS version.
+// Window: target OS version.
 #if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 # if !defined(_WIN32_WINNT) && !defined(_WIN32_WINDOWS)
 #  if defined(_MSC_VER) || (defined(__BORLANDC__) && !defined(__clang__))
@@ -1378,11 +1378,11 @@
   "Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:\n"\
   "- add -D_WIN32_WINNT=0x0601 to the compiler command line; or\n"\
   "- add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.\n"\
-  "Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).")
+  "Assuming _WIN32_WINNT=0x0601 (i.e. Window 7 target).")
 #  else // defined(_MSC_VER) || (defined(__BORLANDC__) && !defined(__clang__))
 #   warning Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately.
 #   warning For example, add -D_WIN32_WINNT=0x0601 to the compiler command line.
-#   warning Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+#   warning Assuming _WIN32_WINNT=0x0601 (i.e. Window 7 target).
 #  endif // defined(_MSC_VER) || (defined(__BORLANDC__) && !defined(__clang__))
 #  define _WIN32_WINNT 0x0601
 # endif // !defined(_WIN32_WINNT) && !defined(_WIN32_WINDOWS)
@@ -1411,7 +1411,7 @@
 # endif // defined(__CYGWIN__)
 #endif // defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 
-// Windows: minimise header inclusion.
+// Window: minimise header inclusion.
 #if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 # if !defined(ASIO_NO_WIN32_LEAN_AND_MEAN)
 #  if !defined(WIN32_LEAN_AND_MEAN)
@@ -1420,7 +1420,7 @@
 # endif // !defined(ASIO_NO_WIN32_LEAN_AND_MEAN)
 #endif // defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 
-// Windows: suppress definition of "min" and "max" macros.
+// Window: suppress definition of "min" and "max" macros.
 #if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 # if !defined(ASIO_NO_NOMINMAX)
 #  if !defined(NOMINMAX)
@@ -1429,7 +1429,7 @@
 # endif // !defined(ASIO_NO_NOMINMAX)
 #endif // defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 
-// Windows: IO Completion Ports.
+// Window: IO Completion Ports.
 #if !defined(ASIO_HAS_IOCP)
 # if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
 #  if defined(_WIN32_WINNT) && (_WIN32_WINNT >= 0x0400)
@@ -1539,7 +1539,7 @@
         //   && !defined(__CYGWIN__)
 #endif // !defined(ASIO_HAS_SERIAL_PORT)
 
-// Windows: stream handles.
+// Window: stream handles.
 #if !defined(ASIO_HAS_WINDOWS_STREAM_HANDLE)
 # if !defined(ASIO_DISABLE_WINDOWS_STREAM_HANDLE)
 #  if defined(ASIO_HAS_IOCP)
@@ -1548,7 +1548,7 @@
 # endif // !defined(ASIO_DISABLE_WINDOWS_STREAM_HANDLE)
 #endif // !defined(ASIO_HAS_WINDOWS_STREAM_HANDLE)
 
-// Windows: random access handles.
+// Window: random access handles.
 #if !defined(ASIO_HAS_WINDOWS_RANDOM_ACCESS_HANDLE)
 # if !defined(ASIO_DISABLE_WINDOWS_RANDOM_ACCESS_HANDLE)
 #  if defined(ASIO_HAS_IOCP)
@@ -1557,7 +1557,7 @@
 # endif // !defined(ASIO_DISABLE_WINDOWS_RANDOM_ACCESS_HANDLE)
 #endif // !defined(ASIO_HAS_WINDOWS_RANDOM_ACCESS_HANDLE)
 
-// Windows: object handles.
+// Window: object handles.
 #if !defined(ASIO_HAS_WINDOWS_OBJECT_HANDLE)
 # if !defined(ASIO_DISABLE_WINDOWS_OBJECT_HANDLE)
 #  if defined(ASIO_WINDOWS) || defined(__CYGWIN__)
@@ -1568,7 +1568,7 @@
 # endif // !defined(ASIO_DISABLE_WINDOWS_OBJECT_HANDLE)
 #endif // !defined(ASIO_HAS_WINDOWS_OBJECT_HANDLE)
 
-// Windows: OVERLAPPED wrapper.
+// Window: OVERLAPPED wrapper.
 #if !defined(ASIO_HAS_WINDOWS_OVERLAPPED_PTR)
 # if !defined(ASIO_DISABLE_WINDOWS_OVERLAPPED_PTR)
 #  if defined(ASIO_HAS_IOCP)

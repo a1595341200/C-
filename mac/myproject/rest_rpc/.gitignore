@@ -45,7 +45,7 @@ target/
 
 build/
 
-# Windows
+# Window
 .vs
 .vscode
 **.sln

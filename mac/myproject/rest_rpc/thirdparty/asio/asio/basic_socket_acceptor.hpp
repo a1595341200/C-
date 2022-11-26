@@ -700,15 +700,15 @@ public:
    *
    * @throws asio::system_error Thrown on failure.
    *
-   * @note This function is unsupported on Windows versions prior to Windows
+   * @note This function is unsupported on Window versions prior to Window
    * 8.1, and will fail with asio::error::operation_not_supported on
    * these platforms.
    */
 #if defined(ASIO_MSVC) && (ASIO_MSVC >= 1400) \
   && (!defined(_WIN32_WINNT) || _WIN32_WINNT < 0x0603)
   __declspec(deprecated("This function always fails with "
-        "operation_not_supported when used on Windows versions "
-        "prior to Windows 8.1."))
+        "operation_not_supported when used on Window versions "
+        "prior to Window 8.1."))
 #endif
   native_handle_type release()
   {
@@ -728,15 +728,15 @@ public:
    *
    * @param ec Set to indicate what error occurred, if any.
    *
-   * @note This function is unsupported on Windows versions prior to Windows
+   * @note This function is unsupported on Window versions prior to Window
    * 8.1, and will fail with asio::error::operation_not_supported on
    * these platforms.
    */
 #if defined(ASIO_MSVC) && (ASIO_MSVC >= 1400) \
   && (!defined(_WIN32_WINNT) || _WIN32_WINNT < 0x0603)
   __declspec(deprecated("This function always fails with "
-        "operation_not_supported when used on Windows versions "
-        "prior to Windows 8.1."))
+        "operation_not_supported when used on Window versions "
+        "prior to Window 8.1."))
 #endif
   native_handle_type release(asio::error_code& ec)
   {
@@ -1231,7 +1231,7 @@ public:
    * @endcode
    *
    * @par Per-Operation Cancellation
-   * On POSIX or Windows operating systems, this asynchronous operation supports
+   * On POSIX or Window operating systems, this asynchronous operation supports
    * cancellation for the following asio::cancellation_type values:
    *
    * @li @c cancellation_type::terminal
@@ -1358,7 +1358,7 @@ public:
    * @endcode
    *
    * @par Per-Operation Cancellation
-   * On POSIX or Windows operating systems, this asynchronous operation supports
+   * On POSIX or Window operating systems, this asynchronous operation supports
    * cancellation for the following asio::cancellation_type values:
    *
    * @li @c cancellation_type::terminal
@@ -1481,7 +1481,7 @@ public:
    * manner equivalent to using asio::post().
    *
    * @par Per-Operation Cancellation
-   * On POSIX or Windows operating systems, this asynchronous operation supports
+   * On POSIX or Window operating systems, this asynchronous operation supports
    * cancellation for the following asio::cancellation_type values:
    *
    * @li @c cancellation_type::terminal
@@ -1613,7 +1613,7 @@ public:
    * @endcode
    *
    * @par Per-Operation Cancellation
-   * On POSIX or Windows operating systems, this asynchronous operation supports
+   * On POSIX or Window operating systems, this asynchronous operation supports
    * cancellation for the following asio::cancellation_type values:
    *
    * @li @c cancellation_type::terminal
@@ -1849,7 +1849,7 @@ public:
    * @endcode
    *
    * @par Per-Operation Cancellation
-   * On POSIX or Windows operating systems, this asynchronous operation supports
+   * On POSIX or Window operating systems, this asynchronous operation supports
    * cancellation for the following asio::cancellation_type values:
    *
    * @li @c cancellation_type::terminal
@@ -1929,7 +1929,7 @@ public:
    * @endcode
    *
    * @par Per-Operation Cancellation
-   * On POSIX or Windows operating systems, this asynchronous operation supports
+   * On POSIX or Window operating systems, this asynchronous operation supports
    * cancellation for the following asio::cancellation_type values:
    *
    * @li @c cancellation_type::terminal
@@ -2087,7 +2087,7 @@ public:
    * @endcode
    *
    * @par Per-Operation Cancellation
-   * On POSIX or Windows operating systems, this asynchronous operation supports
+   * On POSIX or Window operating systems, this asynchronous operation supports
    * cancellation for the following asio::cancellation_type values:
    *
    * @li @c cancellation_type::terminal
@@ -2355,7 +2355,7 @@ public:
    * @endcode
    *
    * @par Per-Operation Cancellation
-   * On POSIX or Windows operating systems, this asynchronous operation supports
+   * On POSIX or Window operating systems, this asynchronous operation supports
    * cancellation for the following asio::cancellation_type values:
    *
    * @li @c cancellation_type::terminal
@@ -2441,7 +2441,7 @@ public:
    * @endcode
    *
    * @par Per-Operation Cancellation
-   * On POSIX or Windows operating systems, this asynchronous operation supports
+   * On POSIX or Window operating systems, this asynchronous operation supports
    * cancellation for the following asio::cancellation_type values:
    *
    * @li @c cancellation_type::terminal

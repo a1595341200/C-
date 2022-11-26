@@ -546,15 +546,15 @@ public:
    *
    * @throws asio::system_error Thrown on failure.
    *
-   * @note This function is unsupported on Windows versions prior to Windows
+   * @note This function is unsupported on Window versions prior to Window
    * 8.1, and will fail with asio::error::operation_not_supported on
    * these platforms.
    */
 #if defined(ASIO_MSVC) && (ASIO_MSVC >= 1400) \
   && (!defined(_WIN32_WINNT) || _WIN32_WINNT < 0x0603)
   __declspec(deprecated("This function always fails with "
-        "operation_not_supported when used on Windows versions "
-        "prior to Windows 8.1."))
+        "operation_not_supported when used on Window versions "
+        "prior to Window 8.1."))
 #endif
   native_handle_type release()
   {
@@ -574,15 +574,15 @@ public:
    *
    * @param ec Set to indicate what error occurred, if any.
    *
-   * @note This function is unsupported on Windows versions prior to Windows
+   * @note This function is unsupported on Window versions prior to Window
    * 8.1, and will fail with asio::error::operation_not_supported on
    * these platforms.
    */
 #if defined(ASIO_MSVC) && (ASIO_MSVC >= 1400) \
   && (!defined(_WIN32_WINNT) || _WIN32_WINNT < 0x0603)
   __declspec(deprecated("This function always fails with "
-        "operation_not_supported when used on Windows versions "
-        "prior to Windows 8.1."))
+        "operation_not_supported when used on Window versions "
+        "prior to Window 8.1."))
 #endif
   native_handle_type release(asio::error_code& ec)
   {
@@ -609,8 +609,8 @@ public:
    * @throws asio::system_error Thrown on failure.
    *
    * @note Calls to cancel() will always fail with
-   * asio::error::operation_not_supported when run on Windows XP, Windows
-   * Server 2003, and earlier versions of Windows, unless
+   * asio::error::operation_not_supported when run on Window XP, Window
+   * Server 2003, and earlier versions of Window, unless
    * ASIO_ENABLE_CANCELIO is defined. However, the CancelIo function has
    * two issues that should be considered before enabling its use:
    *
@@ -624,7 +624,7 @@ public:
    * For portable cancellation, consider using the close() function to
    * simultaneously cancel the outstanding operations and close the file.
    *
-   * When running on Windows Vista, Windows Server 2008, and later, the
+   * When running on Window Vista, Window Server 2008, and later, the
    * CancelIoEx function is always used. This function does not have the
    * problems described above.
    */
@@ -632,7 +632,7 @@ public:
   && (!defined(_WIN32_WINNT) || _WIN32_WINNT < 0x0600) \
   && !defined(ASIO_ENABLE_CANCELIO)
   __declspec(deprecated("By default, this function always fails with "
-        "operation_not_supported when used on Windows XP, Windows Server 2003, "
+        "operation_not_supported when used on Window XP, Window Server 2003, "
         "or earlier. Consult documentation for details."))
 #endif
   void cancel()
@@ -651,8 +651,8 @@ public:
    * @param ec Set to indicate what error occurred, if any.
    *
    * @note Calls to cancel() will always fail with
-   * asio::error::operation_not_supported when run on Windows XP, Windows
-   * Server 2003, and earlier versions of Windows, unless
+   * asio::error::operation_not_supported when run on Window XP, Window
+   * Server 2003, and earlier versions of Window, unless
    * ASIO_ENABLE_CANCELIO is defined. However, the CancelIo function has
    * two issues that should be considered before enabling its use:
    *
@@ -666,7 +666,7 @@ public:
    * For portable cancellation, consider using the close() function to
    * simultaneously cancel the outstanding operations and close the file.
    *
-   * When running on Windows Vista, Windows Server 2008, and later, the
+   * When running on Window Vista, Window Server 2008, and later, the
    * CancelIoEx function is always used. This function does not have the
    * problems described above.
    */
@@ -674,7 +674,7 @@ public:
   && (!defined(_WIN32_WINNT) || _WIN32_WINNT < 0x0600) \
   && !defined(ASIO_ENABLE_CANCELIO)
   __declspec(deprecated("By default, this function always fails with "
-        "operation_not_supported when used on Windows XP, Windows Server 2003, "
+        "operation_not_supported when used on Window XP, Window Server 2003, "
         "or earlier. Consult documentation for details."))
 #endif
   ASIO_SYNC_OP_VOID cancel(asio::error_code& ec)

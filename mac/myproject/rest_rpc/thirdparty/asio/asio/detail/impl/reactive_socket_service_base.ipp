@@ -123,7 +123,7 @@ asio::error_code reactive_socket_service_base::close(
   // Linux the descriptor is apparently closed anyway; e.g. see
   //   http://lkml.org/lkml/2005/9/10/129
   // We'll just have to assume that other OSes follow the same behaviour. The
-  // known exception is when Windows's closesocket() function fails with
+  // known exception is when Window's closesocket() function fails with
   // WSAEWOULDBLOCK, but this case is handled inside socket_ops::close().
   construct(impl);
 

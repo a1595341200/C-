@@ -55,7 +55,7 @@ public:
    * binding.
    *
    * @note On POSIX systems, service names are typically defined in the file
-   * <tt>/etc/services</tt>. On Windows, service names may be found in the file
+   * <tt>/etc/services</tt>. On Window, service names may be found in the file
    * <tt>c:\\windows\\system32\\drivers\\etc\\services</tt>. Operating systems
    * may use additional locations when resolving service names.
    */
@@ -92,7 +92,7 @@ public:
    * binding.
    *
    * @note On POSIX systems, service names are typically defined in the file
-   * <tt>/etc/services</tt>. On Windows, service names may be found in the file
+   * <tt>/etc/services</tt>. On Window, service names may be found in the file
    * <tt>c:\\windows\\system32\\drivers\\etc\\services</tt>. Operating systems
    * may use additional locations when resolving service names.
    */
@@ -134,13 +134,13 @@ public:
    * remote hosts.
    *
    * @note On POSIX systems, host names may be locally defined in the file
-   * <tt>/etc/hosts</tt>. On Windows, host names may be defined in the file
+   * <tt>/etc/hosts</tt>. On Window, host names may be defined in the file
    * <tt>c:\\windows\\system32\\drivers\\etc\\hosts</tt>. Remote host name
    * resolution is performed using DNS. Operating systems may use additional
-   * locations when resolving host names (such as NETBIOS names on Windows).
+   * locations when resolving host names (such as NETBIOS names on Window).
    *
    * On POSIX systems, service names are typically defined in the file
-   * <tt>/etc/services</tt>. On Windows, service names may be found in the file
+   * <tt>/etc/services</tt>. On Window, service names may be found in the file
    * <tt>c:\\windows\\system32\\drivers\\etc\\services</tt>. Operating systems
    * may use additional locations when resolving service names.
    */
@@ -185,13 +185,13 @@ public:
    * remote hosts.
    *
    * @note On POSIX systems, host names may be locally defined in the file
-   * <tt>/etc/hosts</tt>. On Windows, host names may be defined in the file
+   * <tt>/etc/hosts</tt>. On Window, host names may be defined in the file
    * <tt>c:\\windows\\system32\\drivers\\etc\\hosts</tt>. Remote host name
    * resolution is performed using DNS. Operating systems may use additional
-   * locations when resolving host names (such as NETBIOS names on Windows).
+   * locations when resolving host names (such as NETBIOS names on Window).
    *
    * On POSIX systems, service names are typically defined in the file
-   * <tt>/etc/services</tt>. On Windows, service names may be found in the file
+   * <tt>/etc/services</tt>. On Window, service names may be found in the file
    * <tt>c:\\windows\\system32\\drivers\\etc\\services</tt>. Operating systems
    * may use additional locations when resolving service names.
    */
