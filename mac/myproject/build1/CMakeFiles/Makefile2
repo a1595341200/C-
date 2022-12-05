@@ -85,15 +85,33 @@ clean: src/clean
 
 # Recursive "all" directory target.
 external/all: external/subprocess/all
+external/all: external/imgui/all
 .PHONY : external/all
 
 # Recursive "preinstall" directory target.
 external/preinstall: external/subprocess/preinstall
+external/preinstall: external/imgui/preinstall
 .PHONY : external/preinstall
 
 # Recursive "clean" directory target.
 external/clean: external/subprocess/clean
+external/clean: external/imgui/clean
 .PHONY : external/clean
+
+#=============================================================================
+# Directory level rules for directory external/imgui
+
+# Recursive "all" directory target.
+external/imgui/all: external/imgui/CMakeFiles/imgui.dir/all
+.PHONY : external/imgui/all
+
+# Recursive "preinstall" directory target.
+external/imgui/preinstall:
+.PHONY : external/imgui/preinstall
+
+# Recursive "clean" directory target.
+external/imgui/clean: external/imgui/CMakeFiles/imgui.dir/clean
+.PHONY : external/imgui/clean
 
 #=============================================================================
 # Directory level rules for directory external/subprocess
@@ -266,6 +284,16 @@ src/all: src/char/all
 src/all: src/subprocess1/all
 src/all: src/Throw_an_exception_at_destructor_time/all
 src/all: src/virtual/all
+src/all: src/log4cpp/all
+src/all: src/imgui/all
+src/all: src/997/all
+src/all: src/1791/all
+src/all: src/1971/all
+src/all: src/Disjoint-setDataStructure/all
+src/all: src/stringAssign/all
+src/all: src/strto/all
+src/all: src/udl/all
+src/all: src/unique_ptr/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
@@ -391,6 +419,16 @@ src/preinstall: src/char/preinstall
 src/preinstall: src/subprocess1/preinstall
 src/preinstall: src/Throw_an_exception_at_destructor_time/preinstall
 src/preinstall: src/virtual/preinstall
+src/preinstall: src/log4cpp/preinstall
+src/preinstall: src/imgui/preinstall
+src/preinstall: src/997/preinstall
+src/preinstall: src/1791/preinstall
+src/preinstall: src/1971/preinstall
+src/preinstall: src/Disjoint-setDataStructure/preinstall
+src/preinstall: src/stringAssign/preinstall
+src/preinstall: src/strto/preinstall
+src/preinstall: src/udl/preinstall
+src/preinstall: src/unique_ptr/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
@@ -516,6 +554,16 @@ src/clean: src/char/clean
 src/clean: src/subprocess1/clean
 src/clean: src/Throw_an_exception_at_destructor_time/clean
 src/clean: src/virtual/clean
+src/clean: src/log4cpp/clean
+src/clean: src/imgui/clean
+src/clean: src/997/clean
+src/clean: src/1791/clean
+src/clean: src/1971/clean
+src/clean: src/Disjoint-setDataStructure/clean
+src/clean: src/stringAssign/clean
+src/clean: src/strto/clean
+src/clean: src/udl/clean
+src/clean: src/unique_ptr/clean
 .PHONY : src/clean
 
 #=============================================================================
@@ -727,6 +775,36 @@ src/15/preinstall:
 # Recursive "clean" directory target.
 src/15/clean: src/15/CMakeFiles/15.dir/clean
 .PHONY : src/15/clean
+
+#=============================================================================
+# Directory level rules for directory src/1791
+
+# Recursive "all" directory target.
+src/1791/all: src/1791/CMakeFiles/1791.dir/all
+.PHONY : src/1791/all
+
+# Recursive "preinstall" directory target.
+src/1791/preinstall:
+.PHONY : src/1791/preinstall
+
+# Recursive "clean" directory target.
+src/1791/clean: src/1791/CMakeFiles/1791.dir/clean
+.PHONY : src/1791/clean
+
+#=============================================================================
+# Directory level rules for directory src/1971
+
+# Recursive "all" directory target.
+src/1971/all: src/1971/CMakeFiles/1971.dir/all
+.PHONY : src/1971/all
+
+# Recursive "preinstall" directory target.
+src/1971/preinstall:
+.PHONY : src/1971/preinstall
+
+# Recursive "clean" directory target.
+src/1971/clean: src/1971/CMakeFiles/1971.dir/clean
+.PHONY : src/1971/clean
 
 #=============================================================================
 # Directory level rules for directory src/199
@@ -1089,6 +1167,21 @@ src/718/clean: src/718/CMakeFiles/718.dir/clean
 .PHONY : src/718/clean
 
 #=============================================================================
+# Directory level rules for directory src/997
+
+# Recursive "all" directory target.
+src/997/all: src/997/CMakeFiles/997.dir/all
+.PHONY : src/997/all
+
+# Recursive "preinstall" directory target.
+src/997/preinstall:
+.PHONY : src/997/preinstall
+
+# Recursive "clean" directory target.
+src/997/clean: src/997/CMakeFiles/997.dir/clean
+.PHONY : src/997/clean
+
+#=============================================================================
 # Directory level rules for directory src/Copy_structure
 
 # Recursive "all" directory target.
@@ -1117,6 +1210,21 @@ src/DNS/preinstall:
 # Recursive "clean" directory target.
 src/DNS/clean: src/DNS/CMakeFiles/DNS.dir/clean
 .PHONY : src/DNS/clean
+
+#=============================================================================
+# Directory level rules for directory src/Disjoint-setDataStructure
+
+# Recursive "all" directory target.
+src/Disjoint-setDataStructure/all: src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/all
+.PHONY : src/Disjoint-setDataStructure/all
+
+# Recursive "preinstall" directory target.
+src/Disjoint-setDataStructure/preinstall:
+.PHONY : src/Disjoint-setDataStructure/preinstall
+
+# Recursive "clean" directory target.
+src/Disjoint-setDataStructure/clean: src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/clean
+.PHONY : src/Disjoint-setDataStructure/clean
 
 #=============================================================================
 # Directory level rules for directory src/EnumClass
@@ -1674,6 +1782,21 @@ src/gtest/clean: src/gtest/CMakeFiles/gtest.dir/clean
 .PHONY : src/gtest/clean
 
 #=============================================================================
+# Directory level rules for directory src/imgui
+
+# Recursive "all" directory target.
+src/imgui/all: src/imgui/CMakeFiles/imgui1.dir/all
+.PHONY : src/imgui/all
+
+# Recursive "preinstall" directory target.
+src/imgui/preinstall:
+.PHONY : src/imgui/preinstall
+
+# Recursive "clean" directory target.
+src/imgui/clean: src/imgui/CMakeFiles/imgui1.dir/clean
+.PHONY : src/imgui/clean
+
+#=============================================================================
 # Directory level rules for directory src/inline
 
 # Recursive "all" directory target.
@@ -1762,6 +1885,21 @@ src/locale/preinstall:
 # Recursive "clean" directory target.
 src/locale/clean: src/locale/CMakeFiles/locale.dir/clean
 .PHONY : src/locale/clean
+
+#=============================================================================
+# Directory level rules for directory src/log4cpp
+
+# Recursive "all" directory target.
+src/log4cpp/all: src/log4cpp/CMakeFiles/log4cpp.dir/all
+.PHONY : src/log4cpp/all
+
+# Recursive "preinstall" directory target.
+src/log4cpp/preinstall:
+.PHONY : src/log4cpp/preinstall
+
+# Recursive "clean" directory target.
+src/log4cpp/clean: src/log4cpp/CMakeFiles/log4cpp.dir/clean
+.PHONY : src/log4cpp/clean
 
 #=============================================================================
 # Directory level rules for directory src/looper
@@ -2199,6 +2337,36 @@ src/string/clean: src/string/CMakeFiles/string.dir/clean
 .PHONY : src/string/clean
 
 #=============================================================================
+# Directory level rules for directory src/stringAssign
+
+# Recursive "all" directory target.
+src/stringAssign/all: src/stringAssign/CMakeFiles/stringAssign.dir/all
+.PHONY : src/stringAssign/all
+
+# Recursive "preinstall" directory target.
+src/stringAssign/preinstall:
+.PHONY : src/stringAssign/preinstall
+
+# Recursive "clean" directory target.
+src/stringAssign/clean: src/stringAssign/CMakeFiles/stringAssign.dir/clean
+.PHONY : src/stringAssign/clean
+
+#=============================================================================
+# Directory level rules for directory src/strto
+
+# Recursive "all" directory target.
+src/strto/all: src/strto/CMakeFiles/strto.dir/all
+.PHONY : src/strto/all
+
+# Recursive "preinstall" directory target.
+src/strto/preinstall:
+.PHONY : src/strto/preinstall
+
+# Recursive "clean" directory target.
+src/strto/clean: src/strto/CMakeFiles/strto.dir/clean
+.PHONY : src/strto/clean
+
+#=============================================================================
 # Directory level rules for directory src/subprocess1
 
 # Recursive "all" directory target.
@@ -2289,6 +2457,36 @@ src/typeid/clean: src/typeid/CMakeFiles/typeid.dir/clean
 .PHONY : src/typeid/clean
 
 #=============================================================================
+# Directory level rules for directory src/udl
+
+# Recursive "all" directory target.
+src/udl/all: src/udl/CMakeFiles/udl.dir/all
+.PHONY : src/udl/all
+
+# Recursive "preinstall" directory target.
+src/udl/preinstall:
+.PHONY : src/udl/preinstall
+
+# Recursive "clean" directory target.
+src/udl/clean: src/udl/CMakeFiles/udl.dir/clean
+.PHONY : src/udl/clean
+
+#=============================================================================
+# Directory level rules for directory src/unique_ptr
+
+# Recursive "all" directory target.
+src/unique_ptr/all: src/unique_ptr/CMakeFiles/unique_ptr.dir/all
+.PHONY : src/unique_ptr/all
+
+# Recursive "preinstall" directory target.
+src/unique_ptr/preinstall:
+.PHONY : src/unique_ptr/preinstall
+
+# Recursive "clean" directory target.
+src/unique_ptr/clean: src/unique_ptr/CMakeFiles/unique_ptr.dir/clean
+.PHONY : src/unique_ptr/clean
+
+#=============================================================================
 # Directory level rules for directory src/unordered_set
 
 # Recursive "all" directory target.
@@ -2370,12 +2568,12 @@ src/weakPtr/clean: src/weakPtr/CMakeFiles/weakPtr.dir/clean
 external/subprocess/CMakeFiles/subprocess.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/subprocess/CMakeFiles/subprocess.dir/build.make external/subprocess/CMakeFiles/subprocess.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/subprocess/CMakeFiles/subprocess.dir/build.make external/subprocess/CMakeFiles/subprocess.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=88,89,90,91 "Built target subprocess"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=88,89,90 "Built target subprocess"
 .PHONY : external/subprocess/CMakeFiles/subprocess.dir/all
 
 # Build rule for subdir invocation for target.
 external/subprocess/CMakeFiles/subprocess.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/subprocess/CMakeFiles/subprocess.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : external/subprocess/CMakeFiles/subprocess.dir/rule
@@ -2390,18 +2588,44 @@ external/subprocess/CMakeFiles/subprocess.dir/clean:
 .PHONY : external/subprocess/CMakeFiles/subprocess.dir/clean
 
 #=============================================================================
+# Target rules for target external/imgui/CMakeFiles/imgui.dir
+
+# All Build rule for target.
+external/imgui/CMakeFiles/imgui.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/imgui/CMakeFiles/imgui.dir/build.make external/imgui/CMakeFiles/imgui.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/imgui/CMakeFiles/imgui.dir/build.make external/imgui/CMakeFiles/imgui.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=58,59,60 "Built target imgui"
+.PHONY : external/imgui/CMakeFiles/imgui.dir/all
+
+# Build rule for subdir invocation for target.
+external/imgui/CMakeFiles/imgui.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/imgui/CMakeFiles/imgui.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : external/imgui/CMakeFiles/imgui.dir/rule
+
+# Convenience name for target.
+imgui: external/imgui/CMakeFiles/imgui.dir/rule
+.PHONY : imgui
+
+# clean rule for target.
+external/imgui/CMakeFiles/imgui.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/imgui/CMakeFiles/imgui.dir/build.make external/imgui/CMakeFiles/imgui.dir/clean
+.PHONY : external/imgui/CMakeFiles/imgui.dir/clean
+
+#=============================================================================
 # Target rules for target libframework/framework/CMakeFiles/framework.dir
 
 # All Build rule for target.
 libframework/framework/CMakeFiles/framework.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 	$(MAKE) $(MAKESILENT) -f libframework/framework/CMakeFiles/framework.dir/build.make libframework/framework/CMakeFiles/framework.dir/depend
 	$(MAKE) $(MAKESILENT) -f libframework/framework/CMakeFiles/framework.dir/build.make libframework/framework/CMakeFiles/framework.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=53,54,55,56 "Built target framework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=50,51,52,53 "Built target framework"
 .PHONY : libframework/framework/CMakeFiles/framework.dir/all
 
 # Build rule for subdir invocation for target.
 libframework/framework/CMakeFiles/framework.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libframework/framework/CMakeFiles/framework.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : libframework/framework/CMakeFiles/framework.dir/rule
@@ -2423,12 +2647,12 @@ src/Test/CMakeFiles/Test.dir/all: external/subprocess/CMakeFiles/subprocess.dir/
 src/Test/CMakeFiles/Test.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Test/CMakeFiles/Test.dir/build.make src/Test/CMakeFiles/Test.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Test/CMakeFiles/Test.dir/build.make src/Test/CMakeFiles/Test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=32 "Built target Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target Test"
 .PHONY : src/Test/CMakeFiles/Test.dir/all
 
 # Build rule for subdir invocation for target.
 src/Test/CMakeFiles/Test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Test/CMakeFiles/Test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/Test/CMakeFiles/Test.dir/rule
@@ -2450,12 +2674,12 @@ src/EnumClass/CMakeFiles/EnumClass.dir/all: external/subprocess/CMakeFiles/subpr
 src/EnumClass/CMakeFiles/EnumClass.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/EnumClass/CMakeFiles/EnumClass.dir/build.make src/EnumClass/CMakeFiles/EnumClass.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/EnumClass/CMakeFiles/EnumClass.dir/build.make src/EnumClass/CMakeFiles/EnumClass.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=30 "Built target EnumClass"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target EnumClass"
 .PHONY : src/EnumClass/CMakeFiles/EnumClass.dir/all
 
 # Build rule for subdir invocation for target.
 src/EnumClass/CMakeFiles/EnumClass.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/EnumClass/CMakeFiles/EnumClass.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/EnumClass/CMakeFiles/EnumClass.dir/rule
@@ -2482,7 +2706,7 @@ src/weakPtr/CMakeFiles/weakPtr.dir/all: libframework/framework/CMakeFiles/framew
 
 # Build rule for subdir invocation for target.
 src/weakPtr/CMakeFiles/weakPtr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/weakPtr/CMakeFiles/weakPtr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/weakPtr/CMakeFiles/weakPtr.dir/rule
@@ -2504,7 +2728,7 @@ src/reference/CMakeFiles/reference.dir/all: external/subprocess/CMakeFiles/subpr
 src/reference/CMakeFiles/reference.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/reference/CMakeFiles/reference.dir/build.make src/reference/CMakeFiles/reference.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/reference/CMakeFiles/reference.dir/build.make src/reference/CMakeFiles/reference.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target reference"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=76 "Built target reference"
 .PHONY : src/reference/CMakeFiles/reference.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2536,7 +2760,7 @@ src/orm/CMakeFiles/orm.dir/all: libframework/framework/CMakeFiles/framework.dir/
 
 # Build rule for subdir invocation for target.
 src/orm/CMakeFiles/orm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/orm/CMakeFiles/orm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/orm/CMakeFiles/orm.dir/rule
@@ -2558,12 +2782,12 @@ src/dynamic_cast/CMakeFiles/dynamic_cast.dir/all: external/subprocess/CMakeFiles
 src/dynamic_cast/CMakeFiles/dynamic_cast.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/dynamic_cast/CMakeFiles/dynamic_cast.dir/build.make src/dynamic_cast/CMakeFiles/dynamic_cast.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/dynamic_cast/CMakeFiles/dynamic_cast.dir/build.make src/dynamic_cast/CMakeFiles/dynamic_cast.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=48 "Built target dynamic_cast"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=46 "Built target dynamic_cast"
 .PHONY : src/dynamic_cast/CMakeFiles/dynamic_cast.dir/all
 
 # Build rule for subdir invocation for target.
 src/dynamic_cast/CMakeFiles/dynamic_cast.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/dynamic_cast/CMakeFiles/dynamic_cast.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/dynamic_cast/CMakeFiles/dynamic_cast.dir/rule
@@ -2585,12 +2809,12 @@ src/Execute_before_main/CMakeFiles/Execute_before_main.dir/all: external/subproc
 src/Execute_before_main/CMakeFiles/Execute_before_main.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Execute_before_main/CMakeFiles/Execute_before_main.dir/build.make src/Execute_before_main/CMakeFiles/Execute_before_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Execute_before_main/CMakeFiles/Execute_before_main.dir/build.make src/Execute_before_main/CMakeFiles/Execute_before_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=31 "Built target Execute_before_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=30 "Built target Execute_before_main"
 .PHONY : src/Execute_before_main/CMakeFiles/Execute_before_main.dir/all
 
 # Build rule for subdir invocation for target.
 src/Execute_before_main/CMakeFiles/Execute_before_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Execute_before_main/CMakeFiles/Execute_before_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/Execute_before_main/CMakeFiles/Execute_before_main.dir/rule
@@ -2612,12 +2836,12 @@ src/rpc/CMakeFiles/rpc.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/rpc/CMakeFiles/rpc.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/rpc/CMakeFiles/rpc.dir/build.make src/rpc/CMakeFiles/rpc.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/rpc/CMakeFiles/rpc.dir/build.make src/rpc/CMakeFiles/rpc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=79 "Built target rpc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target rpc"
 .PHONY : src/rpc/CMakeFiles/rpc.dir/all
 
 # Build rule for subdir invocation for target.
 src/rpc/CMakeFiles/rpc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/rpc/CMakeFiles/rpc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/rpc/CMakeFiles/rpc.dir/rule
@@ -2639,12 +2863,12 @@ src/asctime/CMakeFiles/asctime.dir/all: external/subprocess/CMakeFiles/subproces
 src/asctime/CMakeFiles/asctime.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/asctime/CMakeFiles/asctime.dir/build.make src/asctime/CMakeFiles/asctime.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/asctime/CMakeFiles/asctime.dir/build.make src/asctime/CMakeFiles/asctime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=39 "Built target asctime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=37 "Built target asctime"
 .PHONY : src/asctime/CMakeFiles/asctime.dir/all
 
 # Build rule for subdir invocation for target.
 src/asctime/CMakeFiles/asctime.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/asctime/CMakeFiles/asctime.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/asctime/CMakeFiles/asctime.dir/rule
@@ -2666,12 +2890,12 @@ src/addressof/CMakeFiles/addressof.dir/all: external/subprocess/CMakeFiles/subpr
 src/addressof/CMakeFiles/addressof.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/addressof/CMakeFiles/addressof.dir/build.make src/addressof/CMakeFiles/addressof.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/addressof/CMakeFiles/addressof.dir/build.make src/addressof/CMakeFiles/addressof.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=36 "Built target addressof"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=35 "Built target addressof"
 .PHONY : src/addressof/CMakeFiles/addressof.dir/all
 
 # Build rule for subdir invocation for target.
 src/addressof/CMakeFiles/addressof.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/addressof/CMakeFiles/addressof.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/addressof/CMakeFiles/addressof.dir/rule
@@ -2698,7 +2922,7 @@ src/22/CMakeFiles/22.dir/all: libframework/framework/CMakeFiles/framework.dir/al
 
 # Build rule for subdir invocation for target.
 src/22/CMakeFiles/22.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/22/CMakeFiles/22.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/22/CMakeFiles/22.dir/rule
@@ -2720,12 +2944,12 @@ src/56/CMakeFiles/56.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/56/CMakeFiles/56.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/56/CMakeFiles/56.dir/build.make src/56/CMakeFiles/56.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/56/CMakeFiles/56.dir/build.make src/56/CMakeFiles/56.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=24 "Built target 56"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=23 "Built target 56"
 .PHONY : src/56/CMakeFiles/56.dir/all
 
 # Build rule for subdir invocation for target.
 src/56/CMakeFiles/56.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/56/CMakeFiles/56.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/56/CMakeFiles/56.dir/rule
@@ -2747,12 +2971,12 @@ src/69/CMakeFiles/69.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/69/CMakeFiles/69.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/69/CMakeFiles/69.dir/build.make src/69/CMakeFiles/69.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/69/CMakeFiles/69.dir/build.make src/69/CMakeFiles/69.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=26 "Built target 69"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 69"
 .PHONY : src/69/CMakeFiles/69.dir/all
 
 # Build rule for subdir invocation for target.
 src/69/CMakeFiles/69.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/69/CMakeFiles/69.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/69/CMakeFiles/69.dir/rule
@@ -2774,12 +2998,12 @@ src/105/CMakeFiles/105.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/105/CMakeFiles/105.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/105/CMakeFiles/105.dir/build.make src/105/CMakeFiles/105.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/105/CMakeFiles/105.dir/build.make src/105/CMakeFiles/105.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=6 "Built target 105"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=5 "Built target 105"
 .PHONY : src/105/CMakeFiles/105.dir/all
 
 # Build rule for subdir invocation for target.
 src/105/CMakeFiles/105.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/105/CMakeFiles/105.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/105/CMakeFiles/105.dir/rule
@@ -2801,12 +3025,12 @@ src/129/CMakeFiles/129.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/129/CMakeFiles/129.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/129/CMakeFiles/129.dir/build.make src/129/CMakeFiles/129.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/129/CMakeFiles/129.dir/build.make src/129/CMakeFiles/129.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=8 "Built target 129"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 129"
 .PHONY : src/129/CMakeFiles/129.dir/all
 
 # Build rule for subdir invocation for target.
 src/129/CMakeFiles/129.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/129/CMakeFiles/129.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/129/CMakeFiles/129.dir/rule
@@ -2828,12 +3052,12 @@ src/141/CMakeFiles/141.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/141/CMakeFiles/141.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/141/CMakeFiles/141.dir/build.make src/141/CMakeFiles/141.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/141/CMakeFiles/141.dir/build.make src/141/CMakeFiles/141.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=9 "Built target 141"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=8 "Built target 141"
 .PHONY : src/141/CMakeFiles/141.dir/all
 
 # Build rule for subdir invocation for target.
 src/141/CMakeFiles/141.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/141/CMakeFiles/141.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/141/CMakeFiles/141.dir/rule
@@ -2855,12 +3079,12 @@ src/148/CMakeFiles/148.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/148/CMakeFiles/148.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/148/CMakeFiles/148.dir/build.make src/148/CMakeFiles/148.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/148/CMakeFiles/148.dir/build.make src/148/CMakeFiles/148.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=10 "Built target 148"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=9 "Built target 148"
 .PHONY : src/148/CMakeFiles/148.dir/all
 
 # Build rule for subdir invocation for target.
 src/148/CMakeFiles/148.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/148/CMakeFiles/148.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/148/CMakeFiles/148.dir/rule
@@ -2882,12 +3106,12 @@ src/211/CMakeFiles/211.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/211/CMakeFiles/211.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/211/CMakeFiles/211.dir/build.make src/211/CMakeFiles/211.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/211/CMakeFiles/211.dir/build.make src/211/CMakeFiles/211.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=15 "Built target 211"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 211"
 .PHONY : src/211/CMakeFiles/211.dir/all
 
 # Build rule for subdir invocation for target.
 src/211/CMakeFiles/211.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/211/CMakeFiles/211.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/211/CMakeFiles/211.dir/rule
@@ -2909,12 +3133,12 @@ src/417/CMakeFiles/417.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/417/CMakeFiles/417.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/417/CMakeFiles/417.dir/build.make src/417/CMakeFiles/417.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/417/CMakeFiles/417.dir/build.make src/417/CMakeFiles/417.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=21 "Built target 417"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=20 "Built target 417"
 .PHONY : src/417/CMakeFiles/417.dir/all
 
 # Build rule for subdir invocation for target.
 src/417/CMakeFiles/417.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/417/CMakeFiles/417.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/417/CMakeFiles/417.dir/rule
@@ -2936,7 +3160,7 @@ src/718/CMakeFiles/718.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/718/CMakeFiles/718.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/718/CMakeFiles/718.dir/build.make src/718/CMakeFiles/718.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/718/CMakeFiles/718.dir/build.make src/718/CMakeFiles/718.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 718"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=26 "Built target 718"
 .PHONY : src/718/CMakeFiles/718.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2963,7 +3187,7 @@ src/1277/CMakeFiles/1277.dir/all: external/subprocess/CMakeFiles/subprocess.dir/
 src/1277/CMakeFiles/1277.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/1277/CMakeFiles/1277.dir/build.make src/1277/CMakeFiles/1277.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/1277/CMakeFiles/1277.dir/build.make src/1277/CMakeFiles/1277.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 1277"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=7 "Built target 1277"
 .PHONY : src/1277/CMakeFiles/1277.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2990,12 +3214,12 @@ src/26Z/CMakeFiles/26Z.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/26Z/CMakeFiles/26Z.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/26Z/CMakeFiles/26Z.dir/build.make src/26Z/CMakeFiles/26Z.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/26Z/CMakeFiles/26Z.dir/build.make src/26Z/CMakeFiles/26Z.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=18 "Built target 26Z"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 26Z"
 .PHONY : src/26Z/CMakeFiles/26Z.dir/all
 
 # Build rule for subdir invocation for target.
 src/26Z/CMakeFiles/26Z.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/26Z/CMakeFiles/26Z.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/26Z/CMakeFiles/26Z.dir/rule
@@ -3017,12 +3241,12 @@ src/6Z/CMakeFiles/6Z.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/6Z/CMakeFiles/6Z.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/6Z/CMakeFiles/6Z.dir/build.make src/6Z/CMakeFiles/6Z.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/6Z/CMakeFiles/6Z.dir/build.make src/6Z/CMakeFiles/6Z.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=27 "Built target 6Z"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=25 "Built target 6Z"
 .PHONY : src/6Z/CMakeFiles/6Z.dir/all
 
 # Build rule for subdir invocation for target.
 src/6Z/CMakeFiles/6Z.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/6Z/CMakeFiles/6Z.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/6Z/CMakeFiles/6Z.dir/rule
@@ -3044,12 +3268,12 @@ src/38Z/CMakeFiles/38Z.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/38Z/CMakeFiles/38Z.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/38Z/CMakeFiles/38Z.dir/build.make src/38Z/CMakeFiles/38Z.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/38Z/CMakeFiles/38Z.dir/build.make src/38Z/CMakeFiles/38Z.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=20 "Built target 38Z"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 38Z"
 .PHONY : src/38Z/CMakeFiles/38Z.dir/all
 
 # Build rule for subdir invocation for target.
 src/38Z/CMakeFiles/38Z.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/38Z/CMakeFiles/38Z.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/38Z/CMakeFiles/38Z.dir/rule
@@ -3076,7 +3300,7 @@ src/1/CMakeFiles/1.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 
 # Build rule for subdir invocation for target.
 src/1/CMakeFiles/1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/1/CMakeFiles/1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/1/CMakeFiles/1.dir/rule
@@ -3098,12 +3322,12 @@ src/15/CMakeFiles/15.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/15/CMakeFiles/15.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/15/CMakeFiles/15.dir/build.make src/15/CMakeFiles/15.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/15/CMakeFiles/15.dir/build.make src/15/CMakeFiles/15.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=11 "Built target 15"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 15"
 .PHONY : src/15/CMakeFiles/15.dir/all
 
 # Build rule for subdir invocation for target.
 src/15/CMakeFiles/15.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/15/CMakeFiles/15.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/15/CMakeFiles/15.dir/rule
@@ -3125,12 +3349,12 @@ src/20/CMakeFiles/20.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/20/CMakeFiles/20.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/20/CMakeFiles/20.dir/build.make src/20/CMakeFiles/20.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/20/CMakeFiles/20.dir/build.make src/20/CMakeFiles/20.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=12 "Built target 20"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 20"
 .PHONY : src/20/CMakeFiles/20.dir/all
 
 # Build rule for subdir invocation for target.
 src/20/CMakeFiles/20.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/20/CMakeFiles/20.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/20/CMakeFiles/20.dir/rule
@@ -3152,12 +3376,12 @@ src/31/CMakeFiles/31.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/31/CMakeFiles/31.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/31/CMakeFiles/31.dir/build.make src/31/CMakeFiles/31.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/31/CMakeFiles/31.dir/build.make src/31/CMakeFiles/31.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=19 "Built target 31"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=18 "Built target 31"
 .PHONY : src/31/CMakeFiles/31.dir/all
 
 # Build rule for subdir invocation for target.
 src/31/CMakeFiles/31.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/31/CMakeFiles/31.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/31/CMakeFiles/31.dir/rule
@@ -3179,7 +3403,7 @@ src/33/CMakeFiles/33.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/33/CMakeFiles/33.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/33/CMakeFiles/33.dir/build.make src/33/CMakeFiles/33.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/33/CMakeFiles/33.dir/build.make src/33/CMakeFiles/33.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 33"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=19 "Built target 33"
 .PHONY : src/33/CMakeFiles/33.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3206,12 +3430,12 @@ src/46/CMakeFiles/46.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/46/CMakeFiles/46.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/46/CMakeFiles/46.dir/build.make src/46/CMakeFiles/46.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/46/CMakeFiles/46.dir/build.make src/46/CMakeFiles/46.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=22 "Built target 46"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=21 "Built target 46"
 .PHONY : src/46/CMakeFiles/46.dir/all
 
 # Build rule for subdir invocation for target.
 src/46/CMakeFiles/46.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/46/CMakeFiles/46.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/46/CMakeFiles/46.dir/rule
@@ -3233,12 +3457,12 @@ src/53/CMakeFiles/53.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/53/CMakeFiles/53.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/53/CMakeFiles/53.dir/build.make src/53/CMakeFiles/53.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/53/CMakeFiles/53.dir/build.make src/53/CMakeFiles/53.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=23 "Built target 53"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 53"
 .PHONY : src/53/CMakeFiles/53.dir/all
 
 # Build rule for subdir invocation for target.
 src/53/CMakeFiles/53.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/53/CMakeFiles/53.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/53/CMakeFiles/53.dir/rule
@@ -3260,7 +3484,7 @@ src/54/CMakeFiles/54.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/54/CMakeFiles/54.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/54/CMakeFiles/54.dir/build.make src/54/CMakeFiles/54.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/54/CMakeFiles/54.dir/build.make src/54/CMakeFiles/54.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 54"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=22 "Built target 54"
 .PHONY : src/54/CMakeFiles/54.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3287,12 +3511,12 @@ src/60/CMakeFiles/60.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
 src/60/CMakeFiles/60.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/60/CMakeFiles/60.dir/build.make src/60/CMakeFiles/60.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/60/CMakeFiles/60.dir/build.make src/60/CMakeFiles/60.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=25 "Built target 60"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=24 "Built target 60"
 .PHONY : src/60/CMakeFiles/60.dir/all
 
 # Build rule for subdir invocation for target.
 src/60/CMakeFiles/60.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/60/CMakeFiles/60.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/60/CMakeFiles/60.dir/rule
@@ -3319,7 +3543,7 @@ src/102/CMakeFiles/102.dir/all: libframework/framework/CMakeFiles/framework.dir/
 
 # Build rule for subdir invocation for target.
 src/102/CMakeFiles/102.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/102/CMakeFiles/102.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/102/CMakeFiles/102.dir/rule
@@ -3341,12 +3565,12 @@ src/102_2/CMakeFiles/102_2.dir/all: external/subprocess/CMakeFiles/subprocess.di
 src/102_2/CMakeFiles/102_2.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/102_2/CMakeFiles/102_2.dir/build.make src/102_2/CMakeFiles/102_2.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/102_2/CMakeFiles/102_2.dir/build.make src/102_2/CMakeFiles/102_2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=3 "Built target 102_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 102_2"
 .PHONY : src/102_2/CMakeFiles/102_2.dir/all
 
 # Build rule for subdir invocation for target.
 src/102_2/CMakeFiles/102_2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/102_2/CMakeFiles/102_2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/102_2/CMakeFiles/102_2.dir/rule
@@ -3368,7 +3592,7 @@ src/102_3/CMakeFiles/102_3.dir/all: external/subprocess/CMakeFiles/subprocess.di
 src/102_3/CMakeFiles/102_3.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/102_3/CMakeFiles/102_3.dir/build.make src/102_3/CMakeFiles/102_3.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/102_3/CMakeFiles/102_3.dir/build.make src/102_3/CMakeFiles/102_3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 102_3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=3 "Built target 102_3"
 .PHONY : src/102_3/CMakeFiles/102_3.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3400,7 +3624,7 @@ src/103/CMakeFiles/103.dir/all: libframework/framework/CMakeFiles/framework.dir/
 
 # Build rule for subdir invocation for target.
 src/103/CMakeFiles/103.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/103/CMakeFiles/103.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/103/CMakeFiles/103.dir/rule
@@ -3422,12 +3646,12 @@ src/103_2/CMakeFiles/103_2.dir/all: external/subprocess/CMakeFiles/subprocess.di
 src/103_2/CMakeFiles/103_2.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/103_2/CMakeFiles/103_2.dir/build.make src/103_2/CMakeFiles/103_2.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/103_2/CMakeFiles/103_2.dir/build.make src/103_2/CMakeFiles/103_2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=5 "Built target 103_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 103_2"
 .PHONY : src/103_2/CMakeFiles/103_2.dir/all
 
 # Build rule for subdir invocation for target.
 src/103_2/CMakeFiles/103_2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/103_2/CMakeFiles/103_2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/103_2/CMakeFiles/103_2.dir/rule
@@ -3449,12 +3673,12 @@ src/121/CMakeFiles/121.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/121/CMakeFiles/121.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/121/CMakeFiles/121.dir/build.make src/121/CMakeFiles/121.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/121/CMakeFiles/121.dir/build.make src/121/CMakeFiles/121.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=7 "Built target 121"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=6 "Built target 121"
 .PHONY : src/121/CMakeFiles/121.dir/all
 
 # Build rule for subdir invocation for target.
 src/121/CMakeFiles/121.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/121/CMakeFiles/121.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/121/CMakeFiles/121.dir/rule
@@ -3476,7 +3700,7 @@ src/199/CMakeFiles/199.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/199/CMakeFiles/199.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/199/CMakeFiles/199.dir/build.make src/199/CMakeFiles/199.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/199/CMakeFiles/199.dir/build.make src/199/CMakeFiles/199.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 199"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=12 "Built target 199"
 .PHONY : src/199/CMakeFiles/199.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3508,7 +3732,7 @@ src/200/CMakeFiles/200.dir/all: libframework/framework/CMakeFiles/framework.dir/
 
 # Build rule for subdir invocation for target.
 src/200/CMakeFiles/200.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/200/CMakeFiles/200.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/200/CMakeFiles/200.dir/rule
@@ -3535,7 +3759,7 @@ src/202_2/CMakeFiles/202_2.dir/all: libframework/framework/CMakeFiles/framework.
 
 # Build rule for subdir invocation for target.
 src/202_2/CMakeFiles/202_2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/202_2/CMakeFiles/202_2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/202_2/CMakeFiles/202_2.dir/rule
@@ -3557,7 +3781,7 @@ src/215/CMakeFiles/215.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/215/CMakeFiles/215.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/215/CMakeFiles/215.dir/build.make src/215/CMakeFiles/215.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/215/CMakeFiles/215.dir/build.make src/215/CMakeFiles/215.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 215"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=15 "Built target 215"
 .PHONY : src/215/CMakeFiles/215.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3589,7 +3813,7 @@ src/236/CMakeFiles/236.dir/all: libframework/framework/CMakeFiles/framework.dir/
 
 # Build rule for subdir invocation for target.
 src/236/CMakeFiles/236.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/236/CMakeFiles/236.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/236/CMakeFiles/236.dir/rule
@@ -3616,7 +3840,7 @@ src/1003/CMakeFiles/1003.dir/all: libframework/framework/CMakeFiles/framework.di
 
 # Build rule for subdir invocation for target.
 src/1003/CMakeFiles/1003.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/1003/CMakeFiles/1003.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/1003/CMakeFiles/1003.dir/rule
@@ -3638,12 +3862,12 @@ src/Copy_structure/CMakeFiles/Copy_structure.dir/all: external/subprocess/CMakeF
 src/Copy_structure/CMakeFiles/Copy_structure.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Copy_structure/CMakeFiles/Copy_structure.dir/build.make src/Copy_structure/CMakeFiles/Copy_structure.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Copy_structure/CMakeFiles/Copy_structure.dir/build.make src/Copy_structure/CMakeFiles/Copy_structure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=28 "Built target Copy_structure"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=27 "Built target Copy_structure"
 .PHONY : src/Copy_structure/CMakeFiles/Copy_structure.dir/all
 
 # Build rule for subdir invocation for target.
 src/Copy_structure/CMakeFiles/Copy_structure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Copy_structure/CMakeFiles/Copy_structure.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/Copy_structure/CMakeFiles/Copy_structure.dir/rule
@@ -3665,12 +3889,12 @@ src/memory_model/CMakeFiles/memory_model.dir/all: external/subprocess/CMakeFiles
 src/memory_model/CMakeFiles/memory_model.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/memory_model/CMakeFiles/memory_model.dir/build.make src/memory_model/CMakeFiles/memory_model.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/memory_model/CMakeFiles/memory_model.dir/build.make src/memory_model/CMakeFiles/memory_model.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=69 "Built target memory_model"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=70 "Built target memory_model"
 .PHONY : src/memory_model/CMakeFiles/memory_model.dir/all
 
 # Build rule for subdir invocation for target.
 src/memory_model/CMakeFiles/memory_model.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/memory_model/CMakeFiles/memory_model.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/memory_model/CMakeFiles/memory_model.dir/rule
@@ -3692,7 +3916,7 @@ src/asio/CMakeFiles/asio.dir/all: external/subprocess/CMakeFiles/subprocess.dir/
 src/asio/CMakeFiles/asio.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/asio/CMakeFiles/asio.dir/build.make src/asio/CMakeFiles/asio.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/asio/CMakeFiles/asio.dir/build.make src/asio/CMakeFiles/asio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target asio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=38 "Built target asio"
 .PHONY : src/asio/CMakeFiles/asio.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3719,12 +3943,12 @@ src/auto/CMakeFiles/auto.dir/all: external/subprocess/CMakeFiles/subprocess.dir/
 src/auto/CMakeFiles/auto.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/auto/CMakeFiles/auto.dir/build.make src/auto/CMakeFiles/auto.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/auto/CMakeFiles/auto.dir/build.make src/auto/CMakeFiles/auto.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=42 "Built target auto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=40 "Built target auto"
 .PHONY : src/auto/CMakeFiles/auto.dir/all
 
 # Build rule for subdir invocation for target.
 src/auto/CMakeFiles/auto.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/auto/CMakeFiles/auto.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/auto/CMakeFiles/auto.dir/rule
@@ -3746,12 +3970,12 @@ src/inline/CMakeFiles/inline.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/inline/CMakeFiles/inline.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/inline/CMakeFiles/inline.dir/build.make src/inline/CMakeFiles/inline.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/inline/CMakeFiles/inline.dir/build.make src/inline/CMakeFiles/inline.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=61 "Built target inline"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=62 "Built target inline"
 .PHONY : src/inline/CMakeFiles/inline.dir/all
 
 # Build rule for subdir invocation for target.
 src/inline/CMakeFiles/inline.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/inline/CMakeFiles/inline.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/inline/CMakeFiles/inline.dir/rule
@@ -3773,12 +3997,12 @@ src/any/CMakeFiles/any.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/any/CMakeFiles/any.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/any/CMakeFiles/any.dir/build.make src/any/CMakeFiles/any.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/any/CMakeFiles/any.dir/build.make src/any/CMakeFiles/any.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=37 "Built target any"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=36 "Built target any"
 .PHONY : src/any/CMakeFiles/any.dir/all
 
 # Build rule for subdir invocation for target.
 src/any/CMakeFiles/any.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/any/CMakeFiles/any.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/any/CMakeFiles/any.dir/rule
@@ -3800,12 +4024,12 @@ src/backtrace/CMakeFiles/backtrace.dir/all: external/subprocess/CMakeFiles/subpr
 src/backtrace/CMakeFiles/backtrace.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/backtrace/CMakeFiles/backtrace.dir/build.make src/backtrace/CMakeFiles/backtrace.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/backtrace/CMakeFiles/backtrace.dir/build.make src/backtrace/CMakeFiles/backtrace.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=43 "Built target backtrace"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=41 "Built target backtrace"
 .PHONY : src/backtrace/CMakeFiles/backtrace.dir/all
 
 # Build rule for subdir invocation for target.
 src/backtrace/CMakeFiles/backtrace.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/backtrace/CMakeFiles/backtrace.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/backtrace/CMakeFiles/backtrace.dir/rule
@@ -3827,12 +4051,12 @@ src/DNS/CMakeFiles/DNS.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/DNS/CMakeFiles/DNS.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/DNS/CMakeFiles/DNS.dir/build.make src/DNS/CMakeFiles/DNS.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/DNS/CMakeFiles/DNS.dir/build.make src/DNS/CMakeFiles/DNS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=29 "Built target DNS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=28 "Built target DNS"
 .PHONY : src/DNS/CMakeFiles/DNS.dir/all
 
 # Build rule for subdir invocation for target.
 src/DNS/CMakeFiles/DNS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/DNS/CMakeFiles/DNS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/DNS/CMakeFiles/DNS.dir/rule
@@ -3854,12 +4078,12 @@ src/enableShard/CMakeFiles/enableShard.dir/all: external/subprocess/CMakeFiles/s
 src/enableShard/CMakeFiles/enableShard.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/enableShard/CMakeFiles/enableShard.dir/build.make src/enableShard/CMakeFiles/enableShard.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/enableShard/CMakeFiles/enableShard.dir/build.make src/enableShard/CMakeFiles/enableShard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=49 "Built target enableShard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target enableShard"
 .PHONY : src/enableShard/CMakeFiles/enableShard.dir/all
 
 # Build rule for subdir invocation for target.
 src/enableShard/CMakeFiles/enableShard.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/enableShard/CMakeFiles/enableShard.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/enableShard/CMakeFiles/enableShard.dir/rule
@@ -3881,12 +4105,12 @@ src/fstream/CMakeFiles/fstream.dir/all: external/subprocess/CMakeFiles/subproces
 src/fstream/CMakeFiles/fstream.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/fstream/CMakeFiles/fstream.dir/build.make src/fstream/CMakeFiles/fstream.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/fstream/CMakeFiles/fstream.dir/build.make src/fstream/CMakeFiles/fstream.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=58 "Built target fstream"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=55 "Built target fstream"
 .PHONY : src/fstream/CMakeFiles/fstream.dir/all
 
 # Build rule for subdir invocation for target.
 src/fstream/CMakeFiles/fstream.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/fstream/CMakeFiles/fstream.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/fstream/CMakeFiles/fstream.dir/rule
@@ -3908,7 +4132,7 @@ src/memory/CMakeFiles/memory.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/memory/CMakeFiles/memory.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/memory/CMakeFiles/memory.dir/build.make src/memory/CMakeFiles/memory.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/memory/CMakeFiles/memory.dir/build.make src/memory/CMakeFiles/memory.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target memory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=69 "Built target memory"
 .PHONY : src/memory/CMakeFiles/memory.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3935,12 +4159,12 @@ src/new/CMakeFiles/new.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/new/CMakeFiles/new.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/new/CMakeFiles/new.dir/build.make src/new/CMakeFiles/new.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/new/CMakeFiles/new.dir/build.make src/new/CMakeFiles/new.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=70 "Built target new"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target new"
 .PHONY : src/new/CMakeFiles/new.dir/all
 
 # Build rule for subdir invocation for target.
 src/new/CMakeFiles/new.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/new/CMakeFiles/new.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/new/CMakeFiles/new.dir/rule
@@ -3967,7 +4191,7 @@ src/regex/CMakeFiles/regex.dir/all: libframework/framework/CMakeFiles/framework.
 
 # Build rule for subdir invocation for target.
 src/regex/CMakeFiles/regex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/regex/CMakeFiles/regex.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/regex/CMakeFiles/regex.dir/rule
@@ -3989,12 +4213,12 @@ src/sharedPtr/CMakeFiles/sharedPtr.dir/all: external/subprocess/CMakeFiles/subpr
 src/sharedPtr/CMakeFiles/sharedPtr.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/sharedPtr/CMakeFiles/sharedPtr.dir/build.make src/sharedPtr/CMakeFiles/sharedPtr.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/sharedPtr/CMakeFiles/sharedPtr.dir/build.make src/sharedPtr/CMakeFiles/sharedPtr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=81 "Built target sharedPtr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target sharedPtr"
 .PHONY : src/sharedPtr/CMakeFiles/sharedPtr.dir/all
 
 # Build rule for subdir invocation for target.
 src/sharedPtr/CMakeFiles/sharedPtr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sharedPtr/CMakeFiles/sharedPtr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/sharedPtr/CMakeFiles/sharedPtr.dir/rule
@@ -4016,12 +4240,12 @@ src/sqlite3/CMakeFiles/sqlite.dir/all: external/subprocess/CMakeFiles/subprocess
 src/sqlite3/CMakeFiles/sqlite.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/sqlite3/CMakeFiles/sqlite.dir/build.make src/sqlite3/CMakeFiles/sqlite.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/sqlite3/CMakeFiles/sqlite.dir/build.make src/sqlite3/CMakeFiles/sqlite.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=84 "Built target sqlite"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target sqlite"
 .PHONY : src/sqlite3/CMakeFiles/sqlite.dir/all
 
 # Build rule for subdir invocation for target.
 src/sqlite3/CMakeFiles/sqlite.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sqlite3/CMakeFiles/sqlite.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/sqlite3/CMakeFiles/sqlite.dir/rule
@@ -4043,7 +4267,7 @@ src/syslog/CMakeFiles/syslog.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/syslog/CMakeFiles/syslog.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/syslog/CMakeFiles/syslog.dir/build.make src/syslog/CMakeFiles/syslog.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/syslog/CMakeFiles/syslog.dir/build.make src/syslog/CMakeFiles/syslog.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target syslog"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=92 "Built target syslog"
 .PHONY : src/syslog/CMakeFiles/syslog.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4070,12 +4294,12 @@ src/ThreadPool/CMakeFiles/ThreadPool.dir/all: external/subprocess/CMakeFiles/sub
 src/ThreadPool/CMakeFiles/ThreadPool.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/ThreadPool/CMakeFiles/ThreadPool.dir/build.make src/ThreadPool/CMakeFiles/ThreadPool.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/ThreadPool/CMakeFiles/ThreadPool.dir/build.make src/ThreadPool/CMakeFiles/ThreadPool.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=33 "Built target ThreadPool"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=32 "Built target ThreadPool"
 .PHONY : src/ThreadPool/CMakeFiles/ThreadPool.dir/all
 
 # Build rule for subdir invocation for target.
 src/ThreadPool/CMakeFiles/ThreadPool.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/ThreadPool/CMakeFiles/ThreadPool.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/ThreadPool/CMakeFiles/ThreadPool.dir/rule
@@ -4097,12 +4321,12 @@ src/TimerTest/CMakeFiles/TimerTest.dir/all: external/subprocess/CMakeFiles/subpr
 src/TimerTest/CMakeFiles/TimerTest.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/TimerTest/CMakeFiles/TimerTest.dir/build.make src/TimerTest/CMakeFiles/TimerTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/TimerTest/CMakeFiles/TimerTest.dir/build.make src/TimerTest/CMakeFiles/TimerTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=35 "Built target TimerTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=34 "Built target TimerTest"
 .PHONY : src/TimerTest/CMakeFiles/TimerTest.dir/all
 
 # Build rule for subdir invocation for target.
 src/TimerTest/CMakeFiles/TimerTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/TimerTest/CMakeFiles/TimerTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/TimerTest/CMakeFiles/TimerTest.dir/rule
@@ -4124,12 +4348,12 @@ src/tuple/CMakeFiles/tuple.dir/all: external/subprocess/CMakeFiles/subprocess.di
 src/tuple/CMakeFiles/tuple.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/tuple/CMakeFiles/tuple.dir/build.make src/tuple/CMakeFiles/tuple.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/tuple/CMakeFiles/tuple.dir/build.make src/tuple/CMakeFiles/tuple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=94 "Built target tuple"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=93 "Built target tuple"
 .PHONY : src/tuple/CMakeFiles/tuple.dir/all
 
 # Build rule for subdir invocation for target.
 src/tuple/CMakeFiles/tuple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/tuple/CMakeFiles/tuple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/tuple/CMakeFiles/tuple.dir/rule
@@ -4156,7 +4380,7 @@ src/reference_wrapper/CMakeFiles/reference_wrapper.dir/all: libframework/framewo
 
 # Build rule for subdir invocation for target.
 src/reference_wrapper/CMakeFiles/reference_wrapper.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/reference_wrapper/CMakeFiles/reference_wrapper.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/reference_wrapper/CMakeFiles/reference_wrapper.dir/rule
@@ -4178,7 +4402,7 @@ src/unordered_set/CMakeFiles/unordered_set.dir/all: external/subprocess/CMakeFil
 src/unordered_set/CMakeFiles/unordered_set.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/unordered_set/CMakeFiles/unordered_set.dir/build.make src/unordered_set/CMakeFiles/unordered_set.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/unordered_set/CMakeFiles/unordered_set.dir/build.make src/unordered_set/CMakeFiles/unordered_set.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target unordered_set"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=97 "Built target unordered_set"
 .PHONY : src/unordered_set/CMakeFiles/unordered_set.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4205,12 +4429,12 @@ src/type/CMakeFiles/type.dir/all: external/subprocess/CMakeFiles/subprocess.dir/
 src/type/CMakeFiles/type.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/type/CMakeFiles/type.dir/build.make src/type/CMakeFiles/type.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/type/CMakeFiles/type.dir/build.make src/type/CMakeFiles/type.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=95 "Built target type"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=94 "Built target type"
 .PHONY : src/type/CMakeFiles/type.dir/all
 
 # Build rule for subdir invocation for target.
 src/type/CMakeFiles/type.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/type/CMakeFiles/type.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/type/CMakeFiles/type.dir/rule
@@ -4232,12 +4456,12 @@ src/typeid/CMakeFiles/typeid.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/typeid/CMakeFiles/typeid.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/typeid/CMakeFiles/typeid.dir/build.make src/typeid/CMakeFiles/typeid.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/typeid/CMakeFiles/typeid.dir/build.make src/typeid/CMakeFiles/typeid.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=96 "Built target typeid"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=95 "Built target typeid"
 .PHONY : src/typeid/CMakeFiles/typeid.dir/all
 
 # Build rule for subdir invocation for target.
 src/typeid/CMakeFiles/typeid.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/typeid/CMakeFiles/typeid.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/typeid/CMakeFiles/typeid.dir/rule
@@ -4259,12 +4483,12 @@ src/getline/CMakeFiles/getline.dir/all: external/subprocess/CMakeFiles/subproces
 src/getline/CMakeFiles/getline.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/getline/CMakeFiles/getline.dir/build.make src/getline/CMakeFiles/getline.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/getline/CMakeFiles/getline.dir/build.make src/getline/CMakeFiles/getline.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=60 "Built target getline"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target getline"
 .PHONY : src/getline/CMakeFiles/getline.dir/all
 
 # Build rule for subdir invocation for target.
 src/getline/CMakeFiles/getline.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/getline/CMakeFiles/getline.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/getline/CMakeFiles/getline.dir/rule
@@ -4291,7 +4515,7 @@ src/json/CMakeFiles/json.dir/all: libframework/framework/CMakeFiles/framework.di
 
 # Build rule for subdir invocation for target.
 src/json/CMakeFiles/json.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/json/CMakeFiles/json.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/json/CMakeFiles/json.dir/rule
@@ -4318,7 +4542,7 @@ src/Variable_parameter_template/CMakeFiles/Variable_parameter_template.dir/all: 
 
 # Build rule for subdir invocation for target.
 src/Variable_parameter_template/CMakeFiles/Variable_parameter_template.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Variable_parameter_template/CMakeFiles/Variable_parameter_template.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/Variable_parameter_template/CMakeFiles/Variable_parameter_template.dir/rule
@@ -4340,12 +4564,12 @@ src/sizeof.../CMakeFiles/sizeof....dir/all: external/subprocess/CMakeFiles/subpr
 src/sizeof.../CMakeFiles/sizeof....dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/sizeof.../CMakeFiles/sizeof....dir/build.make src/sizeof.../CMakeFiles/sizeof....dir/depend
 	$(MAKE) $(MAKESILENT) -f src/sizeof.../CMakeFiles/sizeof....dir/build.make src/sizeof.../CMakeFiles/sizeof....dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=82 "Built target sizeof..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=81 "Built target sizeof..."
 .PHONY : src/sizeof.../CMakeFiles/sizeof....dir/all
 
 # Build rule for subdir invocation for target.
 src/sizeof.../CMakeFiles/sizeof....dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sizeof.../CMakeFiles/sizeof....dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/sizeof.../CMakeFiles/sizeof....dir/rule
@@ -4367,12 +4591,12 @@ src/folded_expression/CMakeFiles/folded_expression.dir/all: external/subprocess/
 src/folded_expression/CMakeFiles/folded_expression.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/folded_expression/CMakeFiles/folded_expression.dir/build.make src/folded_expression/CMakeFiles/folded_expression.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/folded_expression/CMakeFiles/folded_expression.dir/build.make src/folded_expression/CMakeFiles/folded_expression.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=51 "Built target folded_expression"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target folded_expression"
 .PHONY : src/folded_expression/CMakeFiles/folded_expression.dir/all
 
 # Build rule for subdir invocation for target.
 src/folded_expression/CMakeFiles/folded_expression.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/folded_expression/CMakeFiles/folded_expression.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/folded_expression/CMakeFiles/folded_expression.dir/rule
@@ -4394,12 +4618,12 @@ src/folded_expression2/CMakeFiles/folded_expression2.dir/all: external/subproces
 src/folded_expression2/CMakeFiles/folded_expression2.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/folded_expression2/CMakeFiles/folded_expression2.dir/build.make src/folded_expression2/CMakeFiles/folded_expression2.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/folded_expression2/CMakeFiles/folded_expression2.dir/build.make src/folded_expression2/CMakeFiles/folded_expression2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=52 "Built target folded_expression2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=49 "Built target folded_expression2"
 .PHONY : src/folded_expression2/CMakeFiles/folded_expression2.dir/all
 
 # Build rule for subdir invocation for target.
 src/folded_expression2/CMakeFiles/folded_expression2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/folded_expression2/CMakeFiles/folded_expression2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/folded_expression2/CMakeFiles/folded_expression2.dir/rule
@@ -4421,7 +4645,7 @@ src/fold_expression_empty_packet_processing/CMakeFiles/fold_expression_empty_pac
 src/fold_expression_empty_packet_processing/CMakeFiles/fold_expression_empty_packet_processing.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/fold_expression_empty_packet_processing/CMakeFiles/fold_expression_empty_packet_processing.dir/build.make src/fold_expression_empty_packet_processing/CMakeFiles/fold_expression_empty_packet_processing.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/fold_expression_empty_packet_processing/CMakeFiles/fold_expression_empty_packet_processing.dir/build.make src/fold_expression_empty_packet_processing/CMakeFiles/fold_expression_empty_packet_processing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target fold_expression_empty_packet_processing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=48 "Built target fold_expression_empty_packet_processing"
 .PHONY : src/fold_expression_empty_packet_processing/CMakeFiles/fold_expression_empty_packet_processing.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4448,12 +4672,12 @@ src/class_template/CMakeFiles/class_template.dir/all: external/subprocess/CMakeF
 src/class_template/CMakeFiles/class_template.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/class_template/CMakeFiles/class_template.dir/build.make src/class_template/CMakeFiles/class_template.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/class_template/CMakeFiles/class_template.dir/build.make src/class_template/CMakeFiles/class_template.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=47 "Built target class_template"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=44 "Built target class_template"
 .PHONY : src/class_template/CMakeFiles/class_template.dir/all
 
 # Build rule for subdir invocation for target.
 src/class_template/CMakeFiles/class_template.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/class_template/CMakeFiles/class_template.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/class_template/CMakeFiles/class_template.dir/rule
@@ -4480,7 +4704,7 @@ src/visit_struct/CMakeFiles/visit_struct.dir/all: libframework/framework/CMakeFi
 
 # Build rule for subdir invocation for target.
 src/visit_struct/CMakeFiles/visit_struct.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/visit_struct/CMakeFiles/visit_struct.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/visit_struct/CMakeFiles/visit_struct.dir/rule
@@ -4507,7 +4731,7 @@ src/optional/CMakeFiles/optional.dir/all: libframework/framework/CMakeFiles/fram
 
 # Build rule for subdir invocation for target.
 src/optional/CMakeFiles/optional.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/optional/CMakeFiles/optional.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/optional/CMakeFiles/optional.dir/rule
@@ -4529,7 +4753,7 @@ src/sscanf/CMakeFiles/sscanf.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/sscanf/CMakeFiles/sscanf.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/sscanf/CMakeFiles/sscanf.dir/build.make src/sscanf/CMakeFiles/sscanf.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/sscanf/CMakeFiles/sscanf.dir/build.make src/sscanf/CMakeFiles/sscanf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target sscanf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=83 "Built target sscanf"
 .PHONY : src/sscanf/CMakeFiles/sscanf.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4561,7 +4785,7 @@ src/popen/CMakeFiles/popen.dir/all: libframework/framework/CMakeFiles/framework.
 
 # Build rule for subdir invocation for target.
 src/popen/CMakeFiles/popen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/popen/CMakeFiles/popen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/popen/CMakeFiles/popen.dir/rule
@@ -4583,12 +4807,12 @@ src/gcovr/CMakeFiles/gcovr.dir/all: external/subprocess/CMakeFiles/subprocess.di
 src/gcovr/CMakeFiles/gcovr.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/gcovr/CMakeFiles/gcovr.dir/build.make src/gcovr/CMakeFiles/gcovr.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/gcovr/CMakeFiles/gcovr.dir/build.make src/gcovr/CMakeFiles/gcovr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=59 "Built target gcovr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=56 "Built target gcovr"
 .PHONY : src/gcovr/CMakeFiles/gcovr.dir/all
 
 # Build rule for subdir invocation for target.
 src/gcovr/CMakeFiles/gcovr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/gcovr/CMakeFiles/gcovr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/gcovr/CMakeFiles/gcovr.dir/rule
@@ -4610,12 +4834,12 @@ src/async/CMakeFiles/async.dir/all: external/subprocess/CMakeFiles/subprocess.di
 src/async/CMakeFiles/async.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/async/CMakeFiles/async.dir/build.make src/async/CMakeFiles/async.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/async/CMakeFiles/async.dir/build.make src/async/CMakeFiles/async.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=40 "Built target async"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=39 "Built target async"
 .PHONY : src/async/CMakeFiles/async.dir/all
 
 # Build rule for subdir invocation for target.
 src/async/CMakeFiles/async.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/async/CMakeFiles/async.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/async/CMakeFiles/async.dir/rule
@@ -4637,12 +4861,12 @@ src/inlineStatic/CMakeFiles/inlineStatic.dir/all: external/subprocess/CMakeFiles
 src/inlineStatic/CMakeFiles/inlineStatic.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/inlineStatic/CMakeFiles/inlineStatic.dir/build.make src/inlineStatic/CMakeFiles/inlineStatic.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/inlineStatic/CMakeFiles/inlineStatic.dir/build.make src/inlineStatic/CMakeFiles/inlineStatic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=62 "Built target inlineStatic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=63 "Built target inlineStatic"
 .PHONY : src/inlineStatic/CMakeFiles/inlineStatic.dir/all
 
 # Build rule for subdir invocation for target.
 src/inlineStatic/CMakeFiles/inlineStatic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/inlineStatic/CMakeFiles/inlineStatic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/inlineStatic/CMakeFiles/inlineStatic.dir/rule
@@ -4664,7 +4888,7 @@ src/gtest/CMakeFiles/gtest.dir/all: external/subprocess/CMakeFiles/subprocess.di
 src/gtest/CMakeFiles/gtest.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/gtest/CMakeFiles/gtest.dir/build.make src/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/gtest/CMakeFiles/gtest.dir/build.make src/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=57 "Built target gtest"
 .PHONY : src/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4691,7 +4915,7 @@ src/dbg/CMakeFiles/dbg.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/dbg/CMakeFiles/dbg.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/dbg/CMakeFiles/dbg.dir/build.make src/dbg/CMakeFiles/dbg.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/dbg/CMakeFiles/dbg.dir/build.make src/dbg/CMakeFiles/dbg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target dbg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=45 "Built target dbg"
 .PHONY : src/dbg/CMakeFiles/dbg.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4718,12 +4942,12 @@ src/boostLambda/CMakeFiles/boostLambda.dir/all: external/subprocess/CMakeFiles/s
 src/boostLambda/CMakeFiles/boostLambda.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/boostLambda/CMakeFiles/boostLambda.dir/build.make src/boostLambda/CMakeFiles/boostLambda.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/boostLambda/CMakeFiles/boostLambda.dir/build.make src/boostLambda/CMakeFiles/boostLambda.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=44 "Built target boostLambda"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=42 "Built target boostLambda"
 .PHONY : src/boostLambda/CMakeFiles/boostLambda.dir/all
 
 # Build rule for subdir invocation for target.
 src/boostLambda/CMakeFiles/boostLambda.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/boostLambda/CMakeFiles/boostLambda.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/boostLambda/CMakeFiles/boostLambda.dir/rule
@@ -4745,12 +4969,12 @@ src/sqlit3pp/CMakeFiles/sqlit3pp.dir/all: external/subprocess/CMakeFiles/subproc
 src/sqlit3pp/CMakeFiles/sqlit3pp.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/sqlit3pp/CMakeFiles/sqlit3pp.dir/build.make src/sqlit3pp/CMakeFiles/sqlit3pp.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/sqlit3pp/CMakeFiles/sqlit3pp.dir/build.make src/sqlit3pp/CMakeFiles/sqlit3pp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=83 "Built target sqlit3pp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=82 "Built target sqlit3pp"
 .PHONY : src/sqlit3pp/CMakeFiles/sqlit3pp.dir/all
 
 # Build rule for subdir invocation for target.
 src/sqlit3pp/CMakeFiles/sqlit3pp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sqlit3pp/CMakeFiles/sqlit3pp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/sqlit3pp/CMakeFiles/sqlit3pp.dir/rule
@@ -4772,12 +4996,12 @@ src/invocable/CMakeFiles/invocable.dir/all: external/subprocess/CMakeFiles/subpr
 src/invocable/CMakeFiles/invocable.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/invocable/CMakeFiles/invocable.dir/build.make src/invocable/CMakeFiles/invocable.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/invocable/CMakeFiles/invocable.dir/build.make src/invocable/CMakeFiles/invocable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=63 "Built target invocable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target invocable"
 .PHONY : src/invocable/CMakeFiles/invocable.dir/all
 
 # Build rule for subdir invocation for target.
 src/invocable/CMakeFiles/invocable.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/invocable/CMakeFiles/invocable.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/invocable/CMakeFiles/invocable.dir/rule
@@ -4804,7 +5028,7 @@ src/promise/CMakeFiles/promise.dir/all: libframework/framework/CMakeFiles/framew
 
 # Build rule for subdir invocation for target.
 src/promise/CMakeFiles/promise.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/promise/CMakeFiles/promise.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/promise/CMakeFiles/promise.dir/rule
@@ -4826,12 +5050,12 @@ src/packaged_task/CMakeFiles/packaged_task.dir/all: external/subprocess/CMakeFil
 src/packaged_task/CMakeFiles/packaged_task.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/packaged_task/CMakeFiles/packaged_task.dir/build.make src/packaged_task/CMakeFiles/packaged_task.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/packaged_task/CMakeFiles/packaged_task.dir/build.make src/packaged_task/CMakeFiles/packaged_task.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=73 "Built target packaged_task"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target packaged_task"
 .PHONY : src/packaged_task/CMakeFiles/packaged_task.dir/all
 
 # Build rule for subdir invocation for target.
 src/packaged_task/CMakeFiles/packaged_task.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/packaged_task/CMakeFiles/packaged_task.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/packaged_task/CMakeFiles/packaged_task.dir/rule
@@ -4853,7 +5077,7 @@ src/libevent/CMakeFiles/libevent.dir/all: external/subprocess/CMakeFiles/subproc
 src/libevent/CMakeFiles/libevent.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/libevent/CMakeFiles/libevent.dir/build.make src/libevent/CMakeFiles/libevent.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/libevent/CMakeFiles/libevent.dir/build.make src/libevent/CMakeFiles/libevent.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target libevent"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=65 "Built target libevent"
 .PHONY : src/libevent/CMakeFiles/libevent.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4880,12 +5104,12 @@ src/looper/CMakeFiles/looper.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/looper/CMakeFiles/looper.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/looper/CMakeFiles/looper.dir/build.make src/looper/CMakeFiles/looper.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/looper/CMakeFiles/looper.dir/build.make src/looper/CMakeFiles/looper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=66 "Built target looper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=67 "Built target looper"
 .PHONY : src/looper/CMakeFiles/looper.dir/all
 
 # Build rule for subdir invocation for target.
 src/looper/CMakeFiles/looper.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/looper/CMakeFiles/looper.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/looper/CMakeFiles/looper.dir/rule
@@ -4907,12 +5131,12 @@ src/rpc_client/CMakeFiles/rpc_client.dir/all: external/subprocess/CMakeFiles/sub
 src/rpc_client/CMakeFiles/rpc_client.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/rpc_client/CMakeFiles/rpc_client.dir/build.make src/rpc_client/CMakeFiles/rpc_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/rpc_client/CMakeFiles/rpc_client.dir/build.make src/rpc_client/CMakeFiles/rpc_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=80 "Built target rpc_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=79 "Built target rpc_client"
 .PHONY : src/rpc_client/CMakeFiles/rpc_client.dir/all
 
 # Build rule for subdir invocation for target.
 src/rpc_client/CMakeFiles/rpc_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/rpc_client/CMakeFiles/rpc_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/rpc_client/CMakeFiles/rpc_client.dir/rule
@@ -4934,12 +5158,12 @@ src/vec/CMakeFiles/vec.dir/all: external/subprocess/CMakeFiles/subprocess.dir/al
 src/vec/CMakeFiles/vec.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/vec/CMakeFiles/vec.dir/build.make src/vec/CMakeFiles/vec.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/vec/CMakeFiles/vec.dir/build.make src/vec/CMakeFiles/vec.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=97 "Built target vec"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target vec"
 .PHONY : src/vec/CMakeFiles/vec.dir/all
 
 # Build rule for subdir invocation for target.
 src/vec/CMakeFiles/vec.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/vec/CMakeFiles/vec.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/vec/CMakeFiles/vec.dir/rule
@@ -4961,12 +5185,12 @@ src/stream/CMakeFiles/stream.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/stream/CMakeFiles/stream.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/stream/CMakeFiles/stream.dir/build.make src/stream/CMakeFiles/stream.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/stream/CMakeFiles/stream.dir/build.make src/stream/CMakeFiles/stream.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=86 "Built target stream"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=85 "Built target stream"
 .PHONY : src/stream/CMakeFiles/stream.dir/all
 
 # Build rule for subdir invocation for target.
 src/stream/CMakeFiles/stream.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/stream/CMakeFiles/stream.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/stream/CMakeFiles/stream.dir/rule
@@ -4988,12 +5212,12 @@ src/threadTest/CMakeFiles/threadTest.dir/all: external/subprocess/CMakeFiles/sub
 src/threadTest/CMakeFiles/threadTest.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/threadTest/CMakeFiles/threadTest.dir/build.make src/threadTest/CMakeFiles/threadTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/threadTest/CMakeFiles/threadTest.dir/build.make src/threadTest/CMakeFiles/threadTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=93 "Built target threadTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target threadTest"
 .PHONY : src/threadTest/CMakeFiles/threadTest.dir/all
 
 # Build rule for subdir invocation for target.
 src/threadTest/CMakeFiles/threadTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/threadTest/CMakeFiles/threadTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/threadTest/CMakeFiles/threadTest.dir/rule
@@ -5015,7 +5239,7 @@ src/runableHandlerTest/CMakeFiles/runableHandlerTest.dir/all: external/subproces
 src/runableHandlerTest/CMakeFiles/runableHandlerTest.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/runableHandlerTest/CMakeFiles/runableHandlerTest.dir/build.make src/runableHandlerTest/CMakeFiles/runableHandlerTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/runableHandlerTest/CMakeFiles/runableHandlerTest.dir/build.make src/runableHandlerTest/CMakeFiles/runableHandlerTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target runableHandlerTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=80 "Built target runableHandlerTest"
 .PHONY : src/runableHandlerTest/CMakeFiles/runableHandlerTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5042,12 +5266,12 @@ src/string/CMakeFiles/string.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/string/CMakeFiles/string.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/string/CMakeFiles/string.dir/build.make src/string/CMakeFiles/string.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/string/CMakeFiles/string.dir/build.make src/string/CMakeFiles/string.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=87 "Built target string"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target string"
 .PHONY : src/string/CMakeFiles/string.dir/all
 
 # Build rule for subdir invocation for target.
 src/string/CMakeFiles/string.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/string/CMakeFiles/string.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/string/CMakeFiles/string.dir/rule
@@ -5069,7 +5293,7 @@ src/overload/CMakeFiles/overload.dir/all: external/subprocess/CMakeFiles/subproc
 src/overload/CMakeFiles/overload.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/overload/CMakeFiles/overload.dir/build.make src/overload/CMakeFiles/overload.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/overload/CMakeFiles/overload.dir/build.make src/overload/CMakeFiles/overload.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target overload"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=73 "Built target overload"
 .PHONY : src/overload/CMakeFiles/overload.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5096,12 +5320,12 @@ src/quoted/CMakeFiles/quoted.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/quoted/CMakeFiles/quoted.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/quoted/CMakeFiles/quoted.dir/build.make src/quoted/CMakeFiles/quoted.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/quoted/CMakeFiles/quoted.dir/build.make src/quoted/CMakeFiles/quoted.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=76 "Built target quoted"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target quoted"
 .PHONY : src/quoted/CMakeFiles/quoted.dir/all
 
 # Build rule for subdir invocation for target.
 src/quoted/CMakeFiles/quoted.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/quoted/CMakeFiles/quoted.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/quoted/CMakeFiles/quoted.dir/rule
@@ -5123,12 +5347,12 @@ src/as_bytes/CMakeFiles/as_bytes.dir/all: external/subprocess/CMakeFiles/subproc
 src/as_bytes/CMakeFiles/as_bytes.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/as_bytes/CMakeFiles/as_bytes.dir/build.make src/as_bytes/CMakeFiles/as_bytes.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/as_bytes/CMakeFiles/as_bytes.dir/build.make src/as_bytes/CMakeFiles/as_bytes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=38 "Built target as_bytes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target as_bytes"
 .PHONY : src/as_bytes/CMakeFiles/as_bytes.dir/all
 
 # Build rule for subdir invocation for target.
 src/as_bytes/CMakeFiles/as_bytes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/as_bytes/CMakeFiles/as_bytes.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/as_bytes/CMakeFiles/as_bytes.dir/rule
@@ -5150,12 +5374,12 @@ src/atomic/CMakeFiles/atomic.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/atomic/CMakeFiles/atomic.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/atomic/CMakeFiles/atomic.dir/build.make src/atomic/CMakeFiles/atomic.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/atomic/CMakeFiles/atomic.dir/build.make src/atomic/CMakeFiles/atomic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=41 "Built target atomic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target atomic"
 .PHONY : src/atomic/CMakeFiles/atomic.dir/all
 
 # Build rule for subdir invocation for target.
 src/atomic/CMakeFiles/atomic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/atomic/CMakeFiles/atomic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/atomic/CMakeFiles/atomic.dir/rule
@@ -5182,7 +5406,7 @@ src/boolalpha/CMakeFiles/boolalpha.dir/all: libframework/framework/CMakeFiles/fr
 
 # Build rule for subdir invocation for target.
 src/boolalpha/CMakeFiles/boolalpha.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/boolalpha/CMakeFiles/boolalpha.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/boolalpha/CMakeFiles/boolalpha.dir/rule
@@ -5204,12 +5428,12 @@ src/match_format/CMakeFiles/match_format.dir/all: external/subprocess/CMakeFiles
 src/match_format/CMakeFiles/match_format.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/match_format/CMakeFiles/match_format.dir/build.make src/match_format/CMakeFiles/match_format.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/match_format/CMakeFiles/match_format.dir/build.make src/match_format/CMakeFiles/match_format.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=67 "Built target match_format"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=68 "Built target match_format"
 .PHONY : src/match_format/CMakeFiles/match_format.dir/all
 
 # Build rule for subdir invocation for target.
 src/match_format/CMakeFiles/match_format.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/match_format/CMakeFiles/match_format.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/match_format/CMakeFiles/match_format.dir/rule
@@ -5231,12 +5455,12 @@ src/locale/CMakeFiles/locale.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/locale/CMakeFiles/locale.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/locale/CMakeFiles/locale.dir/build.make src/locale/CMakeFiles/locale.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/locale/CMakeFiles/locale.dir/build.make src/locale/CMakeFiles/locale.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=65 "Built target locale"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target locale"
 .PHONY : src/locale/CMakeFiles/locale.dir/all
 
 # Build rule for subdir invocation for target.
 src/locale/CMakeFiles/locale.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/locale/CMakeFiles/locale.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/locale/CMakeFiles/locale.dir/rule
@@ -5258,12 +5482,12 @@ src/strategy/CMakeFiles/strategy.dir/all: external/subprocess/CMakeFiles/subproc
 src/strategy/CMakeFiles/strategy.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/strategy/CMakeFiles/strategy.dir/build.make src/strategy/CMakeFiles/strategy.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/strategy/CMakeFiles/strategy.dir/build.make src/strategy/CMakeFiles/strategy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=85 "Built target strategy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=84 "Built target strategy"
 .PHONY : src/strategy/CMakeFiles/strategy.dir/all
 
 # Build rule for subdir invocation for target.
 src/strategy/CMakeFiles/strategy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/strategy/CMakeFiles/strategy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/strategy/CMakeFiles/strategy.dir/rule
@@ -5285,7 +5509,7 @@ src/Observer/CMakeFiles/Observer.dir/all: external/subprocess/CMakeFiles/subproc
 src/Observer/CMakeFiles/Observer.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Observer/CMakeFiles/Observer.dir/build.make src/Observer/CMakeFiles/Observer.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Observer/CMakeFiles/Observer.dir/build.make src/Observer/CMakeFiles/Observer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target Observer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=31 "Built target Observer"
 .PHONY : src/Observer/CMakeFiles/Observer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5312,12 +5536,12 @@ src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/all: external
 src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/build.make src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/build.make src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=50 "Built target enable_shared_from_this"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=47 "Built target enable_shared_from_this"
 .PHONY : src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/all
 
 # Build rule for subdir invocation for target.
 src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/rule
@@ -5339,12 +5563,12 @@ src/from_chars/CMakeFiles/from_chars.dir/all: external/subprocess/CMakeFiles/sub
 src/from_chars/CMakeFiles/from_chars.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/from_chars/CMakeFiles/from_chars.dir/build.make src/from_chars/CMakeFiles/from_chars.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/from_chars/CMakeFiles/from_chars.dir/build.make src/from_chars/CMakeFiles/from_chars.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=57 "Built target from_chars"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=54 "Built target from_chars"
 .PHONY : src/from_chars/CMakeFiles/from_chars.dir/all
 
 # Build rule for subdir invocation for target.
 src/from_chars/CMakeFiles/from_chars.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/from_chars/CMakeFiles/from_chars.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/from_chars/CMakeFiles/from_chars.dir/rule
@@ -5366,12 +5590,12 @@ src/mem_fn/CMakeFiles/mem_fn.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/mem_fn/CMakeFiles/mem_fn.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/mem_fn/CMakeFiles/mem_fn.dir/build.make src/mem_fn/CMakeFiles/mem_fn.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/mem_fn/CMakeFiles/mem_fn.dir/build.make src/mem_fn/CMakeFiles/mem_fn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=68 "Built target mem_fn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target mem_fn"
 .PHONY : src/mem_fn/CMakeFiles/mem_fn.dir/all
 
 # Build rule for subdir invocation for target.
 src/mem_fn/CMakeFiles/mem_fn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mem_fn/CMakeFiles/mem_fn.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/mem_fn/CMakeFiles/mem_fn.dir/rule
@@ -5393,12 +5617,12 @@ src/chrnon/CMakeFiles/chrnon.dir/all: external/subprocess/CMakeFiles/subprocess.
 src/chrnon/CMakeFiles/chrnon.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/chrnon/CMakeFiles/chrnon.dir/build.make src/chrnon/CMakeFiles/chrnon.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/chrnon/CMakeFiles/chrnon.dir/build.make src/chrnon/CMakeFiles/chrnon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=46 "Built target chrnon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target chrnon"
 .PHONY : src/chrnon/CMakeFiles/chrnon.dir/all
 
 # Build rule for subdir invocation for target.
 src/chrnon/CMakeFiles/chrnon.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/chrnon/CMakeFiles/chrnon.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/chrnon/CMakeFiles/chrnon.dir/rule
@@ -5420,12 +5644,12 @@ src/char/CMakeFiles/char.dir/all: external/subprocess/CMakeFiles/subprocess.dir/
 src/char/CMakeFiles/char.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/char/CMakeFiles/char.dir/build.make src/char/CMakeFiles/char.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/char/CMakeFiles/char.dir/build.make src/char/CMakeFiles/char.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=45 "Built target char"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=43 "Built target char"
 .PHONY : src/char/CMakeFiles/char.dir/all
 
 # Build rule for subdir invocation for target.
 src/char/CMakeFiles/char.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/char/CMakeFiles/char.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/char/CMakeFiles/char.dir/rule
@@ -5447,12 +5671,12 @@ src/subprocess1/CMakeFiles/subprocess1.dir/all: external/subprocess/CMakeFiles/s
 src/subprocess1/CMakeFiles/subprocess1.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/subprocess1/CMakeFiles/subprocess1.dir/build.make src/subprocess1/CMakeFiles/subprocess1.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/subprocess1/CMakeFiles/subprocess1.dir/build.make src/subprocess1/CMakeFiles/subprocess1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=92 "Built target subprocess1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=91 "Built target subprocess1"
 .PHONY : src/subprocess1/CMakeFiles/subprocess1.dir/all
 
 # Build rule for subdir invocation for target.
 src/subprocess1/CMakeFiles/subprocess1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/subprocess1/CMakeFiles/subprocess1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/subprocess1/CMakeFiles/subprocess1.dir/rule
@@ -5474,12 +5698,12 @@ src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destr
 src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destructor_time.dir/all: libframework/framework/CMakeFiles/framework.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destructor_time.dir/build.make src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destructor_time.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destructor_time.dir/build.make src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destructor_time.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=34 "Built target Throw_an_exception_at_destructor_time"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=33 "Built target Throw_an_exception_at_destructor_time"
 .PHONY : src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destructor_time.dir/all
 
 # Build rule for subdir invocation for target.
 src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destructor_time.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destructor_time.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destructor_time.dir/rule
@@ -5506,7 +5730,7 @@ src/virtual/CMakeFiles/virtual.dir/all: libframework/framework/CMakeFiles/framew
 
 # Build rule for subdir invocation for target.
 src/virtual/CMakeFiles/virtual.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/virtual/CMakeFiles/virtual.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
 .PHONY : src/virtual/CMakeFiles/virtual.dir/rule
@@ -5519,6 +5743,277 @@ virtual: src/virtual/CMakeFiles/virtual.dir/rule
 src/virtual/CMakeFiles/virtual.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/virtual/CMakeFiles/virtual.dir/build.make src/virtual/CMakeFiles/virtual.dir/clean
 .PHONY : src/virtual/CMakeFiles/virtual.dir/clean
+
+#=============================================================================
+# Target rules for target src/log4cpp/CMakeFiles/log4cpp.dir
+
+# All Build rule for target.
+src/log4cpp/CMakeFiles/log4cpp.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
+src/log4cpp/CMakeFiles/log4cpp.dir/all: libframework/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f src/log4cpp/CMakeFiles/log4cpp.dir/build.make src/log4cpp/CMakeFiles/log4cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/log4cpp/CMakeFiles/log4cpp.dir/build.make src/log4cpp/CMakeFiles/log4cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=66 "Built target log4cpp"
+.PHONY : src/log4cpp/CMakeFiles/log4cpp.dir/all
+
+# Build rule for subdir invocation for target.
+src/log4cpp/CMakeFiles/log4cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/log4cpp/CMakeFiles/log4cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : src/log4cpp/CMakeFiles/log4cpp.dir/rule
+
+# Convenience name for target.
+log4cpp: src/log4cpp/CMakeFiles/log4cpp.dir/rule
+.PHONY : log4cpp
+
+# clean rule for target.
+src/log4cpp/CMakeFiles/log4cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/log4cpp/CMakeFiles/log4cpp.dir/build.make src/log4cpp/CMakeFiles/log4cpp.dir/clean
+.PHONY : src/log4cpp/CMakeFiles/log4cpp.dir/clean
+
+#=============================================================================
+# Target rules for target src/imgui/CMakeFiles/imgui1.dir
+
+# All Build rule for target.
+src/imgui/CMakeFiles/imgui1.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
+src/imgui/CMakeFiles/imgui1.dir/all: external/imgui/CMakeFiles/imgui.dir/all
+src/imgui/CMakeFiles/imgui1.dir/all: libframework/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f src/imgui/CMakeFiles/imgui1.dir/build.make src/imgui/CMakeFiles/imgui1.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/imgui/CMakeFiles/imgui1.dir/build.make src/imgui/CMakeFiles/imgui1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=61 "Built target imgui1"
+.PHONY : src/imgui/CMakeFiles/imgui1.dir/all
+
+# Build rule for subdir invocation for target.
+src/imgui/CMakeFiles/imgui1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/imgui/CMakeFiles/imgui1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : src/imgui/CMakeFiles/imgui1.dir/rule
+
+# Convenience name for target.
+imgui1: src/imgui/CMakeFiles/imgui1.dir/rule
+.PHONY : imgui1
+
+# clean rule for target.
+src/imgui/CMakeFiles/imgui1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/imgui/CMakeFiles/imgui1.dir/build.make src/imgui/CMakeFiles/imgui1.dir/clean
+.PHONY : src/imgui/CMakeFiles/imgui1.dir/clean
+
+#=============================================================================
+# Target rules for target src/997/CMakeFiles/997.dir
+
+# All Build rule for target.
+src/997/CMakeFiles/997.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
+src/997/CMakeFiles/997.dir/all: libframework/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f src/997/CMakeFiles/997.dir/build.make src/997/CMakeFiles/997.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/997/CMakeFiles/997.dir/build.make src/997/CMakeFiles/997.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target 997"
+.PHONY : src/997/CMakeFiles/997.dir/all
+
+# Build rule for subdir invocation for target.
+src/997/CMakeFiles/997.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/997/CMakeFiles/997.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : src/997/CMakeFiles/997.dir/rule
+
+# Convenience name for target.
+997: src/997/CMakeFiles/997.dir/rule
+.PHONY : 997
+
+# clean rule for target.
+src/997/CMakeFiles/997.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/997/CMakeFiles/997.dir/build.make src/997/CMakeFiles/997.dir/clean
+.PHONY : src/997/CMakeFiles/997.dir/clean
+
+#=============================================================================
+# Target rules for target src/1791/CMakeFiles/1791.dir
+
+# All Build rule for target.
+src/1791/CMakeFiles/1791.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
+src/1791/CMakeFiles/1791.dir/all: libframework/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f src/1791/CMakeFiles/1791.dir/build.make src/1791/CMakeFiles/1791.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/1791/CMakeFiles/1791.dir/build.make src/1791/CMakeFiles/1791.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=10 "Built target 1791"
+.PHONY : src/1791/CMakeFiles/1791.dir/all
+
+# Build rule for subdir invocation for target.
+src/1791/CMakeFiles/1791.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/1791/CMakeFiles/1791.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : src/1791/CMakeFiles/1791.dir/rule
+
+# Convenience name for target.
+1791: src/1791/CMakeFiles/1791.dir/rule
+.PHONY : 1791
+
+# clean rule for target.
+src/1791/CMakeFiles/1791.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/1791/CMakeFiles/1791.dir/build.make src/1791/CMakeFiles/1791.dir/clean
+.PHONY : src/1791/CMakeFiles/1791.dir/clean
+
+#=============================================================================
+# Target rules for target src/1971/CMakeFiles/1971.dir
+
+# All Build rule for target.
+src/1971/CMakeFiles/1971.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
+src/1971/CMakeFiles/1971.dir/all: libframework/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f src/1971/CMakeFiles/1971.dir/build.make src/1971/CMakeFiles/1971.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/1971/CMakeFiles/1971.dir/build.make src/1971/CMakeFiles/1971.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=11 "Built target 1971"
+.PHONY : src/1971/CMakeFiles/1971.dir/all
+
+# Build rule for subdir invocation for target.
+src/1971/CMakeFiles/1971.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/1971/CMakeFiles/1971.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : src/1971/CMakeFiles/1971.dir/rule
+
+# Convenience name for target.
+1971: src/1971/CMakeFiles/1971.dir/rule
+.PHONY : 1971
+
+# clean rule for target.
+src/1971/CMakeFiles/1971.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/1971/CMakeFiles/1971.dir/build.make src/1971/CMakeFiles/1971.dir/clean
+.PHONY : src/1971/CMakeFiles/1971.dir/clean
+
+#=============================================================================
+# Target rules for target src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir
+
+# All Build rule for target.
+src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
+src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/all: libframework/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/build.make src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/build.make src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=29 "Built target Disjoint-setDataStructure"
+.PHONY : src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/all
+
+# Build rule for subdir invocation for target.
+src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/rule
+
+# Convenience name for target.
+Disjoint-setDataStructure: src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/rule
+.PHONY : Disjoint-setDataStructure
+
+# clean rule for target.
+src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/build.make src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/clean
+.PHONY : src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/clean
+
+#=============================================================================
+# Target rules for target src/stringAssign/CMakeFiles/stringAssign.dir
+
+# All Build rule for target.
+src/stringAssign/CMakeFiles/stringAssign.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
+src/stringAssign/CMakeFiles/stringAssign.dir/all: libframework/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f src/stringAssign/CMakeFiles/stringAssign.dir/build.make src/stringAssign/CMakeFiles/stringAssign.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/stringAssign/CMakeFiles/stringAssign.dir/build.make src/stringAssign/CMakeFiles/stringAssign.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=86 "Built target stringAssign"
+.PHONY : src/stringAssign/CMakeFiles/stringAssign.dir/all
+
+# Build rule for subdir invocation for target.
+src/stringAssign/CMakeFiles/stringAssign.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/stringAssign/CMakeFiles/stringAssign.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : src/stringAssign/CMakeFiles/stringAssign.dir/rule
+
+# Convenience name for target.
+stringAssign: src/stringAssign/CMakeFiles/stringAssign.dir/rule
+.PHONY : stringAssign
+
+# clean rule for target.
+src/stringAssign/CMakeFiles/stringAssign.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/stringAssign/CMakeFiles/stringAssign.dir/build.make src/stringAssign/CMakeFiles/stringAssign.dir/clean
+.PHONY : src/stringAssign/CMakeFiles/stringAssign.dir/clean
+
+#=============================================================================
+# Target rules for target src/strto/CMakeFiles/strto.dir
+
+# All Build rule for target.
+src/strto/CMakeFiles/strto.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
+src/strto/CMakeFiles/strto.dir/all: libframework/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f src/strto/CMakeFiles/strto.dir/build.make src/strto/CMakeFiles/strto.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/strto/CMakeFiles/strto.dir/build.make src/strto/CMakeFiles/strto.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=87 "Built target strto"
+.PHONY : src/strto/CMakeFiles/strto.dir/all
+
+# Build rule for subdir invocation for target.
+src/strto/CMakeFiles/strto.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/strto/CMakeFiles/strto.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : src/strto/CMakeFiles/strto.dir/rule
+
+# Convenience name for target.
+strto: src/strto/CMakeFiles/strto.dir/rule
+.PHONY : strto
+
+# clean rule for target.
+src/strto/CMakeFiles/strto.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/strto/CMakeFiles/strto.dir/build.make src/strto/CMakeFiles/strto.dir/clean
+.PHONY : src/strto/CMakeFiles/strto.dir/clean
+
+#=============================================================================
+# Target rules for target src/udl/CMakeFiles/udl.dir
+
+# All Build rule for target.
+src/udl/CMakeFiles/udl.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
+src/udl/CMakeFiles/udl.dir/all: libframework/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f src/udl/CMakeFiles/udl.dir/build.make src/udl/CMakeFiles/udl.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/udl/CMakeFiles/udl.dir/build.make src/udl/CMakeFiles/udl.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num= "Built target udl"
+.PHONY : src/udl/CMakeFiles/udl.dir/all
+
+# Build rule for subdir invocation for target.
+src/udl/CMakeFiles/udl.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/udl/CMakeFiles/udl.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : src/udl/CMakeFiles/udl.dir/rule
+
+# Convenience name for target.
+udl: src/udl/CMakeFiles/udl.dir/rule
+.PHONY : udl
+
+# clean rule for target.
+src/udl/CMakeFiles/udl.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/udl/CMakeFiles/udl.dir/build.make src/udl/CMakeFiles/udl.dir/clean
+.PHONY : src/udl/CMakeFiles/udl.dir/clean
+
+#=============================================================================
+# Target rules for target src/unique_ptr/CMakeFiles/unique_ptr.dir
+
+# All Build rule for target.
+src/unique_ptr/CMakeFiles/unique_ptr.dir/all: external/subprocess/CMakeFiles/subprocess.dir/all
+src/unique_ptr/CMakeFiles/unique_ptr.dir/all: libframework/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f src/unique_ptr/CMakeFiles/unique_ptr.dir/build.make src/unique_ptr/CMakeFiles/unique_ptr.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/unique_ptr/CMakeFiles/unique_ptr.dir/build.make src/unique_ptr/CMakeFiles/unique_ptr.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=96 "Built target unique_ptr"
+.PHONY : src/unique_ptr/CMakeFiles/unique_ptr.dir/all
+
+# Build rule for subdir invocation for target.
+src/unique_ptr/CMakeFiles/unique_ptr.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/unique_ptr/CMakeFiles/unique_ptr.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles 0
+.PHONY : src/unique_ptr/CMakeFiles/unique_ptr.dir/rule
+
+# Convenience name for target.
+unique_ptr: src/unique_ptr/CMakeFiles/unique_ptr.dir/rule
+.PHONY : unique_ptr
+
+# clean rule for target.
+src/unique_ptr/CMakeFiles/unique_ptr.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/unique_ptr/CMakeFiles/unique_ptr.dir/build.make src/unique_ptr/CMakeFiles/unique_ptr.dir/clean
+.PHONY : src/unique_ptr/CMakeFiles/unique_ptr.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

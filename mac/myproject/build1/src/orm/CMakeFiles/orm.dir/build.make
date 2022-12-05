@@ -96,6 +96,7 @@ bin/orm: lib/libframework.so
 bin/orm: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/orm: /usr/local/lib/libevent.so
 bin/orm: lib/libsubprocess.a
+bin/orm: /usr/local/lib/liblog4cpp.so
 bin/orm: src/orm/CMakeFiles/orm.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/orm"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/orm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/orm.dir/link.txt --verbose=$(VERBOSE)

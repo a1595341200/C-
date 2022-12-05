@@ -96,6 +96,7 @@ bin/inlineStatic: lib/libframework.so
 bin/inlineStatic: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/inlineStatic: /usr/local/lib/libevent.so
 bin/inlineStatic: lib/libsubprocess.a
+bin/inlineStatic: /usr/local/lib/liblog4cpp.so
 bin/inlineStatic: src/inlineStatic/CMakeFiles/inlineStatic.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/inlineStatic"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/inlineStatic && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/inlineStatic.dir/link.txt --verbose=$(VERBOSE)

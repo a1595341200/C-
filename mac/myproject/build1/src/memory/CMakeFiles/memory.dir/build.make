@@ -96,6 +96,7 @@ bin/memory: lib/libframework.so
 bin/memory: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/memory: /usr/local/lib/libevent.so
 bin/memory: lib/libsubprocess.a
+bin/memory: /usr/local/lib/liblog4cpp.so
 bin/memory: src/memory/CMakeFiles/memory.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/memory"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/memory && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/memory.dir/link.txt --verbose=$(VERBOSE)

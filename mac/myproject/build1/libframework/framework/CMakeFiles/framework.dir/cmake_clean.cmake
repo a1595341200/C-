@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "../../lib/libframework.pdb"
   "../../lib/libframework.so"
+  "CMakeFiles/framework.dir/src/Log.cpp.o"
+  "CMakeFiles/framework.dir/src/Log.cpp.o.d"
   "CMakeFiles/framework.dir/src/Looper.cpp.o"
   "CMakeFiles/framework.dir/src/Looper.cpp.o.d"
   "CMakeFiles/framework.dir/src/Message.cpp.o"

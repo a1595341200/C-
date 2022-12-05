@@ -96,6 +96,7 @@ bin/15: lib/libframework.so
 bin/15: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/15: /usr/local/lib/libevent.so
 bin/15: lib/libsubprocess.a
+bin/15: /usr/local/lib/liblog4cpp.so
 bin/15: src/15/CMakeFiles/15.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/15"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/15 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/15.dir/link.txt --verbose=$(VERBOSE)

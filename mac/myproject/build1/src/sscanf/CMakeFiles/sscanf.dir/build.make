@@ -96,6 +96,7 @@ bin/sscanf: lib/libframework.so
 bin/sscanf: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/sscanf: /usr/local/lib/libevent.so
 bin/sscanf: lib/libsubprocess.a
+bin/sscanf: /usr/local/lib/liblog4cpp.so
 bin/sscanf: src/sscanf/CMakeFiles/sscanf.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/sscanf"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/sscanf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sscanf.dir/link.txt --verbose=$(VERBOSE)

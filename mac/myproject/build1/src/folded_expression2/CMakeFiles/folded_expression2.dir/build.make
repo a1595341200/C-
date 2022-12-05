@@ -96,6 +96,7 @@ bin/folded_expression2: lib/libframework.so
 bin/folded_expression2: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/folded_expression2: /usr/local/lib/libevent.so
 bin/folded_expression2: lib/libsubprocess.a
+bin/folded_expression2: /usr/local/lib/liblog4cpp.so
 bin/folded_expression2: src/folded_expression2/CMakeFiles/folded_expression2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/folded_expression2"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/folded_expression2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/folded_expression2.dir/link.txt --verbose=$(VERBOSE)

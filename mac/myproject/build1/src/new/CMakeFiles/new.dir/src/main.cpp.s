@@ -73,7 +73,7 @@ _ZN6__pstl9execution2v1L5unseqE:
 	.global	_ZN4TestC2Ev
 	.type	_ZN4TestC2Ev, %function
 _ZN4TestC2Ev:
-.LFB3085:
+.LFB3506:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -98,7 +98,7 @@ _ZN4TestC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3085:
+.LFE3506:
 	.size	_ZN4TestC2Ev, .-_ZN4TestC2Ev
 	.global	_ZN4TestC1Ev
 	.set	_ZN4TestC1Ev,_ZN4TestC2Ev
@@ -111,10 +111,10 @@ _ZN4TestC2Ev:
 	.global	_ZN4TestD2Ev
 	.type	_ZN4TestD2Ev, %function
 _ZN4TestD2Ev:
-.LFB3088:
+.LFB3509:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3088
+	.cfi_lsda 0x1b,.LLSDA3509
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
 	.cfi_offset 29, -32
@@ -138,16 +138,16 @@ _ZN4TestD2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3088:
+.LFE3509:
 	.global	__gxx_personality_v0
 	.section	.gcc_except_table,"a",@progbits
-.LLSDA3088:
+.LLSDA3509:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3088-.LLSDACSB3088
-.LLSDACSB3088:
-.LLSDACSE3088:
+	.uleb128 .LLSDACSE3509-.LLSDACSB3509
+.LLSDACSB3509:
+.LLSDACSE3509:
 	.text
 	.size	_ZN4TestD2Ev, .-_ZN4TestD2Ev
 	.global	_ZN4TestD1Ev
@@ -156,7 +156,7 @@ _ZN4TestD2Ev:
 	.global	_Z6test01v
 	.type	_Z6test01v, %function
 _Z6test01v:
-.LFB3090:
+.LFB3511:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -187,16 +187,16 @@ _Z6test01v:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3090:
+.LFE3511:
 	.size	_Z6test01v, .-_Z6test01v
 	.align	2
 	.global	_Z6test02v
 	.type	_Z6test02v, %function
 _Z6test02v:
-.LFB3091:
+.LFB3512:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3091
+	.cfi_lsda 0x1b,.LLSDA3512
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
 	.cfi_offset 29, -64
@@ -263,34 +263,34 @@ _Z6test02v:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3091:
+.LFE3512:
 	.section	.gcc_except_table
-.LLSDA3091:
+.LLSDA3512:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3091-.LLSDACSB3091
-.LLSDACSB3091:
-	.uleb128 .LEHB0-.LFB3091
+	.uleb128 .LLSDACSE3512-.LLSDACSB3512
+.LLSDACSB3512:
+	.uleb128 .LEHB0-.LFB3512
 	.uleb128 .LEHE0-.LEHB0
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB1-.LFB3091
+	.uleb128 .LEHB1-.LFB3512
 	.uleb128 .LEHE1-.LEHB1
-	.uleb128 .L10-.LFB3091
+	.uleb128 .L10-.LFB3512
 	.uleb128 0
-	.uleb128 .LEHB2-.LFB3091
+	.uleb128 .LEHB2-.LFB3512
 	.uleb128 .LEHE2-.LEHB2
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE3091:
+.LLSDACSE3512:
 	.text
 	.size	_Z6test02v, .-_Z6test02v
 	.align	2
 	.global	main
 	.type	main, %function
 main:
-.LFB3092:
+.LFB3513:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -328,12 +328,12 @@ main:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3092:
+.LFE3513:
 	.size	main, .-main
 	.align	2
 	.type	_Z41__static_initialization_and_destruction_0ii, %function
 _Z41__static_initialization_and_destruction_0ii:
-.LFB3696:
+.LFB4121:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -367,12 +367,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3696:
+.LFE4121:
 	.size	_Z41__static_initialization_and_destruction_0ii, .-_Z41__static_initialization_and_destruction_0ii
 	.align	2
 	.type	_GLOBAL__sub_I__ZN4TestC2Ev, %function
 _GLOBAL__sub_I__ZN4TestC2Ev:
-.LFB3714:
+.LFB4139:
 	.cfi_startproc
 	stp	x29, x30, [sp, -16]!
 	.cfi_def_cfa_offset 16
@@ -388,7 +388,7 @@ _GLOBAL__sub_I__ZN4TestC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3714:
+.LFE4139:
 	.size	_GLOBAL__sub_I__ZN4TestC2Ev, .-_GLOBAL__sub_I__ZN4TestC2Ev
 	.section	.init_array,"aw"
 	.align	3

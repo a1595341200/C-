@@ -96,6 +96,7 @@ bin/dynamic_cast: lib/libframework.so
 bin/dynamic_cast: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/dynamic_cast: /usr/local/lib/libevent.so
 bin/dynamic_cast: lib/libsubprocess.a
+bin/dynamic_cast: /usr/local/lib/liblog4cpp.so
 bin/dynamic_cast: src/dynamic_cast/CMakeFiles/dynamic_cast.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/dynamic_cast"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/dynamic_cast && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dynamic_cast.dir/link.txt --verbose=$(VERBOSE)

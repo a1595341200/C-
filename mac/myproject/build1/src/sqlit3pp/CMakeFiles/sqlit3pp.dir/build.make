@@ -96,6 +96,7 @@ bin/sqlit3pp: lib/libframework.so
 bin/sqlit3pp: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/sqlit3pp: /usr/local/lib/libevent.so
 bin/sqlit3pp: lib/libsubprocess.a
+bin/sqlit3pp: /usr/local/lib/liblog4cpp.so
 bin/sqlit3pp: src/sqlit3pp/CMakeFiles/sqlit3pp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/sqlit3pp"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/sqlit3pp && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sqlit3pp.dir/link.txt --verbose=$(VERBOSE)

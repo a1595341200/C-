@@ -96,6 +96,7 @@ bin/invocable: lib/libframework.so
 bin/invocable: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/invocable: /usr/local/lib/libevent.so
 bin/invocable: lib/libsubprocess.a
+bin/invocable: /usr/local/lib/liblog4cpp.so
 bin/invocable: src/invocable/CMakeFiles/invocable.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/invocable"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/invocable && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/invocable.dir/link.txt --verbose=$(VERBOSE)

@@ -96,6 +96,7 @@ bin/Copy_structure: lib/libframework.so
 bin/Copy_structure: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/Copy_structure: /usr/local/lib/libevent.so
 bin/Copy_structure: lib/libsubprocess.a
+bin/Copy_structure: /usr/local/lib/liblog4cpp.so
 bin/Copy_structure: src/Copy_structure/CMakeFiles/Copy_structure.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/Copy_structure"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/Copy_structure && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Copy_structure.dir/link.txt --verbose=$(VERBOSE)

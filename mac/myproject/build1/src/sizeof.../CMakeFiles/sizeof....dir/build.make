@@ -96,6 +96,7 @@ bin/sizeof...: lib/libframework.so
 bin/sizeof...: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/sizeof...: /usr/local/lib/libevent.so
 bin/sizeof...: lib/libsubprocess.a
+bin/sizeof...: /usr/local/lib/liblog4cpp.so
 bin/sizeof...: src/sizeof.../CMakeFiles/sizeof....dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/sizeof..."
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/sizeof... && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sizeof....dir/link.txt --verbose=$(VERBOSE)

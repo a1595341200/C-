@@ -96,6 +96,7 @@ bin/417: lib/libframework.so
 bin/417: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/417: /usr/local/lib/libevent.so
 bin/417: lib/libsubprocess.a
+bin/417: /usr/local/lib/liblog4cpp.so
 bin/417: src/417/CMakeFiles/417.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/417"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/417 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/417.dir/link.txt --verbose=$(VERBOSE)

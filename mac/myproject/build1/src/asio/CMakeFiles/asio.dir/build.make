@@ -97,6 +97,7 @@ bin/asio: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.74.0
 bin/asio: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/asio: /usr/local/lib/libevent.so
 bin/asio: lib/libsubprocess.a
+bin/asio: /usr/local/lib/liblog4cpp.so
 bin/asio: /usr/lib/aarch64-linux-gnu/libboost_atomic.so.1.74.0
 bin/asio: src/asio/CMakeFiles/asio.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/asio"

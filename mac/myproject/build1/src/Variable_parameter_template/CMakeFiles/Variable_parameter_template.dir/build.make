@@ -96,6 +96,7 @@ bin/Variable_parameter_template: lib/libframework.so
 bin/Variable_parameter_template: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/Variable_parameter_template: /usr/local/lib/libevent.so
 bin/Variable_parameter_template: lib/libsubprocess.a
+bin/Variable_parameter_template: /usr/local/lib/liblog4cpp.so
 bin/Variable_parameter_template: src/Variable_parameter_template/CMakeFiles/Variable_parameter_template.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/Variable_parameter_template"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/Variable_parameter_template && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Variable_parameter_template.dir/link.txt --verbose=$(VERBOSE)

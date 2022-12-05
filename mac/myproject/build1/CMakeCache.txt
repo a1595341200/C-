@@ -132,6 +132,24 @@
 15_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/15
 
 //Value Computed by CMake
+1791_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/1791
+
+//Value Computed by CMake
+1791_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+1791_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/1791
+
+//Value Computed by CMake
+1971_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/1971
+
+//Value Computed by CMake
+1971_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+1971_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/1971
+
+//Value Computed by CMake
 199_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/199
 
 //Value Computed by CMake
@@ -355,6 +373,15 @@
 
 //Value Computed by CMake
 718_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/718
+
+//Value Computed by CMake
+997_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/997
+
+//Value Computed by CMake
+997_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+997_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/997
 
 Boost_DATE_TIME_LIBRARY_RELEASE:STRING=/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.74.0
 
@@ -601,6 +628,15 @@ DNS_IS_TOP_LEVEL:STATIC=OFF
 DNS_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/DNS
 
 //Value Computed by CMake
+Disjoint-setDataStructure_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/Disjoint-setDataStructure
+
+//Value Computed by CMake
+Disjoint-setDataStructure_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Disjoint-setDataStructure_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/Disjoint-setDataStructure
+
+//Value Computed by CMake
 EnumClass_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/EnumClass
 
 //Value Computed by CMake
@@ -621,6 +657,30 @@ Execute_before_main_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproje
 //The directory containing a CMake configuration file for GTest.
 GTest_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/GTest
 
+//Path to a file.
+OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a file.
+OPENGL_GLX_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a file.
+OPENGL_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OPENGL_egl_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/libEGL.so
+
+//Path to a library.
+OPENGL_glu_LIBRARY:FILEPATH=OPENGL_glu_LIBRARY-NOTFOUND
+
+//Path to a library.
+OPENGL_glx_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/libGLX.so
+
+//Path to a library.
+OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/libOpenGL.so
+
+//Path to a file.
+OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
+
 //Value Computed by CMake
 Observer_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/Observer
 
@@ -629,30 +689,6 @@ Observer_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 Observer_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/Observer
-
-//Path to a file.
-Protobuf_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a library.
-Protobuf_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libprotobuf.so
-
-//Path to a library.
-Protobuf_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libprotobuf.so
-
-//Path to a library.
-Protobuf_LITE_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libprotobuf-lite.so
-
-//Path to a library.
-Protobuf_LITE_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libprotobuf-lite.so
-
-//The Google Protocol Buffers Compiler
-Protobuf_PROTOC_EXECUTABLE:FILEPATH=/home/parallels/.local/bin/protoc
-
-//Path to a library.
-Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=Protobuf_PROTOC_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=Protobuf_PROTOC_LIBRARY_RELEASE-NOTFOUND
 
 //Path to a file.
 SQLite3_INCLUDE_DIR:PATH=/usr/include
@@ -949,7 +985,7 @@ framework_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/
 framework_IS_TOP_LEVEL:STATIC=OFF
 
 //Dependencies for the target
-framework_LIB_DEPENDS:STATIC=general;/usr/lib/aarch64-linux-gnu/libsqlite3.so;general;/usr/local/lib/libevent.so;general;subprocess;
+framework_LIB_DEPENDS:STATIC=general;/usr/lib/aarch64-linux-gnu/libsqlite3.so;general;/usr/local/lib/libevent.so;general;subprocess;general;/usr/local/lib/liblog4cpp.so;
 
 //Value Computed by CMake
 framework_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework
@@ -1009,6 +1045,24 @@ gtest_IS_TOP_LEVEL:STATIC=OFF
 gtest_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/gtest
 
 //Value Computed by CMake
+imgui1_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/imgui
+
+//Value Computed by CMake
+imgui1_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+imgui1_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/imgui
+
+//Value Computed by CMake
+imgui_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/external/imgui
+
+//Value Computed by CMake
+imgui_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+imgui_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/external/imgui
+
+//Value Computed by CMake
 inlineStatic_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/inlineStatic
 
 //Value Computed by CMake
@@ -1061,6 +1115,15 @@ locale_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 locale_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/locale
+
+//Value Computed by CMake
+log4cpp_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/log4cpp
+
+//Value Computed by CMake
+log4cpp_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+log4cpp_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/log4cpp
 
 //Value Computed by CMake
 looper_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/looper
@@ -1169,15 +1232,6 @@ promise_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 promise_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/promise
-
-//Value Computed by CMake
-protobuf1_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/protobuf
-
-//Value Computed by CMake
-protobuf1_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-protobuf1_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/protobuf
 
 //Value Computed by CMake
 quoted_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/quoted
@@ -1315,6 +1369,15 @@ stream_IS_TOP_LEVEL:STATIC=OFF
 stream_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/stream
 
 //Value Computed by CMake
+stringAssign_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/stringAssign
+
+//Value Computed by CMake
+stringAssign_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+stringAssign_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/stringAssign
+
+//Value Computed by CMake
 string_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/string
 
 //Value Computed by CMake
@@ -1322,6 +1385,15 @@ string_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 string_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/string
+
+//Value Computed by CMake
+strto_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/strto
+
+//Value Computed by CMake
+strto_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+strto_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/strto
 
 //Value Computed by CMake
 subprocess1_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/subprocess1
@@ -1388,6 +1460,24 @@ typeid_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 typeid_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/typeid
+
+//Value Computed by CMake
+udl_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/udl
+
+//Value Computed by CMake
+udl_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+udl_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/udl
+
+//Value Computed by CMake
+unique_ptr_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/unique_ptr
+
+//Value Computed by CMake
+unique_ptr_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+unique_ptr_SOURCE_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/src/unique_ptr
 
 //Value Computed by CMake
 unordered_set_BINARY_DIR:STATIC=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/unordered_set
@@ -1545,7 +1635,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=129
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=140
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1592,28 +1682,28 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake][cfound components: date_time system filesystem iostreams thread ][v1.74.0()]
 //Details about finding GTest
 FIND_PACKAGE_MESSAGE_DETAILS_GTest:INTERNAL=[/usr/lib/aarch64-linux-gnu/cmake/GTest/GTestConfig.cmake][c ][v1.11.0()]
-//Details about finding Protobuf
-FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/lib/aarch64-linux-gnu/libprotobuf.so][/usr/include][v3.12.4()]
+//Details about finding OpenGL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/aarch64-linux-gnu/libOpenGL.so][/usr/lib/aarch64-linux-gnu/libGLX.so][/usr/include][c ][v()]
 //Details about finding SQLite3
 FIND_PACKAGE_MESSAGE_DETAILS_SQLite3:INTERNAL=[/usr/include][/usr/lib/aarch64-linux-gnu/libsqlite3.so][v3.37.2()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//ADVANCED property for variable: Protobuf_INCLUDE_DIR
-Protobuf_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_LIBRARY_DEBUG
-Protobuf_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_LIBRARY_RELEASE
-Protobuf_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_LITE_LIBRARY_DEBUG
-Protobuf_LITE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_LITE_LIBRARY_RELEASE
-Protobuf_LITE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_PROTOC_EXECUTABLE
-Protobuf_PROTOC_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_DEBUG
-Protobuf_PROTOC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_RELEASE
-Protobuf_PROTOC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
+OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_GLX_INCLUDE_DIR
+OPENGL_GLX_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_INCLUDE_DIR
+OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_egl_LIBRARY
+OPENGL_egl_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_glu_LIBRARY
+OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_glx_LIBRARY
+OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_opengl_LIBRARY
+OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
+OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SQLite3_INCLUDE_DIR
 SQLite3_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SQLite3_LIBRARY

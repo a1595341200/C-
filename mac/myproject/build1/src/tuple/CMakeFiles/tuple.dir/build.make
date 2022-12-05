@@ -96,6 +96,7 @@ bin/tuple: lib/libframework.so
 bin/tuple: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/tuple: /usr/local/lib/libevent.so
 bin/tuple: lib/libsubprocess.a
+bin/tuple: /usr/local/lib/liblog4cpp.so
 bin/tuple: src/tuple/CMakeFiles/tuple.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/tuple"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/tuple && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tuple.dir/link.txt --verbose=$(VERBOSE)

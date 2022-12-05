@@ -96,6 +96,7 @@ bin/reference_wrapper: lib/libframework.so
 bin/reference_wrapper: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/reference_wrapper: /usr/local/lib/libevent.so
 bin/reference_wrapper: lib/libsubprocess.a
+bin/reference_wrapper: /usr/local/lib/liblog4cpp.so
 bin/reference_wrapper: src/reference_wrapper/CMakeFiles/reference_wrapper.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/reference_wrapper"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/reference_wrapper && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/reference_wrapper.dir/link.txt --verbose=$(VERBOSE)

@@ -38,6 +38,8 @@ private:
                           bool& show_another_window);
     void showAnotherWindow(bool& show_another_window);
 
+    void showConsole();
+
     void Rendering();
 };
 

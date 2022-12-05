@@ -96,6 +96,7 @@ bin/38Z: lib/libframework.so
 bin/38Z: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/38Z: /usr/local/lib/libevent.so
 bin/38Z: lib/libsubprocess.a
+bin/38Z: /usr/local/lib/liblog4cpp.so
 bin/38Z: src/38Z/CMakeFiles/38Z.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/38Z"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/38Z && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/38Z.dir/link.txt --verbose=$(VERBOSE)

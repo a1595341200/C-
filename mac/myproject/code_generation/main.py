@@ -7,7 +7,7 @@ import os
 work_path = "/Users/xieyao/Desktop/git/C-/mac/myproject/code_generation"
 
 class code_gen():
-    def __init__(self, name):
+    def __init__(self, name, subdir=''):
         self.code_template_raw = None
         self.fo_main = None
         self.cmake_template_raw = None
@@ -15,15 +15,18 @@ class code_gen():
         os.chdir(work_path)
         self.path = os.getcwd()
         print(os.getcwd())
-        self.path = self.path.replace("code_generation", "src/") + self.name
-        self.make_dir()
+        if len(subdir) == 0:
+            self.path = self.path.replace("code_generation", "src/") + self.name
+        else:
+            self.path = self.path.replace("code_generation", "src/") + subdir + "/" + self.name
+        self.make_dir(subdir)
         self.get_cmake_template(name)
         self.get_code_template()
-        self.out_put_cmake_file()
-        self.out_put_main_file()
-        self.add_to_project()
+        self.out_put_cmake_file(subdir)
+        self.out_put_main_file(subdir)
+        self.add_to_project(subdir)
 
-    def add_to_project(self):
+    def add_to_project(self, subdir):
         fo = open(os.path.abspath(os.path.join(self.path, "../CMakeLists.txt")), "a")
         fo.write("add_subdirectory(\"" + self.name + "\")\n")
         fo.close()
@@ -41,17 +44,17 @@ class code_gen():
         print(self.code_template_raw)
         fo.close()
 
-    def out_put_cmake_file(self):
+    def out_put_cmake_file(self, subdir):
         r = open(self.path + "/" + "CMakeLists.txt", 'w')
         r.write(self.cmake_template_raw)
         r.close()
 
-    def out_put_main_file(self):
+    def out_put_main_file(self, subdir):
         r = open(self.path + "/src/main.cpp", 'w')
         r.write(self.code_template_raw)
         r.close()
 
-    def make_dir(self):
+    def make_dir(self, subdir):
         if os.path.exists(self.path):
             print("目录", self.path, "已存在")
         else:
@@ -61,4 +64,6 @@ class code_gen():
 
 
 if __name__ == '__main__':
-    p = code_gen("imgui")
+    dataStructure = "DataStructure"
+    p = code_gen("142", dataStructure)
+    # p = code_gen("2")

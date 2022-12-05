@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Android_Framework" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/external/log4cpp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gdbus-codegen-glibmm" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/grpc" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/grpc/third_party/abseil-cpp" vcs="Git" />

@@ -130,6 +130,19 @@ subprocess/fast:
 .PHONY : subprocess/fast
 
 #=============================================================================
+# Target rules for targets named imgui
+
+# Build rule for target.
+imgui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imgui
+.PHONY : imgui
+
+# fast build rule for target.
+imgui/fast:
+	$(MAKE) $(MAKESILENT) -f external/imgui/CMakeFiles/imgui.dir/build.make external/imgui/CMakeFiles/imgui.dir/build
+.PHONY : imgui/fast
+
+#=============================================================================
 # Target rules for targets named framework
 
 # Build rule for target.
@@ -1637,6 +1650,136 @@ virtual/fast:
 	$(MAKE) $(MAKESILENT) -f src/virtual/CMakeFiles/virtual.dir/build.make src/virtual/CMakeFiles/virtual.dir/build
 .PHONY : virtual/fast
 
+#=============================================================================
+# Target rules for targets named log4cpp
+
+# Build rule for target.
+log4cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 log4cpp
+.PHONY : log4cpp
+
+# fast build rule for target.
+log4cpp/fast:
+	$(MAKE) $(MAKESILENT) -f src/log4cpp/CMakeFiles/log4cpp.dir/build.make src/log4cpp/CMakeFiles/log4cpp.dir/build
+.PHONY : log4cpp/fast
+
+#=============================================================================
+# Target rules for targets named imgui1
+
+# Build rule for target.
+imgui1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imgui1
+.PHONY : imgui1
+
+# fast build rule for target.
+imgui1/fast:
+	$(MAKE) $(MAKESILENT) -f src/imgui/CMakeFiles/imgui1.dir/build.make src/imgui/CMakeFiles/imgui1.dir/build
+.PHONY : imgui1/fast
+
+#=============================================================================
+# Target rules for targets named 997
+
+# Build rule for target.
+997: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 997
+.PHONY : 997
+
+# fast build rule for target.
+997/fast:
+	$(MAKE) $(MAKESILENT) -f src/997/CMakeFiles/997.dir/build.make src/997/CMakeFiles/997.dir/build
+.PHONY : 997/fast
+
+#=============================================================================
+# Target rules for targets named 1791
+
+# Build rule for target.
+1791: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1791
+.PHONY : 1791
+
+# fast build rule for target.
+1791/fast:
+	$(MAKE) $(MAKESILENT) -f src/1791/CMakeFiles/1791.dir/build.make src/1791/CMakeFiles/1791.dir/build
+.PHONY : 1791/fast
+
+#=============================================================================
+# Target rules for targets named 1971
+
+# Build rule for target.
+1971: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1971
+.PHONY : 1971
+
+# fast build rule for target.
+1971/fast:
+	$(MAKE) $(MAKESILENT) -f src/1971/CMakeFiles/1971.dir/build.make src/1971/CMakeFiles/1971.dir/build
+.PHONY : 1971/fast
+
+#=============================================================================
+# Target rules for targets named Disjoint-setDataStructure
+
+# Build rule for target.
+Disjoint-setDataStructure: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Disjoint-setDataStructure
+.PHONY : Disjoint-setDataStructure
+
+# fast build rule for target.
+Disjoint-setDataStructure/fast:
+	$(MAKE) $(MAKESILENT) -f src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/build.make src/Disjoint-setDataStructure/CMakeFiles/Disjoint-setDataStructure.dir/build
+.PHONY : Disjoint-setDataStructure/fast
+
+#=============================================================================
+# Target rules for targets named stringAssign
+
+# Build rule for target.
+stringAssign: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stringAssign
+.PHONY : stringAssign
+
+# fast build rule for target.
+stringAssign/fast:
+	$(MAKE) $(MAKESILENT) -f src/stringAssign/CMakeFiles/stringAssign.dir/build.make src/stringAssign/CMakeFiles/stringAssign.dir/build
+.PHONY : stringAssign/fast
+
+#=============================================================================
+# Target rules for targets named strto
+
+# Build rule for target.
+strto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 strto
+.PHONY : strto
+
+# fast build rule for target.
+strto/fast:
+	$(MAKE) $(MAKESILENT) -f src/strto/CMakeFiles/strto.dir/build.make src/strto/CMakeFiles/strto.dir/build
+.PHONY : strto/fast
+
+#=============================================================================
+# Target rules for targets named udl
+
+# Build rule for target.
+udl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 udl
+.PHONY : udl
+
+# fast build rule for target.
+udl/fast:
+	$(MAKE) $(MAKESILENT) -f src/udl/CMakeFiles/udl.dir/build.make src/udl/CMakeFiles/udl.dir/build
+.PHONY : udl/fast
+
+#=============================================================================
+# Target rules for targets named unique_ptr
+
+# Build rule for target.
+unique_ptr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unique_ptr
+.PHONY : unique_ptr
+
+# fast build rule for target.
+unique_ptr/fast:
+	$(MAKE) $(MAKESILENT) -f src/unique_ptr/CMakeFiles/unique_ptr.dir/build.make src/unique_ptr/CMakeFiles/unique_ptr.dir/build
+.PHONY : unique_ptr/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1659,6 +1802,8 @@ help:
 	@echo "... 141"
 	@echo "... 148"
 	@echo "... 15"
+	@echo "... 1791"
+	@echo "... 1971"
 	@echo "... 199"
 	@echo "... 20"
 	@echo "... 200"
@@ -1680,8 +1825,10 @@ help:
 	@echo "... 69"
 	@echo "... 6Z"
 	@echo "... 718"
+	@echo "... 997"
 	@echo "... Copy_structure"
 	@echo "... DNS"
+	@echo "... Disjoint-setDataStructure"
 	@echo "... EnumClass"
 	@echo "... Execute_before_main"
 	@echo "... Observer"
@@ -1717,12 +1864,15 @@ help:
 	@echo "... gcovr"
 	@echo "... getline"
 	@echo "... gtest"
+	@echo "... imgui"
+	@echo "... imgui1"
 	@echo "... inline"
 	@echo "... inlineStatic"
 	@echo "... invocable"
 	@echo "... json"
 	@echo "... libevent"
 	@echo "... locale"
+	@echo "... log4cpp"
 	@echo "... looper"
 	@echo "... match_format"
 	@echo "... mem_fn"
@@ -1750,6 +1900,8 @@ help:
 	@echo "... strategy"
 	@echo "... stream"
 	@echo "... string"
+	@echo "... stringAssign"
+	@echo "... strto"
 	@echo "... subprocess"
 	@echo "... subprocess1"
 	@echo "... syslog"
@@ -1757,6 +1909,8 @@ help:
 	@echo "... tuple"
 	@echo "... type"
 	@echo "... typeid"
+	@echo "... udl"
+	@echo "... unique_ptr"
 	@echo "... unordered_set"
 	@echo "... vec"
 	@echo "... virtual"

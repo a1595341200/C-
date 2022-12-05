@@ -96,6 +96,7 @@ bin/boostLambda: lib/libframework.so
 bin/boostLambda: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/boostLambda: /usr/local/lib/libevent.so
 bin/boostLambda: lib/libsubprocess.a
+bin/boostLambda: /usr/local/lib/liblog4cpp.so
 bin/boostLambda: src/boostLambda/CMakeFiles/boostLambda.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/boostLambda"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/boostLambda && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/boostLambda.dir/link.txt --verbose=$(VERBOSE)

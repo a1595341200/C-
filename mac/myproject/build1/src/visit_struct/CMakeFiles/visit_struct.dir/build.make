@@ -96,6 +96,7 @@ bin/visit_struct: lib/libframework.so
 bin/visit_struct: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/visit_struct: /usr/local/lib/libevent.so
 bin/visit_struct: lib/libsubprocess.a
+bin/visit_struct: /usr/local/lib/liblog4cpp.so
 bin/visit_struct: src/visit_struct/CMakeFiles/visit_struct.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/visit_struct"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/visit_struct && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/visit_struct.dir/link.txt --verbose=$(VERBOSE)

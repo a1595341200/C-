@@ -96,6 +96,7 @@ bin/virtual: lib/libframework.so
 bin/virtual: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/virtual: /usr/local/lib/libevent.so
 bin/virtual: lib/libsubprocess.a
+bin/virtual: /usr/local/lib/liblog4cpp.so
 bin/virtual: src/virtual/CMakeFiles/virtual.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/virtual"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/virtual && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/virtual.dir/link.txt --verbose=$(VERBOSE)

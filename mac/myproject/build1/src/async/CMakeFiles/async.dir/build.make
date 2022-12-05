@@ -96,6 +96,7 @@ bin/async: lib/libframework.so
 bin/async: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/async: /usr/local/lib/libevent.so
 bin/async: lib/libsubprocess.a
+bin/async: /usr/local/lib/liblog4cpp.so
 bin/async: src/async/CMakeFiles/async.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/async"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/async && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/async.dir/link.txt --verbose=$(VERBOSE)

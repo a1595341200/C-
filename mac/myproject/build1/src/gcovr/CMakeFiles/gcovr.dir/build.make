@@ -96,6 +96,7 @@ bin/gcovr: lib/libframework.so
 bin/gcovr: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/gcovr: /usr/local/lib/libevent.so
 bin/gcovr: lib/libsubprocess.a
+bin/gcovr: /usr/local/lib/liblog4cpp.so
 bin/gcovr: src/gcovr/CMakeFiles/gcovr.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/gcovr"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/gcovr && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gcovr.dir/link.txt --verbose=$(VERBOSE)

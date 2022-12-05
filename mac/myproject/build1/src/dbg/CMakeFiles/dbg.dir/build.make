@@ -96,6 +96,7 @@ bin/dbg: lib/libframework.so
 bin/dbg: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/dbg: /usr/local/lib/libevent.so
 bin/dbg: lib/libsubprocess.a
+bin/dbg: /usr/local/lib/liblog4cpp.so
 bin/dbg: src/dbg/CMakeFiles/dbg.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/dbg"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/dbg && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dbg.dir/link.txt --verbose=$(VERBOSE)

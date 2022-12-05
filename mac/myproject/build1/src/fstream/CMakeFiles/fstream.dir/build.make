@@ -96,6 +96,7 @@ bin/fstream: lib/libframework.so
 bin/fstream: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/fstream: /usr/local/lib/libevent.so
 bin/fstream: lib/libsubprocess.a
+bin/fstream: /usr/local/lib/liblog4cpp.so
 bin/fstream: src/fstream/CMakeFiles/fstream.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/fstream"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/fstream && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fstream.dir/link.txt --verbose=$(VERBOSE)

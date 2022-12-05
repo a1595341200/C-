@@ -96,6 +96,7 @@ bin/Observer: lib/libframework.so
 bin/Observer: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/Observer: /usr/local/lib/libevent.so
 bin/Observer: lib/libsubprocess.a
+bin/Observer: /usr/local/lib/liblog4cpp.so
 bin/Observer: src/Observer/CMakeFiles/Observer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/Observer"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/Observer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Observer.dir/link.txt --verbose=$(VERBOSE)

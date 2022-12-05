@@ -96,6 +96,7 @@ bin/102_3: lib/libframework.so
 bin/102_3: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/102_3: /usr/local/lib/libevent.so
 bin/102_3: lib/libsubprocess.a
+bin/102_3: /usr/local/lib/liblog4cpp.so
 bin/102_3: src/102_3/CMakeFiles/102_3.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/102_3"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/102_3 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/102_3.dir/link.txt --verbose=$(VERBOSE)

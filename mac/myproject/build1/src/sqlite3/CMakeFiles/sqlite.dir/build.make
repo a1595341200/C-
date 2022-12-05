@@ -96,6 +96,7 @@ bin/sqlite: lib/libframework.so
 bin/sqlite: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/sqlite: /usr/local/lib/libevent.so
 bin/sqlite: lib/libsubprocess.a
+bin/sqlite: /usr/local/lib/liblog4cpp.so
 bin/sqlite: src/sqlite3/CMakeFiles/sqlite.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/sqlite"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/sqlite3 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sqlite.dir/link.txt --verbose=$(VERBOSE)

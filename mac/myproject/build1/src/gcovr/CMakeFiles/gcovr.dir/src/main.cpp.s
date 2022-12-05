@@ -170,7 +170,7 @@ __gcov_._GLOBAL__sub_I_main:
 	.word	1110520618
 	.zero	4
 	.xword	0
-	.word	-1618088622
+	.word	-869765643
 	.zero	4
 	.xword	.LC0
 	.xword	__gcov_merge_add

@@ -96,6 +96,7 @@ bin/from_chars: lib/libframework.so
 bin/from_chars: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/from_chars: /usr/local/lib/libevent.so
 bin/from_chars: lib/libsubprocess.a
+bin/from_chars: /usr/local/lib/liblog4cpp.so
 bin/from_chars: src/from_chars/CMakeFiles/from_chars.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/from_chars"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/from_chars && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/from_chars.dir/link.txt --verbose=$(VERBOSE)

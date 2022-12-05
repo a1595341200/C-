@@ -96,6 +96,7 @@ bin/syslog: lib/libframework.so
 bin/syslog: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/syslog: /usr/local/lib/libevent.so
 bin/syslog: lib/libsubprocess.a
+bin/syslog: /usr/local/lib/liblog4cpp.so
 bin/syslog: src/syslog/CMakeFiles/syslog.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/syslog"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/syslog && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/syslog.dir/link.txt --verbose=$(VERBOSE)

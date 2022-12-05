@@ -96,6 +96,7 @@ bin/enableShard: lib/libframework.so
 bin/enableShard: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/enableShard: /usr/local/lib/libevent.so
 bin/enableShard: lib/libsubprocess.a
+bin/enableShard: /usr/local/lib/liblog4cpp.so
 bin/enableShard: src/enableShard/CMakeFiles/enableShard.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/enableShard"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/enableShard && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/enableShard.dir/link.txt --verbose=$(VERBOSE)

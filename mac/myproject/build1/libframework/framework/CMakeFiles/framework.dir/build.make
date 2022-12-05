@@ -69,10 +69,24 @@ include libframework/framework/CMakeFiles/framework.dir/progress.make
 # Include the compile flags for this target's objects.
 include libframework/framework/CMakeFiles/framework.dir/flags.make
 
+libframework/framework/CMakeFiles/framework.dir/src/Log.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
+libframework/framework/CMakeFiles/framework.dir/src/Log.cpp.o: ../libframework/framework/src/Log.cpp
+libframework/framework/CMakeFiles/framework.dir/src/Log.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Log.cpp.o"
+	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/Log.cpp.o -MF CMakeFiles/framework.dir/src/Log.cpp.o.d -o CMakeFiles/framework.dir/src/Log.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Log.cpp
+
+libframework/framework/CMakeFiles/framework.dir/src/Log.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/src/Log.cpp.i"
+	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Log.cpp > CMakeFiles/framework.dir/src/Log.cpp.i
+
+libframework/framework/CMakeFiles/framework.dir/src/Log.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/src/Log.cpp.s"
+	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Log.cpp -o CMakeFiles/framework.dir/src/Log.cpp.s
+
 libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
 libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.o: ../libframework/framework/src/Looper.cpp
 libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.o"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.o -MF CMakeFiles/framework.dir/src/Looper.cpp.o.d -o CMakeFiles/framework.dir/src/Looper.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Looper.cpp
 
 libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.i: cmake_force
@@ -86,7 +100,7 @@ libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.s: cmake_force
 libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
 libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.o: ../libframework/framework/src/Message.cpp
 libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.o"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.o -MF CMakeFiles/framework.dir/src/Message.cpp.o.d -o CMakeFiles/framework.dir/src/Message.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Message.cpp
 
 libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.i: cmake_force
@@ -100,7 +114,7 @@ libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.s: cmake_force
 libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
 libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.o: ../libframework/framework/src/RunableHandler.cpp
 libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.o"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.o -MF CMakeFiles/framework.dir/src/RunableHandler.cpp.o.d -o CMakeFiles/framework.dir/src/RunableHandler.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/RunableHandler.cpp
 
 libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.i: cmake_force
@@ -114,7 +128,7 @@ libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.s: cmake_
 libframework/framework/CMakeFiles/framework.dir/src/SubProcess.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
 libframework/framework/CMakeFiles/framework.dir/src/SubProcess.cpp.o: ../libframework/framework/src/SubProcess.cpp
 libframework/framework/CMakeFiles/framework.dir/src/SubProcess.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/SubProcess.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/SubProcess.cpp.o"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/SubProcess.cpp.o -MF CMakeFiles/framework.dir/src/SubProcess.cpp.o.d -o CMakeFiles/framework.dir/src/SubProcess.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/SubProcess.cpp
 
 libframework/framework/CMakeFiles/framework.dir/src/SubProcess.cpp.i: cmake_force
@@ -128,7 +142,7 @@ libframework/framework/CMakeFiles/framework.dir/src/SubProcess.cpp.s: cmake_forc
 libframework/framework/CMakeFiles/framework.dir/src/Thread.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
 libframework/framework/CMakeFiles/framework.dir/src/Thread.cpp.o: ../libframework/framework/src/Thread.cpp
 libframework/framework/CMakeFiles/framework.dir/src/Thread.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Thread.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Thread.cpp.o"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/Thread.cpp.o -MF CMakeFiles/framework.dir/src/Thread.cpp.o.d -o CMakeFiles/framework.dir/src/Thread.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Thread.cpp
 
 libframework/framework/CMakeFiles/framework.dir/src/Thread.cpp.i: cmake_force
@@ -142,7 +156,7 @@ libframework/framework/CMakeFiles/framework.dir/src/Thread.cpp.s: cmake_force
 libframework/framework/CMakeFiles/framework.dir/src/ThreadPool.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
 libframework/framework/CMakeFiles/framework.dir/src/ThreadPool.cpp.o: ../libframework/framework/src/ThreadPool.cpp
 libframework/framework/CMakeFiles/framework.dir/src/ThreadPool.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/ThreadPool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/ThreadPool.cpp.o"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/ThreadPool.cpp.o -MF CMakeFiles/framework.dir/src/ThreadPool.cpp.o.d -o CMakeFiles/framework.dir/src/ThreadPool.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/ThreadPool.cpp
 
 libframework/framework/CMakeFiles/framework.dir/src/ThreadPool.cpp.i: cmake_force
@@ -156,7 +170,7 @@ libframework/framework/CMakeFiles/framework.dir/src/ThreadPool.cpp.s: cmake_forc
 libframework/framework/CMakeFiles/framework.dir/src/Timer.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
 libframework/framework/CMakeFiles/framework.dir/src/Timer.cpp.o: ../libframework/framework/src/Timer.cpp
 libframework/framework/CMakeFiles/framework.dir/src/Timer.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Timer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Timer.cpp.o"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/Timer.cpp.o -MF CMakeFiles/framework.dir/src/Timer.cpp.o.d -o CMakeFiles/framework.dir/src/Timer.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Timer.cpp
 
 libframework/framework/CMakeFiles/framework.dir/src/Timer.cpp.i: cmake_force
@@ -170,7 +184,7 @@ libframework/framework/CMakeFiles/framework.dir/src/Timer.cpp.s: cmake_force
 libframework/framework/CMakeFiles/framework.dir/src/Utils.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
 libframework/framework/CMakeFiles/framework.dir/src/Utils.cpp.o: ../libframework/framework/src/Utils.cpp
 libframework/framework/CMakeFiles/framework.dir/src/Utils.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/Utils.cpp.o"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/Utils.cpp.o -MF CMakeFiles/framework.dir/src/Utils.cpp.o.d -o CMakeFiles/framework.dir/src/Utils.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Utils.cpp
 
 libframework/framework/CMakeFiles/framework.dir/src/Utils.cpp.i: cmake_force
@@ -184,7 +198,7 @@ libframework/framework/CMakeFiles/framework.dir/src/Utils.cpp.s: cmake_force
 libframework/framework/CMakeFiles/framework.dir/src/sqlite3pp.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
 libframework/framework/CMakeFiles/framework.dir/src/sqlite3pp.cpp.o: ../libframework/framework/src/sqlite3pp.cpp
 libframework/framework/CMakeFiles/framework.dir/src/sqlite3pp.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/sqlite3pp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/sqlite3pp.cpp.o"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/sqlite3pp.cpp.o -MF CMakeFiles/framework.dir/src/sqlite3pp.cpp.o.d -o CMakeFiles/framework.dir/src/sqlite3pp.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/sqlite3pp.cpp
 
 libframework/framework/CMakeFiles/framework.dir/src/sqlite3pp.cpp.i: cmake_force
@@ -198,7 +212,7 @@ libframework/framework/CMakeFiles/framework.dir/src/sqlite3pp.cpp.s: cmake_force
 libframework/framework/CMakeFiles/framework.dir/src/sqlite3ppext.cpp.o: libframework/framework/CMakeFiles/framework.dir/flags.make
 libframework/framework/CMakeFiles/framework.dir/src/sqlite3ppext.cpp.o: ../libframework/framework/src/sqlite3ppext.cpp
 libframework/framework/CMakeFiles/framework.dir/src/sqlite3ppext.cpp.o: libframework/framework/CMakeFiles/framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/sqlite3ppext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object libframework/framework/CMakeFiles/framework.dir/src/sqlite3ppext.cpp.o"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libframework/framework/CMakeFiles/framework.dir/src/sqlite3ppext.cpp.o -MF CMakeFiles/framework.dir/src/sqlite3ppext.cpp.o.d -o CMakeFiles/framework.dir/src/sqlite3ppext.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/sqlite3ppext.cpp
 
 libframework/framework/CMakeFiles/framework.dir/src/sqlite3ppext.cpp.i: cmake_force
@@ -211,6 +225,7 @@ libframework/framework/CMakeFiles/framework.dir/src/sqlite3ppext.cpp.s: cmake_fo
 
 # Object files for target framework
 framework_OBJECTS = \
+"CMakeFiles/framework.dir/src/Log.cpp.o" \
 "CMakeFiles/framework.dir/src/Looper.cpp.o" \
 "CMakeFiles/framework.dir/src/Message.cpp.o" \
 "CMakeFiles/framework.dir/src/RunableHandler.cpp.o" \
@@ -225,6 +240,7 @@ framework_OBJECTS = \
 # External object files for target framework
 framework_EXTERNAL_OBJECTS =
 
+lib/libframework.so: libframework/framework/CMakeFiles/framework.dir/src/Log.cpp.o
 lib/libframework.so: libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.o
 lib/libframework.so: libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.o
 lib/libframework.so: libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.o
@@ -239,8 +255,9 @@ lib/libframework.so: libframework/framework/CMakeFiles/framework.dir/build.make
 lib/libframework.so: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 lib/libframework.so: /usr/local/lib/libevent.so
 lib/libframework.so: lib/libsubprocess.a
+lib/libframework.so: /usr/local/lib/liblog4cpp.so
 lib/libframework.so: libframework/framework/CMakeFiles/framework.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared library ../../lib/libframework.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library ../../lib/libframework.so"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/libframework/framework && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/framework.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

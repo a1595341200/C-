@@ -96,6 +96,7 @@ bin/typeid: lib/libframework.so
 bin/typeid: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/typeid: /usr/local/lib/libevent.so
 bin/typeid: lib/libsubprocess.a
+bin/typeid: /usr/local/lib/liblog4cpp.so
 bin/typeid: src/typeid/CMakeFiles/typeid.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/typeid"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/typeid && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/typeid.dir/link.txt --verbose=$(VERBOSE)

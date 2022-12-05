@@ -14,7 +14,7 @@ foreach(file ${SRCS})
         message(STATUS ${file})
 endforeach()
 
-add_executable(${PROJECT_N} ${SRCS} include/window.h src/window.cpp)
+add_executable(${PROJECT_N} ${SRCS} include/window.h src/window.cpp include/Console.h src/Console.cpp)
 
 target_include_directories(${PROJECT_N} PUBLIC ${PROJECT_SOURCE_DIR}/include)
 target_link_libraries(${PROJECT_N} PUBLIC framework imgui)

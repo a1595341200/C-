@@ -96,6 +96,7 @@ bin/overload: lib/libframework.so
 bin/overload: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/overload: /usr/local/lib/libevent.so
 bin/overload: lib/libsubprocess.a
+bin/overload: /usr/local/lib/liblog4cpp.so
 bin/overload: src/overload/CMakeFiles/overload.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/overload"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/overload && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/overload.dir/link.txt --verbose=$(VERBOSE)

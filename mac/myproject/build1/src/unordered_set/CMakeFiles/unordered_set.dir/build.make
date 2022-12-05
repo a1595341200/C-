@@ -96,6 +96,7 @@ bin/unordered_set: lib/libframework.so
 bin/unordered_set: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/unordered_set: /usr/local/lib/libevent.so
 bin/unordered_set: lib/libsubprocess.a
+bin/unordered_set: /usr/local/lib/liblog4cpp.so
 bin/unordered_set: src/unordered_set/CMakeFiles/unordered_set.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/unordered_set"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/unordered_set && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/unordered_set.dir/link.txt --verbose=$(VERBOSE)

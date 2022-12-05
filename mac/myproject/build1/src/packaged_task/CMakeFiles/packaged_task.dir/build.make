@@ -96,6 +96,7 @@ bin/packaged_task: lib/libframework.so
 bin/packaged_task: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/packaged_task: /usr/local/lib/libevent.so
 bin/packaged_task: lib/libsubprocess.a
+bin/packaged_task: /usr/local/lib/liblog4cpp.so
 bin/packaged_task: src/packaged_task/CMakeFiles/packaged_task.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/packaged_task"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/packaged_task && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/packaged_task.dir/link.txt --verbose=$(VERBOSE)

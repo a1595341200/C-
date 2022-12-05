@@ -96,6 +96,7 @@ bin/Throw_an_exception_at_destructor_time: lib/libframework.so
 bin/Throw_an_exception_at_destructor_time: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/Throw_an_exception_at_destructor_time: /usr/local/lib/libevent.so
 bin/Throw_an_exception_at_destructor_time: lib/libsubprocess.a
+bin/Throw_an_exception_at_destructor_time: /usr/local/lib/liblog4cpp.so
 bin/Throw_an_exception_at_destructor_time: src/Throw_an_exception_at_destructor_time/CMakeFiles/Throw_an_exception_at_destructor_time.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/Throw_an_exception_at_destructor_time"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/Throw_an_exception_at_destructor_time && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Throw_an_exception_at_destructor_time.dir/link.txt --verbose=$(VERBOSE)

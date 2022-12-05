@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Log.cpp" "libframework/framework/CMakeFiles/framework.dir/src/Log.cpp.o" "gcc" "libframework/framework/CMakeFiles/framework.dir/src/Log.cpp.o.d"
   "/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Looper.cpp" "libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.o" "gcc" "libframework/framework/CMakeFiles/framework.dir/src/Looper.cpp.o.d"
   "/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/Message.cpp" "libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.o" "gcc" "libframework/framework/CMakeFiles/framework.dir/src/Message.cpp.o.d"
   "/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/RunableHandler.cpp" "libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.o" "gcc" "libframework/framework/CMakeFiles/framework.dir/src/RunableHandler.cpp.o.d"

@@ -96,6 +96,7 @@ bin/addressof: lib/libframework.so
 bin/addressof: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/addressof: /usr/local/lib/libevent.so
 bin/addressof: lib/libsubprocess.a
+bin/addressof: /usr/local/lib/liblog4cpp.so
 bin/addressof: src/addressof/CMakeFiles/addressof.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/addressof"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/addressof && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/addressof.dir/link.txt --verbose=$(VERBOSE)

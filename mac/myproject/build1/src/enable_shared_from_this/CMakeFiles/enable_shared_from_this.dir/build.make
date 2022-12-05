@@ -96,6 +96,7 @@ bin/enable_shared_from_this: lib/libframework.so
 bin/enable_shared_from_this: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/enable_shared_from_this: /usr/local/lib/libevent.so
 bin/enable_shared_from_this: lib/libsubprocess.a
+bin/enable_shared_from_this: /usr/local/lib/liblog4cpp.so
 bin/enable_shared_from_this: src/enable_shared_from_this/CMakeFiles/enable_shared_from_this.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/enable_shared_from_this"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/enable_shared_from_this && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/enable_shared_from_this.dir/link.txt --verbose=$(VERBOSE)

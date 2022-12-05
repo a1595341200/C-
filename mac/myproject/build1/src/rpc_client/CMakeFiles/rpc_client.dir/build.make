@@ -96,6 +96,7 @@ bin/rpc_client: lib/libframework.so
 bin/rpc_client: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/rpc_client: /usr/local/lib/libevent.so
 bin/rpc_client: lib/libsubprocess.a
+bin/rpc_client: /usr/local/lib/liblog4cpp.so
 bin/rpc_client: src/rpc_client/CMakeFiles/rpc_client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/rpc_client"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/rpc_client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rpc_client.dir/link.txt --verbose=$(VERBOSE)

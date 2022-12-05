@@ -96,6 +96,7 @@ bin/class_template: lib/libframework.so
 bin/class_template: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/class_template: /usr/local/lib/libevent.so
 bin/class_template: lib/libsubprocess.a
+bin/class_template: /usr/local/lib/liblog4cpp.so
 bin/class_template: src/class_template/CMakeFiles/class_template.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/class_template"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/class_template && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/class_template.dir/link.txt --verbose=$(VERBOSE)

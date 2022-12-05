@@ -9,12 +9,22 @@ set(PRJ_SRC_LIST)
 set(PRJ_LIBRARIES)
 set(PRJ_INCLUDE_DIRS)
 
-set(GLFW_HOME /opt/homebrew/Cellar/glfw/3.3.8)
-#set(GLAD_HOME "d:/software/glad")
+if(APPLE)
+        set(GLFW_HOME /opt/homebrew/Cellar/glfw/3.3.8)
+elseif(UNIX)
+        set(GLFW_HOME /opt/homebrew/Cellar/glfw/3.3.8)
+endif()
+
+# set(GLAD_HOME "d:/software/glad")
 set(IMGUI_HOME ${CMAKE_CURRENT_SOURCE_DIR})
 
 set(GLFW_INC ${GLFW_HOME}/include)
-set(GLFW_LIB ${GLFW_HOME}/lib/libglfw.dylib)
+
+if(APPLE)
+        set(GLFW_LIB ${GLFW_HOME}/lib/libglfw.dylib)
+elseif(UNIX)
+        set(GLFW_LIB /usr/lib/aarch64-linux-gnu/libglfw.so)
+endif()
 
 set(IMGUI_INC "${IMGUI_HOME}/include")
 set(IMGUI_SRC "${IMGUI_HOME}/src")
@@ -53,9 +63,9 @@ message(${PRJ_INC_LIST})
 target_include_directories(${PROJECT_N}
         PUBLIC
         ${PRJ_INCLUDE_DIRS}
-        )
+)
 
 target_link_libraries(${PROJECT_N}
         PUBLIC
         ${PRJ_LIBRARIES}
-        )
+)

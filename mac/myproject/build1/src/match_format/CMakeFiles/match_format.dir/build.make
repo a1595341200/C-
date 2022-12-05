@@ -96,6 +96,7 @@ bin/match_format: lib/libframework.so
 bin/match_format: /usr/lib/aarch64-linux-gnu/libsqlite3.so
 bin/match_format: /usr/local/lib/libevent.so
 bin/match_format: lib/libsubprocess.a
+bin/match_format: /usr/local/lib/liblog4cpp.so
 bin/match_format: src/match_format/CMakeFiles/match_format.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/psf/Home/Desktop/git/C-/mac/myproject/build1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/match_format"
 	cd /media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/match_format && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/match_format.dir/link.txt --verbose=$(VERBOSE)

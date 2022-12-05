@@ -6,6 +6,7 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include <subprocess.hpp>
+#include "Console.h"
 
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #include <GLES2/gl2.h>
@@ -103,18 +104,20 @@ void Window::show(const std::string &name) {
         ImGui::NewFrame();
 
         // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
-        if (show_demo_window) {
+//        if (show_demo_window) {
             ImGui::ShowDemoWindow(&show_demo_window);
-        }
+//        }
         // 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
 
-        ShowSimpleWindow(show_demo_window, show_another_window);
+//        ShowSimpleWindow(show_demo_window, show_another_window);
 
         // 3. Show another simple window.
-        if (show_another_window) {
-            showAnotherWindow(show_another_window);
-        }
+//        if (show_another_window) {
+//            showAnotherWindow(show_another_window);
+//        }
 
+//      //4. show console
+        showConsole();
         Rendering();
     }
 
@@ -152,7 +155,7 @@ void Window::ShowSimpleWindow(bool &show_demo_window,
         counter++;
     }
     ImGui::SameLine();
-    if(ImGui::Button("login")){
+    if (ImGui::Button("login")) {
         using subprocess::CompletedProcess;
         using subprocess::RunBuilder;
         using subprocess::PipeOption;
@@ -187,4 +190,10 @@ void Window::Rendering() {
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
     glfwSwapBuffers(mWindow);
+}
+
+void Window::showConsole() {
+    static Console c;
+    bool b{true};
+    c.Draw("test", &b);
 }
