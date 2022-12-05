@@ -26,7 +26,7 @@
 #    define LOG4CPP_UNDEFINE_WIN32_LEAN_AND_MEAN
 #  endif
 
-#  include <window.h>
+#  include <windows.h>
 
 #  ifdef LOG4CPP_UNDEFINE_NOGDI
 #    undef NOGDI

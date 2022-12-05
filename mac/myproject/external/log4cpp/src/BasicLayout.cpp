@@ -29,7 +29,7 @@ namespace log4cpp {
         std::ostringstream message;
 
         const std::string& priorityName = Priority::getPriorityName(event.priority);
-        message << event.timeStamp.getSeconds() << " " << priorityName << " "
+        message << event.timeStamp.getSeconds() << " " << priorityName << " " 
                 << event.categoryName << " " << event.ndc << ": " 
                 << event.message << std::endl;
 
