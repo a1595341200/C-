@@ -1,1 +1,0 @@
-/usr/bin/c++  -save-temps=obj CMakeFiles/103_2.dir/src/main.cpp.o -o ../../bin/103_2  -Wl,-rpath,/media/psf/Home/Desktop/git/C-/mac/myproject/build1/lib:/usr/local/lib ../../lib/libframework.so /usr/lib/aarch64-linux-gnu/libsqlite3.so /usr/local/lib/libevent.so ../../lib/libsubprocess.a -lstdc++fs -ldl /usr/local/lib/liblog4cpp.so 

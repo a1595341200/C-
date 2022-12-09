@@ -1,4 +1,3 @@
-#include <iostream>
 #include <framework/leetcode.h>
 
 using namespace std;

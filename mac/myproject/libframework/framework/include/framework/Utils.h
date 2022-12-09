@@ -42,14 +42,14 @@ private:
 template<typename T>
 void printT(const T &t) {
     lookType(t);
-    if constexpr (std::is_same_v<T, std::vector<std::vector<typename  T::value_type::value_type>>>) {
+    if constexpr (!std::is_fundamental_v<typename T::value_type>) {
         for (auto &i: t) {
             for (auto &j: i) {
                 std::cout << j << " ";
             }
             std::cout << "\n";
         }
-    } else if constexpr(std::is_same_v<T, std::vector<typename  T::value_type>>) {
+    } else {
         for (auto j: t) {
             std::cout << j << " ";
         }
