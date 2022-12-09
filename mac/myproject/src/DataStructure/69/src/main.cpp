@@ -1,29 +1,38 @@
 #include <iostream>
+#include <framework/leetcode.h>
+#include <chrono>
+#include <thread>
+
+using namespace std;
+using namespace literals::chrono_literals;
+
 class Solution {
 public:
     int mySqrt(int x) {
-        int ans = 0;
-        int l = 0;
-        int r = x;
-        int mid = 0;
-        while (l <= r)
-        {
-            mid = (l + r) / 2;
-            if ((long long)mid *mid <=x)
-            {
-                l = mid + 1;
-                ans = mid;
+        if (x == 0) {
+            return 0;
+        }
+        int l = 1, r = x, mid = 0;
+        while (l <= r) {
+            mid = l + (r - l) / 2;
+            int tmp = x / mid;
+            if (tmp == mid) {
+                return mid;
             }
-            else
-            {
-                r= mid - 1;
+
+            if (tmp < mid) { //mid 的平方大于x 缩小区间至左区间
+                r = mid - 1;
+            } else { //mid 的平方大于x 缩小区间至右区间
+                l = mid + 1;
             }
         }
-        return ans;
+        return r;
     }
 };
-int main(int argc, char const *argv[])
-{
-    std::cout<< "Hello World!" << std::endl;
+
+int main(int argc, char const *argv[]) {
+    Solution s;
+    auto r = s.mySqrt(2147395599);
+    dbg(r);
     return 0;
 }

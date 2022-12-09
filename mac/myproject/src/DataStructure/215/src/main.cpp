@@ -1,28 +1,23 @@
-//
-//  main.cpp
-//  215
-//
-//  Created by 谢瑶 on 2022/8/6.
-//
-
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <framework/leetcode.h>
+
 using namespace std;
+
 class Solution {
 public:
     int findKthLargest(vector<int> &nums, int k) {
-        sort(nums.begin(), nums.end(), std::greater());
-        return nums[k];
+        std::sort(nums.begin(), nums.end(), [](int a, int b) {
+            return a > b;
+        });
+        return nums[k - 1];
     }
 };
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    vector<int> v{1,5,3};
-    sort(v.begin(), v.end(), std::less());
-    for(auto a:v){
-        std::cout<<a<<std::endl;
-    }
+
+int main(int argc, char const *argv[]) {
+    Solution s;
+//    vector<int > v{3,2,3,1,2,4,5,5,6};
+    vector<int> v{3, 2, 1, 5, 6, 4};
+    auto r = s.findKthLargest(v, 2);
+    dbg(r);
     return 0;
 }

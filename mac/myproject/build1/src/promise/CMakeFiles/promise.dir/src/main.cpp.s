@@ -1766,40 +1766,38 @@ _ZNSt6futureIiED2Ev:
 	.set	_ZNSt6futureIiED1Ev,_ZNSt6futureIiED2Ev
 	.text
 	.align	2
-	.global	main
-	.type	main, %function
-main:
+	.global	_Z4testv
+	.type	_Z4testv, %function
+_Z4testv:
 .LFB3436:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
 	.cfi_lsda 0x1b,.LLSDA3436
-	stp	x29, x30, [sp, -112]!
-	.cfi_def_cfa_offset 112
-	.cfi_offset 29, -112
-	.cfi_offset 30, -104
+	stp	x29, x30, [sp, -96]!
+	.cfi_def_cfa_offset 96
+	.cfi_offset 29, -96
+	.cfi_offset 30, -88
 	mov	x29, sp
 	str	x19, [sp, 16]
-	.cfi_offset 19, -96
-	str	w0, [sp, 44]
-	str	x1, [sp, 32]
+	.cfi_offset 19, -80
 	adrp	x0, :got:__stack_chk_guard
 	ldr	x0, [x0, #:got_lo12:__stack_chk_guard]
 	ldr	x1, [x0]
-	str	x1, [sp, 104]
+	str	x1, [sp, 88]
 	mov	x1, 0
-	add	x0, sp, 80
+	add	x0, sp, 64
 .LEHB4:
 	bl	_ZNSt7promiseIiEC1Ev
 .LEHE4:
-	add	x0, sp, 80
-	add	x1, sp, 64
+	add	x0, sp, 64
+	add	x1, sp, 48
 	mov	x8, x1
 .LEHB5:
 	bl	_ZNSt7promiseIiE10get_futureEv
 .LEHE5:
-	add	x0, sp, 80
+	add	x0, sp, 64
 	bl	_ZSt4moveIRSt7promiseIiEEONSt16remove_referenceIT_E4typeEOS4_
-	add	x3, sp, 56
+	add	x3, sp, 40
 	mov	x2, x0
 	adrp	x0, _Z4workOSt7promiseIiE
 	add	x1, x0, :lo12:_Z4workOSt7promiseIiE
@@ -1807,10 +1805,10 @@ main:
 .LEHB6:
 	bl	_ZNSt6threadC1IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_
 .LEHE6:
-	add	x0, sp, 56
+	add	x0, sp, 40
 .LEHB7:
 	bl	_ZNSt6thread6detachEv
-	add	x0, sp, 64
+	add	x0, sp, 48
 	bl	_ZNSt6futureIiE3getEv
 	mov	w1, w0
 	adrp	x0, :got:_ZSt4cout
@@ -1822,48 +1820,45 @@ main:
 	mov	x0, x2
 	bl	_ZNSolsEPFRSoS_E
 .LEHE7:
-	mov	w19, 0
-	add	x0, sp, 56
+	add	x0, sp, 40
 	bl	_ZNSt6threadD1Ev
-	add	x0, sp, 64
+	add	x0, sp, 48
 	bl	_ZNSt6futureIiED1Ev
-	add	x0, sp, 80
+	add	x0, sp, 64
 	bl	_ZNSt7promiseIiED1Ev
-	mov	w1, w19
 	adrp	x0, :got:__stack_chk_guard
 	ldr	x0, [x0, #:got_lo12:__stack_chk_guard]
-	ldr	x3, [sp, 104]
-	ldr	x2, [x0]
-	subs	x3, x3, x2
-	mov	x2, 0
-	beq	.L127
-	b	.L131
-.L130:
-	mov	x19, x0
-	add	x0, sp, 56
-	bl	_ZNSt6threadD1Ev
-	b	.L125
+	ldr	x2, [sp, 88]
+	ldr	x1, [x0]
+	subs	x2, x2, x1
+	mov	x1, 0
+	beq	.L126
+	b	.L130
 .L129:
+	mov	x19, x0
+	add	x0, sp, 40
+	bl	_ZNSt6threadD1Ev
+	b	.L124
+.L128:
+	mov	x19, x0
+.L124:
+	add	x0, sp, 48
+	bl	_ZNSt6futureIiED1Ev
+	b	.L125
+.L127:
 	mov	x19, x0
 .L125:
 	add	x0, sp, 64
-	bl	_ZNSt6futureIiED1Ev
-	b	.L126
-.L128:
-	mov	x19, x0
-.L126:
-	add	x0, sp, 80
 	bl	_ZNSt7promiseIiED1Ev
 	mov	x0, x19
 .LEHB8:
 	bl	_Unwind_Resume
 .LEHE8:
-.L131:
+.L130:
 	bl	__stack_chk_fail
-.L127:
-	mov	w0, w1
+.L126:
 	ldr	x19, [sp, 16]
-	ldp	x29, x30, [sp], 112
+	ldp	x29, x30, [sp], 96
 	.cfi_restore 30
 	.cfi_restore 29
 	.cfi_restore 19
@@ -1884,15 +1879,15 @@ main:
 	.uleb128 0
 	.uleb128 .LEHB5-.LFB3436
 	.uleb128 .LEHE5-.LEHB5
-	.uleb128 .L128-.LFB3436
+	.uleb128 .L127-.LFB3436
 	.uleb128 0
 	.uleb128 .LEHB6-.LFB3436
 	.uleb128 .LEHE6-.LEHB6
-	.uleb128 .L129-.LFB3436
+	.uleb128 .L128-.LFB3436
 	.uleb128 0
 	.uleb128 .LEHB7-.LFB3436
 	.uleb128 .LEHE7-.LEHB7
-	.uleb128 .L130-.LFB3436
+	.uleb128 .L129-.LFB3436
 	.uleb128 0
 	.uleb128 .LEHB8-.LFB3436
 	.uleb128 .LEHE8-.LEHB8
@@ -1900,13 +1895,252 @@ main:
 	.uleb128 0
 .LLSDACSE3436:
 	.text
+	.size	_Z4testv, .-_Z4testv
+	.align	2
+	.global	_Z6test01v
+	.type	_Z6test01v, %function
+_Z6test01v:
+.LFB3443:
+	.cfi_startproc
+	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
+	.cfi_lsda 0x1b,.LLSDA3443
+	stp	x29, x30, [sp, -96]!
+	.cfi_def_cfa_offset 96
+	.cfi_offset 29, -96
+	.cfi_offset 30, -88
+	mov	x29, sp
+	str	x19, [sp, 16]
+	.cfi_offset 19, -80
+	adrp	x0, :got:__stack_chk_guard
+	ldr	x0, [x0, #:got_lo12:__stack_chk_guard]
+	ldr	x1, [x0]
+	str	x1, [sp, 88]
+	mov	x1, 0
+	add	x0, sp, 64
+.LEHB9:
+	bl	_ZNSt7promiseIiEC1Ev
+.LEHE9:
+	add	x0, sp, 64
+	add	x1, sp, 48
+	mov	x8, x1
+.LEHB10:
+	bl	_ZNSt7promiseIiE10get_futureEv
+.LEHE10:
+	add	x0, sp, 64
+	bl	_ZSt4moveIRSt7promiseIiEEONSt16remove_referenceIT_E4typeEOS4_
+	add	x3, sp, 40
+	mov	x2, x0
+	adrp	x0, _Z4workOSt7promiseIiE
+	add	x1, x0, :lo12:_Z4workOSt7promiseIiE
+	mov	x0, x3
+.LEHB11:
+	bl	_ZNSt6threadC1IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_
+.LEHE11:
+	add	x0, sp, 40
+.LEHB12:
+	bl	_ZNSt6thread6detachEv
+	add	x0, sp, 48
+	bl	_ZNSt6futureIiE3getEv
+	mov	w1, w0
+	adrp	x0, :got:_ZSt4cout
+	ldr	x0, [x0, #:got_lo12:_ZSt4cout]
+	bl	_ZNSolsEi
+	mov	x2, x0
+	adrp	x0, :got:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+	ldr	x1, [x0, #:got_lo12:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_]
+	mov	x0, x2
+	bl	_ZNSolsEPFRSoS_E
+.LEHE12:
+	add	x0, sp, 40
+	bl	_ZNSt6threadD1Ev
+	add	x0, sp, 48
+	bl	_ZNSt6futureIiED1Ev
+	add	x0, sp, 64
+	bl	_ZNSt7promiseIiED1Ev
+	adrp	x0, :got:__stack_chk_guard
+	ldr	x0, [x0, #:got_lo12:__stack_chk_guard]
+	ldr	x2, [sp, 88]
+	ldr	x1, [x0]
+	subs	x2, x2, x1
+	mov	x1, 0
+	beq	.L135
+	b	.L139
+.L138:
+	mov	x19, x0
+	add	x0, sp, 40
+	bl	_ZNSt6threadD1Ev
+	b	.L133
+.L137:
+	mov	x19, x0
+.L133:
+	add	x0, sp, 48
+	bl	_ZNSt6futureIiED1Ev
+	b	.L134
+.L136:
+	mov	x19, x0
+.L134:
+	add	x0, sp, 64
+	bl	_ZNSt7promiseIiED1Ev
+	mov	x0, x19
+.LEHB13:
+	bl	_Unwind_Resume
+.LEHE13:
+.L139:
+	bl	__stack_chk_fail
+.L135:
+	ldr	x19, [sp, 16]
+	ldp	x29, x30, [sp], 96
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_restore 19
+	.cfi_def_cfa_offset 0
+	ret
+	.cfi_endproc
+.LFE3443:
+	.section	.gcc_except_table
+.LLSDA3443:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE3443-.LLSDACSB3443
+.LLSDACSB3443:
+	.uleb128 .LEHB9-.LFB3443
+	.uleb128 .LEHE9-.LEHB9
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB10-.LFB3443
+	.uleb128 .LEHE10-.LEHB10
+	.uleb128 .L136-.LFB3443
+	.uleb128 0
+	.uleb128 .LEHB11-.LFB3443
+	.uleb128 .LEHE11-.LEHB11
+	.uleb128 .L137-.LFB3443
+	.uleb128 0
+	.uleb128 .LEHB12-.LFB3443
+	.uleb128 .LEHE12-.LEHB12
+	.uleb128 .L138-.LFB3443
+	.uleb128 0
+	.uleb128 .LEHB13-.LFB3443
+	.uleb128 .LEHE13-.LEHB13
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE3443:
+	.text
+	.size	_Z6test01v, .-_Z6test01v
+	.align	2
+	.global	main
+	.type	main, %function
+main:
+.LFB3444:
+	.cfi_startproc
+	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
+	.cfi_lsda 0x1b,.LLSDA3444
+	stp	x29, x30, [sp, -112]!
+	.cfi_def_cfa_offset 112
+	.cfi_offset 29, -112
+	.cfi_offset 30, -104
+	mov	x29, sp
+	str	x19, [sp, 16]
+	.cfi_offset 19, -96
+	str	w0, [sp, 44]
+	str	x1, [sp, 32]
+	adrp	x0, :got:__stack_chk_guard
+	ldr	x0, [x0, #:got_lo12:__stack_chk_guard]
+	ldr	x1, [x0]
+	str	x1, [sp, 104]
+	mov	x1, 0
+	add	x0, sp, 80
+.LEHB14:
+	bl	_ZNSt7promiseIiEC1Ev
+.LEHE14:
+	add	x0, sp, 80
+	add	x1, sp, 64
+	mov	x8, x1
+.LEHB15:
+	bl	_ZNSt7promiseIiE10get_futureEv
+.LEHE15:
+	mov	w0, 1
+	str	w0, [sp, 56]
+	add	x1, sp, 56
+	add	x0, sp, 80
+.LEHB16:
+	bl	_ZNSt7promiseIiE9set_valueEOi
+.LEHE16:
+	mov	x0, 1000
+	str	x0, [sp, 56]
+	mov	w19, 0
+	add	x0, sp, 64
+	bl	_ZNSt6futureIiED1Ev
+	add	x0, sp, 80
+	bl	_ZNSt7promiseIiED1Ev
+	mov	w1, w19
+	adrp	x0, :got:__stack_chk_guard
+	ldr	x0, [x0, #:got_lo12:__stack_chk_guard]
+	ldr	x3, [sp, 104]
+	ldr	x2, [x0]
+	subs	x3, x3, x2
+	mov	x2, 0
+	beq	.L144
+	b	.L147
+.L146:
+	mov	x19, x0
+	add	x0, sp, 64
+	bl	_ZNSt6futureIiED1Ev
+	b	.L143
+.L145:
+	mov	x19, x0
+.L143:
+	add	x0, sp, 80
+	bl	_ZNSt7promiseIiED1Ev
+	mov	x0, x19
+.LEHB17:
+	bl	_Unwind_Resume
+.LEHE17:
+.L147:
+	bl	__stack_chk_fail
+.L144:
+	mov	w0, w1
+	ldr	x19, [sp, 16]
+	ldp	x29, x30, [sp], 112
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_restore 19
+	.cfi_def_cfa_offset 0
+	ret
+	.cfi_endproc
+.LFE3444:
+	.section	.gcc_except_table
+.LLSDA3444:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE3444-.LLSDACSB3444
+.LLSDACSB3444:
+	.uleb128 .LEHB14-.LFB3444
+	.uleb128 .LEHE14-.LEHB14
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB15-.LFB3444
+	.uleb128 .LEHE15-.LEHB15
+	.uleb128 .L145-.LFB3444
+	.uleb128 0
+	.uleb128 .LEHB16-.LFB3444
+	.uleb128 .LEHE16-.LEHB16
+	.uleb128 .L146-.LFB3444
+	.uleb128 0
+	.uleb128 .LEHB17-.LFB3444
+	.uleb128 .LEHE17-.LEHB17
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE3444:
+	.text
 	.size	main, .-main
 	.section	.text._ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_,"axG",@progbits,_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_,comdat
 	.align	2
 	.weak	_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_
 	.type	_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_, %function
 _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_:
-.LFB3700:
+.LFB3716:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -1935,14 +2169,14 @@ _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3700:
+.LFE3716:
 	.size	_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_, .-_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_
 	.section	.text._ZNKSt6chrono8durationIlSt5ratioILl1ELl1EEE5countEv,"axG",@progbits,_ZNKSt6chrono8durationIlSt5ratioILl1ELl1EEE5countEv,comdat
 	.align	2
 	.weak	_ZNKSt6chrono8durationIlSt5ratioILl1ELl1EEE5countEv
 	.type	_ZNKSt6chrono8durationIlSt5ratioILl1ELl1EEE5countEv, %function
 _ZNKSt6chrono8durationIlSt5ratioILl1ELl1EEE5countEv:
-.LFB3705:
+.LFB3721:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -1953,14 +2187,14 @@ _ZNKSt6chrono8durationIlSt5ratioILl1ELl1EEE5countEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3705:
+.LFE3721:
 	.size	_ZNKSt6chrono8durationIlSt5ratioILl1ELl1EEE5countEv, .-_ZNKSt6chrono8durationIlSt5ratioILl1ELl1EEE5countEv
 	.section	.text._ZNKSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv,"axG",@progbits,_ZNKSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv,comdat
 	.align	2
 	.weak	_ZNKSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv
 	.type	_ZNKSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv, %function
 _ZNKSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv:
-.LFB3730:
+.LFB3746:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -1973,14 +2207,14 @@ _ZNKSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3730:
+.LFE3746:
 	.size	_ZNKSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv, .-_ZNKSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv
 	.section	.text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev,"axG",@progbits,_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED5Ev,comdat
 	.align	2
 	.weak	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev
 	.type	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev, %function
 _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev:
-.LFB3734:
+.LFB3750:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -1991,11 +2225,11 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev:
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0]
 	cmp	x0, 0
-	beq	.L140
+	beq	.L156
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0]
 	bl	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv
-.L140:
+.L156:
 	nop
 	ldp	x29, x30, [sp], 32
 	.cfi_restore 30
@@ -2003,7 +2237,7 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3734:
+.LFE3750:
 	.size	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev, .-_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev
 	.weak	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED1Ev
 	.set	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED1Ev,_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev
@@ -2012,7 +2246,7 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev:
 	.weak	_ZNSt13__atomic_baseIjEC2Ej
 	.type	_ZNSt13__atomic_baseIjEC2Ej, %function
 _ZNSt13__atomic_baseIjEC2Ej:
-.LFB3780:
+.LFB3796:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -2026,7 +2260,7 @@ _ZNSt13__atomic_baseIjEC2Ej:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3780:
+.LFE3796:
 	.size	_ZNSt13__atomic_baseIjEC2Ej, .-_ZNSt13__atomic_baseIjEC2Ej
 	.weak	_ZNSt13__atomic_baseIjEC1Ej
 	.set	_ZNSt13__atomic_baseIjEC1Ej,_ZNSt13__atomic_baseIjEC2Ej
@@ -2035,10 +2269,10 @@ _ZNSt13__atomic_baseIjEC2Ej:
 	.weak	_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2ILb1ELb1EEEv
 	.type	_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2ILb1ELb1EEEv, %function
 _ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2ILb1ELb1EEEv:
-.LFB3810:
+.LFB3826:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3810
+	.cfi_lsda 0x1b,.LLSDA3826
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
 	.cfi_offset 29, -32
@@ -2054,15 +2288,15 @@ _ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2ILb1ELb1EEEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3810:
+.LFE3826:
 	.section	.gcc_except_table
-.LLSDA3810:
+.LLSDA3826:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3810-.LLSDACSB3810
-.LLSDACSB3810:
-.LLSDACSE3810:
+	.uleb128 .LLSDACSE3826-.LLSDACSB3826
+.LLSDACSB3826:
+.LLSDACSE3826:
 	.section	.text._ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2ILb1ELb1EEEv,"axG",@progbits,_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC5ILb1ELb1EEEv,comdat
 	.size	_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2ILb1ELb1EEEv, .-_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2ILb1ELb1EEEv
 	.weak	_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC1ILb1ELb1EEEv
@@ -2072,7 +2306,7 @@ _ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2ILb1ELb1EEEv:
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2Ev
 	.type	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2Ev, %function
 _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2Ev:
-.LFB3812:
+.LFB3828:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2089,7 +2323,7 @@ _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3812:
+.LFE3828:
 	.size	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2Ev, .-_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2Ev
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC1Ev
 	.set	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC1Ev,_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2Ev
@@ -2098,7 +2332,7 @@ _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2Ev:
 	.weak	_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EEv
 	.type	_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EEv, %function
 _ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EEv:
-.LFB3814:
+.LFB3830:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2115,7 +2349,7 @@ _ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EEC
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3814:
+.LFE3830:
 	.size	_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EEv, .-_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EEv
 	.weak	_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI1St15__uniq_ptr_implIS1_S2_EEv
 	.set	_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI1St15__uniq_ptr_implIS1_S2_EEv,_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EEv
@@ -2124,7 +2358,7 @@ _ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EEC
 	.weak	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_vEEv
 	.type	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_vEEv, %function
 _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_vEEv:
-.LFB3816:
+.LFB3832:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2143,7 +2377,7 @@ _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_vEEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3816:
+.LFE3832:
 	.size	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_vEEv, .-_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_vEEv
 	.weak	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC1IS2_vEEv
 	.set	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC1IS2_vEEv,_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_vEEv
@@ -2152,10 +2386,10 @@ _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_vEEv:
 	.weak	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED2Ev
 	.type	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED2Ev, %function
 _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED2Ev:
-.LFB3819:
+.LFB3835:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3819
+	.cfi_lsda 0x1b,.LLSDA3835
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
 	.cfi_offset 29, -64
@@ -2170,7 +2404,7 @@ _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED2Ev:
 	ldr	x0, [sp, 56]
 	ldr	x0, [x0]
 	cmp	x0, 0
-	beq	.L147
+	beq	.L163
 	ldr	x0, [sp, 40]
 	bl	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE11get_deleterEv
 	mov	x19, x0
@@ -2180,7 +2414,7 @@ _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED2Ev:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_ZNKSt13__future_base12_Result_base8_DeleterclEPS0_
-.L147:
+.L163:
 	ldr	x0, [sp, 56]
 	str	xzr, [x0]
 	nop
@@ -2192,15 +2426,15 @@ _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3819:
+.LFE3835:
 	.section	.gcc_except_table
-.LLSDA3819:
+.LLSDA3835:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3819-.LLSDACSB3819
-.LLSDACSB3819:
-.LLSDACSE3819:
+	.uleb128 .LLSDACSE3835-.LLSDACSB3835
+.LLSDACSB3835:
+.LLSDACSE3835:
 	.section	.text._ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED2Ev,"axG",@progbits,_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED5Ev,comdat
 	.size	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED2Ev, .-_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED2Ev
 	.weak	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED1Ev
@@ -2210,7 +2444,7 @@ _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED2Ev:
 	.weak	_ZNSt23__atomic_futex_unsignedILj2147483648EEC2Ej
 	.type	_ZNSt23__atomic_futex_unsignedILj2147483648EEC2Ej, %function
 _ZNSt23__atomic_futex_unsignedILj2147483648EEC2Ej:
-.LFB3822:
+.LFB3838:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2229,7 +2463,7 @@ _ZNSt23__atomic_futex_unsignedILj2147483648EEC2Ej:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3822:
+.LFE3838:
 	.size	_ZNSt23__atomic_futex_unsignedILj2147483648EEC2Ej, .-_ZNSt23__atomic_futex_unsignedILj2147483648EEC2Ej
 	.weak	_ZNSt23__atomic_futex_unsignedILj2147483648EEC1Ej
 	.set	_ZNSt23__atomic_futex_unsignedILj2147483648EEC1Ej,_ZNSt23__atomic_futex_unsignedILj2147483648EEC2Ej
@@ -2238,7 +2472,7 @@ _ZNSt23__atomic_futex_unsignedILj2147483648EEC2Ej:
 	.weak	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEdeEv
 	.type	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEdeEv, %function
 _ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEdeEv:
-.LFB3825:
+.LFB3841:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2256,14 +2490,14 @@ _ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEdeEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3825:
+.LFE3841:
 	.size	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEdeEv, .-_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEdeEv
 	.section	.text._ZSt11__addressofISt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEPT_RS8_,"axG",@progbits,_ZSt11__addressofISt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEPT_RS8_,comdat
 	.align	2
 	.weak	_ZSt11__addressofISt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEPT_RS8_
 	.type	_ZSt11__addressofISt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEPT_RS8_, %function
 _ZSt11__addressofISt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEPT_RS8_:
-.LFB3826:
+.LFB3842:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -2273,14 +2507,14 @@ _ZSt11__addressofISt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseEN
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3826:
+.LFE3842:
 	.size	_ZSt11__addressofISt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEPT_RS8_, .-_ZSt11__addressofISt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEPT_RS8_
 	.section	.text._ZSt11__addressofIbEPT_RS0_,"axG",@progbits,_ZSt11__addressofIbEPT_RS0_,comdat
 	.align	2
 	.weak	_ZSt11__addressofIbEPT_RS0_
 	.type	_ZSt11__addressofIbEPT_RS0_, %function
 _ZSt11__addressofIbEPT_RS0_:
-.LFB3827:
+.LFB3843:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -2290,14 +2524,14 @@ _ZSt11__addressofIbEPT_RS0_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3827:
+.LFE3843:
 	.size	_ZSt11__addressofIbEPT_RS0_, .-_ZSt11__addressofIbEPT_RS0_
 	.section	.text._ZZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_ENKUlvE_clEv,"axG",@progbits,_ZZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_ENKUlvE_clEv,comdat
 	.align	2
 	.weak	_ZZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_ENKUlvE_clEv
 	.type	_ZZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_ENKUlvE_clEv, %function
 _ZZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_ENKUlvE_clEv:
-.LFB3829:
+.LFB3845:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -2342,17 +2576,17 @@ _ZZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_pt
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3829:
+.LFE3845:
 	.size	_ZZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_ENKUlvE_clEv, .-_ZZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_ENKUlvE_clEv
 	.section	.text._ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_,"axG",@progbits,_ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_,comdat
 	.align	2
 	.weak	_ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_
 	.type	_ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_, %function
 _ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_:
-.LFB3828:
+.LFB3844:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3828
+	.cfi_lsda 0x1b,.LLSDA3844
 	stp	x29, x30, [sp, -128]!
 	.cfi_def_cfa_offset 128
 	.cfi_offset 29, -128
@@ -2385,16 +2619,16 @@ _ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptr
 	adrp	x0, :got:__once_proxy
 	ldr	x1, [x0, #:got_lo12:__once_proxy]
 	mov	x0, x2
-.LEHB9:
+.LEHB18:
 	bl	_ZL14__gthread_oncePiPFvvE
 	str	w0, [sp, 84]
 	ldr	w0, [sp, 84]
 	cmp	w0, 0
-	beq	.L158
+	beq	.L174
 	ldr	w0, [sp, 84]
 	bl	_ZSt20__throw_system_errori
-.LEHE9:
-.L158:
+.LEHE18:
+.L174:
 	add	x0, sp, 80
 	bl	_ZNSt9once_flag18_Prepare_executionD1Ev
 	adrp	x0, :got:__stack_chk_guard
@@ -2403,19 +2637,19 @@ _ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptr
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L160
-	b	.L162
-.L161:
+	beq	.L176
+	b	.L178
+.L177:
 	mov	x19, x0
 	add	x0, sp, 80
 	bl	_ZNSt9once_flag18_Prepare_executionD1Ev
 	mov	x0, x19
-.LEHB10:
+.LEHB19:
 	bl	_Unwind_Resume
-.LEHE10:
-.L162:
+.LEHE19:
+.L178:
 	bl	__stack_chk_fail
-.L160:
+.L176:
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 128
 	.cfi_restore 30
@@ -2424,23 +2658,23 @@ _ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptr
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3828:
+.LFE3844:
 	.section	.gcc_except_table
-.LLSDA3828:
+.LLSDA3844:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3828-.LLSDACSB3828
-.LLSDACSB3828:
-	.uleb128 .LEHB9-.LFB3828
-	.uleb128 .LEHE9-.LEHB9
-	.uleb128 .L161-.LFB3828
+	.uleb128 .LLSDACSE3844-.LLSDACSB3844
+.LLSDACSB3844:
+	.uleb128 .LEHB18-.LFB3844
+	.uleb128 .LEHE18-.LEHB18
+	.uleb128 .L177-.LFB3844
 	.uleb128 0
-	.uleb128 .LEHB10-.LFB3828
-	.uleb128 .LEHE10-.LEHB10
+	.uleb128 .LEHB19-.LFB3844
+	.uleb128 .LEHE19-.LEHB19
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE3828:
+.LLSDACSE3844:
 	.section	.text._ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_,"axG",@progbits,_ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_,comdat
 	.size	_ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_, .-_ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EEvRSt9once_flagOT_DpOT0_
 	.section	.text._ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEcvbEv,"axG",@progbits,_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEcvbEv,comdat
@@ -2448,7 +2682,7 @@ _ZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptr
 	.weak	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEcvbEv
 	.type	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEcvbEv, %function
 _ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEcvbEv:
-.LFB3851:
+.LFB3867:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2467,14 +2701,14 @@ _ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEcvbEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3851:
+.LFE3867:
 	.size	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEcvbEv, .-_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEcvbEv
 	.section	.text._ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEptEv,"axG",@progbits,_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEptEv,comdat
 	.align	2
 	.weak	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEptEv
 	.type	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEptEv, %function
 _ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEptEv:
-.LFB3852:
+.LFB3868:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2490,14 +2724,14 @@ _ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEptEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3852:
+.LFE3868:
 	.size	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEptEv, .-_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEptEv
 	.section	.text._ZNSt12future_errorC2ERKS_,"axG",@progbits,_ZNSt12future_errorC5ERKS_,comdat
 	.align	2
 	.weak	_ZNSt12future_errorC2ERKS_
 	.type	_ZNSt12future_errorC2ERKS_, %function
 _ZNSt12future_errorC2ERKS_:
-.LFB3855:
+.LFB3871:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2525,7 +2759,7 @@ _ZNSt12future_errorC2ERKS_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3855:
+.LFE3871:
 	.size	_ZNSt12future_errorC2ERKS_, .-_ZNSt12future_errorC2ERKS_
 	.weak	_ZNSt12future_errorC1ERKS_
 	.set	_ZNSt12future_errorC1ERKS_,_ZNSt12future_errorC2ERKS_
@@ -2534,7 +2768,7 @@ _ZNSt12future_errorC2ERKS_:
 	.weak	_ZSt18make_exception_ptrISt12future_errorENSt15__exception_ptr13exception_ptrET_
 	.type	_ZSt18make_exception_ptrISt12future_errorENSt15__exception_ptr13exception_ptrET_, %function
 _ZSt18make_exception_ptrISt12future_errorENSt15__exception_ptr13exception_ptrET_:
-.LFB3853:
+.LFB3869:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -2577,14 +2811,14 @@ _ZSt18make_exception_ptrISt12future_errorENSt15__exception_ptr13exception_ptrET_
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3853:
+.LFE3869:
 	.size	_ZSt18make_exception_ptrISt12future_errorENSt15__exception_ptr13exception_ptrET_, .-_ZSt18make_exception_ptrISt12future_errorENSt15__exception_ptr13exception_ptrET_
 	.section	.text._ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_,"axG",@progbits,_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_,comdat
 	.align	2
 	.weak	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_
 	.type	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_, %function
 _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_:
-.LFB3857:
+.LFB3873:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2603,14 +2837,14 @@ _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3857:
+.LFE3873:
 	.size	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_, .-_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_
 	.section	.text._ZNKSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEclEv,"axG",@progbits,_ZNKSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEclEv,comdat
 	.align	2
 	.weak	_ZNKSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEclEv
 	.type	_ZNKSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEclEv, %function
 _ZNKSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEclEv:
-.LFB3858:
+.LFB3874:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -2630,9 +2864,9 @@ _ZNKSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEE
 	bl	_ZNKSt14_Function_base8_M_emptyEv
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L172
+	beq	.L188
 	bl	_ZSt25__throw_bad_function_callv
-.L172:
+.L188:
 	ldr	x0, [sp, 40]
 	ldr	x1, [x0, 24]
 	ldr	x0, [sp, 40]
@@ -2644,9 +2878,9 @@ _ZNKSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEE
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L174
+	beq	.L190
 	bl	__stack_chk_fail
-.L174:
+.L190:
 	mov	x0, x19
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 64
@@ -2656,14 +2890,14 @@ _ZNKSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEE
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3858:
+.LFE3874:
 	.size	_ZNKSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEclEv, .-_ZNKSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEclEv
 	.section	.text._ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ERKS4_,"axG",@progbits,_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC5ERKS4_,comdat
 	.align	2
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ERKS4_
 	.type	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ERKS4_, %function
 _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ERKS4_:
-.LFB3862:
+.LFB3878:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2690,7 +2924,7 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3862:
+.LFE3878:
 	.size	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ERKS4_, .-_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ERKS4_
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC1ERKS4_
 	.set	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC1ERKS4_,_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ERKS4_
@@ -2699,7 +2933,7 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	.weak	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ERKS2_
 	.type	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ERKS2_, %function
 _ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ERKS2_:
-.LFB3864:
+.LFB3880:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2718,7 +2952,7 @@ _ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ERKS2_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3864:
+.LFE3880:
 	.size	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ERKS2_, .-_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ERKS2_
 	.weak	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC1ERKS2_
 	.set	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC1ERKS2_,_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ERKS2_
@@ -2727,10 +2961,10 @@ _ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ERKS2_:
 	.weak	_ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_
 	.type	_ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_, %function
 _ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_:
-.LFB3890:
+.LFB3906:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3890
+	.cfi_lsda 0x1b,.LLSDA3906
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
 	.cfi_offset 29, -48
@@ -2748,9 +2982,9 @@ _ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_:
 	bl	_ZNSaINSt13__future_base13_State_baseV2EEC1Ev
 	add	x0, sp, 32
 	mov	x8, x19
-.LEHB11:
+.LEHB20:
 	bl	_ZSt15allocate_sharedINSt13__future_base13_State_baseV2ESaIS1_EJEESt10shared_ptrIT_ERKT0_DpOT1_
-.LEHE11:
+.LEHE20:
 	nop
 	add	x0, sp, 32
 	bl	_ZNSaINSt13__future_base13_State_baseV2EED1Ev
@@ -2761,19 +2995,19 @@ _ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_:
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L180
-	b	.L182
-.L181:
+	beq	.L196
+	b	.L198
+.L197:
 	mov	x19, x0
 	add	x0, sp, 32
 	bl	_ZNSaINSt13__future_base13_State_baseV2EED1Ev
 	mov	x0, x19
-.LEHB12:
+.LEHB21:
 	bl	_Unwind_Resume
-.LEHE12:
-.L182:
+.LEHE21:
+.L198:
 	bl	__stack_chk_fail
-.L180:
+.L196:
 	mov	x0, x19
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 48
@@ -2783,23 +3017,23 @@ _ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3890:
+.LFE3906:
 	.section	.gcc_except_table
-.LLSDA3890:
+.LLSDA3906:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3890-.LLSDACSB3890
-.LLSDACSB3890:
-	.uleb128 .LEHB11-.LFB3890
-	.uleb128 .LEHE11-.LEHB11
-	.uleb128 .L181-.LFB3890
+	.uleb128 .LLSDACSE3906-.LLSDACSB3906
+.LLSDACSB3906:
+	.uleb128 .LEHB20-.LFB3906
+	.uleb128 .LEHE20-.LEHB20
+	.uleb128 .L197-.LFB3906
 	.uleb128 0
-	.uleb128 .LEHB12-.LFB3890
-	.uleb128 .LEHE12-.LEHB12
+	.uleb128 .LEHB21-.LFB3906
+	.uleb128 .LEHE21-.LEHB21
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE3890:
+.LLSDACSE3906:
 	.section	.text._ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_,"axG",@progbits,_ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_,comdat
 	.size	_ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_, .-_ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_
 	.section	.text._ZSt4moveIRSt10shared_ptrINSt13__future_base13_State_baseV2EEEONSt16remove_referenceIT_E4typeEOS6_,"axG",@progbits,_ZSt4moveIRSt10shared_ptrINSt13__future_base13_State_baseV2EEEONSt16remove_referenceIT_E4typeEOS6_,comdat
@@ -2807,7 +3041,7 @@ _ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_:
 	.weak	_ZSt4moveIRSt10shared_ptrINSt13__future_base13_State_baseV2EEEONSt16remove_referenceIT_E4typeEOS6_
 	.type	_ZSt4moveIRSt10shared_ptrINSt13__future_base13_State_baseV2EEEONSt16remove_referenceIT_E4typeEOS6_, %function
 _ZSt4moveIRSt10shared_ptrINSt13__future_base13_State_baseV2EEEONSt16remove_referenceIT_E4typeEOS6_:
-.LFB3900:
+.LFB3916:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -2817,14 +3051,14 @@ _ZSt4moveIRSt10shared_ptrINSt13__future_base13_State_baseV2EEEONSt16remove_refer
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3900:
+.LFE3916:
 	.size	_ZSt4moveIRSt10shared_ptrINSt13__future_base13_State_baseV2EEEONSt16remove_referenceIT_E4typeEOS6_, .-_ZSt4moveIRSt10shared_ptrINSt13__future_base13_State_baseV2EEEONSt16remove_referenceIT_E4typeEOS6_
 	.section	.text._ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2EOS2_,"axG",@progbits,_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC5EOS2_,comdat
 	.align	2
 	.weak	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2EOS2_
 	.type	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2EOS2_, %function
 _ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2EOS2_:
-.LFB3903:
+.LFB3919:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -2850,7 +3084,7 @@ _ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2EOS2_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3903:
+.LFE3919:
 	.size	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2EOS2_, .-_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2EOS2_
 	.weak	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC1EOS2_
 	.set	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC1EOS2_,_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2EOS2_
@@ -2859,7 +3093,7 @@ _ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2EOS2_:
 	.weak	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEcvbEv
 	.type	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEcvbEv, %function
 _ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEcvbEv:
-.LFB3914:
+.LFB3930:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -2873,14 +3107,14 @@ _ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_polic
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3914:
+.LFE3930:
 	.size	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEcvbEv, .-_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEcvbEv
 	.section	.text._ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE6uniqueEv,"axG",@progbits,_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE6uniqueEv,comdat
 	.align	2
 	.weak	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE6uniqueEv
 	.type	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE6uniqueEv, %function
 _ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE6uniqueEv:
-.LFB3915:
+.LFB3931:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2898,14 +3132,14 @@ _ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_polic
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3915:
+.LFE3931:
 	.size	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE6uniqueEv, .-_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE6uniqueEv
 	.section	.text._ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEptEv,"axG",@progbits,_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEptEv,comdat
 	.align	2
 	.weak	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEptEv
 	.type	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEptEv, %function
 _ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEptEv:
-.LFB3916:
+.LFB3932:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2921,14 +3155,14 @@ _ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Loc
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3916:
+.LFE3932:
 	.size	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEptEv, .-_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEptEv
 	.section	.text._ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EIS2_EEPS1_OT_,"axG",@progbits,_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI5St15__uniq_ptr_implIS1_S2_EIS2_EEPS1_OT_,comdat
 	.align	2
 	.weak	_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EIS2_EEPS1_OT_
 	.type	_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EIS2_EEPS1_OT_, %function
 _ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EIS2_EEPS1_OT_:
-.LFB3919:
+.LFB3935:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -2949,7 +3183,7 @@ _ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EEC
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3919:
+.LFE3935:
 	.size	_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EIS2_EEPS1_OT_, .-_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EIS2_EEPS1_OT_
 	.weak	_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI1St15__uniq_ptr_implIS1_S2_EIS2_EEPS1_OT_
 	.set	_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI1St15__uniq_ptr_implIS1_S2_EIS2_EEPS1_OT_,_ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS1_S2_EIS2_EEPS1_OT_
@@ -2958,7 +3192,7 @@ _ZNSt15__uniq_ptr_dataINSt13__future_base12_Result_baseENS1_8_DeleterELb1ELb1EEC
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE4swapERS4_
 	.type	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE4swapERS4_, %function
 _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE4swapERS4_:
-.LFB3924:
+.LFB3940:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2984,14 +3218,14 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3924:
+.LFE3940:
 	.size	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE4swapERS4_, .-_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE4swapERS4_
 	.section	.text._ZNSt14_Function_baseC2Ev,"axG",@progbits,_ZNSt14_Function_baseC5Ev,comdat
 	.align	2
 	.weak	_ZNSt14_Function_baseC2Ev
 	.type	_ZNSt14_Function_baseC2Ev, %function
 _ZNSt14_Function_baseC2Ev:
-.LFB3930:
+.LFB3946:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -3005,7 +3239,7 @@ _ZNSt14_Function_baseC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3930:
+.LFE3946:
 	.size	_ZNSt14_Function_baseC2Ev, .-_ZNSt14_Function_baseC2Ev
 	.weak	_ZNSt14_Function_baseC1Ev
 	.set	_ZNSt14_Function_baseC1Ev,_ZNSt14_Function_baseC2Ev
@@ -3014,7 +3248,7 @@ _ZNSt14_Function_baseC2Ev:
 	.weak	_ZNSt13__future_base13_State_baseV28_S_checkIS0_EEvRKSt10shared_ptrIT_E
 	.type	_ZNSt13__future_base13_State_baseV28_S_checkIS0_EEvRKSt10shared_ptrIT_E, %function
 _ZNSt13__future_base13_State_baseV28_S_checkIS0_EEvRKSt10shared_ptrIT_E:
-.LFB3941:
+.LFB3957:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -3028,10 +3262,10 @@ _ZNSt13__future_base13_State_baseV28_S_checkIS0_EEvRKSt10shared_ptrIT_E:
 	eor	w0, w0, 1
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L197
+	beq	.L213
 	mov	w0, 3
 	bl	_ZSt20__throw_future_errori
-.L197:
+.L213:
 	nop
 	ldp	x29, x30, [sp], 32
 	.cfi_restore 30
@@ -3039,14 +3273,14 @@ _ZNSt13__future_base13_State_baseV28_S_checkIS0_EEvRKSt10shared_ptrIT_E:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3941:
+.LFE3957:
 	.size	_ZNSt13__future_base13_State_baseV28_S_checkIS0_EEvRKSt10shared_ptrIT_E, .-_ZNSt13__future_base13_State_baseV28_S_checkIS0_EEvRKSt10shared_ptrIT_E
 	.section	.text._ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEdeEv,"axG",@progbits,_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEdeEv,comdat
 	.align	2
 	.weak	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEdeEv
 	.type	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEdeEv, %function
 _ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEdeEv:
-.LFB3942:
+.LFB3958:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -3064,14 +3298,14 @@ _ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Loc
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3942:
+.LFE3958:
 	.size	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEdeEv, .-_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEdeEv
 	.section	.text._ZNSt8literals15chrono_literalsli1sIJLc49ELc48EEEENSt6chrono8durationIlSt5ratioILl1ELl1EEEEv,"axG",@progbits,_ZNSt8literals15chrono_literalsli1sIJLc49ELc48EEEENSt6chrono8durationIlSt5ratioILl1ELl1EEEEv,comdat
 	.align	2
 	.weak	_ZNSt8literals15chrono_literalsli1sIJLc49ELc48EEEENSt6chrono8durationIlSt5ratioILl1ELl1EEEEv
 	.type	_ZNSt8literals15chrono_literalsli1sIJLc49ELc48EEEENSt6chrono8durationIlSt5ratioILl1ELl1EEEEv, %function
 _ZNSt8literals15chrono_literalsli1sIJLc49ELc48EEEENSt6chrono8durationIlSt5ratioILl1ELl1EEEEv:
-.LFB3946:
+.LFB3962:
 	.cfi_startproc
 	stp	x29, x30, [sp, -16]!
 	.cfi_def_cfa_offset 16
@@ -3085,14 +3319,14 @@ _ZNSt8literals15chrono_literalsli1sIJLc49ELc48EEEENSt6chrono8durationIlSt5ratioI
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3946:
+.LFE3962:
 	.size	_ZNSt8literals15chrono_literalsli1sIJLc49ELc48EEEENSt6chrono8durationIlSt5ratioILl1ELl1EEEEv, .-_ZNSt8literals15chrono_literalsli1sIJLc49ELc48EEEENSt6chrono8durationIlSt5ratioILl1ELl1EEEEv
 	.section	.text._ZNSt6chronoleIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE,"axG",@progbits,_ZNSt6chronoleIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE,comdat
 	.align	2
 	.weak	_ZNSt6chronoleIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE
 	.type	_ZNSt6chronoleIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE, %function
 _ZNSt6chronoleIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE:
-.LFB3948:
+.LFB3964:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -3113,14 +3347,14 @@ _ZNSt6chronoleIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3948:
+.LFE3964:
 	.size	_ZNSt6chronoleIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE, .-_ZNSt6chronoleIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE
 	.section	.text._ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv,"axG",@progbits,_ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv,comdat
 	.align	2
 	.weak	_ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv
 	.type	_ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv, %function
 _ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv:
-.LFB3949:
+.LFB3965:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -3145,9 +3379,9 @@ _ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv:
 	ldr	x2, [x0]
 	subs	x3, x3, x2
 	mov	x2, 0
-	beq	.L207
+	beq	.L223
 	bl	__stack_chk_fail
-.L207:
+.L223:
 	mov	x0, x1
 	ldp	x29, x30, [sp], 48
 	.cfi_restore 30
@@ -3155,14 +3389,14 @@ _ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3949:
+.LFE3965:
 	.size	_ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv, .-_ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv
 	.section	.text._ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE,"axG",@progbits,_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE,comdat
 	.align	2
 	.weak	_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
 	.type	_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE, %function
 _ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE:
-.LFB3950:
+.LFB3966:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -3178,14 +3412,14 @@ _ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_i
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3950:
+.LFE3966:
 	.size	_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE, .-_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
 	.section	.text._ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1ELl1EEEENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES8_E4typeERKNS1_IT0_T1_EE,"axG",@progbits,_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1ELl1EEEENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES8_E4typeERKNS1_IT0_T1_EE,comdat
 	.align	2
 	.weak	_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1ELl1EEEENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES8_E4typeERKNS1_IT0_T1_EE
 	.type	_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1ELl1EEEENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES8_E4typeERKNS1_IT0_T1_EE, %function
 _ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1ELl1EEEENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES8_E4typeERKNS1_IT0_T1_EE:
-.LFB3951:
+.LFB3967:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -3201,14 +3435,14 @@ _ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1E
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3951:
+.LFE3967:
 	.size	_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1ELl1EEEENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES8_E4typeERKNS1_IT0_T1_EE, .-_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1ELl1EEEENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES8_E4typeERKNS1_IT0_T1_EE
 	.section	.text._ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_,"axG",@progbits,_ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_,comdat
 	.align	2
 	.weak	_ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_
 	.type	_ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_, %function
 _ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_:
-.LFB3952:
+.LFB3968:
 	.cfi_startproc
 	stp	x29, x30, [sp, -96]!
 	.cfi_def_cfa_offset 96
@@ -3248,9 +3482,9 @@ _ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS
 	ldr	x2, [x0]
 	subs	x3, x3, x2
 	mov	x2, 0
-	beq	.L214
+	beq	.L230
 	bl	__stack_chk_fail
-.L214:
+.L230:
 	mov	x0, x1
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 96
@@ -3260,14 +3494,14 @@ _ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3952:
+.LFE3968:
 	.size	_ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_, .-_ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_
 	.section	.text._ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE,"axG",@progbits,_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE,comdat
 	.align	2
 	.weak	_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE
 	.type	_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE, %function
 _ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE:
-.LFB3947:
+.LFB3963:
 	.cfi_startproc
 	stp	x29, x30, [sp, -80]!
 	.cfi_def_cfa_offset 80
@@ -3288,7 +3522,7 @@ _ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE
 	bl	_ZNSt6chronoleIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE
 	and	w0, w0, 255
 	cmp	w0, 0
-	bne	.L222
+	bne	.L238
 	ldr	x0, [sp, 24]
 	bl	_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
 	str	x0, [sp, 40]
@@ -3307,53 +3541,53 @@ _ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE
 	bl	_ZNKSt6chrono8durationIlSt5ratioILl1ELl1000000000EEE5countEv
 	str	x0, [sp, 64]
 	nop
-.L220:
+.L236:
 	add	x1, sp, 56
 	add	x0, sp, 56
 	bl	nanosleep
 	cmn	w0, #1
-	bne	.L218
+	bne	.L234
 	bl	__errno_location
 	ldr	w0, [x0]
 	cmp	w0, 4
-	bne	.L218
+	bne	.L234
 	mov	w0, 1
-	b	.L219
-.L218:
+	b	.L235
+.L234:
 	mov	w0, 0
-.L219:
+.L235:
 	cmp	w0, 0
-	bne	.L220
-	b	.L215
-.L222:
+	bne	.L236
+	b	.L231
+.L238:
 	nop
-.L215:
+.L231:
 	adrp	x0, :got:__stack_chk_guard
 	ldr	x0, [x0, #:got_lo12:__stack_chk_guard]
 	ldr	x2, [sp, 72]
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L221
+	beq	.L237
 	bl	__stack_chk_fail
-.L221:
+.L237:
 	ldp	x29, x30, [sp], 80
 	.cfi_restore 30
 	.cfi_restore 29
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3947:
+.LFE3963:
 	.size	_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE, .-_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE
 	.section	.text._ZNSt7promiseIiE9set_valueEOi,"axG",@progbits,_ZNSt7promiseIiE9set_valueEOi,comdat
 	.align	2
 	.weak	_ZNSt7promiseIiE9set_valueEOi
 	.type	_ZNSt7promiseIiE9set_valueEOi, %function
 _ZNSt7promiseIiE9set_valueEOi:
-.LFB3953:
+.LFB3969:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3953
+	.cfi_lsda 0x1b,.LLSDA3969
 	stp	x29, x30, [sp, -144]!
 	.cfi_def_cfa_offset 144
 	.cfi_offset 29, -144
@@ -3372,9 +3606,9 @@ _ZNSt7promiseIiE9set_valueEOi:
 	str	x1, [sp, 136]
 	mov	x1, 0
 	ldr	x0, [sp, 56]
-.LEHB13:
+.LEHB22:
 	bl	_ZNSt7promiseIiE8_M_stateEv
-.LEHE13:
+.LEHE22:
 	mov	x19, x0
 	ldr	x0, [sp, 48]
 	bl	_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_
@@ -3396,9 +3630,9 @@ _ZNSt7promiseIiE9set_valueEOi:
 	mov	w2, 0
 	mov	x1, x0
 	mov	x0, x19
-.LEHB14:
+.LEHB23:
 	bl	_ZNSt13__future_base13_State_baseV213_M_set_resultESt8functionIFSt10unique_ptrINS_12_Result_baseENS3_8_DeleterEEvEEb
-.LEHE14:
+.LEHE23:
 	add	x0, sp, 104
 	bl	_ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEED1Ev
 	nop
@@ -3408,19 +3642,19 @@ _ZNSt7promiseIiE9set_valueEOi:
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L226
-	b	.L228
-.L227:
+	beq	.L242
+	b	.L244
+.L243:
 	mov	x19, x0
 	add	x0, sp, 104
 	bl	_ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEED1Ev
 	mov	x0, x19
-.LEHB15:
+.LEHB24:
 	bl	_Unwind_Resume
-.LEHE15:
-.L228:
+.LEHE24:
+.L244:
 	bl	__stack_chk_fail
-.L226:
+.L242:
 	ldp	x19, x20, [sp, 16]
 	ldr	x21, [sp, 32]
 	ldp	x29, x30, [sp], 144
@@ -3432,27 +3666,27 @@ _ZNSt7promiseIiE9set_valueEOi:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3953:
+.LFE3969:
 	.section	.gcc_except_table
-.LLSDA3953:
+.LLSDA3969:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3953-.LLSDACSB3953
-.LLSDACSB3953:
-	.uleb128 .LEHB13-.LFB3953
-	.uleb128 .LEHE13-.LEHB13
+	.uleb128 .LLSDACSE3969-.LLSDACSB3969
+.LLSDACSB3969:
+	.uleb128 .LEHB22-.LFB3969
+	.uleb128 .LEHE22-.LEHB22
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB14-.LFB3953
-	.uleb128 .LEHE14-.LEHB14
-	.uleb128 .L227-.LFB3953
+	.uleb128 .LEHB23-.LFB3969
+	.uleb128 .LEHE23-.LEHB23
+	.uleb128 .L243-.LFB3969
 	.uleb128 0
-	.uleb128 .LEHB15-.LFB3953
-	.uleb128 .LEHE15-.LEHB15
+	.uleb128 .LEHB24-.LFB3969
+	.uleb128 .LEHE24-.LEHB24
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE3953:
+.LLSDACSE3969:
 	.section	.text._ZNSt7promiseIiE9set_valueEOi,"axG",@progbits,_ZNSt7promiseIiE9set_valueEOi,comdat
 	.size	_ZNSt7promiseIiE9set_valueEOi, .-_ZNSt7promiseIiE9set_valueEOi
 	.section	.text._ZNSt7promiseIiEC2Ev,"axG",@progbits,_ZNSt7promiseIiEC5Ev,comdat
@@ -3460,10 +3694,10 @@ _ZNSt7promiseIiE9set_valueEOi:
 	.weak	_ZNSt7promiseIiEC2Ev
 	.type	_ZNSt7promiseIiEC2Ev, %function
 _ZNSt7promiseIiEC2Ev:
-.LFB3957:
+.LFB3973:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3957
+	.cfi_lsda 0x1b,.LLSDA3973
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
 	.cfi_offset 29, -64
@@ -3480,15 +3714,15 @@ _ZNSt7promiseIiEC2Ev:
 	mov	x1, 0
 	ldr	x0, [sp, 40]
 	mov	x8, x0
-.LEHB16:
+.LEHB25:
 	bl	_ZSt11make_sharedINSt13__future_base13_State_baseV2EJEESt10shared_ptrIT_EDpOT0_
-.LEHE16:
+.LEHE25:
 	ldr	x0, [sp, 40]
 	add	x19, x0, 16
 	mov	x0, 24
-.LEHB17:
+.LEHB26:
 	bl	_Znwm
-.LEHE17:
+.LEHE26:
 	mov	x20, x0
 	mov	x0, x20
 	bl	_ZNSt13__future_base7_ResultIiEC1Ev
@@ -3502,19 +3736,19 @@ _ZNSt7promiseIiEC2Ev:
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L231
-	b	.L233
-.L232:
+	beq	.L247
+	b	.L249
+.L248:
 	mov	x19, x0
 	ldr	x0, [sp, 40]
 	bl	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EED1Ev
 	mov	x0, x19
-.LEHB18:
+.LEHB27:
 	bl	_Unwind_Resume
-.LEHE18:
-.L233:
+.LEHE27:
+.L249:
 	bl	__stack_chk_fail
-.L231:
+.L247:
 	ldp	x19, x20, [sp, 16]
 	ldp	x29, x30, [sp], 64
 	.cfi_restore 30
@@ -3524,27 +3758,27 @@ _ZNSt7promiseIiEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3957:
+.LFE3973:
 	.section	.gcc_except_table
-.LLSDA3957:
+.LLSDA3973:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3957-.LLSDACSB3957
-.LLSDACSB3957:
-	.uleb128 .LEHB16-.LFB3957
-	.uleb128 .LEHE16-.LEHB16
+	.uleb128 .LLSDACSE3973-.LLSDACSB3973
+.LLSDACSB3973:
+	.uleb128 .LEHB25-.LFB3973
+	.uleb128 .LEHE25-.LEHB25
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB17-.LFB3957
-	.uleb128 .LEHE17-.LEHB17
-	.uleb128 .L232-.LFB3957
+	.uleb128 .LEHB26-.LFB3973
+	.uleb128 .LEHE26-.LEHB26
+	.uleb128 .L248-.LFB3973
 	.uleb128 0
-	.uleb128 .LEHB18-.LFB3957
-	.uleb128 .LEHE18-.LEHB18
+	.uleb128 .LEHB27-.LFB3973
+	.uleb128 .LEHE27-.LEHB27
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE3957:
+.LLSDACSE3973:
 	.section	.text._ZNSt7promiseIiEC2Ev,"axG",@progbits,_ZNSt7promiseIiEC5Ev,comdat
 	.size	_ZNSt7promiseIiEC2Ev, .-_ZNSt7promiseIiEC2Ev
 	.weak	_ZNSt7promiseIiEC1Ev
@@ -3554,10 +3788,10 @@ _ZNSt7promiseIiEC2Ev:
 	.weak	_ZNSt7promiseIiED2Ev
 	.type	_ZNSt7promiseIiED2Ev, %function
 _ZNSt7promiseIiED2Ev:
-.LFB3960:
+.LFB3976:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3960
+	.cfi_lsda 0x1b,.LLSDA3976
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
 	.cfi_offset 29, -64
@@ -3575,21 +3809,21 @@ _ZNSt7promiseIiED2Ev:
 	bl	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEcvbEv
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L235
+	beq	.L251
 	ldr	x0, [sp, 40]
 	bl	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE6uniqueEv
 	and	w0, w0, 255
 	eor	w0, w0, 1
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L235
+	beq	.L251
 	mov	w0, 1
-	b	.L236
-.L235:
+	b	.L252
+.L251:
 	mov	w0, 0
-.L236:
+.L252:
 	cmp	w0, 0
-	beq	.L237
+	beq	.L253
 	ldr	x0, [sp, 40]
 	bl	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEptEv
 	mov	x19, x0
@@ -3605,7 +3839,7 @@ _ZNSt7promiseIiED2Ev:
 	bl	_ZNSt13__future_base13_State_baseV216_M_break_promiseESt10unique_ptrINS_12_Result_baseENS2_8_DeleterEE
 	add	x0, sp, 48
 	bl	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEED1Ev
-.L237:
+.L253:
 	ldr	x0, [sp, 40]
 	add	x0, x0, 16
 	bl	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED1Ev
@@ -3618,9 +3852,9 @@ _ZNSt7promiseIiED2Ev:
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L238
+	beq	.L254
 	bl	__stack_chk_fail
-.L238:
+.L254:
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 64
 	.cfi_restore 30
@@ -3629,15 +3863,15 @@ _ZNSt7promiseIiED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3960:
+.LFE3976:
 	.section	.gcc_except_table
-.LLSDA3960:
+.LLSDA3976:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3960-.LLSDACSB3960
-.LLSDACSB3960:
-.LLSDACSE3960:
+	.uleb128 .LLSDACSE3976-.LLSDACSB3976
+.LLSDACSB3976:
+.LLSDACSE3976:
 	.section	.text._ZNSt7promiseIiED2Ev,"axG",@progbits,_ZNSt7promiseIiED5Ev,comdat
 	.size	_ZNSt7promiseIiED2Ev, .-_ZNSt7promiseIiED2Ev
 	.weak	_ZNSt7promiseIiED1Ev
@@ -3647,7 +3881,7 @@ _ZNSt7promiseIiED2Ev:
 	.weak	_ZNSt7promiseIiE10get_futureEv
 	.type	_ZNSt7promiseIiE10get_futureEv, %function
 _ZNSt7promiseIiE10get_futureEv:
-.LFB3962:
+.LFB3978:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -3671,14 +3905,14 @@ _ZNSt7promiseIiE10get_futureEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3962:
+.LFE3978:
 	.size	_ZNSt7promiseIiE10get_futureEv, .-_ZNSt7promiseIiE10get_futureEv
 	.section	.text._ZSt4moveIRSt7promiseIiEEONSt16remove_referenceIT_E4typeEOS4_,"axG",@progbits,_ZSt4moveIRSt7promiseIiEEONSt16remove_referenceIT_E4typeEOS4_,comdat
 	.align	2
 	.weak	_ZSt4moveIRSt7promiseIiEEONSt16remove_referenceIT_E4typeEOS4_
 	.type	_ZSt4moveIRSt7promiseIiEEONSt16remove_referenceIT_E4typeEOS4_, %function
 _ZSt4moveIRSt7promiseIiEEONSt16remove_referenceIT_E4typeEOS4_:
-.LFB3963:
+.LFB3979:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -3688,17 +3922,17 @@ _ZSt4moveIRSt7promiseIiEEONSt16remove_referenceIT_E4typeEOS4_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3963:
+.LFE3979:
 	.size	_ZSt4moveIRSt7promiseIiEEONSt16remove_referenceIT_E4typeEOS4_, .-_ZSt4moveIRSt7promiseIiEEONSt16remove_referenceIT_E4typeEOS4_
 	.section	.text._ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_,"axG",@progbits,_ZNSt6threadC5IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_,comdat
 	.align	2
 	.weak	_ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_
 	.type	_ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_, %function
 _ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_:
-.LFB3981:
+.LFB3997:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3981
+	.cfi_lsda 0x1b,.LLSDA3997
 	stp	x29, x30, [sp, -112]!
 	.cfi_def_cfa_offset 112
 	.cfi_offset 29, -112
@@ -3727,16 +3961,16 @@ _ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_:
 	bl	_ZSt7forwardISt7promiseIiEEOT_RNSt16remove_referenceIS2_E4typeE
 	mov	x21, x0
 	mov	x0, 40
-.LEHB19:
+.LEHB28:
 	bl	_Znwm
-.LEHE19:
+.LEHE28:
 	mov	x19, x0
 	mov	x2, x21
 	mov	x1, x20
 	mov	x0, x19
-.LEHB20:
+.LEHB29:
 	bl	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC1IJRS6_S4_EEEDpOT_
-.LEHE20:
+.LEHE29:
 	add	x0, sp, 88
 	mov	x1, x19
 	bl	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC1IS3_vEEPS1_
@@ -3744,9 +3978,9 @@ _ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_:
 	mov	x2, 0
 	mov	x1, x0
 	ldr	x0, [sp, 72]
-.LEHB21:
+.LEHB30:
 	bl	_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE
-.LEHE21:
+.LEHE30:
 	add	x0, sp, 88
 	bl	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED1Ev
 	nop
@@ -3756,26 +3990,26 @@ _ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_:
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L246
-	b	.L249
-.L247:
+	beq	.L262
+	b	.L265
+.L263:
 	mov	x20, x0
 	mov	x1, 40
 	mov	x0, x19
 	bl	_ZdlPvm
 	mov	x0, x20
-.LEHB22:
+.LEHB31:
 	bl	_Unwind_Resume
-.L248:
+.L264:
 	mov	x19, x0
 	add	x0, sp, 88
 	bl	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED1Ev
 	mov	x0, x19
 	bl	_Unwind_Resume
-.LEHE22:
-.L249:
+.LEHE31:
+.L265:
 	bl	__stack_chk_fail
-.L246:
+.L262:
 	ldp	x19, x20, [sp, 16]
 	ldr	x21, [sp, 32]
 	ldp	x29, x30, [sp], 112
@@ -3787,31 +4021,31 @@ _ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3981:
+.LFE3997:
 	.section	.gcc_except_table
-.LLSDA3981:
+.LLSDA3997:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3981-.LLSDACSB3981
-.LLSDACSB3981:
-	.uleb128 .LEHB19-.LFB3981
-	.uleb128 .LEHE19-.LEHB19
+	.uleb128 .LLSDACSE3997-.LLSDACSB3997
+.LLSDACSB3997:
+	.uleb128 .LEHB28-.LFB3997
+	.uleb128 .LEHE28-.LEHB28
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB20-.LFB3981
-	.uleb128 .LEHE20-.LEHB20
-	.uleb128 .L247-.LFB3981
+	.uleb128 .LEHB29-.LFB3997
+	.uleb128 .LEHE29-.LEHB29
+	.uleb128 .L263-.LFB3997
 	.uleb128 0
-	.uleb128 .LEHB21-.LFB3981
-	.uleb128 .LEHE21-.LEHB21
-	.uleb128 .L248-.LFB3981
+	.uleb128 .LEHB30-.LFB3997
+	.uleb128 .LEHE30-.LEHB30
+	.uleb128 .L264-.LFB3997
 	.uleb128 0
-	.uleb128 .LEHB22-.LFB3981
-	.uleb128 .LEHE22-.LEHB22
+	.uleb128 .LEHB31-.LFB3997
+	.uleb128 .LEHE31-.LEHB31
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE3981:
+.LLSDACSE3997:
 	.section	.text._ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_,"axG",@progbits,_ZNSt6threadC5IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_,comdat
 	.size	_ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_, .-_ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_
 	.weak	_ZNSt6threadC1IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_
@@ -3821,10 +4055,10 @@ _ZNSt6threadC2IRFvOSt7promiseIiEEJS2_EvEEOT_DpOT0_:
 	.weak	_ZNSt6futureIiE3getEv
 	.type	_ZNSt6futureIiE3getEv, %function
 _ZNSt6futureIiE3getEv:
-.LFB3983:
+.LFB3999:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA3983
+	.cfi_lsda 0x1b,.LLSDA3999
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
 	.cfi_offset 29, -64
@@ -3842,9 +4076,9 @@ _ZNSt6futureIiE3getEv:
 	add	x0, sp, 48
 	bl	_ZNSt14__basic_futureIiE6_ResetC1ERS0_
 	ldr	x0, [sp, 40]
-.LEHB23:
+.LEHB32:
 	bl	_ZNKSt14__basic_futureIiE13_M_get_resultEv
-.LEHE23:
+.LEHE32:
 	bl	_ZNSt13__future_base7_ResultIiE8_M_valueEv
 	bl	_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_
 	ldr	w19, [x0]
@@ -3857,19 +4091,19 @@ _ZNSt6futureIiE3getEv:
 	ldr	x2, [x0]
 	subs	x3, x3, x2
 	mov	x2, 0
-	beq	.L253
-	b	.L255
-.L254:
+	beq	.L269
+	b	.L271
+.L270:
 	mov	x19, x0
 	add	x0, sp, 48
 	bl	_ZNSt14__basic_futureIiE6_ResetD1Ev
 	mov	x0, x19
-.LEHB24:
+.LEHB33:
 	bl	_Unwind_Resume
-.LEHE24:
-.L255:
+.LEHE33:
+.L271:
 	bl	__stack_chk_fail
-.L253:
+.L269:
 	mov	w0, w1
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 64
@@ -3879,23 +4113,23 @@ _ZNSt6futureIiE3getEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE3983:
+.LFE3999:
 	.section	.gcc_except_table
-.LLSDA3983:
+.LLSDA3999:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE3983-.LLSDACSB3983
-.LLSDACSB3983:
-	.uleb128 .LEHB23-.LFB3983
-	.uleb128 .LEHE23-.LEHB23
-	.uleb128 .L254-.LFB3983
+	.uleb128 .LLSDACSE3999-.LLSDACSB3999
+.LLSDACSB3999:
+	.uleb128 .LEHB32-.LFB3999
+	.uleb128 .LEHE32-.LEHB32
+	.uleb128 .L270-.LFB3999
 	.uleb128 0
-	.uleb128 .LEHB24-.LFB3983
-	.uleb128 .LEHE24-.LEHB24
+	.uleb128 .LEHB33-.LFB3999
+	.uleb128 .LEHE33-.LEHB33
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE3983:
+.LLSDACSE3999:
 	.section	.text._ZNSt6futureIiE3getEv,"axG",@progbits,_ZNSt6futureIiE3getEv,comdat
 	.size	_ZNSt6futureIiE3getEv, .-_ZNSt6futureIiE3getEv
 	.section	.text._ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_,"axG",@progbits,_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_,comdat
@@ -3903,7 +4137,7 @@ _ZNSt6futureIiE3getEv:
 	.weak	_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_
 	.type	_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_, %function
 _ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_:
-.LFB4060:
+.LFB4076:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -3913,7 +4147,7 @@ _ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_ref
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4060:
+.LFE4076:
 	.size	_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_, .-_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_
 	.global	__aarch64_ldadd4_acq_rel
 	.section	.text._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv,"axG",@progbits,_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv,comdat
@@ -3921,7 +4155,7 @@ _ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_ref
 	.weak	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv
 	.type	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv, %function
 _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv:
-.LFB4083:
+.LFB4099:
 	.cfi_startproc
 	stp	x29, x30, [sp, -112]!
 	.cfi_def_cfa_offset 112
@@ -3941,7 +4175,7 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv:
 	cset	w0, ne
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L260
+	beq	.L276
 	ldr	x0, [sp, 64]
 	str	x0, [sp, 72]
 	ldr	w0, [sp, 32]
@@ -3956,8 +4190,8 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv:
 	ldr	x0, [sp, 72]
 	str	w1, [x0]
 	ldr	w0, [sp, 40]
-	b	.L262
-.L260:
+	b	.L278
+.L276:
 	ldr	x0, [sp, 64]
 	str	x0, [sp, 80]
 	ldr	w0, [sp, 32]
@@ -3966,12 +4200,12 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv:
 	ldr	x1, [sp, 80]
 	bl	__aarch64_ldadd4_acq_rel
 	nop
-.L262:
+.L278:
 	cmp	w0, 1
 	cset	w0, eq
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L270
+	beq	.L286
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0]
 	add	x0, x0, 16
@@ -3990,7 +4224,7 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv:
 	cset	w0, ne
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L266
+	beq	.L282
 	ldr	x0, [sp, 88]
 	str	x0, [sp, 96]
 	ldr	w0, [sp, 48]
@@ -4005,8 +4239,8 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv:
 	ldr	x0, [sp, 96]
 	str	w1, [x0]
 	ldr	w0, [sp, 56]
-	b	.L268
-.L266:
+	b	.L284
+.L282:
 	ldr	x0, [sp, 88]
 	str	x0, [sp, 104]
 	ldr	w0, [sp, 48]
@@ -4015,19 +4249,19 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv:
 	ldr	x1, [sp, 104]
 	bl	__aarch64_ldadd4_acq_rel
 	nop
-.L268:
+.L284:
 	cmp	w0, 1
 	cset	w0, eq
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L270
+	beq	.L286
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0]
 	add	x0, x0, 24
 	ldr	x1, [x0]
 	ldr	x0, [sp, 24]
 	blr	x1
-.L270:
+.L286:
 	nop
 	ldp	x29, x30, [sp], 112
 	.cfi_restore 30
@@ -4035,14 +4269,14 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4083:
+.LFE4099:
 	.size	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv, .-_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv
 	.section	.text._ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2Ev,"axG",@progbits,_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC5Ev,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2Ev
 	.type	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2Ev, %function
 _ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2Ev:
-.LFB4087:
+.LFB4103:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4061,7 +4295,7 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4087:
+.LFE4103:
 	.size	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2Ev, .-_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2Ev
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC1Ev
 	.set	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC1Ev,_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2Ev
@@ -4070,7 +4304,7 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2Ev:
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv
 	.type	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv, %function
 _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv:
-.LFB4089:
+.LFB4105:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4086,14 +4320,14 @@ _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4089:
+.LFE4105:
 	.size	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv, .-_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv
 	.section	.text._ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE11get_deleterEv,"axG",@progbits,_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE11get_deleterEv,comdat
 	.align	2
 	.weak	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE11get_deleterEv
 	.type	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE11get_deleterEv, %function
 _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE11get_deleterEv:
-.LFB4090:
+.LFB4106:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4109,14 +4343,14 @@ _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE11get_deleterE
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4090:
+.LFE4106:
 	.size	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE11get_deleterEv, .-_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE11get_deleterEv
 	.section	.text._ZSt4moveIRPNSt13__future_base12_Result_baseEEONSt16remove_referenceIT_E4typeEOS5_,"axG",@progbits,_ZSt4moveIRPNSt13__future_base12_Result_baseEEONSt16remove_referenceIT_E4typeEOS5_,comdat
 	.align	2
 	.weak	_ZSt4moveIRPNSt13__future_base12_Result_baseEEONSt16remove_referenceIT_E4typeEOS5_
 	.type	_ZSt4moveIRPNSt13__future_base12_Result_baseEEONSt16remove_referenceIT_E4typeEOS5_, %function
 _ZSt4moveIRPNSt13__future_base12_Result_baseEEONSt16remove_referenceIT_E4typeEOS5_:
-.LFB4091:
+.LFB4107:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -4126,14 +4360,14 @@ _ZSt4moveIRPNSt13__future_base12_Result_baseEEONSt16remove_referenceIT_E4typeEOS
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4091:
+.LFE4107:
 	.size	_ZSt4moveIRPNSt13__future_base12_Result_baseEEONSt16remove_referenceIT_E4typeEOS5_, .-_ZSt4moveIRPNSt13__future_base12_Result_baseEEONSt16remove_referenceIT_E4typeEOS5_
 	.section	.text._ZNSt23__atomic_futex_unsignedILj2147483648EE16_M_load_and_testEjjbSt12memory_order,"axG",@progbits,_ZNSt23__atomic_futex_unsignedILj2147483648EE16_M_load_and_testEjjbSt12memory_order,comdat
 	.align	2
 	.weak	_ZNSt23__atomic_futex_unsignedILj2147483648EE16_M_load_and_testEjjbSt12memory_order
 	.type	_ZNSt23__atomic_futex_unsignedILj2147483648EE16_M_load_and_testEjjbSt12memory_order, %function
 _ZNSt23__atomic_futex_unsignedILj2147483648EE16_M_load_and_testEjjbSt12memory_order:
-.LFB4093:
+.LFB4109:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -4162,14 +4396,14 @@ _ZNSt23__atomic_futex_unsignedILj2147483648EE16_M_load_and_testEjjbSt12memory_or
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4093:
+.LFE4109:
 	.size	_ZNSt23__atomic_futex_unsignedILj2147483648EE16_M_load_and_testEjjbSt12memory_order, .-_ZNSt23__atomic_futex_unsignedILj2147483648EE16_M_load_and_testEjjbSt12memory_order
 	.section	.text._ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE3getEv,"axG",@progbits,_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE3getEv,comdat
 	.align	2
 	.weak	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE3getEv
 	.type	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE3getEv, %function
 _ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE3getEv:
-.LFB4094:
+.LFB4110:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4185,14 +4419,14 @@ _ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE3getEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4094:
+.LFE4110:
 	.size	_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE3getEv, .-_ZNKSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEE3getEv
 	.section	.text._ZSt7forwardIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEEOT_RNSt16remove_referenceISD_E4typeE,"axG",@progbits,_ZSt7forwardIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEEOT_RNSt16remove_referenceISD_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEEOT_RNSt16remove_referenceISD_E4typeE
 	.type	_ZSt7forwardIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEEOT_RNSt16remove_referenceISD_E4typeE, %function
 _ZSt7forwardIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEEOT_RNSt16remove_referenceISD_E4typeE:
-.LFB4095:
+.LFB4111:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -4202,14 +4436,14 @@ _ZSt7forwardIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrIN
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4095:
+.LFE4111:
 	.size	_ZSt7forwardIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEEOT_RNSt16remove_referenceISD_E4typeE, .-_ZSt7forwardIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEEOT_RNSt16remove_referenceISD_E4typeE
 	.section	.text._ZSt7forwardIPNSt13__future_base13_State_baseV2EEOT_RNSt16remove_referenceIS3_E4typeE,"axG",@progbits,_ZSt7forwardIPNSt13__future_base13_State_baseV2EEOT_RNSt16remove_referenceIS3_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardIPNSt13__future_base13_State_baseV2EEOT_RNSt16remove_referenceIS3_E4typeE
 	.type	_ZSt7forwardIPNSt13__future_base13_State_baseV2EEOT_RNSt16remove_referenceIS3_E4typeE, %function
 _ZSt7forwardIPNSt13__future_base13_State_baseV2EEOT_RNSt16remove_referenceIS3_E4typeE:
-.LFB4096:
+.LFB4112:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -4219,14 +4453,14 @@ _ZSt7forwardIPNSt13__future_base13_State_baseV2EEOT_RNSt16remove_referenceIS3_E4
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4096:
+.LFE4112:
 	.size	_ZSt7forwardIPNSt13__future_base13_State_baseV2EEOT_RNSt16remove_referenceIS3_E4typeE, .-_ZSt7forwardIPNSt13__future_base13_State_baseV2EEOT_RNSt16remove_referenceIS3_E4typeE
 	.section	.text._ZSt7forwardIPSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEOT_RNSt16remove_referenceIS9_E4typeE,"axG",@progbits,_ZSt7forwardIPSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEOT_RNSt16remove_referenceIS9_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardIPSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEOT_RNSt16remove_referenceIS9_E4typeE
 	.type	_ZSt7forwardIPSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEOT_RNSt16remove_referenceIS9_E4typeE, %function
 _ZSt7forwardIPSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEOT_RNSt16remove_referenceIS9_E4typeE:
-.LFB4097:
+.LFB4113:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -4236,14 +4470,14 @@ _ZSt7forwardIPSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4097:
+.LFE4113:
 	.size	_ZSt7forwardIPSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEOT_RNSt16remove_referenceIS9_E4typeE, .-_ZSt7forwardIPSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS3_8_DeleterEEvEEEOT_RNSt16remove_referenceIS9_E4typeE
 	.section	.text._ZSt7forwardIPbEOT_RNSt16remove_referenceIS1_E4typeE,"axG",@progbits,_ZSt7forwardIPbEOT_RNSt16remove_referenceIS1_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardIPbEOT_RNSt16remove_referenceIS1_E4typeE
 	.type	_ZSt7forwardIPbEOT_RNSt16remove_referenceIS1_E4typeE, %function
 _ZSt7forwardIPbEOT_RNSt16remove_referenceIS1_E4typeE:
-.LFB4098:
+.LFB4114:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -4253,14 +4487,14 @@ _ZSt7forwardIPbEOT_RNSt16remove_referenceIS1_E4typeE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4098:
+.LFE4114:
 	.size	_ZSt7forwardIPbEOT_RNSt16remove_referenceIS1_E4typeE, .-_ZSt7forwardIPbEOT_RNSt16remove_referenceIS1_E4typeE
 	.section	.text._ZSt8__invokeIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EENSt15__invoke_resultIT_JDpT0_EE4typeEOSF_DpOSG_,"axG",@progbits,_ZSt8__invokeIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EENSt15__invoke_resultIT_JDpT0_EE4typeEOSF_DpOSG_,comdat
 	.align	2
 	.weak	_ZSt8__invokeIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EENSt15__invoke_resultIT_JDpT0_EE4typeEOSF_DpOSG_
 	.type	_ZSt8__invokeIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EENSt15__invoke_resultIT_JDpT0_EE4typeEOSF_DpOSG_, %function
 _ZSt8__invokeIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EENSt15__invoke_resultIT_JDpT0_EE4typeEOSF_DpOSG_:
-.LFB4099:
+.LFB4115:
 	.cfi_startproc
 	stp	x29, x30, [sp, -80]!
 	.cfi_def_cfa_offset 80
@@ -4307,14 +4541,14 @@ _ZSt8__invokeIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrI
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4099:
+.LFE4115:
 	.size	_ZSt8__invokeIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EENSt15__invoke_resultIT_JDpT0_EE4typeEOSF_DpOSG_, .-_ZSt8__invokeIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEJPS1_S9_SA_EENSt15__invoke_resultIT_JDpT0_EE4typeEOSF_DpOSG_
 	.section	.text._ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_clEv,"axG",@progbits,_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_clEv,comdat
 	.align	2
 	.weak	_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_clEv
 	.type	_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_clEv, %function
 _ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_clEv:
-.LFB4101:
+.LFB4117:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4335,14 +4569,14 @@ _ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4101:
+.LFE4117:
 	.size	_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_clEv, .-_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_clEv
 	.section	.text._ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENUlvE_4_FUNEv,"axG",@progbits,_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENUlvE_4_FUNEv,comdat
 	.align	2
 	.weak	_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENUlvE_4_FUNEv
 	.type	_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENUlvE_4_FUNEv, %function
 _ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENUlvE_4_FUNEv:
-.LFB4102:
+.LFB4118:
 	.cfi_startproc
 	stp	x29, x30, [sp, -16]!
 	.cfi_def_cfa_offset 16
@@ -4357,14 +4591,14 @@ _ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4102:
+.LFE4118:
 	.size	_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENUlvE_4_FUNEv, .-_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENUlvE_4_FUNEv
 	.section	.text._ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_cvPFvvEEv,"axG",@progbits,_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_cvPFvvEEv,comdat
 	.align	2
 	.weak	_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_cvPFvvEEv
 	.type	_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_cvPFvvEEv, %function
 _ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_cvPFvvEEv:
-.LFB4103:
+.LFB4119:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -4375,14 +4609,14 @@ _ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4103:
+.LFE4119:
 	.size	_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_cvPFvvEEv, .-_ZZNSt9once_flag18_Prepare_executionC4IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_ENKUlvE_cvPFvvEEv
 	.section	.text._ZNSt9once_flag18_Prepare_executionC2IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_,"axG",@progbits,_ZNSt9once_flag18_Prepare_executionC5IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_,comdat
 	.align	2
 	.weak	_ZNSt9once_flag18_Prepare_executionC2IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_
 	.type	_ZNSt9once_flag18_Prepare_executionC2IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_, %function
 _ZNSt9once_flag18_Prepare_executionC2IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_:
-.LFB4104:
+.LFB4120:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -4419,16 +4653,16 @@ _ZNSt9once_flag18_Prepare_executionC2IZSt9call_onceIMNSt13__future_base13_State_
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L298
+	beq	.L314
 	bl	__stack_chk_fail
-.L298:
+.L314:
 	ldp	x29, x30, [sp], 48
 	.cfi_restore 30
 	.cfi_restore 29
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4104:
+.LFE4120:
 	.size	_ZNSt9once_flag18_Prepare_executionC2IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_, .-_ZNSt9once_flag18_Prepare_executionC2IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_
 	.weak	_ZNSt9once_flag18_Prepare_executionC1IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_
 	.set	_ZNSt9once_flag18_Prepare_executionC1IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_,_ZNSt9once_flag18_Prepare_executionC2IZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS3_12_Result_baseENS7_8_DeleterEEvEEPbEJPS4_SC_SD_EEvRS_OT_DpOT0_EUlvE_EERSI_
@@ -4437,7 +4671,7 @@ _ZNSt9once_flag18_Prepare_executionC2IZSt9call_onceIMNSt13__future_base13_State_
 	.weak	_ZNSt15__exception_ptr12__dest_thunkISt12future_errorEEvPv
 	.type	_ZNSt15__exception_ptr12__dest_thunkISt12future_errorEEvPv, %function
 _ZNSt15__exception_ptr12__dest_thunkISt12future_errorEEvPv:
-.LFB4126:
+.LFB4142:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4457,14 +4691,14 @@ _ZNSt15__exception_ptr12__dest_thunkISt12future_errorEEvPv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4126:
+.LFE4142:
 	.size	_ZNSt15__exception_ptr12__dest_thunkISt12future_errorEEvPv, .-_ZNSt15__exception_ptr12__dest_thunkISt12future_errorEEvPv
 	.section	.text._ZSt7forwardISt12future_errorEOT_RNSt16remove_referenceIS1_E4typeE,"axG",@progbits,_ZSt7forwardISt12future_errorEOT_RNSt16remove_referenceIS1_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardISt12future_errorEOT_RNSt16remove_referenceIS1_E4typeE
 	.type	_ZSt7forwardISt12future_errorEOT_RNSt16remove_referenceIS1_E4typeE, %function
 _ZSt7forwardISt12future_errorEOT_RNSt16remove_referenceIS1_E4typeE:
-.LFB4127:
+.LFB4143:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -4474,14 +4708,14 @@ _ZSt7forwardISt12future_errorEOT_RNSt16remove_referenceIS1_E4typeE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4127:
+.LFE4143:
 	.size	_ZSt7forwardISt12future_errorEOT_RNSt16remove_referenceIS1_E4typeE, .-_ZSt7forwardISt12future_errorEOT_RNSt16remove_referenceIS1_E4typeE
 	.section	.text._ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_,"axG",@progbits,_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_,comdat
 	.align	2
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_
 	.type	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_, %function
 _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_:
-.LFB4128:
+.LFB4144:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -4517,14 +4751,14 @@ _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4128:
+.LFE4144:
 	.size	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_, .-_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE4swapERS3_
 	.section	.text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2ERKS2_,"axG",@progbits,_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC5ERKS2_,comdat
 	.align	2
 	.weak	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2ERKS2_
 	.type	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2ERKS2_, %function
 _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2ERKS2_:
-.LFB4130:
+.LFB4146:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4540,11 +4774,11 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2ERKS2_:
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0]
 	cmp	x0, 0
-	beq	.L305
+	beq	.L321
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0]
 	bl	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv
-.L305:
+.L321:
 	nop
 	ldp	x29, x30, [sp], 32
 	.cfi_restore 30
@@ -4552,7 +4786,7 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2ERKS2_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4130:
+.LFE4146:
 	.size	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2ERKS2_, .-_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2ERKS2_
 	.weak	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC1ERKS2_
 	.set	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC1ERKS2_,_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2ERKS2_
@@ -4561,7 +4795,7 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2ERKS2_:
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE5resetEv
 	.type	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE5resetEv, %function
 _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE5resetEv:
-.LFB4135:
+.LFB4151:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -4588,23 +4822,23 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L307
+	beq	.L323
 	bl	__stack_chk_fail
-.L307:
+.L323:
 	ldp	x29, x30, [sp], 64
 	.cfi_restore 30
 	.cfi_restore 29
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4135:
+.LFE4151:
 	.size	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE5resetEv, .-_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE5resetEv
 	.section	.text._ZNSaINSt13__future_base13_State_baseV2EEC2Ev,"axG",@progbits,_ZNSaINSt13__future_base13_State_baseV2EEC5Ev,comdat
 	.align	2
 	.weak	_ZNSaINSt13__future_base13_State_baseV2EEC2Ev
 	.type	_ZNSaINSt13__future_base13_State_baseV2EEC2Ev, %function
 _ZNSaINSt13__future_base13_State_baseV2EEC2Ev:
-.LFB4137:
+.LFB4153:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4621,7 +4855,7 @@ _ZNSaINSt13__future_base13_State_baseV2EEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4137:
+.LFE4153:
 	.size	_ZNSaINSt13__future_base13_State_baseV2EEC2Ev, .-_ZNSaINSt13__future_base13_State_baseV2EEC2Ev
 	.weak	_ZNSaINSt13__future_base13_State_baseV2EEC1Ev
 	.set	_ZNSaINSt13__future_base13_State_baseV2EEC1Ev,_ZNSaINSt13__future_base13_State_baseV2EEC2Ev
@@ -4630,7 +4864,7 @@ _ZNSaINSt13__future_base13_State_baseV2EEC2Ev:
 	.weak	_ZNSaINSt13__future_base13_State_baseV2EED2Ev
 	.type	_ZNSaINSt13__future_base13_State_baseV2EED2Ev, %function
 _ZNSaINSt13__future_base13_State_baseV2EED2Ev:
-.LFB4140:
+.LFB4156:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4647,7 +4881,7 @@ _ZNSaINSt13__future_base13_State_baseV2EED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4140:
+.LFE4156:
 	.size	_ZNSaINSt13__future_base13_State_baseV2EED2Ev, .-_ZNSaINSt13__future_base13_State_baseV2EED2Ev
 	.weak	_ZNSaINSt13__future_base13_State_baseV2EED1Ev
 	.set	_ZNSaINSt13__future_base13_State_baseV2EED1Ev,_ZNSaINSt13__future_base13_State_baseV2EED2Ev
@@ -4656,7 +4890,7 @@ _ZNSaINSt13__future_base13_State_baseV2EED2Ev:
 	.weak	_ZSt15allocate_sharedINSt13__future_base13_State_baseV2ESaIS1_EJEESt10shared_ptrIT_ERKT0_DpOT1_
 	.type	_ZSt15allocate_sharedINSt13__future_base13_State_baseV2ESaIS1_EJEESt10shared_ptrIT_ERKT0_DpOT1_, %function
 _ZSt15allocate_sharedINSt13__future_base13_State_baseV2ESaIS1_EJEESt10shared_ptrIT_ERKT0_DpOT1_:
-.LFB4142:
+.LFB4158:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -4680,14 +4914,14 @@ _ZSt15allocate_sharedINSt13__future_base13_State_baseV2ESaIS1_EJEESt10shared_ptr
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4142:
+.LFE4158:
 	.size	_ZSt15allocate_sharedINSt13__future_base13_State_baseV2ESaIS1_EJEESt10shared_ptrIT_ERKT0_DpOT1_, .-_ZSt15allocate_sharedINSt13__future_base13_State_baseV2ESaIS1_EJEESt10shared_ptrIT_ERKT0_DpOT1_
 	.section	.text._ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2EOS4_,"axG",@progbits,_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC5EOS4_,comdat
 	.align	2
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2EOS4_
 	.type	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2EOS4_, %function
 _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2EOS4_:
-.LFB4151:
+.LFB4167:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4719,7 +4953,7 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4151:
+.LFE4167:
 	.size	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2EOS4_, .-_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2EOS4_
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC1EOS4_
 	.set	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC1EOS4_,_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2EOS4_
@@ -4728,7 +4962,7 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	.weak	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2EOS3_
 	.type	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2EOS3_, %function
 _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2EOS3_:
-.LFB4155:
+.LFB4171:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -4739,7 +4973,7 @@ _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2EOS3_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4155:
+.LFE4171:
 	.size	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2EOS3_, .-_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2EOS3_
 	.weak	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC1EOS3_
 	.set	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC1EOS3_,_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2EOS3_
@@ -4748,7 +4982,7 @@ _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2EOS3_:
 	.weak	_ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE9_M_uniqueEv
 	.type	_ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE9_M_uniqueEv, %function
 _ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE9_M_uniqueEv:
-.LFB4157:
+.LFB4173:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4767,14 +5001,14 @@ _ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE9_M_uniqueEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4157:
+.LFE4173:
 	.size	_ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE9_M_uniqueEv, .-_ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE9_M_uniqueEv
 	.section	.text._ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EE6_M_getEv,"axG",@progbits,_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EE6_M_getEv,comdat
 	.align	2
 	.weak	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EE6_M_getEv
 	.type	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EE6_M_getEv, %function
 _ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EE6_M_getEv:
-.LFB4158:
+.LFB4174:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -4790,14 +5024,14 @@ _ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Loc
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4158:
+.LFE4174:
 	.size	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EE6_M_getEv, .-_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EE6_M_getEv
 	.section	.text._ZSt7forwardINSt13__future_base12_Result_base8_DeleterEEOT_RNSt16remove_referenceIS3_E4typeE,"axG",@progbits,_ZSt7forwardINSt13__future_base12_Result_base8_DeleterEEOT_RNSt16remove_referenceIS3_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardINSt13__future_base12_Result_base8_DeleterEEOT_RNSt16remove_referenceIS3_E4typeE
 	.type	_ZSt7forwardINSt13__future_base12_Result_base8_DeleterEEOT_RNSt16remove_referenceIS3_E4typeE, %function
 _ZSt7forwardINSt13__future_base12_Result_base8_DeleterEEOT_RNSt16remove_referenceIS3_E4typeE:
-.LFB4160:
+.LFB4176:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -4807,14 +5041,14 @@ _ZSt7forwardINSt13__future_base12_Result_base8_DeleterEEOT_RNSt16remove_referenc
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4160:
+.LFE4176:
 	.size	_ZSt7forwardINSt13__future_base12_Result_base8_DeleterEEOT_RNSt16remove_referenceIS3_E4typeE, .-_ZSt7forwardINSt13__future_base12_Result_base8_DeleterEEOT_RNSt16remove_referenceIS3_E4typeE
 	.section	.text._ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_EEPS1_OT_,"axG",@progbits,_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC5IS2_EEPS1_OT_,comdat
 	.align	2
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_EEPS1_OT_
 	.type	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_EEPS1_OT_, %function
 _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_EEPS1_OT_:
-.LFB4168:
+.LFB4184:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -4844,7 +5078,7 @@ _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_EEP
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4168:
+.LFE4184:
 	.size	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_EEPS1_OT_, .-_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_EEPS1_OT_
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC1IS2_EEPS1_OT_
 	.set	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC1IS2_EEPS1_OT_,_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_EEPS1_OT_
@@ -4853,7 +5087,7 @@ _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEEC2IS2_EEP
 	.weak	_ZSt4moveIRPNSt13__future_base13_State_baseV2EEONSt16remove_referenceIT_E4typeEOS5_
 	.type	_ZSt4moveIRPNSt13__future_base13_State_baseV2EEONSt16remove_referenceIT_E4typeEOS5_, %function
 _ZSt4moveIRPNSt13__future_base13_State_baseV2EEONSt16remove_referenceIT_E4typeEOS5_:
-.LFB4171:
+.LFB4187:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -4863,14 +5097,14 @@ _ZSt4moveIRPNSt13__future_base13_State_baseV2EEONSt16remove_referenceIT_E4typeEO
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4171:
+.LFE4187:
 	.size	_ZSt4moveIRPNSt13__future_base13_State_baseV2EEONSt16remove_referenceIT_E4typeEOS5_, .-_ZSt4moveIRPNSt13__future_base13_State_baseV2EEONSt16remove_referenceIT_E4typeEOS5_
 	.section	.text._ZSt4swapIPNSt13__future_base13_State_baseV2EENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_,"axG",@progbits,_ZSt4swapIPNSt13__future_base13_State_baseV2EENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_,comdat
 	.align	2
 	.weak	_ZSt4swapIPNSt13__future_base13_State_baseV2EENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_
 	.type	_ZSt4swapIPNSt13__future_base13_State_baseV2EENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_, %function
 _ZSt4swapIPNSt13__future_base13_State_baseV2EENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_:
-.LFB4170:
+.LFB4186:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -4905,23 +5139,23 @@ _ZSt4swapIPNSt13__future_base13_State_baseV2EENSt9enable_ifIXsrSt6__and_IJSt6__n
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L324
+	beq	.L340
 	bl	__stack_chk_fail
-.L324:
+.L340:
 	ldp	x29, x30, [sp], 48
 	.cfi_restore 30
 	.cfi_restore 29
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4170:
+.LFE4186:
 	.size	_ZSt4swapIPNSt13__future_base13_State_baseV2EENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_, .-_ZSt4swapIPNSt13__future_base13_State_baseV2EENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_
 	.section	.text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE7_M_swapERS2_,"axG",@progbits,_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE7_M_swapERS2_,comdat
 	.align	2
 	.weak	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE7_M_swapERS2_
 	.type	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE7_M_swapERS2_, %function
 _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE7_M_swapERS2_:
-.LFB4172:
+.LFB4188:
 	.cfi_startproc
 	sub	sp, sp, #32
 	.cfi_def_cfa_offset 32
@@ -4942,14 +5176,14 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE7_M_swapERS2_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4172:
+.LFE4188:
 	.size	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE7_M_swapERS2_, .-_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE7_M_swapERS2_
 	.section	.text._ZNSt8literals15chrono_literals16__check_overflowINSt6chrono8durationIlSt5ratioILl1ELl1EEEEJLc49ELc48EEEET_v,"axG",@progbits,_ZNSt8literals15chrono_literals16__check_overflowINSt6chrono8durationIlSt5ratioILl1ELl1EEEEJLc49ELc48EEEET_v,comdat
 	.align	2
 	.weak	_ZNSt8literals15chrono_literals16__check_overflowINSt6chrono8durationIlSt5ratioILl1ELl1EEEEJLc49ELc48EEEET_v
 	.type	_ZNSt8literals15chrono_literals16__check_overflowINSt6chrono8durationIlSt5ratioILl1ELl1EEEEJLc49ELc48EEEET_v, %function
 _ZNSt8literals15chrono_literals16__check_overflowINSt6chrono8durationIlSt5ratioILl1ELl1EEEEJLc49ELc48EEEET_v:
-.LFB4201:
+.LFB4217:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -4974,9 +5208,9 @@ _ZNSt8literals15chrono_literals16__check_overflowINSt6chrono8durationIlSt5ratioI
 	ldr	x2, [x0]
 	subs	x3, x3, x2
 	mov	x2, 0
-	beq	.L328
+	beq	.L344
 	bl	__stack_chk_fail
-.L328:
+.L344:
 	mov	x0, x1
 	ldp	x29, x30, [sp], 48
 	.cfi_restore 30
@@ -4984,14 +5218,14 @@ _ZNSt8literals15chrono_literals16__check_overflowINSt6chrono8durationIlSt5ratioI
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4201:
+.LFE4217:
 	.size	_ZNSt8literals15chrono_literals16__check_overflowINSt6chrono8durationIlSt5ratioILl1ELl1EEEEJLc49ELc48EEEET_v, .-_ZNSt8literals15chrono_literals16__check_overflowINSt6chrono8durationIlSt5ratioILl1ELl1EEEEJLc49ELc48EEEET_v
 	.section	.text._ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE,"axG",@progbits,_ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE,comdat
 	.align	2
 	.weak	_ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE
 	.type	_ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE, %function
 _ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE:
-.LFB4202:
+.LFB4218:
 	.cfi_startproc
 	stp	x29, x30, [sp, -80]!
 	.cfi_def_cfa_offset 80
@@ -5028,9 +5262,9 @@ _ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE:
 	ldr	x2, [x0]
 	subs	x3, x3, x2
 	mov	x2, 0
-	beq	.L331
+	beq	.L347
 	bl	__stack_chk_fail
-.L331:
+.L347:
 	mov	w0, w1
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 80
@@ -5040,14 +5274,14 @@ _ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4202:
+.LFE4218:
 	.size	_ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE, .-_ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE
 	.section	.text._ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1EE6__castIlS3_EES4_RKNS1_IT_T0_EE,"axG",@progbits,_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1EE6__castIlS3_EES4_RKNS1_IT_T0_EE,comdat
 	.align	2
 	.weak	_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1EE6__castIlS3_EES4_RKNS1_IT_T0_EE
 	.type	_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1EE6__castIlS3_EES4_RKNS1_IT_T0_EE, %function
 _ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1EE6__castIlS3_EES4_RKNS1_IT_T0_EE:
-.LFB4203:
+.LFB4219:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -5074,9 +5308,9 @@ _ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1
 	ldr	x2, [x0]
 	subs	x3, x3, x2
 	mov	x2, 0
-	beq	.L334
+	beq	.L350
 	bl	__stack_chk_fail
-.L334:
+.L350:
 	mov	x0, x1
 	ldp	x29, x30, [sp], 64
 	.cfi_restore 30
@@ -5084,14 +5318,14 @@ _ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4203:
+.LFE4219:
 	.size	_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1EE6__castIlS3_EES4_RKNS1_IT_T0_EE, .-_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1EE6__castIlS3_EES4_RKNS1_IT_T0_EE
 	.section	.text._ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2_ILl1000000000ELl1EElLb0ELb1EE6__castIlS2_ILl1ELl1EEEES4_RKNS1_IT_T0_EE,"axG",@progbits,_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2_ILl1000000000ELl1EElLb0ELb1EE6__castIlS2_ILl1ELl1EEEES4_RKNS1_IT_T0_EE,comdat
 	.align	2
 	.weak	_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2_ILl1000000000ELl1EElLb0ELb1EE6__castIlS2_ILl1ELl1EEEES4_RKNS1_IT_T0_EE
 	.type	_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2_ILl1000000000ELl1EElLb0ELb1EE6__castIlS2_ILl1ELl1EEEES4_RKNS1_IT_T0_EE, %function
 _ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2_ILl1000000000ELl1EElLb0ELb1EE6__castIlS2_ILl1ELl1EEEES4_RKNS1_IT_T0_EE:
-.LFB4204:
+.LFB4220:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -5122,9 +5356,9 @@ _ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2
 	ldr	x2, [x0]
 	subs	x3, x3, x2
 	mov	x2, 0
-	beq	.L337
+	beq	.L353
 	bl	__stack_chk_fail
-.L337:
+.L353:
 	mov	x0, x1
 	ldp	x29, x30, [sp], 64
 	.cfi_restore 30
@@ -5132,14 +5366,14 @@ _ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4204:
+.LFE4220:
 	.size	_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2_ILl1000000000ELl1EElLb0ELb1EE6__castIlS2_ILl1ELl1EEEES4_RKNS1_IT_T0_EE, .-_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2_ILl1000000000ELl1EElLb0ELb1EE6__castIlS2_ILl1ELl1EEEES4_RKNS1_IT_T0_EE
 	.section	.text._ZNSt7promiseIiE8_M_stateEv,"axG",@progbits,_ZNSt7promiseIiE8_M_stateEv,comdat
 	.align	2
 	.weak	_ZNSt7promiseIiE8_M_stateEv
 	.type	_ZNSt7promiseIiE8_M_stateEv, %function
 _ZNSt7promiseIiE8_M_stateEv:
-.LFB4205:
+.LFB4221:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -5157,14 +5391,14 @@ _ZNSt7promiseIiE8_M_stateEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4205:
+.LFE4221:
 	.size	_ZNSt7promiseIiE8_M_stateEv, .-_ZNSt7promiseIiE8_M_stateEv
 	.section	.text._ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_,"axG",@progbits,_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_,comdat
 	.align	2
 	.weak	_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_
 	.type	_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_, %function
 _ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_:
-.LFB4206:
+.LFB4222:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -5174,14 +5408,14 @@ _ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4206:
+.LFE4222:
 	.size	_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_, .-_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_
 	.section	.text._ZSt11__addressofIiEPT_RS0_,"axG",@progbits,_ZSt11__addressofIiEPT_RS0_,comdat
 	.align	2
 	.weak	_ZSt11__addressofIiEPT_RS0_
 	.type	_ZSt11__addressofIiEPT_RS0_, %function
 _ZSt11__addressofIiEPT_RS0_:
-.LFB4208:
+.LFB4224:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -5191,14 +5425,14 @@ _ZSt11__addressofIiEPT_RS0_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4208:
+.LFE4224:
 	.size	_ZSt11__addressofIiEPT_RS0_, .-_ZSt11__addressofIiEPT_RS0_
 	.section	.text._ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEC2INS1_13_State_baseV27_SetterIiOiEEvEEOT_,"axG",@progbits,_ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEC5INS1_13_State_baseV27_SetterIiOiEEvEEOT_,comdat
 	.align	2
 	.weak	_ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEC2INS1_13_State_baseV27_SetterIiOiEEvEEOT_
 	.type	_ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEC2INS1_13_State_baseV27_SetterIiOiEEvEEOT_, %function
 _ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEC2INS1_13_State_baseV27_SetterIiOiEEvEEOT_:
-.LFB4210:
+.LFB4226:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -5220,7 +5454,7 @@ _ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEv
 	bl	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE21_M_not_empty_functionIS5_EEbRKT_
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L346
+	beq	.L362
 	ldr	x19, [sp, 40]
 	ldr	x0, [sp, 32]
 	bl	_ZSt7forwardINSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS5_E4typeE
@@ -5235,7 +5469,7 @@ _ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEv
 	adrp	x1, _ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKSB_St18_Manager_operation
 	add	x1, x1, :lo12:_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKSB_St18_Manager_operation
 	str	x1, [x0, 16]
-.L346:
+.L362:
 	nop
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 48
@@ -5245,7 +5479,7 @@ _ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEv
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4210:
+.LFE4226:
 	.size	_ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEC2INS1_13_State_baseV27_SetterIiOiEEvEEOT_, .-_ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEC2INS1_13_State_baseV27_SetterIiOiEEvEEOT_
 	.weak	_ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEC1INS1_13_State_baseV27_SetterIiOiEEvEEOT_
 	.set	_ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEC1INS1_13_State_baseV27_SetterIiOiEEvEEOT_,_ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvEEC2INS1_13_State_baseV27_SetterIiOiEEvEEOT_
@@ -5254,10 +5488,10 @@ _ZNSt8functionIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEv
 	.weak	_ZNSt13__future_base7_ResultIiEC2Ev
 	.type	_ZNSt13__future_base7_ResultIiEC2Ev, %function
 _ZNSt13__future_base7_ResultIiEC2Ev:
-.LFB4213:
+.LFB4229:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4213
+	.cfi_lsda 0x1b,.LLSDA4229
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
 	.cfi_offset 29, -32
@@ -5279,15 +5513,15 @@ _ZNSt13__future_base7_ResultIiEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4213:
+.LFE4229:
 	.section	.gcc_except_table
-.LLSDA4213:
+.LLSDA4229:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4213-.LLSDACSB4213
-.LLSDACSB4213:
-.LLSDACSE4213:
+	.uleb128 .LLSDACSE4229-.LLSDACSB4229
+.LLSDACSB4229:
+.LLSDACSE4229:
 	.section	.text._ZNSt13__future_base7_ResultIiEC2Ev,"axG",@progbits,_ZNSt13__future_base7_ResultIiEC5Ev,comdat
 	.size	_ZNSt13__future_base7_ResultIiEC2Ev, .-_ZNSt13__future_base7_ResultIiEC2Ev
 	.weak	_ZNSt13__future_base7_ResultIiEC1Ev
@@ -5297,7 +5531,7 @@ _ZNSt13__future_base7_ResultIiEC2Ev:
 	.weak	_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS2_S4_EEPS2_
 	.type	_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS2_S4_EEPS2_, %function
 _ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS2_S4_EEPS2_:
-.LFB4217:
+.LFB4233:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -5316,7 +5550,7 @@ _ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4217:
+.LFE4233:
 	.size	_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS2_S4_EEPS2_, .-_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS2_S4_EEPS2_
 	.weak	_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EECI1St15__uniq_ptr_implIS2_S4_EEPS2_
 	.set	_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EECI1St15__uniq_ptr_implIS2_S4_EEPS2_,_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EECI2St15__uniq_ptr_implIS2_S4_EEPS2_
@@ -5325,10 +5559,10 @@ _ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.weak	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2IS4_vEEPS2_
 	.type	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2IS4_vEEPS2_, %function
 _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2IS4_vEEPS2_:
-.LFB4219:
+.LFB4235:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4219
+	.cfi_lsda 0x1b,.LLSDA4235
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
 	.cfi_offset 29, -32
@@ -5346,15 +5580,15 @@ _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2I
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4219:
+.LFE4235:
 	.section	.gcc_except_table
-.LLSDA4219:
+.LLSDA4235:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4219-.LLSDACSB4219
-.LLSDACSB4219:
-.LLSDACSE4219:
+	.uleb128 .LLSDACSE4235-.LLSDACSB4235
+.LLSDACSB4235:
+.LLSDACSE4235:
 	.section	.text._ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2IS4_vEEPS2_,"axG",@progbits,_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC5IS4_vEEPS2_,comdat
 	.size	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2IS4_vEEPS2_, .-_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2IS4_vEEPS2_
 	.weak	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC1IS4_vEEPS2_
@@ -5364,10 +5598,10 @@ _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2I
 	.weak	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED2Ev
 	.type	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED2Ev, %function
 _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED2Ev:
-.LFB4222:
+.LFB4238:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4222
+	.cfi_lsda 0x1b,.LLSDA4238
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
 	.cfi_offset 29, -64
@@ -5382,7 +5616,7 @@ _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED2E
 	ldr	x0, [sp, 56]
 	ldr	x0, [x0]
 	cmp	x0, 0
-	beq	.L351
+	beq	.L367
 	ldr	x0, [sp, 40]
 	bl	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE11get_deleterEv
 	mov	x19, x0
@@ -5392,7 +5626,7 @@ _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED2E
 	mov	x1, x0
 	mov	x0, x19
 	bl	_ZNKSt13__future_base12_Result_base8_DeleterclEPS0_
-.L351:
+.L367:
 	ldr	x0, [sp, 56]
 	str	xzr, [x0]
 	nop
@@ -5404,15 +5638,15 @@ _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED2E
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4222:
+.LFE4238:
 	.section	.gcc_except_table
-.LLSDA4222:
+.LLSDA4238:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4222-.LLSDACSB4222
-.LLSDACSB4222:
-.LLSDACSE4222:
+	.uleb128 .LLSDACSE4238-.LLSDACSB4238
+.LLSDACSB4238:
+.LLSDACSE4238:
 	.section	.text._ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED2Ev,"axG",@progbits,_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED5Ev,comdat
 	.size	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED2Ev, .-_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED2Ev
 	.weak	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED1Ev
@@ -5422,7 +5656,7 @@ _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEED2E
 	.weak	_ZSt4moveIRSt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEONSt16remove_referenceIT_E4typeEOS9_
 	.type	_ZSt4moveIRSt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEONSt16remove_referenceIT_E4typeEOS9_, %function
 _ZSt4moveIRSt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEONSt16remove_referenceIT_E4typeEOS9_:
-.LFB4224:
+.LFB4240:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -5432,17 +5666,17 @@ _ZSt4moveIRSt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_Dele
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4224:
+.LFE4240:
 	.size	_ZSt4moveIRSt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEONSt16remove_referenceIT_E4typeEOS9_, .-_ZSt4moveIRSt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEONSt16remove_referenceIT_E4typeEOS9_
 	.section	.text._ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2INS0_7_ResultIiEES2_vEEOS_IT_T0_E,"axG",@progbits,_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC5INS0_7_ResultIiEES2_vEEOS_IT_T0_E,comdat
 	.align	2
 	.weak	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2INS0_7_ResultIiEES2_vEEOS_IT_T0_E
 	.type	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2INS0_7_ResultIiEES2_vEEOS_IT_T0_E, %function
 _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2INS0_7_ResultIiEES2_vEEOS_IT_T0_E:
-.LFB4226:
+.LFB4242:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4226
+	.cfi_lsda 0x1b,.LLSDA4242
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
 	.cfi_offset 29, -48
@@ -5474,15 +5708,15 @@ _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2INS0_7_Resul
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4226:
+.LFE4242:
 	.section	.gcc_except_table
-.LLSDA4226:
+.LLSDA4242:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4226-.LLSDACSB4226
-.LLSDACSB4226:
-.LLSDACSE4226:
+	.uleb128 .LLSDACSE4242-.LLSDACSB4242
+.LLSDACSB4242:
+.LLSDACSE4242:
 	.section	.text._ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2INS0_7_ResultIiEES2_vEEOS_IT_T0_E,"axG",@progbits,_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC5INS0_7_ResultIiEES2_vEEOS_IT_T0_E,comdat
 	.size	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2INS0_7_ResultIiEES2_vEEOS_IT_T0_E, .-_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2INS0_7_ResultIiEES2_vEEOS_IT_T0_E
 	.weak	_ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC1INS0_7_ResultIiEES2_vEEOS_IT_T0_E
@@ -5492,7 +5726,7 @@ _ZNSt10unique_ptrINSt13__future_base12_Result_baseENS1_8_DeleterEEC2INS0_7_Resul
 	.weak	_ZNSt6futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE
 	.type	_ZNSt6futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE, %function
 _ZNSt6futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE:
-.LFB4229:
+.LFB4245:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -5511,7 +5745,7 @@ _ZNSt6futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4229:
+.LFE4245:
 	.size	_ZNSt6futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE, .-_ZNSt6futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE
 	.weak	_ZNSt6futureIiEC1ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE
 	.set	_ZNSt6futureIiEC1ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE,_ZNSt6futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE
@@ -5520,7 +5754,7 @@ _ZNSt6futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE:
 	.weak	_ZSt7forwardIRFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE
 	.type	_ZSt7forwardIRFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE, %function
 _ZSt7forwardIRFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE:
-.LFB4231:
+.LFB4247:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -5530,14 +5764,14 @@ _ZSt7forwardIRFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4231:
+.LFE4247:
 	.size	_ZSt7forwardIRFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE, .-_ZSt7forwardIRFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE
 	.section	.text._ZSt7forwardISt7promiseIiEEOT_RNSt16remove_referenceIS2_E4typeE,"axG",@progbits,_ZSt7forwardISt7promiseIiEEOT_RNSt16remove_referenceIS2_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardISt7promiseIiEEOT_RNSt16remove_referenceIS2_E4typeE
 	.type	_ZSt7forwardISt7promiseIiEEOT_RNSt16remove_referenceIS2_E4typeE, %function
 _ZSt7forwardISt7promiseIiEEOT_RNSt16remove_referenceIS2_E4typeE:
-.LFB4232:
+.LFB4248:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -5547,14 +5781,14 @@ _ZSt7forwardISt7promiseIiEEOT_RNSt16remove_referenceIS2_E4typeE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4232:
+.LFE4248:
 	.size	_ZSt7forwardISt7promiseIiEEOT_RNSt16remove_referenceIS2_E4typeE, .-_ZSt7forwardISt7promiseIiEEOT_RNSt16remove_referenceIS2_E4typeE
 	.section	.text._ZNSt6thread6_StateC2Ev,"axG",@progbits,_ZNSt6thread6_StateC5Ev,comdat
 	.align	2
 	.weak	_ZNSt6thread6_StateC2Ev
 	.type	_ZNSt6thread6_StateC2Ev, %function
 _ZNSt6thread6_StateC2Ev:
-.LFB4235:
+.LFB4251:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -5569,7 +5803,7 @@ _ZNSt6thread6_StateC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4235:
+.LFE4251:
 	.size	_ZNSt6thread6_StateC2Ev, .-_ZNSt6thread6_StateC2Ev
 	.weak	_ZNSt6thread6_StateC1Ev
 	.set	_ZNSt6thread6_StateC1Ev,_ZNSt6thread6_StateC2Ev
@@ -5578,7 +5812,7 @@ _ZNSt6thread6_StateC2Ev:
 	.weak	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EED2Ev
 	.type	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EED2Ev, %function
 _ZNSt10_Head_baseILm1ESt7promiseIiELb0EED2Ev:
-.LFB4247:
+.LFB4263:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -5595,7 +5829,7 @@ _ZNSt10_Head_baseILm1ESt7promiseIiELb0EED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4247:
+.LFE4263:
 	.size	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EED2Ev, .-_ZNSt10_Head_baseILm1ESt7promiseIiELb0EED2Ev
 	.weak	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EED1Ev
 	.set	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EED1Ev,_ZNSt10_Head_baseILm1ESt7promiseIiELb0EED2Ev
@@ -5604,7 +5838,7 @@ _ZNSt10_Head_baseILm1ESt7promiseIiELb0EED2Ev:
 	.weak	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEED2Ev
 	.type	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEED2Ev, %function
 _ZNSt11_Tuple_implILm1EJSt7promiseIiEEED2Ev:
-.LFB4249:
+.LFB4265:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -5621,7 +5855,7 @@ _ZNSt11_Tuple_implILm1EJSt7promiseIiEEED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4249:
+.LFE4265:
 	.size	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEED2Ev, .-_ZNSt11_Tuple_implILm1EJSt7promiseIiEEED2Ev
 	.weak	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEED1Ev
 	.set	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEED1Ev,_ZNSt11_Tuple_implILm1EJSt7promiseIiEEED2Ev
@@ -5630,7 +5864,7 @@ _ZNSt11_Tuple_implILm1EJSt7promiseIiEEED2Ev:
 	.weak	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EED2Ev
 	.type	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EED2Ev, %function
 _ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EED2Ev:
-.LFB4251:
+.LFB4267:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -5647,7 +5881,7 @@ _ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4251:
+.LFE4267:
 	.size	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EED2Ev, .-_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EED2Ev
 	.weak	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EED1Ev
 	.set	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EED1Ev,_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EED2Ev
@@ -5656,7 +5890,7 @@ _ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EED2Ev:
 	.weak	_ZNSt5tupleIJPFvOSt7promiseIiEES1_EED2Ev
 	.type	_ZNSt5tupleIJPFvOSt7promiseIiEES1_EED2Ev, %function
 _ZNSt5tupleIJPFvOSt7promiseIiEES1_EED2Ev:
-.LFB4253:
+.LFB4269:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -5673,7 +5907,7 @@ _ZNSt5tupleIJPFvOSt7promiseIiEES1_EED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4253:
+.LFE4269:
 	.size	_ZNSt5tupleIJPFvOSt7promiseIiEES1_EED2Ev, .-_ZNSt5tupleIJPFvOSt7promiseIiEES1_EED2Ev
 	.weak	_ZNSt5tupleIJPFvOSt7promiseIiEES1_EED1Ev
 	.set	_ZNSt5tupleIJPFvOSt7promiseIiEES1_EED1Ev,_ZNSt5tupleIJPFvOSt7promiseIiEES1_EED2Ev
@@ -5682,10 +5916,10 @@ _ZNSt5tupleIJPFvOSt7promiseIiEES1_EED2Ev:
 	.weak	_ZNSt5tupleIJPFvOSt7promiseIiEES1_EEC2IRS3_S1_Lb1EEEOT_OT0_
 	.type	_ZNSt5tupleIJPFvOSt7promiseIiEES1_EEC2IRS3_S1_Lb1EEEOT_OT0_, %function
 _ZNSt5tupleIJPFvOSt7promiseIiEES1_EEC2IRS3_S1_Lb1EEEOT_OT0_:
-.LFB4256:
+.LFB4272:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4256
+	.cfi_lsda 0x1b,.LLSDA4272
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
 	.cfi_offset 29, -64
@@ -5717,15 +5951,15 @@ _ZNSt5tupleIJPFvOSt7promiseIiEES1_EEC2IRS3_S1_Lb1EEEOT_OT0_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4256:
+.LFE4272:
 	.section	.gcc_except_table
-.LLSDA4256:
+.LLSDA4272:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4256-.LLSDACSB4256
-.LLSDACSB4256:
-.LLSDACSE4256:
+	.uleb128 .LLSDACSE4272-.LLSDACSB4272
+.LLSDACSB4272:
+.LLSDACSE4272:
 	.section	.text._ZNSt5tupleIJPFvOSt7promiseIiEES1_EEC2IRS3_S1_Lb1EEEOT_OT0_,"axG",@progbits,_ZNSt5tupleIJPFvOSt7promiseIiEES1_EEC5IRS3_S1_Lb1EEEOT_OT0_,comdat
 	.size	_ZNSt5tupleIJPFvOSt7promiseIiEES1_EEC2IRS3_S1_Lb1EEEOT_OT0_, .-_ZNSt5tupleIJPFvOSt7promiseIiEES1_EEC2IRS3_S1_Lb1EEEOT_OT0_
 	.weak	_ZNSt5tupleIJPFvOSt7promiseIiEES1_EEC1IRS3_S1_Lb1EEEOT_OT0_
@@ -5735,7 +5969,7 @@ _ZNSt5tupleIJPFvOSt7promiseIiEES1_EEC2IRS3_S1_Lb1EEEOT_OT0_:
 	.weak	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEED2Ev
 	.type	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEED2Ev, %function
 _ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEED2Ev:
-.LFB4259:
+.LFB4275:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -5752,7 +5986,7 @@ _ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4259:
+.LFE4275:
 	.size	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEED2Ev, .-_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEED2Ev
 	.weak	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEED1Ev
 	.set	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEED1Ev,_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEED2Ev
@@ -5761,7 +5995,7 @@ _ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEED2Ev:
 	.weak	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC2IJRS6_S4_EEEDpOT_
 	.type	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC2IJRS6_S4_EEEDpOT_, %function
 _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC2IJRS6_S4_EEEDpOT_:
-.LFB4261:
+.LFB4277:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -5801,7 +6035,7 @@ _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC2IJR
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4261:
+.LFE4277:
 	.size	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC2IJRS6_S4_EEEDpOT_, .-_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC2IJRS6_S4_EEEDpOT_
 	.weak	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC1IJRS6_S4_EEEDpOT_
 	.set	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC1IJRS6_S4_EEEDpOT_,_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC2IJRS6_S4_EEEDpOT_
@@ -5810,7 +6044,7 @@ _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEC2IJR
 	.weak	_ZNSt15__uniq_ptr_dataINSt6thread6_StateESt14default_deleteIS1_ELb1ELb1EECI2St15__uniq_ptr_implIS1_S3_EEPS1_
 	.type	_ZNSt15__uniq_ptr_dataINSt6thread6_StateESt14default_deleteIS1_ELb1ELb1EECI2St15__uniq_ptr_implIS1_S3_EEPS1_, %function
 _ZNSt15__uniq_ptr_dataINSt6thread6_StateESt14default_deleteIS1_ELb1ELb1EECI2St15__uniq_ptr_implIS1_S3_EEPS1_:
-.LFB4265:
+.LFB4281:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -5829,7 +6063,7 @@ _ZNSt15__uniq_ptr_dataINSt6thread6_StateESt14default_deleteIS1_ELb1ELb1EECI2St15
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4265:
+.LFE4281:
 	.size	_ZNSt15__uniq_ptr_dataINSt6thread6_StateESt14default_deleteIS1_ELb1ELb1EECI2St15__uniq_ptr_implIS1_S3_EEPS1_, .-_ZNSt15__uniq_ptr_dataINSt6thread6_StateESt14default_deleteIS1_ELb1ELb1EECI2St15__uniq_ptr_implIS1_S3_EEPS1_
 	.weak	_ZNSt15__uniq_ptr_dataINSt6thread6_StateESt14default_deleteIS1_ELb1ELb1EECI1St15__uniq_ptr_implIS1_S3_EEPS1_
 	.set	_ZNSt15__uniq_ptr_dataINSt6thread6_StateESt14default_deleteIS1_ELb1ELb1EECI1St15__uniq_ptr_implIS1_S3_EEPS1_,_ZNSt15__uniq_ptr_dataINSt6thread6_StateESt14default_deleteIS1_ELb1ELb1EECI2St15__uniq_ptr_implIS1_S3_EEPS1_
@@ -5838,10 +6072,10 @@ _ZNSt15__uniq_ptr_dataINSt6thread6_StateESt14default_deleteIS1_ELb1ELb1EECI2St15
 	.weak	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC2IS3_vEEPS1_
 	.type	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC2IS3_vEEPS1_, %function
 _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC2IS3_vEEPS1_:
-.LFB4267:
+.LFB4283:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4267
+	.cfi_lsda 0x1b,.LLSDA4283
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
 	.cfi_offset 29, -32
@@ -5859,15 +6093,15 @@ _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC2IS3_vEEPS1_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4267:
+.LFE4283:
 	.section	.gcc_except_table
-.LLSDA4267:
+.LLSDA4283:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4267-.LLSDACSB4267
-.LLSDACSB4267:
-.LLSDACSE4267:
+	.uleb128 .LLSDACSE4283-.LLSDACSB4283
+.LLSDACSB4283:
+.LLSDACSE4283:
 	.section	.text._ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC2IS3_vEEPS1_,"axG",@progbits,_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC5IS3_vEEPS1_,comdat
 	.size	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC2IS3_vEEPS1_, .-_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC2IS3_vEEPS1_
 	.weak	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC1IS3_vEEPS1_
@@ -5877,7 +6111,7 @@ _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC2IS3_vEEPS1_:
 	.weak	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
 	.type	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev, %function
 _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev:
-.LFB4270:
+.LFB4286:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -5893,7 +6127,7 @@ _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev:
 	ldr	x0, [sp, 56]
 	ldr	x0, [x0]
 	cmp	x0, 0
-	beq	.L371
+	beq	.L387
 	ldr	x0, [sp, 40]
 	bl	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EE11get_deleterEv
 	mov	x19, x0
@@ -5903,7 +6137,7 @@ _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_
-.L371:
+.L387:
 	ldr	x0, [sp, 56]
 	str	xzr, [x0]
 	nop
@@ -5915,7 +6149,7 @@ _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4270:
+.LFE4286:
 	.size	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev, .-_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
 	.weak	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED1Ev
 	.set	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED1Ev,_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev
@@ -5924,7 +6158,7 @@ _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev:
 	.weak	_ZNSt14__basic_futureIiE6_ResetC2ERS0_
 	.type	_ZNSt14__basic_futureIiE6_ResetC2ERS0_, %function
 _ZNSt14__basic_futureIiE6_ResetC2ERS0_:
-.LFB4273:
+.LFB4289:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -5938,7 +6172,7 @@ _ZNSt14__basic_futureIiE6_ResetC2ERS0_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4273:
+.LFE4289:
 	.size	_ZNSt14__basic_futureIiE6_ResetC2ERS0_, .-_ZNSt14__basic_futureIiE6_ResetC2ERS0_
 	.weak	_ZNSt14__basic_futureIiE6_ResetC1ERS0_
 	.set	_ZNSt14__basic_futureIiE6_ResetC1ERS0_,_ZNSt14__basic_futureIiE6_ResetC2ERS0_
@@ -5947,7 +6181,7 @@ _ZNSt14__basic_futureIiE6_ResetC2ERS0_:
 	.weak	_ZNSt14__basic_futureIiE6_ResetD2Ev
 	.type	_ZNSt14__basic_futureIiE6_ResetD2Ev, %function
 _ZNSt14__basic_futureIiE6_ResetD2Ev:
-.LFB4276:
+.LFB4292:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -5965,7 +6199,7 @@ _ZNSt14__basic_futureIiE6_ResetD2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4276:
+.LFE4292:
 	.size	_ZNSt14__basic_futureIiE6_ResetD2Ev, .-_ZNSt14__basic_futureIiE6_ResetD2Ev
 	.weak	_ZNSt14__basic_futureIiE6_ResetD1Ev
 	.set	_ZNSt14__basic_futureIiE6_ResetD1Ev,_ZNSt14__basic_futureIiE6_ResetD2Ev
@@ -5974,10 +6208,10 @@ _ZNSt14__basic_futureIiE6_ResetD2Ev:
 	.weak	_ZNKSt14__basic_futureIiE13_M_get_resultEv
 	.type	_ZNKSt14__basic_futureIiE13_M_get_resultEv, %function
 _ZNKSt14__basic_futureIiE13_M_get_resultEv:
-.LFB4278:
+.LFB4294:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4278
+	.cfi_lsda 0x1b,.LLSDA4294
 	stp	x29, x30, [sp, -80]!
 	.cfi_def_cfa_offset 80
 	.cfi_offset 29, -80
@@ -5992,12 +6226,12 @@ _ZNKSt14__basic_futureIiE13_M_get_resultEv:
 	str	x1, [sp, 72]
 	mov	x1, 0
 	ldr	x0, [sp, 40]
-.LEHB25:
+.LEHB34:
 	bl	_ZNSt13__future_base13_State_baseV28_S_checkIS0_EEvRKSt10shared_ptrIT_E
 	ldr	x0, [sp, 40]
 	bl	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEptEv
 	bl	_ZNSt13__future_base13_State_baseV24waitEv
-.LEHE25:
+.LEHE34:
 	str	x0, [sp, 64]
 	ldr	x0, [sp, 64]
 	add	x19, x0, 8
@@ -6014,16 +6248,16 @@ _ZNKSt14__basic_futureIiE13_M_get_resultEv:
 	add	x0, sp, 56
 	bl	_ZNSt15__exception_ptr13exception_ptrD1Ev
 	cmp	w19, 0
-	beq	.L375
+	beq	.L391
 	ldr	x0, [sp, 64]
 	add	x1, x0, 8
 	add	x0, sp, 56
 	bl	_ZNSt15__exception_ptr13exception_ptrC1ERKS0_
 	add	x0, sp, 56
-.LEHB26:
+.LEHB35:
 	bl	_ZSt17rethrow_exceptionNSt15__exception_ptr13exception_ptrE
-.LEHE26:
-.L375:
+.LEHE35:
+.L391:
 	ldr	x0, [sp, 64]
 	mov	x1, x0
 	adrp	x0, :got:__stack_chk_guard
@@ -6032,19 +6266,19 @@ _ZNKSt14__basic_futureIiE13_M_get_resultEv:
 	ldr	x2, [x0]
 	subs	x3, x3, x2
 	mov	x2, 0
-	beq	.L378
-	b	.L380
-.L379:
+	beq	.L394
+	b	.L396
+.L395:
 	mov	x19, x0
 	add	x0, sp, 56
 	bl	_ZNSt15__exception_ptr13exception_ptrD1Ev
 	mov	x0, x19
-.LEHB27:
+.LEHB36:
 	bl	_Unwind_Resume
-.LEHE27:
-.L380:
+.LEHE36:
+.L396:
 	bl	__stack_chk_fail
-.L378:
+.L394:
 	mov	x0, x1
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 80
@@ -6054,27 +6288,27 @@ _ZNKSt14__basic_futureIiE13_M_get_resultEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4278:
+.LFE4294:
 	.section	.gcc_except_table
-.LLSDA4278:
+.LLSDA4294:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4278-.LLSDACSB4278
-.LLSDACSB4278:
-	.uleb128 .LEHB25-.LFB4278
-	.uleb128 .LEHE25-.LEHB25
+	.uleb128 .LLSDACSE4294-.LLSDACSB4294
+.LLSDACSB4294:
+	.uleb128 .LEHB34-.LFB4294
+	.uleb128 .LEHE34-.LEHB34
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB26-.LFB4278
-	.uleb128 .LEHE26-.LEHB26
-	.uleb128 .L379-.LFB4278
+	.uleb128 .LEHB35-.LFB4294
+	.uleb128 .LEHE35-.LEHB35
+	.uleb128 .L395-.LFB4294
 	.uleb128 0
-	.uleb128 .LEHB27-.LFB4278
-	.uleb128 .LEHE27-.LEHB27
+	.uleb128 .LEHB36-.LFB4294
+	.uleb128 .LEHE36-.LEHB36
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE4278:
+.LLSDACSE4294:
 	.section	.text._ZNKSt14__basic_futureIiE13_M_get_resultEv,"axG",@progbits,_ZNKSt14__basic_futureIiE13_M_get_resultEv,comdat
 	.size	_ZNKSt14__basic_futureIiE13_M_get_resultEv, .-_ZNKSt14__basic_futureIiE13_M_get_resultEv
 	.section	.text._ZNSt13__future_base7_ResultIiE8_M_valueEv,"axG",@progbits,_ZNSt13__future_base7_ResultIiE8_M_valueEv,comdat
@@ -6082,7 +6316,7 @@ _ZNKSt14__basic_futureIiE13_M_get_resultEv:
 	.weak	_ZNSt13__future_base7_ResultIiE8_M_valueEv
 	.type	_ZNSt13__future_base7_ResultIiE8_M_valueEv, %function
 _ZNSt13__future_base7_ResultIiE8_M_valueEv:
-.LFB4279:
+.LFB4295:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -6099,14 +6333,14 @@ _ZNSt13__future_base7_ResultIiE8_M_valueEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4279:
+.LFE4295:
 	.size	_ZNSt13__future_base7_ResultIiE8_M_valueEv, .-_ZNSt13__future_base7_ResultIiE8_M_valueEv
 	.section	.text._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv,"axG",@progbits,_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv,comdat
 	.align	2
 	.weak	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv
 	.type	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv, %function
 _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv:
-.LFB4327:
+.LFB4343:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -6116,14 +6350,14 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv:
 	str	x0, [sp, 24]
 	ldr	x0, [sp, 24]
 	cmp	x0, 0
-	beq	.L385
+	beq	.L401
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0]
 	add	x0, x0, 8
 	ldr	x1, [x0]
 	ldr	x0, [sp, 24]
 	blr	x1
-.L385:
+.L401:
 	nop
 	ldp	x29, x30, [sp], 32
 	.cfi_restore 30
@@ -6131,14 +6365,14 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4327:
+.LFE4343:
 	.size	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv, .-_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv
 	.section	.text._ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2Ev,"axG",@progbits,_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC5Ev,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2Ev
 	.type	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2Ev, %function
 _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2Ev:
-.LFB4330:
+.LFB4346:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -6155,7 +6389,7 @@ _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4330:
+.LFE4346:
 	.size	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2Ev, .-_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2Ev
 	.weak	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC1Ev
 	.set	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC1Ev,_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2Ev
@@ -6164,7 +6398,7 @@ _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2Ev:
 	.weak	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2Ev
 	.type	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2Ev, %function
 _ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2Ev:
-.LFB4333:
+.LFB4349:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -6176,7 +6410,7 @@ _ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4333:
+.LFE4349:
 	.size	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2Ev, .-_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2Ev
 	.weak	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC1Ev
 	.set	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC1Ev,_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2Ev
@@ -6185,7 +6419,7 @@ _ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2Ev:
 	.weak	_ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_
 	.type	_ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_, %function
 _ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_:
-.LFB4335:
+.LFB4351:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -6201,14 +6435,14 @@ _ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elem
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4335:
+.LFE4351:
 	.size	_ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_, .-_ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_
 	.section	.text._ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE10_M_deleterEv,"axG",@progbits,_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE10_M_deleterEv,comdat
 	.align	2
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE10_M_deleterEv
 	.type	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE10_M_deleterEv, %function
 _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE10_M_deleterEv:
-.LFB4336:
+.LFB4352:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -6224,7 +6458,7 @@ _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE10_M_dele
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4336:
+.LFE4352:
 	.size	_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE10_M_deleterEv, .-_ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE10_M_deleterEv
 	.global	__aarch64_ldset4_acq_rel
 	.section	.text._ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12memory_orderbNSt6chrono8durationIlSt5ratioILl1ELl1EEEENS3_IlS4_ILl1ELl1000000000EEEE,"axG",@progbits,_ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12memory_orderbNSt6chrono8durationIlSt5ratioILl1ELl1EEEENS3_IlS4_ILl1ELl1000000000EEEE,comdat
@@ -6232,7 +6466,7 @@ _ZNSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE10_M_dele
 	.weak	_ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12memory_orderbNSt6chrono8durationIlSt5ratioILl1ELl1EEEENS3_IlS4_ILl1ELl1000000000EEEE
 	.type	_ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12memory_orderbNSt6chrono8durationIlSt5ratioILl1ELl1EEEENS3_IlS4_ILl1ELl1000000000EEEE, %function
 _ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12memory_orderbNSt6chrono8durationIlSt5ratioILl1ELl1EEEENS3_IlS4_ILl1ELl1000000000EEEE:
-.LFB4338:
+.LFB4354:
 	.cfi_startproc
 	stp	x29, x30, [sp, -112]!
 	.cfi_def_cfa_offset 112
@@ -6247,7 +6481,7 @@ _ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12mem
 	strb	w5, [sp, 46]
 	str	x6, [sp, 32]
 	str	x7, [sp, 24]
-.L399:
+.L415:
 	ldr	x0, [sp, 56]
 	str	x0, [sp, 104]
 	mov	w0, -2147483648
@@ -6289,7 +6523,7 @@ _ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12mem
 	eor	w0, w0, 1
 	and	w0, w0, 255
 	cmp	w0, 0
-	bne	.L396
+	bne	.L412
 	ldr	w1, [sp, 48]
 	ldr	w0, [sp, 52]
 	cmp	w1, w0
@@ -6298,8 +6532,8 @@ _ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12mem
 	mov	w1, w0
 	ldrb	w0, [sp, 47]
 	cmp	w1, w0
-	bne	.L399
-.L396:
+	bne	.L415
+.L412:
 	ldr	w0, [sp, 52]
 	ldp	x29, x30, [sp], 112
 	.cfi_restore 30
@@ -6307,14 +6541,14 @@ _ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12mem
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4338:
+.LFE4354:
 	.size	_ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12memory_orderbNSt6chrono8durationIlSt5ratioILl1ELl1EEEENS3_IlS4_ILl1ELl1000000000EEEE, .-_ZNSt23__atomic_futex_unsignedILj2147483648EE22_M_load_and_test_untilEjjbSt12memory_orderbNSt6chrono8durationIlSt5ratioILl1ELl1EEEENS3_IlS4_ILl1ELl1000000000EEEE
 	.section	.text._ZNKSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv,"axG",@progbits,_ZNKSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv,comdat
 	.align	2
 	.weak	_ZNKSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv
 	.type	_ZNKSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv, %function
 _ZNKSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv:
-.LFB4339:
+.LFB4355:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -6331,14 +6565,14 @@ _ZNKSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrE
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4339:
+.LFE4355:
 	.size	_ZNKSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv, .-_ZNKSt15__uniq_ptr_implINSt13__future_base12_Result_baseENS1_8_DeleterEE6_M_ptrEv
 	.section	.text._ZSt13__invoke_implIvMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEPS1_JS9_SA_EET_St21__invoke_memfun_derefOT0_OT1_DpOT2_,"axG",@progbits,_ZSt13__invoke_implIvMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEPS1_JS9_SA_EET_St21__invoke_memfun_derefOT0_OT1_DpOT2_,comdat
 	.align	2
 	.weak	_ZSt13__invoke_implIvMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEPS1_JS9_SA_EET_St21__invoke_memfun_derefOT0_OT1_DpOT2_
 	.type	_ZSt13__invoke_implIvMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEPS1_JS9_SA_EET_St21__invoke_memfun_derefOT0_OT1_DpOT2_, %function
 _ZSt13__invoke_implIvMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEPS1_JS9_SA_EET_St21__invoke_memfun_derefOT0_OT1_DpOT2_:
-.LFB4340:
+.LFB4356:
 	.cfi_startproc
 	stp	x29, x30, [sp, -96]!
 	.cfi_def_cfa_offset 96
@@ -6362,11 +6596,11 @@ _ZSt13__invoke_implIvMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10uniq
 	ldr	x1, [x1, 8]
 	and	x1, x1, 1
 	cmp	x1, 0
-	bne	.L404
+	bne	.L420
 	ldr	x1, [sp, 80]
 	ldr	x19, [x1]
-	b	.L405
-.L404:
+	b	.L421
+.L420:
 	ldr	x1, [sp, 80]
 	ldr	x1, [x1, 8]
 	asr	x1, x1, 1
@@ -6376,7 +6610,7 @@ _ZSt13__invoke_implIvMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10uniq
 	ldr	x2, [x2]
 	add	x1, x1, x2
 	ldr	x19, [x1]
-.L405:
+.L421:
 	ldr	x1, [sp, 80]
 	ldr	x1, [x1, 8]
 	asr	x1, x1, 1
@@ -6403,14 +6637,14 @@ _ZSt13__invoke_implIvMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10uniq
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4340:
+.LFE4356:
 	.size	_ZSt13__invoke_implIvMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEPS1_JS9_SA_EET_St21__invoke_memfun_derefOT0_OT1_DpOT2_, .-_ZSt13__invoke_implIvMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS0_12_Result_baseENS4_8_DeleterEEvEEPbEPS1_JS9_SA_EET_St21__invoke_memfun_derefOT0_OT1_DpOT2_
 	.section	.text._ZSt11__addressofIZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS1_12_Result_baseENS5_8_DeleterEEvEEPbEJPS2_SA_SB_EEvRSt9once_flagOT_DpOT0_EUlvE_EPSH_RSH_,"axG",@progbits,_ZSt11__addressofIZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS1_12_Result_baseENS5_8_DeleterEEvEEPbEJPS2_SA_SB_EEvRSt9once_flagOT_DpOT0_EUlvE_EPSH_RSH_,comdat
 	.align	2
 	.weak	_ZSt11__addressofIZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS1_12_Result_baseENS5_8_DeleterEEvEEPbEJPS2_SA_SB_EEvRSt9once_flagOT_DpOT0_EUlvE_EPSH_RSH_
 	.type	_ZSt11__addressofIZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS1_12_Result_baseENS5_8_DeleterEEvEEPbEJPS2_SA_SB_EEvRSt9once_flagOT_DpOT0_EUlvE_EPSH_RSH_, %function
 _ZSt11__addressofIZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS1_12_Result_baseENS5_8_DeleterEEvEEPbEJPS2_SA_SB_EEvRSt9once_flagOT_DpOT0_EUlvE_EPSH_RSH_:
-.LFB4341:
+.LFB4357:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -6420,14 +6654,14 @@ _ZSt11__addressofIZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functio
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4341:
+.LFE4357:
 	.size	_ZSt11__addressofIZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS1_12_Result_baseENS5_8_DeleterEEvEEPbEJPS2_SA_SB_EEvRSt9once_flagOT_DpOT0_EUlvE_EPSH_RSH_, .-_ZSt11__addressofIZSt9call_onceIMNSt13__future_base13_State_baseV2EFvPSt8functionIFSt10unique_ptrINS1_12_Result_baseENS5_8_DeleterEEvEEPbEJPS2_SA_SB_EEvRSt9once_flagOT_DpOT0_EUlvE_EPSH_RSH_
 	.section	.text._ZSt4swapIPNSt13__future_base12_Result_baseEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_,"axG",@progbits,_ZSt4swapIPNSt13__future_base12_Result_baseEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_,comdat
 	.align	2
 	.weak	_ZSt4swapIPNSt13__future_base12_Result_baseEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_
 	.type	_ZSt4swapIPNSt13__future_base12_Result_baseEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_, %function
 _ZSt4swapIPNSt13__future_base12_Result_baseEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_:
-.LFB4348:
+.LFB4364:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -6462,23 +6696,23 @@ _ZSt4swapIPNSt13__future_base12_Result_baseEENSt9enable_ifIXsrSt6__and_IJSt6__no
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L410
+	beq	.L426
 	bl	__stack_chk_fail
-.L410:
+.L426:
 	ldp	x29, x30, [sp], 48
 	.cfi_restore 30
 	.cfi_restore 29
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4348:
+.LFE4364:
 	.size	_ZSt4swapIPNSt13__future_base12_Result_baseEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_, .-_ZSt4swapIPNSt13__future_base12_Result_baseEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_
 	.section	.text._ZSt4moveIRNSt13__future_base12_Result_base8_DeleterEEONSt16remove_referenceIT_E4typeEOS5_,"axG",@progbits,_ZSt4moveIRNSt13__future_base12_Result_base8_DeleterEEONSt16remove_referenceIT_E4typeEOS5_,comdat
 	.align	2
 	.weak	_ZSt4moveIRNSt13__future_base12_Result_base8_DeleterEEONSt16remove_referenceIT_E4typeEOS5_
 	.type	_ZSt4moveIRNSt13__future_base12_Result_base8_DeleterEEONSt16remove_referenceIT_E4typeEOS5_, %function
 _ZSt4moveIRNSt13__future_base12_Result_base8_DeleterEEONSt16remove_referenceIT_E4typeEOS5_:
-.LFB4350:
+.LFB4366:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -6488,14 +6722,14 @@ _ZSt4moveIRNSt13__future_base12_Result_base8_DeleterEEONSt16remove_referenceIT_E
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4350:
+.LFE4366:
 	.size	_ZSt4moveIRNSt13__future_base12_Result_base8_DeleterEEONSt16remove_referenceIT_E4typeEOS5_, .-_ZSt4moveIRNSt13__future_base12_Result_base8_DeleterEEONSt16remove_referenceIT_E4typeEOS5_
 	.section	.text._ZSt4swapINSt13__future_base12_Result_base8_DeleterEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_,"axG",@progbits,_ZSt4swapINSt13__future_base12_Result_base8_DeleterEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_,comdat
 	.align	2
 	.weak	_ZSt4swapINSt13__future_base12_Result_base8_DeleterEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_
 	.type	_ZSt4swapINSt13__future_base12_Result_base8_DeleterEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_, %function
 _ZSt4swapINSt13__future_base12_Result_base8_DeleterEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_:
-.LFB4349:
+.LFB4365:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -6522,23 +6756,23 @@ _ZSt4swapINSt13__future_base12_Result_base8_DeleterEENSt9enable_ifIXsrSt6__and_I
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L414
+	beq	.L430
 	bl	__stack_chk_fail
-.L414:
+.L430:
 	ldp	x29, x30, [sp], 48
 	.cfi_restore 30
 	.cfi_restore 29
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4349:
+.LFE4365:
 	.size	_ZSt4swapINSt13__future_base12_Result_base8_DeleterEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_, .-_ZSt4swapINSt13__future_base12_Result_base8_DeleterEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS7_ESt18is_move_assignableIS7_EEE5valueEvE4typeERS7_SH_
 	.section	.text._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv,"axG",@progbits,_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv,comdat
 	.align	2
 	.weak	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv
 	.type	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv, %function
 _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv:
-.LFB4351:
+.LFB4367:
 	.cfi_startproc
 	stp	x29, x30, [sp, -80]!
 	.cfi_def_cfa_offset 80
@@ -6558,7 +6792,7 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv:
 	cset	w0, ne
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L417
+	beq	.L433
 	ldr	x0, [sp, 56]
 	str	x0, [sp, 64]
 	ldr	w0, [sp, 44]
@@ -6569,8 +6803,8 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv:
 	add	w1, w1, w0
 	ldr	x0, [sp, 64]
 	str	w1, [x0]
-	b	.L418
-.L417:
+	b	.L434
+.L433:
 	ldr	x0, [sp, 56]
 	str	x0, [sp, 72]
 	ldr	w0, [sp, 44]
@@ -6579,7 +6813,7 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv:
 	ldr	x1, [sp, 72]
 	bl	__aarch64_ldadd4_acq_rel
 	nop
-.L418:
+.L434:
 	nop
 	nop
 	ldp	x29, x30, [sp], 80
@@ -6588,14 +6822,14 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4351:
+.LFE4367:
 	.size	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv, .-_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE15_M_add_ref_copyEv
 	.section	.text._ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2Ev,"axG",@progbits,_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC5Ev,comdat
 	.align	2
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2Ev
 	.type	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2Ev, %function
 _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2Ev:
-.LFB4353:
+.LFB4369:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -6615,7 +6849,7 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4353:
+.LFE4369:
 	.size	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2Ev, .-_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2Ev
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC1Ev
 	.set	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC1Ev,_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2Ev
@@ -6624,7 +6858,7 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	.weak	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2Ev
 	.type	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2Ev, %function
 _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2Ev:
-.LFB4356:
+.LFB4372:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -6634,7 +6868,7 @@ _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4356:
+.LFE4372:
 	.size	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2Ev, .-_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2Ev
 	.weak	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC1Ev
 	.set	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC1Ev,_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2Ev
@@ -6643,7 +6877,7 @@ _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2Ev:
 	.weak	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EED2Ev
 	.type	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EED2Ev, %function
 _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EED2Ev:
-.LFB4359:
+.LFB4375:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -6653,7 +6887,7 @@ _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4359:
+.LFE4375:
 	.size	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EED2Ev, .-_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EED2Ev
 	.weak	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EED1Ev
 	.set	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EED1Ev,_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EED2Ev
@@ -6662,7 +6896,7 @@ _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EED2Ev:
 	.weak	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
 	.type	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_, %function
 _ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_:
-.LFB4362:
+.LFB4378:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -6681,7 +6915,7 @@ _ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ISaIS1_EJEEESt20_Sp_alloc
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4362:
+.LFE4378:
 	.size	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_, .-_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
 	.weak	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC1ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
 	.set	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC1ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_,_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
@@ -6690,7 +6924,7 @@ _ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC2ISaIS1_EJEEESt20_Sp_alloc
 	.weak	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2Ev
 	.type	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2Ev, %function
 _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2Ev:
-.LFB4370:
+.LFB4386:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -6702,7 +6936,7 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4370:
+.LFE4386:
 	.size	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2Ev, .-_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2Ev
 	.weak	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC1Ev
 	.set	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC1Ev,_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2Ev
@@ -6711,7 +6945,7 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2Ev:
 	.weak	_ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv
 	.type	_ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv, %function
 _ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv:
-.LFB4372:
+.LFB4388:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -6722,28 +6956,28 @@ _ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv:
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0]
 	cmp	x0, 0
-	beq	.L425
+	beq	.L441
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0]
 	bl	_ZNKSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv
-	b	.L427
-.L425:
+	b	.L443
+.L441:
 	mov	x0, 0
-.L427:
+.L443:
 	ldp	x29, x30, [sp], 32
 	.cfi_restore 30
 	.cfi_restore 29
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4372:
+.LFE4388:
 	.size	_ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv, .-_ZNKSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EE16_M_get_use_countEv
 	.section	.text._ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE3getEv,"axG",@progbits,_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE3getEv,comdat
 	.align	2
 	.weak	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE3getEv
 	.type	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE3getEv, %function
 _ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE3getEv:
-.LFB4373:
+.LFB4389:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -6754,17 +6988,17 @@ _ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_polic
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4373:
+.LFE4389:
 	.size	_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE3getEv, .-_ZNKSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE3getEv
 	.section	.text._ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_S3_Lb1EEEOT_OT0_,"axG",@progbits,_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC5IRS2_S3_Lb1EEEOT_OT0_,comdat
 	.align	2
 	.weak	_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_S3_Lb1EEEOT_OT0_
 	.type	_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_S3_Lb1EEEOT_OT0_, %function
 _ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_S3_Lb1EEEOT_OT0_:
-.LFB4376:
+.LFB4392:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4376
+	.cfi_lsda 0x1b,.LLSDA4392
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
 	.cfi_offset 29, -64
@@ -6796,15 +7030,15 @@ _ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_S3_Lb1EEEO
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4376:
+.LFE4392:
 	.section	.gcc_except_table
-.LLSDA4376:
+.LLSDA4392:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4376-.LLSDACSB4376
-.LLSDACSB4376:
-.LLSDACSE4376:
+	.uleb128 .LLSDACSE4392-.LLSDACSB4392
+.LLSDACSB4392:
+.LLSDACSE4392:
 	.section	.text._ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_S3_Lb1EEEOT_OT0_,"axG",@progbits,_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC5IRS2_S3_Lb1EEEOT_OT0_,comdat
 	.size	_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_S3_Lb1EEEOT_OT0_, .-_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_S3_Lb1EEEOT_OT0_
 	.weak	_ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC1IRS2_S3_Lb1EEEOT_OT0_
@@ -6814,7 +7048,7 @@ _ZNSt5tupleIJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_S3_Lb1EEEO
 	.weak	_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v
 	.type	_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v, %function
 _ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v:
-.LFB4382:
+.LFB4398:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -6830,14 +7064,14 @@ _ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4382:
+.LFE4398:
 	.size	_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v, .-_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v
 	.section	.text._ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE21_M_not_empty_functionIS5_EEbRKT_,"axG",@progbits,_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE21_M_not_empty_functionIS5_EEbRKT_,comdat
 	.align	2
 	.weak	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE21_M_not_empty_functionIS5_EEbRKT_
 	.type	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE21_M_not_empty_functionIS5_EEbRKT_, %function
 _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE21_M_not_empty_functionIS5_EEbRKT_:
-.LFB4395:
+.LFB4411:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -6847,14 +7081,14 @@ _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIi
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4395:
+.LFE4411:
 	.size	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE21_M_not_empty_functionIS5_EEbRKT_, .-_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE21_M_not_empty_functionIS5_EEbRKT_
 	.section	.text._ZSt7forwardINSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS5_E4typeE,"axG",@progbits,_ZSt7forwardINSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS5_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardINSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS5_E4typeE
 	.type	_ZSt7forwardINSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS5_E4typeE, %function
 _ZSt7forwardINSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS5_E4typeE:
-.LFB4396:
+.LFB4412:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -6864,14 +7098,14 @@ _ZSt7forwardINSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_ref
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4396:
+.LFE4412:
 	.size	_ZSt7forwardINSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS5_E4typeE, .-_ZSt7forwardINSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS5_E4typeE
 	.section	.text._ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIS5_EEvRSt9_Any_dataOT_,"axG",@progbits,_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIS5_EEvRSt9_Any_dataOT_,comdat
 	.align	2
 	.weak	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIS5_EEvRSt9_Any_dataOT_
 	.type	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIS5_EEvRSt9_Any_dataOT_, %function
 _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIS5_EEvRSt9_Any_dataOT_:
-.LFB4397:
+.LFB4413:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -6897,14 +7131,14 @@ _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIi
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4397:
+.LFE4413:
 	.size	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIS5_EEvRSt9_Any_dataOT_, .-_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIS5_EEvRSt9_Any_dataOT_
 	.section	.text._ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE9_M_invokeERKSt9_Any_data,"axG",@progbits,_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE9_M_invokeERKSt9_Any_data,comdat
 	.align	2
 	.weak	_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE9_M_invokeERKSt9_Any_data
 	.type	_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE9_M_invokeERKSt9_Any_data, %function
 _ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE9_M_invokeERKSt9_Any_data:
-.LFB4398:
+.LFB4414:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -6930,9 +7164,9 @@ _ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L440
+	beq	.L456
 	bl	__stack_chk_fail
-.L440:
+.L456:
 	mov	x0, x19
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 64
@@ -6942,14 +7176,14 @@ _ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4398:
+.LFE4414:
 	.size	_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE9_M_invokeERKSt9_Any_data, .-_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE9_M_invokeERKSt9_Any_data
 	.section	.text._ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKSB_St18_Manager_operation,"axG",@progbits,_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKSB_St18_Manager_operation,comdat
 	.align	2
 	.weak	_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKSB_St18_Manager_operation
 	.type	_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKSB_St18_Manager_operation, %function
 _ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKSB_St18_Manager_operation:
-.LFB4401:
+.LFB4417:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -6963,32 +7197,32 @@ _ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_
 	str	w2, [sp, 44]
 	ldr	w0, [sp, 44]
 	cmp	w0, 0
-	beq	.L442
+	beq	.L458
 	cmp	w0, 1
-	beq	.L443
-	b	.L447
-.L442:
+	beq	.L459
+	b	.L463
+.L458:
 	ldr	x0, [sp, 56]
 	bl	_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v
 	mov	x1, x0
 	adrp	x0, _ZTINSt13__future_base13_State_baseV27_SetterIiOiEE
 	add	x0, x0, :lo12:_ZTINSt13__future_base13_State_baseV27_SetterIiOiEE
 	str	x0, [x1]
-	b	.L445
-.L443:
+	b	.L461
+.L459:
 	ldr	x0, [sp, 48]
 	bl	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE14_M_get_pointerERKSt9_Any_data
 	mov	x19, x0
 	ldr	x0, [sp, 56]
 	bl	_ZNSt9_Any_data9_M_accessIPNSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v
 	str	x19, [x0]
-	b	.L445
-.L447:
+	b	.L461
+.L463:
 	ldr	w2, [sp, 44]
 	ldr	x1, [sp, 48]
 	ldr	x0, [sp, 56]
 	bl	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation
-.L445:
+.L461:
 	mov	w0, 0
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 64
@@ -6998,14 +7232,14 @@ _ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4401:
+.LFE4417:
 	.size	_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKSB_St18_Manager_operation, .-_ZNSt17_Function_handlerIFSt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEEvENS1_13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKSB_St18_Manager_operation
 	.section	.text._ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EPS2_,"axG",@progbits,_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC5EPS2_,comdat
 	.align	2
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EPS2_
 	.type	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EPS2_, %function
 _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EPS2_:
-.LFB4404:
+.LFB4420:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -7031,7 +7265,7 @@ _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4404:
+.LFE4420:
 	.size	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EPS2_, .-_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EPS2_
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC1EPS2_
 	.set	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC1EPS2_,_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EPS2_
@@ -7040,7 +7274,7 @@ _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv
 	.type	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv, %function
 _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv:
-.LFB4406:
+.LFB4422:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7056,14 +7290,14 @@ _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4406:
+.LFE4422:
 	.size	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv, .-_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv
 	.section	.text._ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE11get_deleterEv,"axG",@progbits,_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE11get_deleterEv,comdat
 	.align	2
 	.weak	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE11get_deleterEv
 	.type	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE11get_deleterEv, %function
 _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE11get_deleterEv:
-.LFB4407:
+.LFB4423:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7079,14 +7313,14 @@ _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE11g
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4407:
+.LFE4423:
 	.size	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE11get_deleterEv, .-_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE11get_deleterEv
 	.section	.text._ZSt4moveIRPNSt13__future_base7_ResultIiEEEONSt16remove_referenceIT_E4typeEOS6_,"axG",@progbits,_ZSt4moveIRPNSt13__future_base7_ResultIiEEEONSt16remove_referenceIT_E4typeEOS6_,comdat
 	.align	2
 	.weak	_ZSt4moveIRPNSt13__future_base7_ResultIiEEEONSt16remove_referenceIT_E4typeEOS6_
 	.type	_ZSt4moveIRPNSt13__future_base7_ResultIiEEEONSt16remove_referenceIT_E4typeEOS6_, %function
 _ZSt4moveIRPNSt13__future_base7_ResultIiEEEONSt16remove_referenceIT_E4typeEOS6_:
-.LFB4408:
+.LFB4424:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -7096,14 +7330,14 @@ _ZSt4moveIRPNSt13__future_base7_ResultIiEEEONSt16remove_referenceIT_E4typeEOS6_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4408:
+.LFE4424:
 	.size	_ZSt4moveIRPNSt13__future_base7_ResultIiEEEONSt16remove_referenceIT_E4typeEOS6_, .-_ZSt4moveIRPNSt13__future_base7_ResultIiEEEONSt16remove_referenceIT_E4typeEOS6_
 	.section	.text._ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv,"axG",@progbits,_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv,comdat
 	.align	2
 	.weak	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv
 	.type	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv, %function
 _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv:
-.LFB4409:
+.LFB4425:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7119,17 +7353,17 @@ _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7re
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4409:
+.LFE4425:
 	.size	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv, .-_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv
 	.section	.text._ZNSt14__basic_futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE,"axG",@progbits,_ZNSt14__basic_futureIiEC5ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE,comdat
 	.align	2
 	.weak	_ZNSt14__basic_futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE
 	.type	_ZNSt14__basic_futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE, %function
 _ZNSt14__basic_futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE:
-.LFB4411:
+.LFB4427:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4411
+	.cfi_lsda 0x1b,.LLSDA4427
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
 	.cfi_offset 29, -48
@@ -7143,22 +7377,22 @@ _ZNSt14__basic_futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE:
 	ldr	x1, [sp, 32]
 	bl	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EEC1ERKS2_
 	ldr	x0, [sp, 40]
-.LEHB28:
+.LEHB37:
 	bl	_ZNSt13__future_base13_State_baseV28_S_checkIS0_EEvRKSt10shared_ptrIT_E
 	ldr	x0, [sp, 40]
 	bl	_ZNKSt19__shared_ptr_accessINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2ELb0ELb0EEptEv
 	bl	_ZNSt13__future_base13_State_baseV221_M_set_retrieved_flagEv
-.LEHE28:
-	b	.L460
-.L459:
+.LEHE37:
+	b	.L476
+.L475:
 	mov	x19, x0
 	ldr	x0, [sp, 40]
 	bl	_ZNSt10shared_ptrINSt13__future_base13_State_baseV2EED1Ev
 	mov	x0, x19
-.LEHB29:
+.LEHB38:
 	bl	_Unwind_Resume
-.LEHE29:
-.L460:
+.LEHE38:
+.L476:
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 48
 	.cfi_restore 30
@@ -7167,23 +7401,23 @@ _ZNSt14__basic_futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4411:
+.LFE4427:
 	.section	.gcc_except_table
-.LLSDA4411:
+.LLSDA4427:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4411-.LLSDACSB4411
-.LLSDACSB4411:
-	.uleb128 .LEHB28-.LFB4411
-	.uleb128 .LEHE28-.LEHB28
-	.uleb128 .L459-.LFB4411
+	.uleb128 .LLSDACSE4427-.LLSDACSB4427
+.LLSDACSB4427:
+	.uleb128 .LEHB37-.LFB4427
+	.uleb128 .LEHE37-.LEHB37
+	.uleb128 .L475-.LFB4427
 	.uleb128 0
-	.uleb128 .LEHB29-.LFB4411
-	.uleb128 .LEHE29-.LEHB29
+	.uleb128 .LEHB38-.LFB4427
+	.uleb128 .LEHE38-.LEHB38
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE4411:
+.LLSDACSE4427:
 	.section	.text._ZNSt14__basic_futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE,"axG",@progbits,_ZNSt14__basic_futureIiEC5ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE,comdat
 	.size	_ZNSt14__basic_futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE, .-_ZNSt14__basic_futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE
 	.weak	_ZNSt14__basic_futureIiEC1ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE
@@ -7193,7 +7427,7 @@ _ZNSt14__basic_futureIiEC2ERKSt10shared_ptrINSt13__future_base13_State_baseV2EE:
 	.weak	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC2IRS3_JS1_EvEEOT_DpOT0_
 	.type	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC2IRS3_JS1_EvEEOT_DpOT0_, %function
 _ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC2IRS3_JS1_EvEEOT_DpOT0_:
-.LFB4414:
+.LFB4430:
 	.cfi_startproc
 	stp	x29, x30, [sp, -80]!
 	.cfi_def_cfa_offset 80
@@ -7232,9 +7466,9 @@ _ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC2IRS3_JS1_EvEEOT_DpOT0_:
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L462
+	beq	.L478
 	bl	__stack_chk_fail
-.L462:
+.L478:
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 80
 	.cfi_restore 30
@@ -7243,7 +7477,7 @@ _ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC2IRS3_JS1_EvEEOT_DpOT0_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4414:
+.LFE4430:
 	.size	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC2IRS3_JS1_EvEEOT_DpOT0_, .-_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC2IRS3_JS1_EvEEOT_DpOT0_
 	.weak	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC1IRS3_JS1_EvEEOT_DpOT0_
 	.set	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC1IRS3_JS1_EvEEOT_DpOT0_,_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC2IRS3_JS1_EvEEOT_DpOT0_
@@ -7252,7 +7486,7 @@ _ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EEC2IRS3_JS1_EvEEOT_DpOT0_:
 	.weak	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC2EPS1_
 	.type	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC2EPS1_, %function
 _ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC2EPS1_:
-.LFB4418:
+.LFB4434:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -7278,7 +7512,7 @@ _ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC2EPS1_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4418:
+.LFE4434:
 	.size	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC2EPS1_, .-_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC2EPS1_
 	.weak	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC1EPS1_
 	.set	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC1EPS1_,_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC2EPS1_
@@ -7287,7 +7521,7 @@ _ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC2EPS1_:
 	.weak	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE6_M_ptrEv
 	.type	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE6_M_ptrEv, %function
 _ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE6_M_ptrEv:
-.LFB4420:
+.LFB4436:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7303,14 +7537,14 @@ _ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE6_M_ptrEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4420:
+.LFE4436:
 	.size	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE6_M_ptrEv, .-_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE6_M_ptrEv
 	.section	.text._ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EE11get_deleterEv,"axG",@progbits,_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EE11get_deleterEv,comdat
 	.align	2
 	.weak	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EE11get_deleterEv
 	.type	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EE11get_deleterEv, %function
 _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EE11get_deleterEv:
-.LFB4421:
+.LFB4437:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7326,14 +7560,14 @@ _ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EE11get_deleterEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4421:
+.LFE4437:
 	.size	_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EE11get_deleterEv, .-_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EE11get_deleterEv
 	.section	.text._ZSt4moveIRPNSt6thread6_StateEEONSt16remove_referenceIT_E4typeEOS5_,"axG",@progbits,_ZSt4moveIRPNSt6thread6_StateEEONSt16remove_referenceIT_E4typeEOS5_,comdat
 	.align	2
 	.weak	_ZSt4moveIRPNSt6thread6_StateEEONSt16remove_referenceIT_E4typeEOS5_
 	.type	_ZSt4moveIRPNSt6thread6_StateEEONSt16remove_referenceIT_E4typeEOS5_, %function
 _ZSt4moveIRPNSt6thread6_StateEEONSt16remove_referenceIT_E4typeEOS5_:
-.LFB4422:
+.LFB4438:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -7343,14 +7577,14 @@ _ZSt4moveIRPNSt6thread6_StateEEONSt16remove_referenceIT_E4typeEOS5_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4422:
+.LFE4438:
 	.size	_ZSt4moveIRPNSt6thread6_StateEEONSt16remove_referenceIT_E4typeEOS5_, .-_ZSt4moveIRPNSt6thread6_StateEEONSt16remove_referenceIT_E4typeEOS5_
 	.section	.text._ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_,"axG",@progbits,_ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_,comdat
 	.align	2
 	.weak	_ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_
 	.type	_ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_, %function
 _ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_:
-.LFB4423:
+.LFB4439:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7361,12 +7595,12 @@ _ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_:
 	str	x1, [sp, 16]
 	ldr	x0, [sp, 16]
 	cmp	x0, 0
-	beq	.L472
+	beq	.L488
 	ldr	x1, [x0]
 	add	x1, x1, 8
 	ldr	x1, [x1]
 	blr	x1
-.L472:
+.L488:
 	nop
 	ldp	x29, x30, [sp], 32
 	.cfi_restore 30
@@ -7374,14 +7608,14 @@ _ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4423:
+.LFE4439:
 	.size	_ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_, .-_ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_
 	.section	.text._ZN9__gnu_cxx16__aligned_bufferIiE6_M_ptrEv,"axG",@progbits,_ZN9__gnu_cxx16__aligned_bufferIiE6_M_ptrEv,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx16__aligned_bufferIiE6_M_ptrEv
 	.type	_ZN9__gnu_cxx16__aligned_bufferIiE6_M_ptrEv, %function
 _ZN9__gnu_cxx16__aligned_bufferIiE6_M_ptrEv:
-.LFB4424:
+.LFB4440:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7397,14 +7631,14 @@ _ZN9__gnu_cxx16__aligned_bufferIiE6_M_ptrEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4424:
+.LFE4440:
 	.size	_ZN9__gnu_cxx16__aligned_bufferIiE6_M_ptrEv, .-_ZN9__gnu_cxx16__aligned_bufferIiE6_M_ptrEv
 	.section	.text._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED2Ev,"axG",@progbits,_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED5Ev,comdat
 	.align	2
 	.weak	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED2Ev
 	.type	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED2Ev, %function
 _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED2Ev:
-.LFB4474:
+.LFB4490:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -7418,7 +7652,7 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4474:
+.LFE4490:
 	.size	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED2Ev, .-_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED2Ev
 	.weak	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED1Ev
 	.set	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED1Ev,_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED2Ev
@@ -7427,7 +7661,7 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED2Ev:
 	.weak	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED0Ev
 	.type	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED0Ev, %function
 _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED0Ev:
-.LFB4476:
+.LFB4492:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7446,14 +7680,14 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED0Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4476:
+.LFE4492:
 	.size	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED0Ev, .-_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EED0Ev
 	.section	.text._ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2Ev,"axG",@progbits,_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC5Ev,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2Ev
 	.type	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2Ev, %function
 _ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2Ev:
-.LFB4478:
+.LFB4494:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -7463,7 +7697,7 @@ _ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4478:
+.LFE4494:
 	.size	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2Ev, .-_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2Ev
 	.weak	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC1Ev
 	.set	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC1Ev,_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2Ev
@@ -7472,7 +7706,7 @@ _ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2Ev:
 	.weak	_ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE
 	.type	_ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE, %function
 _ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE:
-.LFB4480:
+.LFB4496:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7488,14 +7722,14 @@ _ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERT0_RS
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4480:
+.LFE4496:
 	.size	_ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE, .-_ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE
 	.section	.text._ZSt3getILm1EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_,"axG",@progbits,_ZSt3getILm1EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_,comdat
 	.align	2
 	.weak	_ZSt3getILm1EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_
 	.type	_ZSt3getILm1EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_, %function
 _ZSt3getILm1EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_:
-.LFB4481:
+.LFB4497:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7511,14 +7745,14 @@ _ZSt3getILm1EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elem
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4481:
+.LFE4497:
 	.size	_ZSt3getILm1EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_, .-_ZSt3getILm1EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS8_
 	.section	.text._ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS8_,"axG",@progbits,_ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS8_,comdat
 	.align	2
 	.weak	_ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS8_
 	.type	_ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS8_, %function
 _ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS8_:
-.LFB4483:
+.LFB4499:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7534,14 +7768,14 @@ _ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERKNSt13tuple_ele
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4483:
+.LFE4499:
 	.size	_ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS8_, .-_ZSt3getILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS8_
 	.section	.text._ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_,"axG",@progbits,_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC5ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_,comdat
 	.align	2
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
 	.type	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_, %function
 _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_:
-.LFB4491:
+.LFB4507:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7569,7 +7803,7 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4491:
+.LFE4507:
 	.size	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_, .-_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC1ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
 	.set	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC1ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_,_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EEC2ISaIS1_EJEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
@@ -7578,7 +7812,7 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	.weak	_ZSt7forwardIRPNSt13__future_base12_Result_baseEEOT_RNSt16remove_referenceIS4_E4typeE
 	.type	_ZSt7forwardIRPNSt13__future_base12_Result_baseEEOT_RNSt16remove_referenceIS4_E4typeE, %function
 _ZSt7forwardIRPNSt13__future_base12_Result_baseEEOT_RNSt16remove_referenceIS4_E4typeE:
-.LFB4498:
+.LFB4514:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -7588,14 +7822,14 @@ _ZSt7forwardIRPNSt13__future_base12_Result_baseEEOT_RNSt16remove_referenceIS4_E4
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4498:
+.LFE4514:
 	.size	_ZSt7forwardIRPNSt13__future_base12_Result_baseEEOT_RNSt16remove_referenceIS4_E4typeE, .-_ZSt7forwardIRPNSt13__future_base12_Result_baseEEOT_RNSt16remove_referenceIS4_E4typeE
 	.section	.text._ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_JS3_EvEEOT_DpOT0_,"axG",@progbits,_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC5IRS2_JS3_EvEEOT_DpOT0_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_JS3_EvEEOT_DpOT0_
 	.type	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_JS3_EvEEOT_DpOT0_, %function
 _ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_JS3_EvEEOT_DpOT0_:
-.LFB4500:
+.LFB4516:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -7627,7 +7861,7 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4500:
+.LFE4516:
 	.size	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_JS3_EvEEOT_DpOT0_, .-_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_JS3_EvEEOT_DpOT0_
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC1IRS2_JS3_EvEEOT_DpOT0_
 	.set	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC1IRS2_JS3_EvEEOT_DpOT0_,_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2_JS3_EvEEOT_DpOT0_
@@ -7636,7 +7870,7 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEEC2IRS2
 	.weak	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE
 	.type	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE, %function
 _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE:
-.LFB4515:
+.LFB4531:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -7668,14 +7902,14 @@ _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIi
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4515:
+.LFE4531:
 	.size	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE, .-_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE
 	.section	.text._ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE14_M_get_pointerERKSt9_Any_data,"axG",@progbits,_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE14_M_get_pointerERKSt9_Any_data,comdat
 	.align	2
 	.weak	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE14_M_get_pointerERKSt9_Any_data
 	.type	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE14_M_get_pointerERKSt9_Any_data, %function
 _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE14_M_get_pointerERKSt9_Any_data:
-.LFB4516:
+.LFB4532:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -7694,14 +7928,14 @@ _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIi
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4516:
+.LFE4532:
 	.size	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE14_M_get_pointerERKSt9_Any_data, .-_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE14_M_get_pointerERKSt9_Any_data
 	.section	.text._ZSt10__invoke_rISt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEENSt9enable_ifIX16is_invocable_r_vIT_T0_DpT1_EESB_E4typeEOSC_DpOSD_,"axG",@progbits,_ZSt10__invoke_rISt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEENSt9enable_ifIX16is_invocable_r_vIT_T0_DpT1_EESB_E4typeEOSC_DpOSD_,comdat
 	.align	2
 	.weak	_ZSt10__invoke_rISt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEENSt9enable_ifIX16is_invocable_r_vIT_T0_DpT1_EESB_E4typeEOSC_DpOSD_
 	.type	_ZSt10__invoke_rISt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEENSt9enable_ifIX16is_invocable_r_vIT_T0_DpT1_EESB_E4typeEOSC_DpOSD_, %function
 _ZSt10__invoke_rISt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEENSt9enable_ifIX16is_invocable_r_vIT_T0_DpT1_EESB_E4typeEOSC_DpOSD_:
-.LFB4517:
+.LFB4533:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -7737,9 +7971,9 @@ _ZSt10__invoke_rISt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEE
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L493
+	beq	.L509
 	bl	__stack_chk_fail
-.L493:
+.L509:
 	mov	x0, x19
 	ldp	x19, x20, [sp, 16]
 	ldp	x29, x30, [sp], 64
@@ -7750,14 +7984,14 @@ _ZSt10__invoke_rISt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEE
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4517:
+.LFE4533:
 	.size	_ZSt10__invoke_rISt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEENSt9enable_ifIX16is_invocable_r_vIT_T0_DpT1_EESB_E4typeEOSC_DpOSD_, .-_ZSt10__invoke_rISt10unique_ptrINSt13__future_base12_Result_baseENS2_8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEENSt9enable_ifIX16is_invocable_r_vIT_T0_DpT1_EESB_E4typeEOSC_DpOSD_
 	.section	.text._ZNSt9_Any_data9_M_accessIPNSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v,"axG",@progbits,_ZNSt9_Any_data9_M_accessIPNSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v,comdat
 	.align	2
 	.weak	_ZNSt9_Any_data9_M_accessIPNSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v
 	.type	_ZNSt9_Any_data9_M_accessIPNSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v, %function
 _ZNSt9_Any_data9_M_accessIPNSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v:
-.LFB4518:
+.LFB4534:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7773,14 +8007,14 @@ _ZNSt9_Any_data9_M_accessIPNSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4518:
+.LFE4534:
 	.size	_ZNSt9_Any_data9_M_accessIPNSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v, .-_ZNSt9_Any_data9_M_accessIPNSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v
 	.section	.text._ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation,"axG",@progbits,_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation,comdat
 	.align	2
 	.weak	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation
 	.type	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation, %function
 _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation:
-.LFB4519:
+.LFB4535:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -7794,47 +8028,47 @@ _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIi
 	str	w2, [sp, 44]
 	ldr	w0, [sp, 44]
 	cmp	w0, 3
-	beq	.L497
+	beq	.L513
 	cmp	w0, 3
-	bgt	.L498
+	bgt	.L514
 	cmp	w0, 2
-	beq	.L499
+	beq	.L515
 	cmp	w0, 2
-	bgt	.L498
+	bgt	.L514
 	cmp	w0, 0
-	beq	.L500
+	beq	.L516
 	cmp	w0, 1
-	beq	.L501
-	b	.L498
-.L500:
+	beq	.L517
+	b	.L514
+.L516:
 	ldr	x0, [sp, 56]
 	bl	_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v
 	mov	x1, x0
 	adrp	x0, _ZTINSt13__future_base13_State_baseV27_SetterIiOiEE
 	add	x0, x0, :lo12:_ZTINSt13__future_base13_State_baseV27_SetterIiOiEE
 	str	x0, [x1]
-	b	.L498
-.L501:
+	b	.L514
+.L517:
 	ldr	x0, [sp, 48]
 	bl	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE14_M_get_pointerERKSt9_Any_data
 	mov	x19, x0
 	ldr	x0, [sp, 56]
 	bl	_ZNSt9_Any_data9_M_accessIPNSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v
 	str	x19, [x0]
-	b	.L498
-.L499:
+	b	.L514
+.L515:
 	ldr	x0, [sp, 48]
 	bl	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE14_M_get_pointerERKSt9_Any_data
 	mov	x1, x0
 	ldr	x0, [sp, 56]
 	bl	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIRKS5_EEvRSt9_Any_dataOT_
-	b	.L498
-.L497:
+	b	.L514
+.L513:
 	mov	w1, w3
 	ldr	x0, [sp, 56]
 	bl	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE
 	nop
-.L498:
+.L514:
 	mov	w0, 0
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 64
@@ -7844,17 +8078,17 @@ _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIi
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4519:
+.LFE4535:
 	.size	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation, .-_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_managerERSt9_Any_dataRKS7_St18_Manager_operation
 	.section	.text._ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2ILb1ELb1EEEv,"axG",@progbits,_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC5ILb1ELb1EEEv,comdat
 	.align	2
 	.weak	_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2ILb1ELb1EEEv
 	.type	_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2ILb1ELb1EEEv, %function
 _ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2ILb1ELb1EEEv:
-.LFB4521:
+.LFB4537:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4521
+	.cfi_lsda 0x1b,.LLSDA4537
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
 	.cfi_offset 29, -32
@@ -7870,15 +8104,15 @@ _ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2ILb1
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4521:
+.LFE4537:
 	.section	.gcc_except_table
-.LLSDA4521:
+.LLSDA4537:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4521-.LLSDACSB4521
-.LLSDACSB4521:
-.LLSDACSE4521:
+	.uleb128 .LLSDACSE4537-.LLSDACSB4537
+.LLSDACSB4537:
+.LLSDACSE4537:
 	.section	.text._ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2ILb1ELb1EEEv,"axG",@progbits,_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC5ILb1ELb1EEEv,comdat
 	.size	_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2ILb1ELb1EEEv, .-_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2ILb1ELb1EEEv
 	.weak	_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC1ILb1ELb1EEEv
@@ -7888,7 +8122,7 @@ _ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2ILb1
 	.weak	_ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_
 	.type	_ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_, %function
 _ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_:
-.LFB4523:
+.LFB4539:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7904,14 +8138,14 @@ _ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt1
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4523:
+.LFE4539:
 	.size	_ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_, .-_ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_
 	.section	.text._ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE10_M_deleterEv,"axG",@progbits,_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE10_M_deleterEv,comdat
 	.align	2
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE10_M_deleterEv
 	.type	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE10_M_deleterEv, %function
 _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE10_M_deleterEv:
-.LFB4524:
+.LFB4540:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -7927,14 +8161,14 @@ _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4524:
+.LFE4540:
 	.size	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE10_M_deleterEv, .-_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE10_M_deleterEv
 	.section	.text._ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv,"axG",@progbits,_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv,comdat
 	.align	2
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv
 	.type	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv, %function
 _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv:
-.LFB4525:
+.LFB4541:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -7956,14 +8190,14 @@ _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4525:
+.LFE4541:
 	.size	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv, .-_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE7releaseEv
 	.section	.text._ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC2IS1_EEOT_,"axG",@progbits,_ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC5IS1_EEOT_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC2IS1_EEOT_
 	.type	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC2IS1_EEOT_, %function
 _ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC2IS1_EEOT_:
-.LFB4527:
+.LFB4543:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -7989,7 +8223,7 @@ _ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC2IS1_EEOT_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4527:
+.LFE4543:
 	.size	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC2IS1_EEOT_, .-_ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC2IS1_EEOT_
 	.weak	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC1IS1_EEOT_
 	.set	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC1IS1_EEOT_,_ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC2IS1_EEOT_
@@ -7998,7 +8232,7 @@ _ZNSt11_Tuple_implILm1EJSt7promiseIiEEEC2IS1_EEOT_:
 	.weak	_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EEC2ERKS4_
 	.type	_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EEC2ERKS4_, %function
 _ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EEC2ERKS4_:
-.LFB4530:
+.LFB4546:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -8013,7 +8247,7 @@ _ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EEC2ERKS4_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4530:
+.LFE4546:
 	.size	_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EEC2ERKS4_, .-_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EEC2ERKS4_
 	.weak	_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EEC1ERKS4_
 	.set	_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EEC1ERKS4_,_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EEC2ERKS4_
@@ -8022,10 +8256,10 @@ _ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EEC2ERKS4_:
 	.weak	_ZNSt5tupleIJPNSt6thread6_StateESt14default_deleteIS1_EEEC2ILb1ELb1EEEv
 	.type	_ZNSt5tupleIJPNSt6thread6_StateESt14default_deleteIS1_EEEC2ILb1ELb1EEEv, %function
 _ZNSt5tupleIJPNSt6thread6_StateESt14default_deleteIS1_EEEC2ILb1ELb1EEEv:
-.LFB4533:
+.LFB4549:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4533
+	.cfi_lsda 0x1b,.LLSDA4549
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
 	.cfi_offset 29, -32
@@ -8041,15 +8275,15 @@ _ZNSt5tupleIJPNSt6thread6_StateESt14default_deleteIS1_EEEC2ILb1ELb1EEEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4533:
+.LFE4549:
 	.section	.gcc_except_table
-.LLSDA4533:
+.LLSDA4549:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4533-.LLSDACSB4533
-.LLSDACSB4533:
-.LLSDACSE4533:
+	.uleb128 .LLSDACSE4549-.LLSDACSB4549
+.LLSDACSB4549:
+.LLSDACSE4549:
 	.section	.text._ZNSt5tupleIJPNSt6thread6_StateESt14default_deleteIS1_EEEC2ILb1ELb1EEEv,"axG",@progbits,_ZNSt5tupleIJPNSt6thread6_StateESt14default_deleteIS1_EEEC5ILb1ELb1EEEv,comdat
 	.size	_ZNSt5tupleIJPNSt6thread6_StateESt14default_deleteIS1_EEEC2ILb1ELb1EEEv, .-_ZNSt5tupleIJPNSt6thread6_StateESt14default_deleteIS1_EEEC2ILb1ELb1EEEv
 	.weak	_ZNSt5tupleIJPNSt6thread6_StateESt14default_deleteIS1_EEEC1ILb1ELb1EEEv
@@ -8059,7 +8293,7 @@ _ZNSt5tupleIJPNSt6thread6_StateESt14default_deleteIS1_EEEC2ILb1ELb1EEEv:
 	.weak	_ZSt3getILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_
 	.type	_ZSt3getILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_, %function
 _ZSt3getILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_:
-.LFB4535:
+.LFB4551:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8075,14 +8309,14 @@ _ZSt3getILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4535:
+.LFE4551:
 	.size	_ZSt3getILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_, .-_ZSt3getILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_
 	.section	.text._ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE10_M_deleterEv,"axG",@progbits,_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE10_M_deleterEv,comdat
 	.align	2
 	.weak	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE10_M_deleterEv
 	.type	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE10_M_deleterEv, %function
 _ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE10_M_deleterEv:
-.LFB4536:
+.LFB4552:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8098,14 +8332,14 @@ _ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE10_M_deleterEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4536:
+.LFE4552:
 	.size	_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE10_M_deleterEv, .-_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE10_M_deleterEv
 	.section	.text._ZN9__gnu_cxx16__aligned_bufferIiE7_M_addrEv,"axG",@progbits,_ZN9__gnu_cxx16__aligned_bufferIiE7_M_addrEv,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx16__aligned_bufferIiE7_M_addrEv
 	.type	_ZN9__gnu_cxx16__aligned_bufferIiE7_M_addrEv, %function
 _ZN9__gnu_cxx16__aligned_bufferIiE7_M_addrEv:
-.LFB4537:
+.LFB4553:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -8115,14 +8349,14 @@ _ZN9__gnu_cxx16__aligned_bufferIiE7_M_addrEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4537:
+.LFE4553:
 	.size	_ZN9__gnu_cxx16__aligned_bufferIiE7_M_addrEv, .-_ZN9__gnu_cxx16__aligned_bufferIiE7_M_addrEv
 	.section	.text._ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERS4_,"axG",@progbits,_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERS4_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERS4_
 	.type	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERS4_, %function
 _ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERS4_:
-.LFB4586:
+.LFB4602:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8138,14 +8372,14 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_he
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4586:
+.LFE4602:
 	.size	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERS4_, .-_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERS4_
 	.section	.text._ZSt12__get_helperILm1ENSt13__future_base12_Result_base8_DeleterEJEERT0_RSt11_Tuple_implIXT_EJS3_DpT1_EE,"axG",@progbits,_ZSt12__get_helperILm1ENSt13__future_base12_Result_base8_DeleterEJEERT0_RSt11_Tuple_implIXT_EJS3_DpT1_EE,comdat
 	.align	2
 	.weak	_ZSt12__get_helperILm1ENSt13__future_base12_Result_base8_DeleterEJEERT0_RSt11_Tuple_implIXT_EJS3_DpT1_EE
 	.type	_ZSt12__get_helperILm1ENSt13__future_base12_Result_base8_DeleterEJEERT0_RSt11_Tuple_implIXT_EJS3_DpT1_EE, %function
 _ZSt12__get_helperILm1ENSt13__future_base12_Result_base8_DeleterEJEERT0_RSt11_Tuple_implIXT_EJS3_DpT1_EE:
-.LFB4587:
+.LFB4603:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8161,14 +8395,14 @@ _ZSt12__get_helperILm1ENSt13__future_base12_Result_base8_DeleterEJEERT0_RSt11_Tu
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4587:
+.LFE4603:
 	.size	_ZSt12__get_helperILm1ENSt13__future_base12_Result_base8_DeleterEJEERT0_RSt11_Tuple_implIXT_EJS3_DpT1_EE, .-_ZSt12__get_helperILm1ENSt13__future_base12_Result_base8_DeleterEJEERT0_RSt11_Tuple_implIXT_EJS3_DpT1_EE
 	.section	.text._ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS4_DpT1_EE,"axG",@progbits,_ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS4_DpT1_EE,comdat
 	.align	2
 	.weak	_ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS4_DpT1_EE
 	.type	_ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS4_DpT1_EE, %function
 _ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS4_DpT1_EE:
-.LFB4588:
+.LFB4604:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8184,17 +8418,17 @@ _ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERKT0_R
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4588:
+.LFE4604:
 	.size	_ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS4_DpT1_EE, .-_ZSt12__get_helperILm0EPNSt13__future_base12_Result_baseEJNS1_8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS4_DpT1_EE
 	.section	.text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_State_baseV2ESaIS5_EJEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_,"axG",@progbits,_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC5INSt13__future_base13_State_baseV2ESaIS5_EJEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_,comdat
 	.align	2
 	.weak	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_State_baseV2ESaIS5_EJEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_
 	.type	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_State_baseV2ESaIS5_EJEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_, %function
 _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_State_baseV2ESaIS5_EJEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_:
-.LFB4599:
+.LFB4615:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4599
+	.cfi_lsda 0x1b,.LLSDA4615
 	stp	x29, x30, [sp, -128]!
 	.cfi_def_cfa_offset 128
 	.cfi_offset 29, -128
@@ -8217,9 +8451,9 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_Stat
 	add	x0, sp, 72
 	add	x1, sp, 104
 	mov	x8, x1
-.LEHB30:
+.LEHB39:
 	bl	_ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEESt15__allocated_ptrIT_ERS9_
-.LEHE30:
+.LEHE39:
 	add	x0, sp, 104
 	bl	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE3getEv
 	str	x0, [sp, 88]
@@ -8260,19 +8494,19 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_Stat
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L527
-	b	.L529
-.L528:
+	beq	.L543
+	b	.L545
+.L544:
 	mov	x19, x0
 	add	x0, sp, 72
 	bl	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEED1Ev
 	mov	x0, x19
-.LEHB31:
+.LEHB40:
 	bl	_Unwind_Resume
-.LEHE31:
-.L529:
+.LEHE40:
+.L545:
 	bl	__stack_chk_fail
-.L527:
+.L543:
 	ldp	x19, x20, [sp, 16]
 	ldp	x29, x30, [sp], 128
 	.cfi_restore 30
@@ -8282,23 +8516,23 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_Stat
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4599:
+.LFE4615:
 	.section	.gcc_except_table
-.LLSDA4599:
+.LLSDA4615:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4599-.LLSDACSB4599
-.LLSDACSB4599:
-	.uleb128 .LEHB30-.LFB4599
-	.uleb128 .LEHE30-.LEHB30
-	.uleb128 .L528-.LFB4599
+	.uleb128 .LLSDACSE4615-.LLSDACSB4615
+.LLSDACSB4615:
+	.uleb128 .LEHB39-.LFB4615
+	.uleb128 .LEHE39-.LEHB39
+	.uleb128 .L544-.LFB4615
 	.uleb128 0
-	.uleb128 .LEHB31-.LFB4599
-	.uleb128 .LEHE31-.LEHB31
+	.uleb128 .LEHB40-.LFB4615
+	.uleb128 .LEHE40-.LEHB40
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE4599:
+.LLSDACSE4615:
 	.section	.text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_State_baseV2ESaIS5_EJEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_,"axG",@progbits,_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC5INSt13__future_base13_State_baseV2ESaIS5_EJEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_,comdat
 	.size	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_State_baseV2ESaIS5_EJEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_, .-_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_State_baseV2ESaIS5_EJEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_
 	.weak	_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC1INSt13__future_base13_State_baseV2ESaIS5_EJEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_
@@ -8308,7 +8542,7 @@ _ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEC2INSt13__future_base13_Stat
 	.weak	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE31_M_enable_shared_from_this_withIS1_S1_EENSt9enable_ifIXntsrNS4_15__has_esft_baseIT0_vEE5valueEvE4typeEPT_
 	.type	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE31_M_enable_shared_from_this_withIS1_S1_EENSt9enable_ifIXntsrNS4_15__has_esft_baseIT0_vEE5valueEvE4typeEPT_, %function
 _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE31_M_enable_shared_from_this_withIS1_S1_EENSt9enable_ifIXntsrNS4_15__has_esft_baseIT0_vEE5valueEvE4typeEPT_:
-.LFB4601:
+.LFB4617:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -8319,14 +8553,14 @@ _ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policy
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4601:
+.LFE4617:
 	.size	_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE31_M_enable_shared_from_this_withIS1_S1_EENSt9enable_ifIXntsrNS4_15__has_esft_baseIT0_vEE5valueEvE4typeEPT_, .-_ZNSt12__shared_ptrINSt13__future_base13_State_baseV2ELN9__gnu_cxx12_Lock_policyE2EE31_M_enable_shared_from_this_withIS1_S1_EENSt9enable_ifIXntsrNS4_15__has_esft_baseIT0_vEE5valueEvE4typeEPT_
 	.section	.text._ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2IS2_EEOT_,"axG",@progbits,_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC5IS2_EEOT_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2IS2_EEOT_
 	.type	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2IS2_EEOT_, %function
 _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2IS2_EEOT_:
-.LFB4607:
+.LFB4623:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8347,7 +8581,7 @@ _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2IS2_EEOT_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4607:
+.LFE4623:
 	.size	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2IS2_EEOT_, .-_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2IS2_EEOT_
 	.weak	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC1IS2_EEOT_
 	.set	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC1IS2_EEOT_,_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2IS2_EEOT_
@@ -8356,7 +8590,7 @@ _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEEC2IS2_EEOT_:
 	.weak	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2IRS2_EEOT_
 	.type	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2IRS2_EEOT_, %function
 _ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2IRS2_EEOT_:
-.LFB4610:
+.LFB4626:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8377,7 +8611,7 @@ _ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2IRS2_EEOT_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4610:
+.LFE4626:
 	.size	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2IRS2_EEOT_, .-_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2IRS2_EEOT_
 	.weak	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC1IRS2_EEOT_
 	.set	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC1IRS2_EEOT_,_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2IRS2_EEOT_
@@ -8386,7 +8620,7 @@ _ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EEC2IRS2_EEOT_:
 	.weak	_ZNKSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERKT_v
 	.type	_ZNKSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERKT_v, %function
 _ZNKSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERKT_v:
-.LFB4620:
+.LFB4636:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8402,14 +8636,14 @@ _ZNKSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERKT_
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4620:
+.LFE4636:
 	.size	_ZNKSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERKT_v, .-_ZNKSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERKT_v
 	.section	.text._ZSt11__addressofIKNSt13__future_base13_State_baseV27_SetterIiOiEEEPT_RS6_,"axG",@progbits,_ZSt11__addressofIKNSt13__future_base13_State_baseV27_SetterIiOiEEEPT_RS6_,comdat
 	.align	2
 	.weak	_ZSt11__addressofIKNSt13__future_base13_State_baseV27_SetterIiOiEEEPT_RS6_
 	.type	_ZSt11__addressofIKNSt13__future_base13_State_baseV27_SetterIiOiEEEPT_RS6_, %function
 _ZSt11__addressofIKNSt13__future_base13_State_baseV27_SetterIiOiEEEPT_RS6_:
-.LFB4621:
+.LFB4637:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -8419,14 +8653,14 @@ _ZSt11__addressofIKNSt13__future_base13_State_baseV27_SetterIiOiEEEPT_RS6_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4621:
+.LFE4637:
 	.size	_ZSt11__addressofIKNSt13__future_base13_State_baseV27_SetterIiOiEEEPT_RS6_, .-_ZSt11__addressofIKNSt13__future_base13_State_baseV27_SetterIiOiEEEPT_RS6_
 	.section	.text._ZSt7forwardIRNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS6_E4typeE,"axG",@progbits,_ZSt7forwardIRNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS6_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardIRNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS6_E4typeE
 	.type	_ZSt7forwardIRNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS6_E4typeE, %function
 _ZSt7forwardIRNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS6_E4typeE:
-.LFB4622:
+.LFB4638:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -8436,14 +8670,14 @@ _ZSt7forwardIRNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_re
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4622:
+.LFE4638:
 	.size	_ZSt7forwardIRNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS6_E4typeE, .-_ZSt7forwardIRNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS6_E4typeE
 	.section	.text._ZSt13__invoke_implISt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEET_St14__invoke_otherOT0_DpOT1_,"axG",@progbits,_ZSt13__invoke_implISt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEET_St14__invoke_otherOT0_DpOT1_,comdat
 	.align	2
 	.weak	_ZSt13__invoke_implISt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEET_St14__invoke_otherOT0_DpOT1_
 	.type	_ZSt13__invoke_implISt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEET_St14__invoke_otherOT0_DpOT1_, %function
 _ZSt13__invoke_implISt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEET_St14__invoke_otherOT0_DpOT1_:
-.LFB4623:
+.LFB4639:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -8470,9 +8704,9 @@ _ZSt13__invoke_implISt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_b
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L541
+	beq	.L557
 	bl	__stack_chk_fail
-.L541:
+.L557:
 	mov	x0, x19
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 64
@@ -8482,14 +8716,14 @@ _ZSt13__invoke_implISt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_b
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4623:
+.LFE4639:
 	.size	_ZSt13__invoke_implISt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEET_St14__invoke_otherOT0_DpOT1_, .-_ZSt13__invoke_implISt10unique_ptrINSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEERNS1_13_State_baseV27_SetterIiOiEEJEET_St14__invoke_otherOT0_DpOT1_
 	.section	.text._ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIRKS5_EEvRSt9_Any_dataOT_,"axG",@progbits,_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIRKS5_EEvRSt9_Any_dataOT_,comdat
 	.align	2
 	.weak	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIRKS5_EEvRSt9_Any_dataOT_
 	.type	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIRKS5_EEvRSt9_Any_dataOT_, %function
 _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIRKS5_EEvRSt9_Any_dataOT_:
-.LFB4624:
+.LFB4640:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -8515,14 +8749,14 @@ _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIi
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4624:
+.LFE4640:
 	.size	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIRKS5_EEvRSt9_Any_dataOT_, .-_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE15_M_init_functorIRKS5_EEvRSt9_Any_dataOT_
 	.section	.text._ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE,"axG",@progbits,_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE,comdat
 	.align	2
 	.weak	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE
 	.type	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE, %function
 _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE:
-.LFB4625:
+.LFB4641:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8540,14 +8774,14 @@ _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIi
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4625:
+.LFE4641:
 	.size	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE, .-_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE
 	.section	.text._ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2Ev,"axG",@progbits,_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC5Ev,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2Ev
 	.type	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2Ev, %function
 _ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2Ev:
-.LFB4627:
+.LFB4643:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8566,7 +8800,7 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_Delet
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4627:
+.LFE4643:
 	.size	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2Ev, .-_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2Ev
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC1Ev
 	.set	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC1Ev,_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2Ev
@@ -8575,7 +8809,7 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_Delet
 	.weak	_ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERT0_RSt11_Tuple_implIXT_EJS6_DpT1_EE
 	.type	_ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERT0_RSt11_Tuple_implIXT_EJS6_DpT1_EE, %function
 _ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERT0_RSt11_Tuple_implIXT_EJS6_DpT1_EE:
-.LFB4629:
+.LFB4645:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8591,14 +8825,14 @@ _ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_Delet
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4629:
+.LFE4645:
 	.size	_ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERT0_RSt11_Tuple_implIXT_EJS6_DpT1_EE, .-_ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERT0_RSt11_Tuple_implIXT_EJS6_DpT1_EE
 	.section	.text._ZSt3getILm1EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_,"axG",@progbits,_ZSt3getILm1EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_,comdat
 	.align	2
 	.weak	_ZSt3getILm1EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_
 	.type	_ZSt3getILm1EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_, %function
 _ZSt3getILm1EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_:
-.LFB4630:
+.LFB4646:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8614,14 +8848,14 @@ _ZSt3getILm1EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt1
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4630:
+.LFE4646:
 	.size	_ZSt3getILm1EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_, .-_ZSt3getILm1EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERSA_
 	.section	.text._ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC2IS1_EEOT_,"axG",@progbits,_ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC5IS1_EEOT_,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC2IS1_EEOT_
 	.type	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC2IS1_EEOT_, %function
 _ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC2IS1_EEOT_:
-.LFB4632:
+.LFB4648:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -8647,7 +8881,7 @@ _ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC2IS1_EEOT_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4632:
+.LFE4648:
 	.size	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC2IS1_EEOT_, .-_ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC2IS1_EEOT_
 	.weak	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC1IS1_EEOT_
 	.set	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC1IS1_EEOT_,_ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC2IS1_EEOT_
@@ -8656,7 +8890,7 @@ _ZNSt10_Head_baseILm1ESt7promiseIiELb0EEC2IS1_EEOT_:
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEEC2Ev
 	.type	_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEEC2Ev, %function
 _ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEEC2Ev:
-.LFB4635:
+.LFB4651:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8675,7 +8909,7 @@ _ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4635:
+.LFE4651:
 	.size	_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEEC2Ev, .-_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEEC2Ev
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEEC1Ev
 	.set	_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEEC1Ev,_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEEC2Ev
@@ -8684,7 +8918,7 @@ _ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEEC2Ev:
 	.weak	_ZSt12__get_helperILm0EPNSt6thread6_StateEJSt14default_deleteIS1_EEERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE
 	.type	_ZSt12__get_helperILm0EPNSt6thread6_StateEJSt14default_deleteIS1_EEERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE, %function
 _ZSt12__get_helperILm0EPNSt6thread6_StateEJSt14default_deleteIS1_EEERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE:
-.LFB4637:
+.LFB4653:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8700,14 +8934,14 @@ _ZSt12__get_helperILm0EPNSt6thread6_StateEJSt14default_deleteIS1_EEERT0_RSt11_Tu
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4637:
+.LFE4653:
 	.size	_ZSt12__get_helperILm0EPNSt6thread6_StateEJSt14default_deleteIS1_EEERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE, .-_ZSt12__get_helperILm0EPNSt6thread6_StateEJSt14default_deleteIS1_EEERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE
 	.section	.text._ZSt3getILm1EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_,"axG",@progbits,_ZSt3getILm1EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_,comdat
 	.align	2
 	.weak	_ZSt3getILm1EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_
 	.type	_ZSt3getILm1EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_, %function
 _ZSt3getILm1EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_:
-.LFB4638:
+.LFB4654:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8723,14 +8957,14 @@ _ZSt3getILm1EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4638:
+.LFE4654:
 	.size	_ZSt3getILm1EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_, .-_ZSt3getILm1EJPNSt6thread6_StateESt14default_deleteIS1_EEERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS9_
 	.section	.text._ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERS3_,"axG",@progbits,_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERS3_,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERS3_
 	.type	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERS3_, %function
 _ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERS3_:
-.LFB4689:
+.LFB4705:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -8740,14 +8974,14 @@ _ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERS3_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4689:
+.LFE4705:
 	.size	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERS3_, .-_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERS3_
 	.section	.text._ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEE7_M_headERS3_,"axG",@progbits,_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEE7_M_headERS3_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEE7_M_headERS3_
 	.type	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEE7_M_headERS3_, %function
 _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEE7_M_headERS3_:
-.LFB4690:
+.LFB4706:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8763,14 +8997,14 @@ _ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEE7_M_headERS3
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4690:
+.LFE4706:
 	.size	_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEE7_M_headERS3_, .-_ZNSt11_Tuple_implILm1EJNSt13__future_base12_Result_base8_DeleterEEE7_M_headERS3_
 	.section	.text._ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERKS4_,"axG",@progbits,_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERKS4_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERKS4_
 	.type	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERKS4_, %function
 _ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERKS4_:
-.LFB4691:
+.LFB4707:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8786,14 +9020,14 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_he
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4691:
+.LFE4707:
 	.size	_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERKS4_, .-_ZNSt11_Tuple_implILm0EJPNSt13__future_base12_Result_baseENS1_8_DeleterEEE7_M_headERKS4_
 	.section	.text._ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEC2IS1_EERKSaIT_E,"axG",@progbits,_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEC5IS1_EERKSaIT_E,comdat
 	.align	2
 	.weak	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEC2IS1_EERKSaIT_E
 	.type	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEC2IS1_EERKSaIT_E, %function
 _ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEC2IS1_EERKSaIT_E:
-.LFB4699:
+.LFB4715:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8811,7 +9045,7 @@ _ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4699:
+.LFE4715:
 	.size	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEC2IS1_EERKSaIT_E, .-_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEC2IS1_EERKSaIT_E
 	.weak	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEC1IS1_EERKSaIT_E
 	.set	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEC1IS1_EERKSaIT_E,_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEC2IS1_EERKSaIT_E
@@ -8820,7 +9054,7 @@ _ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__
 	.weak	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEED2Ev
 	.type	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEED2Ev, %function
 _ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEED2Ev:
-.LFB4702:
+.LFB4718:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8837,7 +9071,7 @@ _ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4702:
+.LFE4718:
 	.size	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEED2Ev, .-_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEED2Ev
 	.weak	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEED1Ev
 	.set	_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEED1Ev,_ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEED2Ev
@@ -8846,7 +9080,7 @@ _ZNSaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__
 	.weak	_ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEESt15__allocated_ptrIT_ERS9_
 	.type	_ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEESt15__allocated_ptrIT_ERS9_, %function
 _ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEESt15__allocated_ptrIT_ERS9_:
-.LFB4704:
+.LFB4720:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -8873,17 +9107,17 @@ _ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_Sta
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4704:
+.LFE4720:
 	.size	_ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEESt15__allocated_ptrIT_ERS9_, .-_ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEESt15__allocated_ptrIT_ERS9_
 	.section	.text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEED2Ev,"axG",@progbits,_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEED5Ev,comdat
 	.align	2
 	.weak	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEED2Ev
 	.type	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEED2Ev, %function
 _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEED2Ev:
-.LFB4706:
+.LFB4722:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4706
+	.cfi_lsda 0x1b,.LLSDA4722
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
 	.cfi_offset 29, -32
@@ -8893,7 +9127,7 @@ _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0, 8]
 	cmp	x0, 0
-	beq	.L567
+	beq	.L583
 	ldr	x0, [sp, 24]
 	ldr	x3, [x0]
 	ldr	x0, [sp, 24]
@@ -8902,7 +9136,7 @@ _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State
 	mov	x1, x0
 	mov	x0, x3
 	bl	_ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE10deallocateERS7_PS6_m
-.L567:
+.L583:
 	nop
 	ldp	x29, x30, [sp], 32
 	.cfi_restore 30
@@ -8910,15 +9144,15 @@ _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4706:
+.LFE4722:
 	.section	.gcc_except_table
-.LLSDA4706:
+.LLSDA4722:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4706-.LLSDACSB4706
-.LLSDACSB4706:
-.LLSDACSE4706:
+	.uleb128 .LLSDACSE4722-.LLSDACSB4722
+.LLSDACSB4722:
+.LLSDACSE4722:
 	.section	.text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEED2Ev,"axG",@progbits,_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEED5Ev,comdat
 	.size	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEED2Ev, .-_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEED2Ev
 	.weak	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEED1Ev
@@ -8928,7 +9162,7 @@ _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State
 	.weak	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE3getEv
 	.type	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE3getEv, %function
 _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE3getEv:
-.LFB4708:
+.LFB4724:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8945,14 +9179,14 @@ _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4708:
+.LFE4724:
 	.size	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE3getEv, .-_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE3getEv
 	.section	.text._ZNSaINSt13__future_base13_State_baseV2EEC2ERKS1_,"axG",@progbits,_ZNSaINSt13__future_base13_State_baseV2EEC5ERKS1_,comdat
 	.align	2
 	.weak	_ZNSaINSt13__future_base13_State_baseV2EEC2ERKS1_
 	.type	_ZNSaINSt13__future_base13_State_baseV2EEC2ERKS1_, %function
 _ZNSaINSt13__future_base13_State_baseV2EEC2ERKS1_:
-.LFB4710:
+.LFB4726:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8971,7 +9205,7 @@ _ZNSaINSt13__future_base13_State_baseV2EEC2ERKS1_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4710:
+.LFE4726:
 	.size	_ZNSaINSt13__future_base13_State_baseV2EEC2ERKS1_, .-_ZNSaINSt13__future_base13_State_baseV2EEC2ERKS1_
 	.weak	_ZNSaINSt13__future_base13_State_baseV2EEC1ERKS1_
 	.set	_ZNSaINSt13__future_base13_State_baseV2EEC1ERKS1_,_ZNSaINSt13__future_base13_State_baseV2EEC2ERKS1_
@@ -8980,7 +9214,7 @@ _ZNSaINSt13__future_base13_State_baseV2EEC2ERKS1_:
 	.weak	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EED2Ev
 	.type	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EED2Ev, %function
 _ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EED2Ev:
-.LFB4715:
+.LFB4731:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -8997,7 +9231,7 @@ _ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4715:
+.LFE4731:
 	.size	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EED2Ev, .-_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EED2Ev
 	.weak	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EED1Ev
 	.set	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EED1Ev,_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EED2Ev
@@ -9006,7 +9240,7 @@ _ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EED2Ev:
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplD2Ev
 	.type	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplD2Ev, %function
 _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplD2Ev:
-.LFB4717:
+.LFB4733:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9023,7 +9257,7 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4717:
+.LFE4733:
 	.size	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplD2Ev, .-_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplD2Ev
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplD1Ev
 	.set	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplD1Ev,_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplD2Ev
@@ -9032,7 +9266,7 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEC2IJEEES2_DpOT_
 	.type	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEC2IJEEES2_DpOT_, %function
 _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEC2IJEEES2_DpOT_:
-.LFB4720:
+.LFB4736:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -9077,9 +9311,9 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L574
+	beq	.L590
 	bl	__stack_chk_fail
-.L574:
+.L590:
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 64
 	.cfi_restore 30
@@ -9088,7 +9322,7 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4720:
+.LFE4736:
 	.size	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEC2IJEEES2_DpOT_, .-_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEC2IJEEES2_DpOT_
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEC1IJEEES2_DpOT_
 	.set	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEC1IJEEES2_DpOT_,_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EEC2IJEEES2_DpOT_
@@ -9097,7 +9331,7 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.weak	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEaSEDn
 	.type	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEaSEDn, %function
 _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEaSEDn:
-.LFB4722:
+.LFB4738:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9110,14 +9344,14 @@ _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4722:
+.LFE4738:
 	.size	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEaSEDn, .-_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEaSEDn
 	.section	.text._ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE6_M_ptrEv,"axG",@progbits,_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE6_M_ptrEv,comdat
 	.align	2
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE6_M_ptrEv
 	.type	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE6_M_ptrEv, %function
 _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE6_M_ptrEv:
-.LFB4723:
+.LFB4739:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9134,14 +9368,14 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4723:
+.LFE4739:
 	.size	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE6_M_ptrEv, .-_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE6_M_ptrEv
 	.section	.text._ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2IS2_EEOT_,"axG",@progbits,_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC5IS2_EEOT_,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2IS2_EEOT_
 	.type	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2IS2_EEOT_, %function
 _ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2IS2_EEOT_:
-.LFB4726:
+.LFB4742:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9159,7 +9393,7 @@ _ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2IS2_EEOT_
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4726:
+.LFE4742:
 	.size	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2IS2_EEOT_, .-_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2IS2_EEOT_
 	.weak	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC1IS2_EEOT_
 	.set	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC1IS2_EEOT_,_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2IS2_EEOT_
@@ -9168,7 +9402,7 @@ _ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EEC2IS2_EEOT_
 	.weak	_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EEC2EOS5_
 	.type	_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EEC2EOS5_, %function
 _ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EEC2EOS5_:
-.LFB4732:
+.LFB4748:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9187,7 +9421,7 @@ _ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4732:
+.LFE4748:
 	.size	_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EEC2EOS5_, .-_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EEC2EOS5_
 	.weak	_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EEC1EOS5_
 	.set	_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EEC1EOS5_,_ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterELb1ELb1EEC2EOS5_
@@ -9196,7 +9430,7 @@ _ZNSt15__uniq_ptr_dataINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.weak	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_
 	.type	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_, %function
 _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_:
-.LFB4734:
+.LFB4750:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9215,7 +9449,7 @@ _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2E
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4734:
+.LFE4750:
 	.size	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_, .-_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_
 	.weak	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC1EOS5_
 	.set	_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC1EOS5_,_ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_
@@ -9224,7 +9458,7 @@ _ZNSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2E
 	.weak	_ZNKSt13__future_base13_State_baseV27_SetterIiOiEclEv
 	.type	_ZNKSt13__future_base13_State_baseV27_SetterIiOiEclEv, %function
 _ZNKSt13__future_base13_State_baseV27_SetterIiOiEclEv:
-.LFB4729:
+.LFB4745:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -9264,14 +9498,14 @@ _ZNKSt13__future_base13_State_baseV27_SetterIiOiEclEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4729:
+.LFE4745:
 	.size	_ZNKSt13__future_base13_State_baseV27_SetterIiOiEclEv, .-_ZNKSt13__future_base13_State_baseV27_SetterIiOiEclEv
 	.section	.text._ZSt7forwardIRKNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS7_E4typeE,"axG",@progbits,_ZSt7forwardIRKNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS7_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardIRKNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS7_E4typeE
 	.type	_ZSt7forwardIRKNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS7_E4typeE, %function
 _ZSt7forwardIRKNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS7_E4typeE:
-.LFB4736:
+.LFB4752:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9281,14 +9515,14 @@ _ZSt7forwardIRKNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_r
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4736:
+.LFE4752:
 	.size	_ZSt7forwardIRKNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS7_E4typeE, .-_ZSt7forwardIRKNSt13__future_base13_State_baseV27_SetterIiOiEEEOT_RNSt16remove_referenceIS7_E4typeE
 	.section	.text._ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIRKS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE,"axG",@progbits,_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIRKS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE,comdat
 	.align	2
 	.weak	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIRKS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE
 	.type	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIRKS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE, %function
 _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIRKS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE:
-.LFB4737:
+.LFB4753:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -9320,14 +9554,14 @@ _ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIi
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4737:
+.LFE4753:
 	.size	_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIRKS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE, .-_ZNSt14_Function_base13_Base_managerINSt13__future_base13_State_baseV27_SetterIiOiEEE9_M_createIRKS5_EEvRSt9_Any_dataOT_St17integral_constantIbLb1EE
 	.section	.text._ZNSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v,"axG",@progbits,_ZNSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v,comdat
 	.align	2
 	.weak	_ZNSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v
 	.type	_ZNSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v, %function
 _ZNSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v:
-.LFB4738:
+.LFB4754:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9343,14 +9577,14 @@ _ZNSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4738:
+.LFE4754:
 	.size	_ZNSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v, .-_ZNSt9_Any_data9_M_accessINSt13__future_base13_State_baseV27_SetterIiOiEEEERT_v
 	.section	.text._ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC2Ev,"axG",@progbits,_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC5Ev,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC2Ev
 	.type	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC2Ev, %function
 _ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC2Ev:
-.LFB4740:
+.LFB4756:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9362,7 +9596,7 @@ _ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4740:
+.LFE4756:
 	.size	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC2Ev, .-_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC2Ev
 	.weak	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC1Ev
 	.set	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC1Ev,_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC2Ev
@@ -9371,7 +9605,7 @@ _ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EEC2Ev:
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERS6_
 	.type	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERS6_, %function
 _ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERS6_:
-.LFB4742:
+.LFB4758:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9387,14 +9621,14 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_Delet
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4742:
+.LFE4758:
 	.size	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERS6_, .-_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERS6_
 	.section	.text._ZNSt7promiseIiEC2EOS0_,"axG",@progbits,_ZNSt7promiseIiEC5EOS0_,comdat
 	.align	2
 	.weak	_ZNSt7promiseIiEC2EOS0_
 	.type	_ZNSt7promiseIiEC2EOS0_, %function
 _ZNSt7promiseIiEC2EOS0_:
-.LFB4744:
+.LFB4760:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -9428,7 +9662,7 @@ _ZNSt7promiseIiEC2EOS0_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4744:
+.LFE4760:
 	.size	_ZNSt7promiseIiEC2EOS0_, .-_ZNSt7promiseIiEC2EOS0_
 	.weak	_ZNSt7promiseIiEC1EOS0_
 	.set	_ZNSt7promiseIiEC1EOS0_,_ZNSt7promiseIiEC2EOS0_
@@ -9437,7 +9671,7 @@ _ZNSt7promiseIiEC2EOS0_:
 	.weak	_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEEC2Ev
 	.type	_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEEC2Ev, %function
 _ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEEC2Ev:
-.LFB4747:
+.LFB4763:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9454,7 +9688,7 @@ _ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4747:
+.LFE4763:
 	.size	_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEEC2Ev, .-_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEEC2Ev
 	.weak	_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEEC1Ev
 	.set	_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEEC1Ev,_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEEC2Ev
@@ -9463,7 +9697,7 @@ _ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEEC2Ev:
 	.weak	_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC2Ev
 	.type	_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC2Ev, %function
 _ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC2Ev:
-.LFB4750:
+.LFB4766:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9475,7 +9709,7 @@ _ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4750:
+.LFE4766:
 	.size	_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC2Ev, .-_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC2Ev
 	.weak	_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC1Ev
 	.set	_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC1Ev,_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC2Ev
@@ -9484,7 +9718,7 @@ _ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC2Ev:
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEE7_M_headERS5_
 	.type	_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEE7_M_headERS5_, %function
 _ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEE7_M_headERS5_:
-.LFB4752:
+.LFB4768:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9500,14 +9734,14 @@ _ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEE7_M_headERS5
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4752:
+.LFE4768:
 	.size	_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEE7_M_headERS5_, .-_ZNSt11_Tuple_implILm0EJPNSt6thread6_StateESt14default_deleteIS1_EEE7_M_headERS5_
 	.section	.text._ZSt12__get_helperILm1ESt14default_deleteINSt6thread6_StateEEJEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE,"axG",@progbits,_ZSt12__get_helperILm1ESt14default_deleteINSt6thread6_StateEEJEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE,comdat
 	.align	2
 	.weak	_ZSt12__get_helperILm1ESt14default_deleteINSt6thread6_StateEEJEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE
 	.type	_ZSt12__get_helperILm1ESt14default_deleteINSt6thread6_StateEEJEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE, %function
 _ZSt12__get_helperILm1ESt14default_deleteINSt6thread6_StateEEJEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE:
-.LFB4753:
+.LFB4769:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9523,14 +9757,14 @@ _ZSt12__get_helperILm1ESt14default_deleteINSt6thread6_StateEEJEERT0_RSt11_Tuple_
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4753:
+.LFE4769:
 	.size	_ZSt12__get_helperILm1ESt14default_deleteINSt6thread6_StateEEJEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE, .-_ZSt12__get_helperILm1ESt14default_deleteINSt6thread6_StateEEJEERT0_RSt11_Tuple_implIXT_EJS4_DpT1_EE
 	.section	.text._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC2Ev,"axG",@progbits,_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC5Ev,comdat
 	.align	2
 	.weak	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC2Ev
 	.type	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC2Ev, %function
 _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC2Ev:
-.LFB4782:
+.LFB4798:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9550,7 +9784,7 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4782:
+.LFE4798:
 	.size	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC2Ev, .-_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC2Ev
 	.weak	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC1Ev
 	.set	_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC1Ev,_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC2Ev
@@ -9559,7 +9793,7 @@ _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EEC2Ev:
 	.weak	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EE7_M_headERS3_
 	.type	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EE7_M_headERS3_, %function
 _ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EE7_M_headERS3_:
-.LFB4789:
+.LFB4805:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9569,14 +9803,14 @@ _ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EE7_M_headERS
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4789:
+.LFE4805:
 	.size	_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EE7_M_headERS3_, .-_ZNSt10_Head_baseILm1ENSt13__future_base12_Result_base8_DeleterELb1EE7_M_headERS3_
 	.section	.text._ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERKS3_,"axG",@progbits,_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERKS3_,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERKS3_
 	.type	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERKS3_, %function
 _ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERKS3_:
-.LFB4790:
+.LFB4806:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9586,14 +9820,14 @@ _ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERKS3_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4790:
+.LFE4806:
 	.size	_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERKS3_, .-_ZNSt10_Head_baseILm0EPNSt13__future_base12_Result_baseELb0EE7_M_headERKS3_
 	.section	.text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEEC2Ev,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEEC5Ev,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEEC2Ev
 	.type	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEEC2Ev, %function
 _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEEC2Ev:
-.LFB4794:
+.LFB4810:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9603,7 +9837,7 @@ _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_St
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4794:
+.LFE4810:
 	.size	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEEC2Ev, .-_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEEC2Ev
 	.weak	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEEC1Ev
 	.set	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEEC1Ev,_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEEC2Ev
@@ -9612,7 +9846,7 @@ _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_St
 	.weak	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEED2Ev
 	.type	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEED2Ev, %function
 _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEED2Ev:
-.LFB4797:
+.LFB4813:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9622,7 +9856,7 @@ _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_St
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4797:
+.LFE4813:
 	.size	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEED2Ev, .-_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEED2Ev
 	.weak	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEED1Ev
 	.set	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEED1Ev,_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEED2Ev
@@ -9631,7 +9865,7 @@ _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_St
 	.weak	_ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE8allocateERS7_m
 	.type	_ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE8allocateERS7_m, %function
 _ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE8allocateERS7_m:
-.LFB4799:
+.LFB4815:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9650,14 +9884,14 @@ _ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_Stat
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4799:
+.LFE4815:
 	.size	_ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE8allocateERS7_m, .-_ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE8allocateERS7_m
 	.section	.text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEC2ERS7_PS6_,"axG",@progbits,_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEC5ERS7_PS6_,comdat
 	.align	2
 	.weak	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEC2ERS7_PS6_
 	.type	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEC2ERS7_PS6_, %function
 _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEC2ERS7_PS6_:
-.LFB4801:
+.LFB4817:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -9682,7 +9916,7 @@ _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4801:
+.LFE4817:
 	.size	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEC2ERS7_PS6_, .-_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEC2ERS7_PS6_
 	.weak	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEC1ERS7_PS6_
 	.set	_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEC1ERS7_PS6_,_ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEC2ERS7_PS6_
@@ -9691,7 +9925,7 @@ _ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State
 	.weak	_ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE10deallocateERS7_PS6_m
 	.type	_ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE10deallocateERS7_PS6_m, %function
 _ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE10deallocateERS7_PS6_m:
-.LFB4803:
+.LFB4819:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -9712,14 +9946,14 @@ _ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_Stat
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4803:
+.LFE4819:
 	.size	_ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE10deallocateERS7_PS6_m, .-_ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEE10deallocateERS7_PS6_m
 	.section	.text._ZSt12__to_addressISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEPT_S8_,"axG",@progbits,_ZSt12__to_addressISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEPT_S8_,comdat
 	.align	2
 	.weak	_ZSt12__to_addressISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEPT_S8_
 	.type	_ZSt12__to_addressISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEPT_S8_, %function
 _ZSt12__to_addressISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEPT_S8_:
-.LFB4804:
+.LFB4820:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9729,14 +9963,14 @@ _ZSt12__to_addressISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4804:
+.LFE4820:
 	.size	_ZSt12__to_addressISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEPT_S8_, .-_ZSt12__to_addressISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEPT_S8_
 	.section	.text._ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2ERKS3_,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC5ERKS3_,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2ERKS3_
 	.type	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2ERKS3_, %function
 _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2ERKS3_:
-.LFB4806:
+.LFB4822:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -9747,7 +9981,7 @@ _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2ERKS3_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4806:
+.LFE4822:
 	.size	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2ERKS3_, .-_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2ERKS3_
 	.weak	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC1ERKS3_
 	.set	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC1ERKS3_,_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2ERKS3_
@@ -9756,7 +9990,7 @@ _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EEC2ERKS3_:
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplC2ES2_
 	.type	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplC2ES2_, %function
 _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplC2ES2_:
-.LFB4809:
+.LFB4825:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9775,7 +10009,7 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4809:
+.LFE4825:
 	.size	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplC2ES2_, .-_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplC2ES2_
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplC1ES2_
 	.set	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplC1ES2_,_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_ImplC2ES2_
@@ -9784,7 +10018,7 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.weak	_ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE9constructIS1_JEEEvRS2_PT_DpOT0_
 	.type	_ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE9constructIS1_JEEEvRS2_PT_DpOT0_, %function
 _ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE9constructIS1_JEEEvRS2_PT_DpOT0_:
-.LFB4811:
+.LFB4827:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9803,14 +10037,14 @@ _ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE9constructIS1_JEE
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4811:
+.LFE4827:
 	.size	_ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE9constructIS1_JEEEvRS2_PT_DpOT0_, .-_ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE9constructIS1_JEEEvRS2_PT_DpOT0_
 	.section	.text._ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE6_M_ptrEv,"axG",@progbits,_ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE6_M_ptrEv,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE6_M_ptrEv
 	.type	_ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE6_M_ptrEv, %function
 _ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE6_M_ptrEv:
-.LFB4812:
+.LFB4828:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9826,14 +10060,14 @@ _ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE6_M_ptrEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4812:
+.LFE4828:
 	.size	_ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE6_M_ptrEv, .-_ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE6_M_ptrEv
 	.section	.text._ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEptEv,"axG",@progbits,_ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEptEv,comdat
 	.align	2
 	.weak	_ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEptEv
 	.type	_ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEptEv, %function
 _ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEptEv:
-.LFB4814:
+.LFB4830:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9849,14 +10083,14 @@ _ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEpt
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4814:
+.LFE4830:
 	.size	_ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEptEv, .-_ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEptEv
 	.section	.text._ZNSt13__future_base7_ResultIiE6_M_setEOi,"axG",@progbits,_ZNSt13__future_base7_ResultIiE6_M_setEOi,comdat
 	.align	2
 	.weak	_ZNSt13__future_base7_ResultIiE6_M_setEOi
 	.type	_ZNSt13__future_base7_ResultIiE6_M_setEOi, %function
 _ZNSt13__future_base7_ResultIiE6_M_setEOi:
-.LFB4815:
+.LFB4831:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -9889,14 +10123,14 @@ _ZNSt13__future_base7_ResultIiE6_M_setEOi:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4815:
+.LFE4831:
 	.size	_ZNSt13__future_base7_ResultIiE6_M_setEOi, .-_ZNSt13__future_base7_ResultIiE6_M_setEOi
 	.section	.text._ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_,"axG",@progbits,_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC5EOS6_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_
 	.type	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_, %function
 _ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_:
-.LFB4819:
+.LFB4835:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9919,7 +10153,7 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_Delet
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4819:
+.LFE4835:
 	.size	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_, .-_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC1EOS6_
 	.set	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC1EOS6_,_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_
@@ -9928,7 +10162,7 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_Delet
 	.weak	_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_
 	.type	_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_, %function
 _ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_:
-.LFB4821:
+.LFB4837:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -9947,7 +10181,7 @@ _ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4821:
+.LFE4837:
 	.size	_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_, .-_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_
 	.weak	_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC1EOS6_
 	.set	_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC1EOS6_,_ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6_
@@ -9956,7 +10190,7 @@ _ZNSt5tupleIJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEEC2EOS6
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_
 	.type	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_, %function
 _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_:
-.LFB4823:
+.LFB4839:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -9985,7 +10219,7 @@ _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4823:
+.LFE4839:
 	.size	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_, .-_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_
 	.weak	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC1EOS5_
 	.set	_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC1EOS5_,_ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEC2EOS5_
@@ -9994,7 +10228,7 @@ _ZNSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_Deleter
 	.weak	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERS4_
 	.type	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERS4_, %function
 _ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERS4_:
-.LFB4825:
+.LFB4841:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -10004,14 +10238,14 @@ _ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERS4_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4825:
+.LFE4841:
 	.size	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERS4_, .-_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERS4_
 	.section	.text._ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC2Ev,"axG",@progbits,_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC5Ev,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC2Ev
 	.type	_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC2Ev, %function
 _ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC2Ev:
-.LFB4827:
+.LFB4843:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -10021,7 +10255,7 @@ _ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4827:
+.LFE4843:
 	.size	_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC2Ev, .-_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC2Ev
 	.weak	_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC1Ev
 	.set	_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC1Ev,_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC2Ev
@@ -10030,7 +10264,7 @@ _ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EEC2Ev:
 	.weak	_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EE7_M_headERS3_
 	.type	_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EE7_M_headERS3_, %function
 _ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EE7_M_headERS3_:
-.LFB4829:
+.LFB4845:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -10040,14 +10274,14 @@ _ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EE7_M_headERS3_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4829:
+.LFE4845:
 	.size	_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EE7_M_headERS3_, .-_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EE7_M_headERS3_
 	.section	.text._ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEE7_M_headERS4_,"axG",@progbits,_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEE7_M_headERS4_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEE7_M_headERS4_
 	.type	_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEE7_M_headERS4_, %function
 _ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEE7_M_headERS4_:
-.LFB4830:
+.LFB4846:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10063,14 +10297,14 @@ _ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEE7_M_headERS4_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4830:
+.LFE4846:
 	.size	_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEE7_M_headERS4_, .-_ZNSt11_Tuple_implILm1EJSt14default_deleteINSt6thread6_StateEEEE7_M_headERS4_
 	.section	.text._ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE11_M_max_sizeEv,"axG",@progbits,_ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE11_M_max_sizeEv,comdat
 	.align	2
 	.weak	_ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE11_M_max_sizeEv
 	.type	_ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE11_M_max_sizeEv, %function
 _ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE11_M_max_sizeEv:
-.LFB4849:
+.LFB4865:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -10081,14 +10315,14 @@ _ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_S
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4849:
+.LFE4865:
 	.size	_ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE11_M_max_sizeEv, .-_ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE11_M_max_sizeEv
 	.section	.text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE8allocateEmPKv,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE8allocateEmPKv,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE8allocateEmPKv
 	.type	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE8allocateEmPKv, %function
 _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE8allocateEmPKv:
-.LFB4848:
+.LFB4864:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -10110,16 +10344,16 @@ _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_St
 	cset	w0, ne
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L633
+	beq	.L649
 	ldr	x1, [sp, 32]
 	mov	x0, 6148914691236517205
 	movk	x0, 0x555, lsl 48
 	cmp	x1, x0
-	bls	.L634
+	bls	.L650
 	bl	_ZSt28__throw_bad_array_new_lengthv
-.L634:
+.L650:
 	bl	_ZSt17__throw_bad_allocv
-.L633:
+.L649:
 	ldr	x1, [sp, 32]
 	mov	x0, x1
 	lsl	x0, x0, 1
@@ -10133,14 +10367,14 @@ _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_St
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4848:
+.LFE4864:
 	.size	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE8allocateEmPKv, .-_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE8allocateEmPKv
 	.section	.text._ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEPT_RS8_,"axG",@progbits,_ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEPT_RS8_,comdat
 	.align	2
 	.weak	_ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEPT_RS8_
 	.type	_ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEPT_RS8_, %function
 _ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEPT_RS8_:
-.LFB4850:
+.LFB4866:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -10150,14 +10384,14 @@ _ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_base
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4850:
+.LFE4866:
 	.size	_ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEPT_RS8_, .-_ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS2_ELN9__gnu_cxx12_Lock_policyE2EEEEPT_RS8_
 	.section	.text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE10deallocateEPS6_m,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE10deallocateEPS6_m,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE10deallocateEPS6_m
 	.type	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE10deallocateEPS6_m, %function
 _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE10deallocateEPS6_m:
-.LFB4851:
+.LFB4867:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -10181,14 +10415,14 @@ _ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_St
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4851:
+.LFE4867:
 	.size	_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE10deallocateEPS6_m, .-_ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS3_ELNS_12_Lock_policyE2EEE10deallocateEPS6_m
 	.section	.text._ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC2ERKS2_,"axG",@progbits,_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC5ERKS2_,comdat
 	.align	2
 	.weak	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC2ERKS2_
 	.type	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC2ERKS2_, %function
 _ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC2ERKS2_:
-.LFB4853:
+.LFB4869:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10207,7 +10441,7 @@ _ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC2ERKS2_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4853:
+.LFE4869:
 	.size	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC2ERKS2_, .-_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC2ERKS2_
 	.weak	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC1ERKS2_
 	.set	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC1ERKS2_,_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC2ERKS2_
@@ -10216,7 +10450,7 @@ _ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EEC2ERKS2_:
 	.weak	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE9constructIS2_JEEEvPT_DpOT0_
 	.type	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE9constructIS2_JEEEvPT_DpOT0_, %function
 _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE9constructIS2_JEEEvPT_DpOT0_:
-.LFB4855:
+.LFB4871:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10237,14 +10471,14 @@ _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE9constructIS2_JE
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4855:
+.LFE4871:
 	.size	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE9constructIS2_JEEEvPT_DpOT0_, .-_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE9constructIS2_JEEEvPT_DpOT0_
 	.section	.text._ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE7_M_addrEv,"axG",@progbits,_ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE7_M_addrEv,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE7_M_addrEv
 	.type	_ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE7_M_addrEv, %function
 _ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE7_M_addrEv:
-.LFB4856:
+.LFB4872:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -10254,14 +10488,14 @@ _ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE7_M_addrEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4856:
+.LFE4872:
 	.size	_ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE7_M_addrEv, .-_ZN9__gnu_cxx16__aligned_bufferINSt13__future_base13_State_baseV2EE7_M_addrEv
 	.section	.text._ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE3getEv,"axG",@progbits,_ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE3getEv,comdat
 	.align	2
 	.weak	_ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE3getEv
 	.type	_ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE3getEv, %function
 _ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE3getEv:
-.LFB4858:
+.LFB4874:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10277,14 +10511,14 @@ _ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE3g
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4858:
+.LFE4874:
 	.size	_ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE3getEv, .-_ZNKSt10unique_ptrINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE3getEv
 	.section	.text._ZSt4moveIRSt5tupleIJPNSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEEONSt16remove_referenceIT_E4typeEOSA_,"axG",@progbits,_ZSt4moveIRSt5tupleIJPNSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEEONSt16remove_referenceIT_E4typeEOSA_,comdat
 	.align	2
 	.weak	_ZSt4moveIRSt5tupleIJPNSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEEONSt16remove_referenceIT_E4typeEOSA_
 	.type	_ZSt4moveIRSt5tupleIJPNSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEEONSt16remove_referenceIT_E4typeEOSA_, %function
 _ZSt4moveIRSt5tupleIJPNSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEEONSt16remove_referenceIT_E4typeEOSA_:
-.LFB4859:
+.LFB4875:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -10294,14 +10528,14 @@ _ZSt4moveIRSt5tupleIJPNSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterE
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4859:
+.LFE4875:
 	.size	_ZSt4moveIRSt5tupleIJPNSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEEONSt16remove_referenceIT_E4typeEOSA_, .-_ZSt4moveIRSt5tupleIJPNSt13__future_base7_ResultIiEENS1_12_Result_base8_DeleterEEEEONSt16remove_referenceIT_E4typeEOSA_
 	.section	.text._ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EE7_M_headERS4_,"axG",@progbits,_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EE7_M_headERS4_,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EE7_M_headERS4_
 	.type	_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EE7_M_headERS4_, %function
 _ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EE7_M_headERS4_:
-.LFB4860:
+.LFB4876:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -10311,14 +10545,14 @@ _ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EE7_M_headERS4_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4860:
+.LFE4876:
 	.size	_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EE7_M_headERS4_, .-_ZNSt10_Head_baseILm1ESt14default_deleteINSt6thread6_StateEELb1EE7_M_headERS4_
 	.section	.text._ZNKSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv,"axG",@progbits,_ZNKSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv,comdat
 	.align	2
 	.weak	_ZNKSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv
 	.type	_ZNKSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv, %function
 _ZNKSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv:
-.LFB4862:
+.LFB4878:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10335,14 +10569,14 @@ _ZNKSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_Delete
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4862:
+.LFE4878:
 	.size	_ZNKSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv, .-_ZNKSt15__uniq_ptr_implINSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEE6_M_ptrEv
 	.section	.text._ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSA_,"axG",@progbits,_ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSA_,comdat
 	.align	2
 	.weak	_ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSA_
 	.type	_ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSA_, %function
 _ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSA_:
-.LFB4864:
+.LFB4880:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10358,14 +10592,14 @@ _ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERKNSt
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4864:
+.LFE4880:
 	.size	_ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSA_, .-_ZSt3getILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKSA_
 	.section	.text._ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS6_DpT1_EE,"axG",@progbits,_ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS6_DpT1_EE,comdat
 	.align	2
 	.weak	_ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS6_DpT1_EE
 	.type	_ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS6_DpT1_EE, %function
 _ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS6_DpT1_EE:
-.LFB4866:
+.LFB4882:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10381,14 +10615,14 @@ _ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_Delet
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4866:
+.LFE4882:
 	.size	_ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS6_DpT1_EE, .-_ZSt12__get_helperILm0EPNSt13__future_base7_ResultIiEEJNS0_12_Result_base8_DeleterEEERKT0_RKSt11_Tuple_implIXT_EJS6_DpT1_EE
 	.section	.text._ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERKS6_,"axG",@progbits,_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERKS6_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERKS6_
 	.type	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERKS6_, %function
 _ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERKS6_:
-.LFB4868:
+.LFB4884:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10404,14 +10638,14 @@ _ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_Delet
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4868:
+.LFE4884:
 	.size	_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERKS6_, .-_ZNSt11_Tuple_implILm0EJPNSt13__future_base7_ResultIiEENS0_12_Result_base8_DeleterEEE7_M_headERKS6_
 	.section	.text._ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERKS4_,"axG",@progbits,_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERKS4_,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERKS4_
 	.type	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERKS4_, %function
 _ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERKS4_:
-.LFB4869:
+.LFB4885:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -10421,7 +10655,7 @@ _ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERKS4_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4869:
+.LFE4885:
 	.size	_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERKS4_, .-_ZNSt10_Head_baseILm0EPNSt13__future_base7_ResultIiEELb0EE7_M_headERKS4_
 	.weak	_ZTVSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE
 	.section	.data.rel.ro.local._ZTVSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE,"awG",@progbits,_ZTVSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE,comdat
@@ -10452,7 +10686,7 @@ _ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEEE:
 	.weak	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED2Ev
 	.type	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED2Ev, %function
 _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED2Ev:
-.LFB4871:
+.LFB4887:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10476,7 +10710,7 @@ _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4871:
+.LFE4887:
 	.size	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED2Ev, .-_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED2Ev
 	.weak	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED1Ev
 	.set	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED1Ev,_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED2Ev
@@ -10485,7 +10719,7 @@ _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED2Ev:
 	.weak	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED0Ev
 	.type	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED0Ev, %function
 _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED0Ev:
-.LFB4873:
+.LFB4889:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10504,7 +10738,7 @@ _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED0Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4873:
+.LFE4889:
 	.size	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED0Ev, .-_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEED0Ev
 	.weak	_ZTVNSt13__future_base7_ResultIiEE
 	.section	.data.rel.ro.local._ZTVNSt13__future_base7_ResultIiEE,"awG",@progbits,_ZTVNSt13__future_base7_ResultIiEE,comdat
@@ -10534,7 +10768,7 @@ _ZTVNSt13__future_base13_State_baseV2E:
 	.weak	_ZNSt13__future_base13_State_baseV2D2Ev
 	.type	_ZNSt13__future_base13_State_baseV2D2Ev, %function
 _ZNSt13__future_base13_State_baseV2D2Ev:
-.LFB4879:
+.LFB4895:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10556,7 +10790,7 @@ _ZNSt13__future_base13_State_baseV2D2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4879:
+.LFE4895:
 	.size	_ZNSt13__future_base13_State_baseV2D2Ev, .-_ZNSt13__future_base13_State_baseV2D2Ev
 	.weak	_ZNSt13__future_base13_State_baseV2D1Ev
 	.set	_ZNSt13__future_base13_State_baseV2D1Ev,_ZNSt13__future_base13_State_baseV2D2Ev
@@ -10565,7 +10799,7 @@ _ZNSt13__future_base13_State_baseV2D2Ev:
 	.weak	_ZNSt13__future_base13_State_baseV2D0Ev
 	.type	_ZNSt13__future_base13_State_baseV2D0Ev, %function
 _ZNSt13__future_base13_State_baseV2D0Ev:
-.LFB4881:
+.LFB4897:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10584,7 +10818,7 @@ _ZNSt13__future_base13_State_baseV2D0Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4881:
+.LFE4897:
 	.size	_ZNSt13__future_base13_State_baseV2D0Ev, .-_ZNSt13__future_base13_State_baseV2D0Ev
 	.weak	_ZTVSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
 	.section	.data.rel.ro._ZTVSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE,"awG",@progbits,_ZTVSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE,comdat
@@ -10697,7 +10931,7 @@ _ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE:
 	.align	2
 	.type	_Z41__static_initialization_and_destruction_0ii, %function
 _Z41__static_initialization_and_destruction_0ii:
-.LFB4898:
+.LFB4914:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10708,11 +10942,11 @@ _Z41__static_initialization_and_destruction_0ii:
 	str	w1, [sp, 24]
 	ldr	w0, [sp, 28]
 	cmp	w0, 1
-	bne	.L666
+	bne	.L682
 	ldr	w1, [sp, 24]
 	mov	w0, 65535
 	cmp	w1, w0
-	bne	.L666
+	bne	.L682
 	adrp	x0, _ZStL8__ioinit
 	add	x0, x0, :lo12:_ZStL8__ioinit
 	bl	_ZNSt8ios_base4InitC1Ev
@@ -10723,7 +10957,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	adrp	x0, :got:_ZNSt8ios_base4InitD1Ev
 	ldr	x0, [x0, #:got_lo12:_ZNSt8ios_base4InitD1Ev]
 	bl	__cxa_atexit
-.L666:
+.L682:
 	nop
 	ldp	x29, x30, [sp], 32
 	.cfi_restore 30
@@ -10731,14 +10965,14 @@ _Z41__static_initialization_and_destruction_0ii:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4898:
+.LFE4914:
 	.size	_Z41__static_initialization_and_destruction_0ii, .-_Z41__static_initialization_and_destruction_0ii
 	.section	.text._ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED2Ev,"axG",@progbits,_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED5Ev,comdat
 	.align	2
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED2Ev
 	.type	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED2Ev, %function
 _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED2Ev:
-.LFB4900:
+.LFB4916:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10762,7 +10996,7 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4900:
+.LFE4916:
 	.size	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED2Ev, .-_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED2Ev
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED1Ev
 	.set	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED1Ev,_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED2Ev
@@ -10771,7 +11005,7 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED0Ev
 	.type	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED0Ev, %function
 _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED0Ev:
-.LFB4902:
+.LFB4918:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10790,14 +11024,14 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4902:
+.LFE4918:
 	.size	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED0Ev, .-_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED0Ev
 	.section	.text._ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv,"axG",@progbits,_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv,comdat
 	.align	2
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv
 	.type	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv, %function
 _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv:
-.LFB4903:
+.LFB4919:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -10825,14 +11059,14 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4903:
+.LFE4919:
 	.size	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv, .-_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv
 	.section	.text._ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv,"axG",@progbits,_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv,comdat
 	.align	2
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv
 	.type	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv, %function
 _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv:
-.LFB4904:
+.LFB4920:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -10867,23 +11101,23 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L671
+	beq	.L687
 	bl	__stack_chk_fail
-.L671:
+.L687:
 	ldp	x29, x30, [sp], 64
 	.cfi_restore 30
 	.cfi_restore 29
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4904:
+.LFE4920:
 	.size	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv, .-_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv
 	.section	.text._ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info,"axG",@progbits,_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info,comdat
 	.align	2
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info
 	.type	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info, %function
 _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info:
-.LFB4905:
+.LFB4921:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -10899,41 +11133,41 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	mov	x1, x0
 	ldr	x0, [sp, 16]
 	cmp	x0, x1
-	beq	.L673
+	beq	.L689
 	adrp	x0, _ZTISt19_Sp_make_shared_tag
 	add	x1, x0, :lo12:_ZTISt19_Sp_make_shared_tag
 	ldr	x0, [sp, 16]
 	bl	_ZNKSt9type_infoeqERKS_
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L674
-.L673:
+	beq	.L690
+.L689:
 	mov	w0, 1
-	b	.L675
-.L674:
+	b	.L691
+.L690:
 	mov	w0, 0
-.L675:
+.L691:
 	cmp	w0, 0
-	beq	.L676
+	beq	.L692
 	ldr	x0, [sp, 40]
-	b	.L677
-.L676:
+	b	.L693
+.L692:
 	mov	x0, 0
-.L677:
+.L693:
 	ldp	x29, x30, [sp], 48
 	.cfi_restore 30
 	.cfi_restore 29
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4905:
+.LFE4921:
 	.size	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info, .-_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info
 	.section	.text._ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEE6_M_runEv,"axG",@progbits,_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEE6_M_runEv,comdat
 	.align	2
 	.weak	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEE6_M_runEv
 	.type	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEE6_M_runEv, %function
 _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEE6_M_runEv:
-.LFB4913:
+.LFB4929:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10951,14 +11185,14 @@ _ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEE6_M_r
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4913:
+.LFE4929:
 	.size	_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEE6_M_runEv, .-_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvOSt7promiseIiEES4_EEEEE6_M_runEv
 	.section	.text._ZNSt13__future_base7_ResultIiE10_M_destroyEv,"axG",@progbits,_ZNSt13__future_base7_ResultIiE10_M_destroyEv,comdat
 	.align	2
 	.weak	_ZNSt13__future_base7_ResultIiE10_M_destroyEv
 	.type	_ZNSt13__future_base7_ResultIiE10_M_destroyEv, %function
 _ZNSt13__future_base7_ResultIiE10_M_destroyEv:
-.LFB4914:
+.LFB4930:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -10968,14 +11202,14 @@ _ZNSt13__future_base7_ResultIiE10_M_destroyEv:
 	str	x0, [sp, 24]
 	ldr	x0, [sp, 24]
 	cmp	x0, 0
-	beq	.L681
+	beq	.L697
 	ldr	x0, [sp, 24]
 	ldr	x0, [x0]
 	add	x0, x0, 16
 	ldr	x1, [x0]
 	ldr	x0, [sp, 24]
 	blr	x1
-.L681:
+.L697:
 	nop
 	ldp	x29, x30, [sp], 32
 	.cfi_restore 30
@@ -10983,14 +11217,14 @@ _ZNSt13__future_base7_ResultIiE10_M_destroyEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4914:
+.LFE4930:
 	.size	_ZNSt13__future_base7_ResultIiE10_M_destroyEv, .-_ZNSt13__future_base7_ResultIiE10_M_destroyEv
 	.section	.text._ZNSt13__future_base7_ResultIiED2Ev,"axG",@progbits,_ZNSt13__future_base7_ResultIiED5Ev,comdat
 	.align	2
 	.weak	_ZNSt13__future_base7_ResultIiED2Ev
 	.type	_ZNSt13__future_base7_ResultIiED2Ev, %function
 _ZNSt13__future_base7_ResultIiED2Ev:
-.LFB4916:
+.LFB4932:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11005,10 +11239,10 @@ _ZNSt13__future_base7_ResultIiED2Ev:
 	ldr	x0, [sp, 24]
 	ldrb	w0, [x0, 20]
 	cmp	w0, 0
-	beq	.L683
+	beq	.L699
 	ldr	x0, [sp, 24]
 	bl	_ZNSt13__future_base7_ResultIiE8_M_valueEv
-.L683:
+.L699:
 	ldr	x0, [sp, 24]
 	bl	_ZNSt13__future_base12_Result_baseD2Ev
 	nop
@@ -11018,7 +11252,7 @@ _ZNSt13__future_base7_ResultIiED2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4916:
+.LFE4932:
 	.size	_ZNSt13__future_base7_ResultIiED2Ev, .-_ZNSt13__future_base7_ResultIiED2Ev
 	.weak	_ZNSt13__future_base7_ResultIiED1Ev
 	.set	_ZNSt13__future_base7_ResultIiED1Ev,_ZNSt13__future_base7_ResultIiED2Ev
@@ -11027,7 +11261,7 @@ _ZNSt13__future_base7_ResultIiED2Ev:
 	.weak	_ZNSt13__future_base7_ResultIiED0Ev
 	.type	_ZNSt13__future_base7_ResultIiED0Ev, %function
 _ZNSt13__future_base7_ResultIiED0Ev:
-.LFB4918:
+.LFB4934:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11046,14 +11280,14 @@ _ZNSt13__future_base7_ResultIiED0Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4918:
+.LFE4934:
 	.size	_ZNSt13__future_base7_ResultIiED0Ev, .-_ZNSt13__future_base7_ResultIiED0Ev
 	.section	.text._ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_Impl8_M_allocEv,"axG",@progbits,_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_Impl8_M_allocEv,comdat
 	.align	2
 	.weak	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_Impl8_M_allocEv
 	.type	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_Impl8_M_allocEv, %function
 _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_Impl8_M_allocEv:
-.LFB4919:
+.LFB4935:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11069,14 +11303,14 @@ _ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4919:
+.LFE4935:
 	.size	_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_Impl8_M_allocEv, .-_ZNSt23_Sp_counted_ptr_inplaceINSt13__future_base13_State_baseV2ESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE5_Impl8_M_allocEv
 	.section	.text._ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE7destroyIS1_EEvRS2_PT_,"axG",@progbits,_ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE7destroyIS1_EEvRS2_PT_,comdat
 	.align	2
 	.weak	_ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE7destroyIS1_EEvRS2_PT_
 	.type	_ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE7destroyIS1_EEvRS2_PT_, %function
 _ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE7destroyIS1_EEvRS2_PT_:
-.LFB4920:
+.LFB4936:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11095,14 +11329,14 @@ _ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE7destroyIS1_EEvRS
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4920:
+.LFE4936:
 	.size	_ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE7destroyIS1_EEvRS2_PT_, .-_ZNSt16allocator_traitsISaINSt13__future_base13_State_baseV2EEE7destroyIS1_EEvRS2_PT_
 	.section	.text._ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEEclEv,"axG",@progbits,_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEEclEv,comdat
 	.align	2
 	.weak	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEEclEv
 	.type	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEEclEv, %function
 _ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEEclEv:
-.LFB4923:
+.LFB4939:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11119,14 +11353,14 @@ _ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEEclEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4923:
+.LFE4939:
 	.size	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEEclEv, .-_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEEclEv
 	.section	.text._ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EE6_S_getERS3_,"axG",@progbits,_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EE6_S_getERS3_,comdat
 	.align	2
 	.weak	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EE6_S_getERS3_
 	.type	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EE6_S_getERS3_, %function
 _ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EE6_S_getERS3_:
-.LFB4924:
+.LFB4940:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -11136,14 +11370,14 @@ _ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EE6_S_getERS3
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4924:
+.LFE4940:
 	.size	_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EE6_S_getERS3_, .-_ZNSt14_Sp_ebo_helperILi0ESaINSt13__future_base13_State_baseV2EELb1EE6_S_getERS3_
 	.section	.text._ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE7destroyIS2_EEvPT_,"axG",@progbits,_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE7destroyIS2_EEvPT_,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE7destroyIS2_EEvPT_
 	.type	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE7destroyIS2_EEvPT_, %function
 _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE7destroyIS2_EEvPT_:
-.LFB4925:
+.LFB4941:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11164,14 +11398,14 @@ _ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE7destroyIS2_EEvP
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4925:
+.LFE4941:
 	.size	_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE7destroyIS2_EEvPT_, .-_ZN9__gnu_cxx13new_allocatorINSt13__future_base13_State_baseV2EE7destroyIS2_EEvPT_
 	.section	.text._ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEE9_M_invokeIJLm0ELm1EEEEvSt12_Index_tupleIJXspT_EEE,"axG",@progbits,_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEE9_M_invokeIJLm0ELm1EEEEvSt12_Index_tupleIJXspT_EEE,comdat
 	.align	2
 	.weak	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEE9_M_invokeIJLm0ELm1EEEEvSt12_Index_tupleIJXspT_EEE
 	.type	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEE9_M_invokeIJLm0ELm1EEEEvSt12_Index_tupleIJXspT_EEE, %function
 _ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEE9_M_invokeIJLm0ELm1EEEEvSt12_Index_tupleIJXspT_EEE:
-.LFB4928:
+.LFB4944:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -11201,14 +11435,14 @@ _ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEE9_M_invokeIJLm0ELm1EEEEv
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4928:
+.LFE4944:
 	.size	_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEE9_M_invokeIJLm0ELm1EEEEvSt12_Index_tupleIJXspT_EEE, .-_ZNSt6thread8_InvokerISt5tupleIJPFvOSt7promiseIiEES3_EEE9_M_invokeIJLm0ELm1EEEEvSt12_Index_tupleIJXspT_EEE
 	.section	.text._ZSt4moveIRSt5tupleIJPFvOSt7promiseIiEES2_EEEONSt16remove_referenceIT_E4typeEOS9_,"axG",@progbits,_ZSt4moveIRSt5tupleIJPFvOSt7promiseIiEES2_EEEONSt16remove_referenceIT_E4typeEOS9_,comdat
 	.align	2
 	.weak	_ZSt4moveIRSt5tupleIJPFvOSt7promiseIiEES2_EEEONSt16remove_referenceIT_E4typeEOS9_
 	.type	_ZSt4moveIRSt5tupleIJPFvOSt7promiseIiEES2_EEEONSt16remove_referenceIT_E4typeEOS9_, %function
 _ZSt4moveIRSt5tupleIJPFvOSt7promiseIiEES2_EEEONSt16remove_referenceIT_E4typeEOS9_:
-.LFB4930:
+.LFB4946:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -11218,14 +11452,14 @@ _ZSt4moveIRSt5tupleIJPFvOSt7promiseIiEES2_EEEONSt16remove_referenceIT_E4typeEOS9
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4930:
+.LFE4946:
 	.size	_ZSt4moveIRSt5tupleIJPFvOSt7promiseIiEES2_EEEONSt16remove_referenceIT_E4typeEOS9_, .-_ZSt4moveIRSt5tupleIJPFvOSt7promiseIiEES2_EEEONSt16remove_referenceIT_E4typeEOS9_
 	.section	.text._ZSt3getILm0EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_,"axG",@progbits,_ZSt3getILm0EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_,comdat
 	.align	2
 	.weak	_ZSt3getILm0EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_
 	.type	_ZSt3getILm0EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_, %function
 _ZSt3getILm0EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_:
-.LFB4931:
+.LFB4947:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11242,14 +11476,14 @@ _ZSt3getILm0EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4931:
+.LFE4947:
 	.size	_ZSt3getILm0EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_, .-_ZSt3getILm0EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_
 	.section	.text._ZSt3getILm1EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_,"axG",@progbits,_ZSt3getILm1EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_,comdat
 	.align	2
 	.weak	_ZSt3getILm1EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_
 	.type	_ZSt3getILm1EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_, %function
 _ZSt3getILm1EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_:
-.LFB4932:
+.LFB4948:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11266,14 +11500,14 @@ _ZSt3getILm1EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4932:
+.LFE4948:
 	.size	_ZSt3getILm1EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_, .-_ZSt3getILm1EJPFvOSt7promiseIiEES1_EEONSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEOS9_
 	.section	.text._ZSt8__invokeIPFvOSt7promiseIiEEJS1_EENSt15__invoke_resultIT_JDpT0_EE4typeEOS6_DpOS7_,"axG",@progbits,_ZSt8__invokeIPFvOSt7promiseIiEEJS1_EENSt15__invoke_resultIT_JDpT0_EE4typeEOS6_DpOS7_,comdat
 	.align	2
 	.weak	_ZSt8__invokeIPFvOSt7promiseIiEEJS1_EENSt15__invoke_resultIT_JDpT0_EE4typeEOS6_DpOS7_
 	.type	_ZSt8__invokeIPFvOSt7promiseIiEEJS1_EENSt15__invoke_resultIT_JDpT0_EE4typeEOS6_DpOS7_, %function
 _ZSt8__invokeIPFvOSt7promiseIiEEJS1_EENSt15__invoke_resultIT_JDpT0_EE4typeEOS6_DpOS7_:
-.LFB4933:
+.LFB4949:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -11304,14 +11538,14 @@ _ZSt8__invokeIPFvOSt7promiseIiEEJS1_EENSt15__invoke_resultIT_JDpT0_EE4typeEOS6_D
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4933:
+.LFE4949:
 	.size	_ZSt8__invokeIPFvOSt7promiseIiEEJS1_EENSt15__invoke_resultIT_JDpT0_EE4typeEOS6_DpOS7_, .-_ZSt8__invokeIPFvOSt7promiseIiEEJS1_EENSt15__invoke_resultIT_JDpT0_EE4typeEOS6_DpOS7_
 	.section	.text._ZSt12__get_helperILm0EPFvOSt7promiseIiEEJS1_EERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE,"axG",@progbits,_ZSt12__get_helperILm0EPFvOSt7promiseIiEEJS1_EERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE,comdat
 	.align	2
 	.weak	_ZSt12__get_helperILm0EPFvOSt7promiseIiEEJS1_EERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE
 	.type	_ZSt12__get_helperILm0EPFvOSt7promiseIiEEJS1_EERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE, %function
 _ZSt12__get_helperILm0EPFvOSt7promiseIiEEJS1_EERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE:
-.LFB4934:
+.LFB4950:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11327,14 +11561,14 @@ _ZSt12__get_helperILm0EPFvOSt7promiseIiEEJS1_EERT0_RSt11_Tuple_implIXT_EJS5_DpT1
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4934:
+.LFE4950:
 	.size	_ZSt12__get_helperILm0EPFvOSt7promiseIiEEJS1_EERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE, .-_ZSt12__get_helperILm0EPFvOSt7promiseIiEEJS1_EERT0_RSt11_Tuple_implIXT_EJS5_DpT1_EE
 	.section	.text._ZSt7forwardIPFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE,"axG",@progbits,_ZSt7forwardIPFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardIPFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE
 	.type	_ZSt7forwardIPFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE, %function
 _ZSt7forwardIPFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE:
-.LFB4935:
+.LFB4951:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -11344,14 +11578,14 @@ _ZSt7forwardIPFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4935:
+.LFE4951:
 	.size	_ZSt7forwardIPFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE, .-_ZSt7forwardIPFvOSt7promiseIiEEEOT_RNSt16remove_referenceIS5_E4typeE
 	.section	.text._ZSt12__get_helperILm1ESt7promiseIiEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE,"axG",@progbits,_ZSt12__get_helperILm1ESt7promiseIiEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE,comdat
 	.align	2
 	.weak	_ZSt12__get_helperILm1ESt7promiseIiEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE
 	.type	_ZSt12__get_helperILm1ESt7promiseIiEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE, %function
 _ZSt12__get_helperILm1ESt7promiseIiEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE:
-.LFB4936:
+.LFB4952:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11367,14 +11601,14 @@ _ZSt12__get_helperILm1ESt7promiseIiEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4936:
+.LFE4952:
 	.size	_ZSt12__get_helperILm1ESt7promiseIiEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE, .-_ZSt12__get_helperILm1ESt7promiseIiEJEERT0_RSt11_Tuple_implIXT_EJS2_DpT1_EE
 	.section	.text._ZSt13__invoke_implIvPFvOSt7promiseIiEEJS1_EET_St14__invoke_otherOT0_DpOT1_,"axG",@progbits,_ZSt13__invoke_implIvPFvOSt7promiseIiEEJS1_EET_St14__invoke_otherOT0_DpOT1_,comdat
 	.align	2
 	.weak	_ZSt13__invoke_implIvPFvOSt7promiseIiEEJS1_EET_St14__invoke_otherOT0_DpOT1_
 	.type	_ZSt13__invoke_implIvPFvOSt7promiseIiEEJS1_EET_St14__invoke_otherOT0_DpOT1_, %function
 _ZSt13__invoke_implIvPFvOSt7promiseIiEEJS1_EET_St14__invoke_otherOT0_DpOT1_:
-.LFB4937:
+.LFB4953:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -11401,14 +11635,14 @@ _ZSt13__invoke_implIvPFvOSt7promiseIiEEJS1_EET_St14__invoke_otherOT0_DpOT1_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4937:
+.LFE4953:
 	.size	_ZSt13__invoke_implIvPFvOSt7promiseIiEEJS1_EET_St14__invoke_otherOT0_DpOT1_, .-_ZSt13__invoke_implIvPFvOSt7promiseIiEEJS1_EET_St14__invoke_otherOT0_DpOT1_
 	.section	.text._ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EE7_M_headERS5_,"axG",@progbits,_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EE7_M_headERS5_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EE7_M_headERS5_
 	.type	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EE7_M_headERS5_, %function
 _ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EE7_M_headERS5_:
-.LFB4938:
+.LFB4954:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11425,14 +11659,14 @@ _ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EE7_M_headERS5_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4938:
+.LFE4954:
 	.size	_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EE7_M_headERS5_, .-_ZNSt11_Tuple_implILm0EJPFvOSt7promiseIiEES1_EE7_M_headERS5_
 	.section	.text._ZNSt11_Tuple_implILm1EJSt7promiseIiEEE7_M_headERS2_,"axG",@progbits,_ZNSt11_Tuple_implILm1EJSt7promiseIiEEE7_M_headERS2_,comdat
 	.align	2
 	.weak	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEE7_M_headERS2_
 	.type	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEE7_M_headERS2_, %function
 _ZNSt11_Tuple_implILm1EJSt7promiseIiEEE7_M_headERS2_:
-.LFB4939:
+.LFB4955:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -11448,14 +11682,14 @@ _ZNSt11_Tuple_implILm1EJSt7promiseIiEEE7_M_headERS2_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4939:
+.LFE4955:
 	.size	_ZNSt11_Tuple_implILm1EJSt7promiseIiEEE7_M_headERS2_, .-_ZNSt11_Tuple_implILm1EJSt7promiseIiEEE7_M_headERS2_
 	.section	.text._ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EE7_M_headERS5_,"axG",@progbits,_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EE7_M_headERS5_,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EE7_M_headERS5_
 	.type	_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EE7_M_headERS5_, %function
 _ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EE7_M_headERS5_:
-.LFB4940:
+.LFB4956:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -11465,14 +11699,14 @@ _ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EE7_M_headERS5_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4940:
+.LFE4956:
 	.size	_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EE7_M_headERS5_, .-_ZNSt10_Head_baseILm0EPFvOSt7promiseIiEELb0EE7_M_headERS5_
 	.section	.text._ZNSt10_Head_baseILm1ESt7promiseIiELb0EE7_M_headERS2_,"axG",@progbits,_ZNSt10_Head_baseILm1ESt7promiseIiELb0EE7_M_headERS2_,comdat
 	.align	2
 	.weak	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EE7_M_headERS2_
 	.type	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EE7_M_headERS2_, %function
 _ZNSt10_Head_baseILm1ESt7promiseIiELb0EE7_M_headERS2_:
-.LFB4941:
+.LFB4957:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -11482,7 +11716,7 @@ _ZNSt10_Head_baseILm1ESt7promiseIiELb0EE7_M_headERS2_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4941:
+.LFE4957:
 	.size	_ZNSt10_Head_baseILm1ESt7promiseIiELb0EE7_M_headERS2_, .-_ZNSt10_Head_baseILm1ESt7promiseIiELb0EE7_M_headERS2_
 	.weak	_ZTISt19_Sp_make_shared_tag
 	.section	.data.rel.ro._ZTISt19_Sp_make_shared_tag,"awG",@progbits,_ZTISt19_Sp_make_shared_tag,comdat
@@ -11518,7 +11752,7 @@ _ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE:
 	.align	2
 	.type	_GLOBAL__sub_I__Z4workOSt7promiseIiE, %function
 _GLOBAL__sub_I__Z4workOSt7promiseIiE:
-.LFB4942:
+.LFB4958:
 	.cfi_startproc
 	stp	x29, x30, [sp, -16]!
 	.cfi_def_cfa_offset 16
@@ -11534,7 +11768,7 @@ _GLOBAL__sub_I__Z4workOSt7promiseIiE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4942:
+.LFE4958:
 	.size	_GLOBAL__sub_I__Z4workOSt7promiseIiE, .-_GLOBAL__sub_I__Z4workOSt7promiseIiE
 	.section	.init_array,"aw"
 	.align	3

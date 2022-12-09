@@ -187,7 +187,7 @@ static constexpr size_t SUFFIX_LENGTH = sizeof(">(void)") - 1;
             return type_name<typename std::remove_pointer<T>::type>() + "*";
         }
         if (std::is_lvalue_reference<T>::value) {
-            std::cout << "is_lvalue_reference" << std::endl;
+//            std::cout << "is_lvalue_reference" << std::endl;
 
             return type_name<typename std::remove_reference<T>::type>() + "&";
         }

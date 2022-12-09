@@ -48428,21 +48428,36 @@ namespace std __attribute__ ((__visibility__ ("default")))
 }
 # 4 "/media/psf/Home/Desktop/git/C-/mac/myproject/src/promise/src/main.cpp" 2
 
-# 4 "/media/psf/Home/Desktop/git/C-/mac/myproject/src/promise/src/main.cpp"
+
+
+# 6 "/media/psf/Home/Desktop/git/C-/mac/myproject/src/promise/src/main.cpp"
 using namespace std;
 
-void work(std::promise<int> &&p)
-{
+void work(std::promise<int> &&p) {
     this_thread::sleep_for(10s);
     p.set_value(2);
 }
 
-int main(int argc, char const *argv[])
-{
+void test() {
     std::promise<int> p;
     auto f = p.get_future();
     std::thread t(work, std::move(p));
     t.detach();
     std::cout << f.get() << std::endl;
+}
+
+void test01() {
+    std::promise<int> p;
+    auto f = p.get_future();
+    std::thread t(work, std::move(p));
+    t.detach();
+    std::cout << f.get() << std::endl;
+}
+
+int main(int argc, char const *argv[]) {
+    std::promise<int> p;
+    auto f = p.get_future();
+    p.set_value(1);
+    std::chrono::microseconds o = std::chrono::milliseconds(1);
     return 0;
 }

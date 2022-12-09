@@ -72048,7 +72048,7 @@ static constexpr size_t SUFFIX_LENGTH = sizeof("]") - 1;
             return type_name<typename std::remove_pointer<T>::type>() + "*";
         }
         if (std::is_lvalue_reference<T>::value) {
-            std::cout << "is_lvalue_reference" << std::endl;
+
 
             return type_name<typename std::remove_reference<T>::type>() + "&";
         }
@@ -72654,30 +72654,2830 @@ static constexpr size_t SUFFIX_LENGTH = sizeof("]") - 1;
 
 }
 # 3 "/media/psf/Home/Desktop/git/C-/mac/myproject/src/virtual/src/main.cpp" 2
-using namespace std;
-class Base{
+# 1 "/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include/framework/Utils.h" 1
+
+
+
+
+
+
+
+# 1 "/usr/include/boost/type_index.hpp" 1 3 4
+# 17 "/usr/include/boost/type_index.hpp" 3 4
+# 1 "/usr/include/boost/config.hpp" 1 3 4
+# 30 "/usr/include/boost/config.hpp" 3 4
+# 1 "/usr/include/boost/config/user.hpp" 1 3 4
+# 31 "/usr/include/boost/config.hpp" 2 3 4
+
+
+
+
+# 1 "/usr/include/boost/config/detail/select_compiler_config.hpp" 1 3 4
+# 36 "/usr/include/boost/config.hpp" 2 3 4
+
+
+
+# 1 "/usr/include/boost/config/compiler/gcc.hpp" 1 3 4
+# 165 "/usr/include/boost/config/compiler/gcc.hpp" 3 4
+# 1 "/usr/include/c++/11/cstddef" 1 3 4
+# 42 "/usr/include/c++/11/cstddef" 3 4
+       
+# 43 "/usr/include/c++/11/cstddef" 3
+
+
+
+
+
+
+
+# 1 "/usr/lib/gcc/aarch64-linux-gnu/11/include/stddef.h" 1 3 4
+# 51 "/usr/include/c++/11/cstddef" 2 3
+
+
+# 52 "/usr/include/c++/11/cstddef" 3
+extern "C++"
+{
+
+namespace std
+{
+
+  using ::max_align_t;
+}
+
+
+
+namespace std
+{
+
+
+
+
+  enum class byte : unsigned char {};
+
+  template<typename _IntegerType> struct __byte_operand { };
+  template<> struct __byte_operand<bool> { using __type = byte; };
+  template<> struct __byte_operand<char> { using __type = byte; };
+  template<> struct __byte_operand<signed char> { using __type = byte; };
+  template<> struct __byte_operand<unsigned char> { using __type = byte; };
+
+  template<> struct __byte_operand<wchar_t> { using __type = byte; };
+
+
+
+
+  template<> struct __byte_operand<char16_t> { using __type = byte; };
+  template<> struct __byte_operand<char32_t> { using __type = byte; };
+  template<> struct __byte_operand<short> { using __type = byte; };
+  template<> struct __byte_operand<unsigned short> { using __type = byte; };
+  template<> struct __byte_operand<int> { using __type = byte; };
+  template<> struct __byte_operand<unsigned int> { using __type = byte; };
+  template<> struct __byte_operand<long> { using __type = byte; };
+  template<> struct __byte_operand<unsigned long> { using __type = byte; };
+  template<> struct __byte_operand<long long> { using __type = byte; };
+  template<> struct __byte_operand<unsigned long long> { using __type = byte; };
+
+  template<> struct __byte_operand<__int128>
+  { using __type = byte; };
+  template<> struct __byte_operand<unsigned __int128>
+  { using __type = byte; };
+# 110 "/usr/include/c++/11/cstddef" 3
+  template<typename _IntegerType>
+    struct __byte_operand<const _IntegerType>
+    : __byte_operand<_IntegerType> { };
+  template<typename _IntegerType>
+    struct __byte_operand<volatile _IntegerType>
+    : __byte_operand<_IntegerType> { };
+  template<typename _IntegerType>
+    struct __byte_operand<const volatile _IntegerType>
+    : __byte_operand<_IntegerType> { };
+
+  template<typename _IntegerType>
+    using __byte_op_t = typename __byte_operand<_IntegerType>::__type;
+
+  template<typename _IntegerType>
+    constexpr __byte_op_t<_IntegerType>
+    operator<<(byte __b, _IntegerType __shift) noexcept
+    { return (byte)(unsigned char)((unsigned)__b << __shift); }
+
+  template<typename _IntegerType>
+    constexpr __byte_op_t<_IntegerType>
+    operator>>(byte __b, _IntegerType __shift) noexcept
+    { return (byte)(unsigned char)((unsigned)__b >> __shift); }
+
+  constexpr byte
+  operator|(byte __l, byte __r) noexcept
+  { return (byte)(unsigned char)((unsigned)__l | (unsigned)__r); }
+
+  constexpr byte
+  operator&(byte __l, byte __r) noexcept
+  { return (byte)(unsigned char)((unsigned)__l & (unsigned)__r); }
+
+  constexpr byte
+  operator^(byte __l, byte __r) noexcept
+  { return (byte)(unsigned char)((unsigned)__l ^ (unsigned)__r); }
+
+  constexpr byte
+  operator~(byte __b) noexcept
+  { return (byte)(unsigned char)~(unsigned)__b; }
+
+  template<typename _IntegerType>
+    constexpr __byte_op_t<_IntegerType>&
+    operator<<=(byte& __b, _IntegerType __shift) noexcept
+    { return __b = __b << __shift; }
+
+  template<typename _IntegerType>
+    constexpr __byte_op_t<_IntegerType>&
+    operator>>=(byte& __b, _IntegerType __shift) noexcept
+    { return __b = __b >> __shift; }
+
+  constexpr byte&
+  operator|=(byte& __l, byte __r) noexcept
+  { return __l = __l | __r; }
+
+  constexpr byte&
+  operator&=(byte& __l, byte __r) noexcept
+  { return __l = __l & __r; }
+
+  constexpr byte&
+  operator^=(byte& __l, byte __r) noexcept
+  { return __l = __l ^ __r; }
+
+  template<typename _IntegerType>
+    [[nodiscard]]
+    constexpr _IntegerType
+    to_integer(__byte_op_t<_IntegerType> __b) noexcept
+    { return _IntegerType(__b); }
+
+
+}
+
+}
+# 166 "/usr/include/boost/config/compiler/gcc.hpp" 2 3 4
+# 40 "/usr/include/boost/config.hpp" 2 3 4
+
+
+
+
+# 1 "/usr/include/boost/config/detail/select_stdlib_config.hpp" 1 3 4
+# 24 "/usr/include/boost/config/detail/select_stdlib_config.hpp" 3 4
+# 1 "/usr/include/c++/11/version" 1 3 4
+# 33 "/usr/include/c++/11/version" 3 4
+       
+# 34 "/usr/include/c++/11/version" 3
+# 25 "/usr/include/boost/config/detail/select_stdlib_config.hpp" 2 3 4
+# 45 "/usr/include/boost/config.hpp" 2 3 4
+
+
+
+# 1 "/usr/include/boost/config/stdlib/libstdcpp3.hpp" 1 3 4
+# 49 "/usr/include/boost/config.hpp" 2 3 4
+
+
+
+
+# 1 "/usr/include/boost/config/detail/select_platform_config.hpp" 1 3 4
+# 54 "/usr/include/boost/config.hpp" 2 3 4
+
+
+
+# 1 "/usr/include/boost/config/platform/linux.hpp" 1 3 4
+# 15 "/usr/include/boost/config/platform/linux.hpp" 3 4
+# 1 "/usr/include/c++/11/cstdlib" 1 3 4
+# 39 "/usr/include/c++/11/cstdlib" 3 4
+       
+# 40 "/usr/include/c++/11/cstdlib" 3
+# 16 "/usr/include/boost/config/platform/linux.hpp" 2 3 4
+# 75 "/usr/include/boost/config/platform/linux.hpp" 3 4
+# 1 "/usr/include/boost/config/detail/posix_features.hpp" 1 3 4
+# 76 "/usr/include/boost/config/platform/linux.hpp" 2 3 4
+# 58 "/usr/include/boost/config.hpp" 2 3 4
+
+
+
+# 1 "/usr/include/boost/config/detail/suffix.hpp" 1 3 4
+# 34 "/usr/include/boost/config/detail/suffix.hpp" 3 4
+       
+# 35 "/usr/include/boost/config/detail/suffix.hpp" 3
+# 484 "/usr/include/boost/config/detail/suffix.hpp" 3
+namespace boost{
+
+   __extension__ typedef long long long_long_type;
+   __extension__ typedef unsigned long long ulong_long_type;
+
+
+
+
+}
+
+
+
+namespace boost{
+
+   __extension__ typedef __int128 int128_type;
+   __extension__ typedef unsigned __int128 uint128_type;
+
+
+
+
+}
+# 543 "/usr/include/boost/config/detail/suffix.hpp" 3
+# 1 "/usr/include/boost/config/helper_macros.hpp" 1 3 4
+# 544 "/usr/include/boost/config/detail/suffix.hpp" 2 3
+# 62 "/usr/include/boost/config.hpp" 2 3 4
+
+
+       
+# 18 "/usr/include/boost/type_index.hpp" 2 3 4
+
+
+        
+# 29 "/usr/include/boost/type_index.hpp" 3 4
+# 1 "/usr/include/boost/type_index/stl_type_index.hpp" 1 3 4
+# 22 "/usr/include/boost/type_index/stl_type_index.hpp" 3 4
+# 1 "/usr/include/boost/type_index/type_index_facade.hpp" 1 3 4
+# 13 "/usr/include/boost/type_index/type_index_facade.hpp" 3 4
+# 1 "/usr/include/boost/container_hash/hash_fwd.hpp" 1 3 4
+# 13 "/usr/include/boost/container_hash/hash_fwd.hpp" 3 4
+# 1 "/usr/include/boost/config/workaround.hpp" 1 3 4
+# 14 "/usr/include/boost/container_hash/hash_fwd.hpp" 2 3 4
+
+
+
+       
+
+
+
+namespace boost
+{
+    template <class T> struct hash;
+
+    template <class T> void hash_combine(std::size_t& seed, T const& v);
+
+    template <class It> std::size_t hash_range(It, It);
+    template <class It> void hash_range(std::size_t&, It, It);
+
+
+
+
+
+}
+# 14 "/usr/include/boost/type_index/type_index_facade.hpp" 2 3 4
+
+# 1 "/usr/include/c++/11/cstring" 1 3 4
+# 39 "/usr/include/c++/11/cstring" 3 4
+       
+# 40 "/usr/include/c++/11/cstring" 3
+
+
+# 1 "/usr/include/string.h" 1 3 4
+# 26 "/usr/include/string.h" 3 4
+# 1 "/usr/include/aarch64-linux-gnu/bits/libc-header-start.h" 1 3 4
+# 27 "/usr/include/string.h" 2 3 4
+
+extern "C" {
+
+
+
+
+# 1 "/usr/lib/gcc/aarch64-linux-gnu/11/include/stddef.h" 1 3 4
+# 34 "/usr/include/string.h" 2 3 4
+# 43 "/usr/include/string.h" 3 4
+extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+       size_t __n) noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern void *memmove (void *__dest, const void *__src, size_t __n)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+extern void *memccpy (void *__restrict __dest, const void *__restrict __src,
+        int __c, size_t __n)
+    noexcept (true) __attribute__ ((__nonnull__ (1, 2))) __attribute__ ((__access__ (__write_only__, 1, 4)));
+
+
+
+
+extern void *memset (void *__s, int __c, size_t __n) noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+extern int memcmp (const void *__s1, const void *__s2, size_t __n)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 80 "/usr/include/string.h" 3 4
+extern int __memcmpeq (const void *__s1, const void *__s2, size_t __n)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern "C++"
+{
+extern void *memchr (void *__s, int __c, size_t __n)
+      noexcept (true) __asm ("memchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern const void *memchr (const void *__s, int __c, size_t __n)
+      noexcept (true) __asm ("memchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 105 "/usr/include/string.h" 3 4
+}
+# 115 "/usr/include/string.h" 3 4
+extern "C++" void *rawmemchr (void *__s, int __c)
+     noexcept (true) __asm ("rawmemchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern "C++" const void *rawmemchr (const void *__s, int __c)
+     noexcept (true) __asm ("rawmemchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+extern "C++" void *memrchr (void *__s, int __c, size_t __n)
+      noexcept (true) __asm ("memrchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)))
+      __attribute__ ((__access__ (__read_only__, 1, 3)));
+extern "C++" const void *memrchr (const void *__s, int __c, size_t __n)
+      noexcept (true) __asm ("memrchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)))
+      __attribute__ ((__access__ (__read_only__, 1, 3)));
+# 141 "/usr/include/string.h" 3 4
+extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+extern char *strncpy (char *__restrict __dest,
+        const char *__restrict __src, size_t __n)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern char *strcat (char *__restrict __dest, const char *__restrict __src)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+extern char *strncat (char *__restrict __dest, const char *__restrict __src,
+        size_t __n) noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int strcmp (const char *__s1, const char *__s2)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern int strncmp (const char *__s1, const char *__s2, size_t __n)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int strcoll (const char *__s1, const char *__s2)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern size_t strxfrm (char *__restrict __dest,
+         const char *__restrict __src, size_t __n)
+    noexcept (true) __attribute__ ((__nonnull__ (2))) __attribute__ ((__access__ (__write_only__, 1, 3)));
+
+
+
+
+
+
+extern int strcoll_l (const char *__s1, const char *__s2, locale_t __l)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2, 3)));
+
+
+extern size_t strxfrm_l (char *__dest, const char *__src, size_t __n,
+    locale_t __l) noexcept (true) __attribute__ ((__nonnull__ (2, 4)))
+     __attribute__ ((__access__ (__write_only__, 1, 3)));
+
+
+
+
+
+extern char *strdup (const char *__s)
+     noexcept (true) __attribute__ ((__malloc__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern char *strndup (const char *__string, size_t __n)
+     noexcept (true) __attribute__ ((__malloc__)) __attribute__ ((__nonnull__ (1)));
+# 224 "/usr/include/string.h" 3 4
+extern "C++"
+{
+extern char *strchr (char *__s, int __c)
+     noexcept (true) __asm ("strchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern const char *strchr (const char *__s, int __c)
+     noexcept (true) __asm ("strchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 244 "/usr/include/string.h" 3 4
+}
+
+
+
+
+
+
+extern "C++"
+{
+extern char *strrchr (char *__s, int __c)
+     noexcept (true) __asm ("strrchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern const char *strrchr (const char *__s, int __c)
+     noexcept (true) __asm ("strrchr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 271 "/usr/include/string.h" 3 4
+}
+# 281 "/usr/include/string.h" 3 4
+extern "C++" char *strchrnul (char *__s, int __c)
+     noexcept (true) __asm ("strchrnul") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern "C++" const char *strchrnul (const char *__s, int __c)
+     noexcept (true) __asm ("strchrnul") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 293 "/usr/include/string.h" 3 4
+extern size_t strcspn (const char *__s, const char *__reject)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern size_t strspn (const char *__s, const char *__accept)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern "C++"
+{
+extern char *strpbrk (char *__s, const char *__accept)
+     noexcept (true) __asm ("strpbrk") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+extern const char *strpbrk (const char *__s, const char *__accept)
+     noexcept (true) __asm ("strpbrk") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 321 "/usr/include/string.h" 3 4
+}
+
+
+
+
+
+
+extern "C++"
+{
+extern char *strstr (char *__haystack, const char *__needle)
+     noexcept (true) __asm ("strstr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+extern const char *strstr (const char *__haystack, const char *__needle)
+     noexcept (true) __asm ("strstr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 348 "/usr/include/string.h" 3 4
+}
+
+
+
+
+
+
+
+extern char *strtok (char *__restrict __s, const char *__restrict __delim)
+     noexcept (true) __attribute__ ((__nonnull__ (2)));
+
+
+
+extern char *__strtok_r (char *__restrict __s,
+    const char *__restrict __delim,
+    char **__restrict __save_ptr)
+     noexcept (true) __attribute__ ((__nonnull__ (2, 3)));
+
+extern char *strtok_r (char *__restrict __s, const char *__restrict __delim,
+         char **__restrict __save_ptr)
+     noexcept (true) __attribute__ ((__nonnull__ (2, 3)));
+
+
+
+
+
+extern "C++" char *strcasestr (char *__haystack, const char *__needle)
+     noexcept (true) __asm ("strcasestr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+extern "C++" const char *strcasestr (const char *__haystack,
+         const char *__needle)
+     noexcept (true) __asm ("strcasestr") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 389 "/usr/include/string.h" 3 4
+extern void *memmem (const void *__haystack, size_t __haystacklen,
+       const void *__needle, size_t __needlelen)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 3)))
+    __attribute__ ((__access__ (__read_only__, 1, 2)))
+    __attribute__ ((__access__ (__read_only__, 3, 4)));
+
+
+
+extern void *__mempcpy (void *__restrict __dest,
+   const void *__restrict __src, size_t __n)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+extern void *mempcpy (void *__restrict __dest,
+        const void *__restrict __src, size_t __n)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern size_t strlen (const char *__s)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern size_t strnlen (const char *__string, size_t __maxlen)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern char *strerror (int __errnum) noexcept (true);
+# 444 "/usr/include/string.h" 3 4
+extern char *strerror_r (int __errnum, char *__buf, size_t __buflen)
+     noexcept (true) __attribute__ ((__nonnull__ (2))) __attribute__ ((__access__ (__write_only__, 2, 3)));
+
+
+
+
+extern const char *strerrordesc_np (int __err) noexcept (true);
+
+extern const char *strerrorname_np (int __err) noexcept (true);
+
+
+
+
+
+extern char *strerror_l (int __errnum, locale_t __l) noexcept (true);
+
+
+
+# 1 "/usr/include/strings.h" 1 3 4
+# 23 "/usr/include/strings.h" 3 4
+# 1 "/usr/lib/gcc/aarch64-linux-gnu/11/include/stddef.h" 1 3 4
+# 24 "/usr/include/strings.h" 2 3 4
+
+
+
+
+
+
+extern "C" {
+
+
+
+extern int bcmp (const void *__s1, const void *__s2, size_t __n)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern void bcopy (const void *__src, void *__dest, size_t __n)
+  noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern void bzero (void *__s, size_t __n) noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern "C++"
+{
+extern char *index (char *__s, int __c)
+     noexcept (true) __asm ("index") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern const char *index (const char *__s, int __c)
+     noexcept (true) __asm ("index") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 66 "/usr/include/strings.h" 3 4
+}
+
+
+
+
+
+
+
+extern "C++"
+{
+extern char *rindex (char *__s, int __c)
+     noexcept (true) __asm ("rindex") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+extern const char *rindex (const char *__s, int __c)
+     noexcept (true) __asm ("rindex") __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 94 "/usr/include/strings.h" 3 4
+}
+# 104 "/usr/include/strings.h" 3 4
+extern int ffs (int __i) noexcept (true) __attribute__ ((__const__));
+
+
+
+
+
+extern int ffsl (long int __l) noexcept (true) __attribute__ ((__const__));
+__extension__ extern int ffsll (long long int __ll)
+     noexcept (true) __attribute__ ((__const__));
+
+
+
+extern int strcasecmp (const char *__s1, const char *__s2)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int strncasecmp (const char *__s1, const char *__s2, size_t __n)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+
+extern int strcasecmp_l (const char *__s1, const char *__s2, locale_t __loc)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2, 3)));
+
+
+
+extern int strncasecmp_l (const char *__s1, const char *__s2,
+     size_t __n, locale_t __loc)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2, 4)));
+
+
+}
+# 463 "/usr/include/string.h" 2 3 4
+
+
+
+extern void explicit_bzero (void *__s, size_t __n) noexcept (true) __attribute__ ((__nonnull__ (1)))
+    __attribute__ ((__access__ (__write_only__, 1, 2)));
+
+
+
+extern char *strsep (char **__restrict __stringp,
+       const char *__restrict __delim)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern char *strsignal (int __sig) noexcept (true);
+
+
+
+extern const char *sigabbrev_np (int __sig) noexcept (true);
+
+
+extern const char *sigdescr_np (int __sig) noexcept (true);
+
+
+
+extern char *__stpcpy (char *__restrict __dest, const char *__restrict __src)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+extern char *stpcpy (char *__restrict __dest, const char *__restrict __src)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern char *__stpncpy (char *__restrict __dest,
+   const char *__restrict __src, size_t __n)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+extern char *stpncpy (char *__restrict __dest,
+        const char *__restrict __src, size_t __n)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int strverscmp (const char *__s1, const char *__s2)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern char *strfry (char *__string) noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+extern void *memfrob (void *__s, size_t __n) noexcept (true) __attribute__ ((__nonnull__ (1)))
+    __attribute__ ((__access__ (__read_write__, 1, 2)));
+
+
+
+
+
+
+
+extern "C++" char *basename (char *__filename)
+     noexcept (true) __asm ("basename") __attribute__ ((__nonnull__ (1)));
+extern "C++" const char *basename (const char *__filename)
+     noexcept (true) __asm ("basename") __attribute__ ((__nonnull__ (1)));
+# 539 "/usr/include/string.h" 3 4
+}
+# 43 "/usr/include/c++/11/cstring" 2 3
+# 71 "/usr/include/c++/11/cstring" 3
+extern "C++"
+{
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  using ::memchr;
+  using ::memcmp;
+  using ::memcpy;
+  using ::memmove;
+  using ::memset;
+  using ::strcat;
+  using ::strcmp;
+  using ::strcoll;
+  using ::strcpy;
+  using ::strcspn;
+  using ::strerror;
+  using ::strlen;
+  using ::strncat;
+  using ::strncmp;
+  using ::strncpy;
+  using ::strspn;
+  using ::strtok;
+  using ::strxfrm;
+  using ::strchr;
+  using ::strpbrk;
+  using ::strrchr;
+  using ::strstr;
+# 122 "/usr/include/c++/11/cstring" 3
+
+}
+}
+# 16 "/usr/include/boost/type_index/type_index_facade.hpp" 2 3 4
+# 26 "/usr/include/boost/type_index/type_index_facade.hpp" 3 4
+        
+
+
+namespace boost { namespace typeindex {
+# 61 "/usr/include/boost/type_index/type_index_facade.hpp" 3 4
+template <class Derived, class TypeInfo>
+class type_index_facade {
+private:
+
+    constexpr const Derived & derived() const noexcept {
+      return *static_cast<Derived const*>(this);
+    }
+
 public:
-    virtual ~Base() {
-        dbg::DebugOutput("/media/psf/Home/Desktop/git/C-/mac/myproject/src/virtual/src/main.cpp", 7, __func__) .print({"1"}, {dbg::type_name<decltype(1)>()}, 1);
-    };
+    typedef TypeInfo type_info_t;
+
+
+
+    inline const char* name() const noexcept {
+        return derived().raw_name();
+    }
+
+
+
+    inline std::string pretty_name() const {
+        return derived().name();
+    }
+
+
+
+    inline bool equal(const Derived& rhs) const noexcept {
+        const char* const left = derived().raw_name();
+        const char* const right = rhs.raw_name();
+        return left == right || !std::strcmp(left, right);
+    }
+
+
+
+    inline bool before(const Derived& rhs) const noexcept {
+        const char* const left = derived().raw_name();
+        const char* const right = rhs.raw_name();
+        return left != right && std::strcmp(left, right) < 0;
+    }
+
+
+
+
+
+    inline std::size_t hash_code() const noexcept {
+        const char* const name_raw = derived().raw_name();
+        return boost::hash_range(name_raw, name_raw + std::strlen(name_raw));
+    }
+# 150 "/usr/include/boost/type_index/type_index_facade.hpp" 3 4
 };
 
-class D : public Base{
-public:
-    D(){}
-    ~D(){
-        dbg::DebugOutput("/media/psf/Home/Desktop/git/C-/mac/myproject/src/virtual/src/main.cpp", 15, __func__) .print({"2"}, {dbg::type_name<decltype(2)>()}, 2);
-    }
-};
-class A :public D{
-public:
-    ~A(){
-        dbg::DebugOutput("/media/psf/Home/Desktop/git/C-/mac/myproject/src/virtual/src/main.cpp", 21, __func__) .print({"3"}, {dbg::type_name<decltype(3)>()}, 3);
-    }
-};
-int main(int argc, char const *argv[])
+
+template <class Derived, class TypeInfo>
+constexpr inline bool operator == (const type_index_facade<Derived, TypeInfo>& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return static_cast<Derived const&>(lhs).equal(static_cast<Derived const&>(rhs));
+}
+
+template <class Derived, class TypeInfo>
+constexpr inline bool operator < (const type_index_facade<Derived, TypeInfo>& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return static_cast<Derived const&>(lhs).before(static_cast<Derived const&>(rhs));
+}
+
+
+
+template <class Derived, class TypeInfo>
+constexpr inline bool operator > (const type_index_facade<Derived, TypeInfo>& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return rhs < lhs;
+}
+
+template <class Derived, class TypeInfo>
+constexpr inline bool operator <= (const type_index_facade<Derived, TypeInfo>& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return !(lhs > rhs);
+}
+
+template <class Derived, class TypeInfo>
+constexpr inline bool operator >= (const type_index_facade<Derived, TypeInfo>& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return !(lhs < rhs);
+}
+
+template <class Derived, class TypeInfo>
+constexpr inline bool operator != (const type_index_facade<Derived, TypeInfo>& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return !(lhs == rhs);
+}
+
+
+template <class Derived, class TypeInfo>
+inline bool operator == (const TypeInfo& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return Derived(lhs) == rhs;
+}
+
+template <class Derived, class TypeInfo>
+inline bool operator < (const TypeInfo& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return Derived(lhs) < rhs;
+}
+
+template <class Derived, class TypeInfo>
+inline bool operator > (const TypeInfo& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return rhs < Derived(lhs);
+}
+
+template <class Derived, class TypeInfo>
+inline bool operator <= (const TypeInfo& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return !(Derived(lhs) > rhs);
+}
+
+template <class Derived, class TypeInfo>
+inline bool operator >= (const TypeInfo& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return !(Derived(lhs) < rhs);
+}
+
+template <class Derived, class TypeInfo>
+inline bool operator != (const TypeInfo& lhs, const type_index_facade<Derived, TypeInfo>& rhs) noexcept {
+    return !(Derived(lhs) == rhs);
+}
+
+
+template <class Derived, class TypeInfo>
+inline bool operator == (const type_index_facade<Derived, TypeInfo>& lhs, const TypeInfo& rhs) noexcept {
+    return lhs == Derived(rhs);
+}
+
+template <class Derived, class TypeInfo>
+inline bool operator < (const type_index_facade<Derived, TypeInfo>& lhs, const TypeInfo& rhs) noexcept {
+    return lhs < Derived(rhs);
+}
+
+template <class Derived, class TypeInfo>
+inline bool operator > (const type_index_facade<Derived, TypeInfo>& lhs, const TypeInfo& rhs) noexcept {
+    return Derived(rhs) < lhs;
+}
+
+template <class Derived, class TypeInfo>
+inline bool operator <= (const type_index_facade<Derived, TypeInfo>& lhs, const TypeInfo& rhs) noexcept {
+    return !(lhs > Derived(rhs));
+}
+
+template <class Derived, class TypeInfo>
+inline bool operator >= (const type_index_facade<Derived, TypeInfo>& lhs, const TypeInfo& rhs) noexcept {
+    return !(lhs < Derived(rhs));
+}
+
+template <class Derived, class TypeInfo>
+inline bool operator != (const type_index_facade<Derived, TypeInfo>& lhs, const TypeInfo& rhs) noexcept {
+    return !(lhs == Derived(rhs));
+}
+# 276 "/usr/include/boost/type_index/type_index_facade.hpp" 3 4
+template <class CharT, class TriatT, class Derived, class TypeInfo>
+inline std::basic_ostream<CharT, TriatT>& operator<<(
+    std::basic_ostream<CharT, TriatT>& ostr,
+    const type_index_facade<Derived, TypeInfo>& ind)
 {
-    Base * b = new A();
+    ostr << static_cast<Derived const&>(ind).pretty_name();
+    return ostr;
+}
+
+
+
+
+
+template <class Derived, class TypeInfo>
+inline std::size_t hash_value(const type_index_facade<Derived, TypeInfo>& lhs) noexcept {
+    return static_cast<Derived const&>(lhs).hash_code();
+}
+
+}}
+# 23 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+
+
+
+
+
+
+
+# 1 "/usr/include/c++/11/cstring" 1 3 4
+# 39 "/usr/include/c++/11/cstring" 3 4
+       
+# 40 "/usr/include/c++/11/cstring" 3
+# 31 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+
+# 1 "/usr/include/boost/static_assert.hpp" 1 3 4
+# 18 "/usr/include/boost/static_assert.hpp" 3 4
+# 1 "/usr/include/boost/detail/workaround.hpp" 1 3 4
+# 19 "/usr/include/boost/static_assert.hpp" 2 3 4
+# 33 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+# 1 "/usr/include/boost/throw_exception.hpp" 1 3 4
+# 23 "/usr/include/boost/throw_exception.hpp" 3 4
+# 1 "/usr/include/boost/assert/source_location.hpp" 1 3 4
+# 10 "/usr/include/boost/assert/source_location.hpp" 3 4
+# 1 "/usr/include/boost/current_function.hpp" 1 3 4
+# 22 "/usr/include/boost/current_function.hpp" 3 4
+namespace boost
+{
+
+namespace detail
+{
+
+inline void current_function_helper()
+{
+# 69 "/usr/include/boost/current_function.hpp" 3 4
+}
+
+}
+
+}
+# 11 "/usr/include/boost/assert/source_location.hpp" 2 3 4
+
+# 1 "/usr/include/boost/cstdint.hpp" 1 3 4
+# 46 "/usr/include/boost/cstdint.hpp" 3 4
+       
+# 47 "/usr/include/boost/cstdint.hpp" 3
+# 114 "/usr/include/boost/cstdint.hpp" 3
+namespace boost
+{
+
+  using ::int8_t;
+  using ::int_least8_t;
+  using ::int_fast8_t;
+  using ::uint8_t;
+  using ::uint_least8_t;
+  using ::uint_fast8_t;
+
+  using ::int16_t;
+  using ::int_least16_t;
+  using ::int_fast16_t;
+  using ::uint16_t;
+  using ::uint_least16_t;
+  using ::uint_fast16_t;
+
+  using ::int32_t;
+  using ::int_least32_t;
+  using ::int_fast32_t;
+  using ::uint32_t;
+  using ::uint_least32_t;
+  using ::uint_fast32_t;
+
+
+
+  using ::int64_t;
+  using ::int_least64_t;
+  using ::int_fast64_t;
+  using ::uint64_t;
+  using ::uint_least64_t;
+  using ::uint_fast64_t;
+
+
+
+  using ::intmax_t;
+  using ::uintmax_t;
+
+}
+# 387 "/usr/include/boost/cstdint.hpp" 3
+namespace boost {
+    using ::intptr_t;
+    using ::uintptr_t;
+}
+# 13 "/usr/include/boost/assert/source_location.hpp" 2 3 4
+
+
+namespace boost
+{
+
+struct source_location
+{
+private:
+
+    char const * file_;
+    char const * function_;
+    boost::uint_least32_t line_;
+    boost::uint_least32_t column_;
+
+public:
+
+    constexpr source_location() noexcept: file_( "(unknown)" ), function_( "(unknown)" ), line_( 0 ), column_( 0 )
+    {
+    }
+
+    constexpr source_location( char const * file, boost::uint_least32_t ln, char const * function, boost::uint_least32_t col = 0 ) noexcept: file_( file ), function_( function ), line_( ln ), column_( col )
+    {
+    }
+
+    constexpr char const * file_name() const noexcept
+    {
+        return file_;
+    }
+
+    constexpr char const * function_name() const noexcept
+    {
+        return function_;
+    }
+
+    constexpr boost::uint_least32_t line() const noexcept
+    {
+        return line_;
+    }
+
+    constexpr boost::uint_least32_t column() const noexcept
+    {
+        return column_;
+    }
+};
+
+template<class E, class T> std::basic_ostream<E, T> & operator<<( std::basic_ostream<E, T> & os, source_location const & loc )
+{
+    os.width( 0 );
+
+    if( loc.line() == 0 )
+    {
+        os << "(unknown source location)";
+    }
+    else
+    {
+        os << loc.file_name() << ':' << loc.line();
+
+        if( loc.column() )
+        {
+            os << ':' << loc.column();
+        }
+
+        os << ": in function '" << loc.function_name() << '\'';
+    }
+
+    return os;
+}
+
+}
+# 24 "/usr/include/boost/throw_exception.hpp" 2 3 4
+# 32 "/usr/include/boost/throw_exception.hpp" 3 4
+namespace boost
+{
+
+
+
+
+inline void throw_exception_assert_compatibility( std::exception const & ) {}
+
+}
+# 73 "/usr/include/boost/throw_exception.hpp" 3 4
+# 1 "/usr/include/boost/exception/exception.hpp" 1 3 4
+# 15 "/usr/include/boost/exception/exception.hpp" 3 4
+namespace boost { template <class T> class shared_ptr; }
+namespace boost { namespace exception_detail { using boost::shared_ptr; } }
+
+
+
+
+       
+# 22 "/usr/include/boost/exception/exception.hpp" 3
+# 32 "/usr/include/boost/exception/exception.hpp" 3
+namespace
+boost
+    {
+    namespace
+    exception_detail
+        {
+        template <class T>
+        class
+        refcount_ptr
+            {
+            public:
+
+            refcount_ptr():
+                px_(0)
+                {
+                }
+
+            ~refcount_ptr()
+                {
+                release();
+                }
+
+            refcount_ptr( refcount_ptr const & x ):
+                px_(x.px_)
+                {
+                add_ref();
+                }
+
+            refcount_ptr &
+            operator=( refcount_ptr const & x )
+                {
+                adopt(x.px_);
+                return *this;
+                }
+
+            void
+            adopt( T * px )
+                {
+                release();
+                px_=px;
+                add_ref();
+                }
+
+            T *
+            get() const
+                {
+                return px_;
+                }
+
+            private:
+
+            T * px_;
+
+            void
+            add_ref()
+                {
+                if( px_ )
+                    px_->add_ref();
+                }
+
+            void
+            release()
+                {
+                if( px_ && px_->release() )
+                    px_=0;
+                }
+            };
+        }
+
+
+
+    template <class Tag,class T>
+    class error_info;
+
+    typedef error_info<struct throw_function_,char const *> throw_function;
+    typedef error_info<struct throw_file_,char const *> throw_file;
+    typedef error_info<struct throw_line_,int> throw_line;
+
+    template <>
+    class
+    error_info<throw_function_,char const *>
+        {
+        public:
+        typedef char const * value_type;
+        value_type v_;
+        explicit
+        error_info( value_type v ):
+            v_(v)
+            {
+            }
+        };
+
+    template <>
+    class
+    error_info<throw_file_,char const *>
+        {
+        public:
+        typedef char const * value_type;
+        value_type v_;
+        explicit
+        error_info( value_type v ):
+            v_(v)
+            {
+            }
+        };
+
+    template <>
+    class
+    error_info<throw_line_,int>
+        {
+        public:
+        typedef int value_type;
+        value_type v_;
+        explicit
+        error_info( value_type v ):
+            v_(v)
+            {
+            }
+        };
+
+    class
+    __attribute__((__visibility__("default")))
+    exception;
+
+    namespace
+    exception_detail
+        {
+        class error_info_base;
+        struct type_info_;
+
+        struct
+        error_info_container
+            {
+            virtual char const * diagnostic_information( char const * ) const = 0;
+            virtual shared_ptr<error_info_base> get( type_info_ const & ) const = 0;
+            virtual void set( shared_ptr<error_info_base> const &, type_info_ const & ) = 0;
+            virtual void add_ref() const = 0;
+            virtual bool release() const = 0;
+            virtual refcount_ptr<exception_detail::error_info_container> clone() const = 0;
+
+            protected:
+
+            ~error_info_container() noexcept
+                {
+                }
+            };
+
+        template <class>
+        struct get_info;
+
+        template <>
+        struct get_info<throw_function>;
+
+        template <>
+        struct get_info<throw_file>;
+
+        template <>
+        struct get_info<throw_line>;
+
+        template <class>
+        struct set_info_rv;
+
+        template <>
+        struct set_info_rv<throw_function>;
+
+        template <>
+        struct set_info_rv<throw_file>;
+
+        template <>
+        struct set_info_rv<throw_line>;
+
+        char const * get_diagnostic_information( exception const &, char const * );
+
+        void copy_boost_exception( exception *, exception const * );
+
+        template <class E,class Tag,class T>
+        E const & set_info( E const &, error_info<Tag,T> const & );
+
+        template <class E>
+        E const & set_info( E const &, throw_function const & );
+
+        template <class E>
+        E const & set_info( E const &, throw_file const & );
+
+        template <class E>
+        E const & set_info( E const &, throw_line const & );
+        }
+
+    class
+    __attribute__((__visibility__("default")))
+    exception
+        {
+
+        public:
+        template <class Tag> void set( typename Tag::type const & );
+        template <class Tag> typename Tag::type const * get() const;
+
+
+        protected:
+
+        exception():
+            throw_function_(0),
+            throw_file_(0),
+            throw_line_(-1)
+            {
+            }
+# 251 "/usr/include/boost/exception/exception.hpp" 3
+        virtual ~exception() noexcept
+
+            = 0
+
+            ;
+
+
+
+
+        private:
+
+        template <class E>
+        friend E const & exception_detail::set_info( E const &, throw_function const & );
+
+        template <class E>
+        friend E const & exception_detail::set_info( E const &, throw_file const & );
+
+        template <class E>
+        friend E const & exception_detail::set_info( E const &, throw_line const & );
+
+        template <class E,class Tag,class T>
+        friend E const & exception_detail::set_info( E const &, error_info<Tag,T> const & );
+
+        friend char const * exception_detail::get_diagnostic_information( exception const &, char const * );
+
+        template <class>
+        friend struct exception_detail::get_info;
+        friend struct exception_detail::get_info<throw_function>;
+        friend struct exception_detail::get_info<throw_file>;
+        friend struct exception_detail::get_info<throw_line>;
+        template <class>
+        friend struct exception_detail::set_info_rv;
+        friend struct exception_detail::set_info_rv<throw_function>;
+        friend struct exception_detail::set_info_rv<throw_file>;
+        friend struct exception_detail::set_info_rv<throw_line>;
+        friend void exception_detail::copy_boost_exception( exception *, exception const * );
+
+        mutable exception_detail::refcount_ptr<exception_detail::error_info_container> data_;
+        mutable char const * throw_function_;
+        mutable char const * throw_file_;
+        mutable int throw_line_;
+        };
+
+    inline
+    exception::
+    ~exception() noexcept
+        {
+        }
+
+    namespace
+    exception_detail
+        {
+        template <class E>
+        E const &
+        set_info( E const & x, throw_function const & y )
+            {
+            x.throw_function_=y.v_;
+            return x;
+            }
+
+        template <class E>
+        E const &
+        set_info( E const & x, throw_file const & y )
+            {
+            x.throw_file_=y.v_;
+            return x;
+            }
+
+        template <class E>
+        E const &
+        set_info( E const & x, throw_line const & y )
+            {
+            x.throw_line_=y.v_;
+            return x;
+            }
+        }
+
+
+
+    namespace
+    exception_detail
+        {
+        template <class T>
+        struct
+        __attribute__((__visibility__("default")))
+        error_info_injector:
+            public T,
+            public exception
+            {
+            explicit
+            error_info_injector( T const & x ):
+                T(x)
+                {
+                }
+
+            ~error_info_injector() noexcept
+                {
+                }
+            };
+
+        struct large_size { char c[256]; };
+        large_size dispatch_boost_exception( exception const * );
+
+        struct small_size { };
+        small_size dispatch_boost_exception( void const * );
+
+        template <class,int>
+        struct enable_error_info_helper;
+
+        template <class T>
+        struct
+        enable_error_info_helper<T,sizeof(large_size)>
+            {
+            typedef T type;
+            };
+
+        template <class T>
+        struct
+        enable_error_info_helper<T,sizeof(small_size)>
+            {
+            typedef error_info_injector<T> type;
+            };
+
+        template <class T>
+        struct
+        enable_error_info_return_type
+            {
+            typedef typename enable_error_info_helper<T,sizeof(exception_detail::dispatch_boost_exception(static_cast<T *>(0)))>::type type;
+            };
+        }
+
+    template <class T>
+    inline
+    typename
+    exception_detail::enable_error_info_return_type<T>::type
+    enable_error_info( T const & x )
+        {
+        typedef typename exception_detail::enable_error_info_return_type<T>::type rt;
+        return rt(x);
+        }
+
+
+
+    namespace
+    exception_detail
+        {
+        class
+        __attribute__((__visibility__("default")))
+        clone_base
+            {
+            public:
+
+            virtual clone_base const * clone() const = 0;
+            virtual void rethrow() const = 0;
+
+            virtual
+            ~clone_base() noexcept
+                {
+                }
+            };
+
+        inline
+        void
+        copy_boost_exception( exception * a, exception const * b )
+            {
+            refcount_ptr<error_info_container> data;
+            if( error_info_container * d=b->data_.get() )
+                data = d->clone();
+            a->throw_file_ = b->throw_file_;
+            a->throw_line_ = b->throw_line_;
+            a->throw_function_ = b->throw_function_;
+            a->data_ = data;
+            }
+
+        inline
+        void
+        copy_boost_exception( void *, void const * )
+            {
+            }
+
+        template <class T>
+        class
+        __attribute__((__visibility__("default")))
+        clone_impl:
+            public T,
+            public virtual clone_base
+            {
+            struct clone_tag { };
+            clone_impl( clone_impl const & x, clone_tag ):
+                T(x)
+                {
+                copy_boost_exception(this,&x);
+                }
+
+            public:
+
+            explicit
+            clone_impl( T const & x ):
+                T(x)
+                {
+                copy_boost_exception(this,&x);
+                }
+
+            ~clone_impl() noexcept
+                {
+                }
+
+            private:
+
+            clone_base const *
+            clone() const
+                {
+                return new clone_impl(*this,clone_tag());
+                }
+
+            void
+            rethrow() const
+                {
+                throw*this;
+                }
+            };
+        }
+
+    template <class T>
+    inline
+    exception_detail::clone_impl<T>
+    enable_current_exception( T const & x )
+        {
+        return exception_detail::clone_impl<T>(x);
+        }
+    }
+# 74 "/usr/include/boost/throw_exception.hpp" 2 3 4
+
+namespace boost
+{
+
+
+
+namespace detail
+{
+
+typedef char (&wrapexcept_s1)[ 1 ];
+typedef char (&wrapexcept_s2)[ 2 ];
+
+template<class T> wrapexcept_s1 wrapexcept_is_convertible( T* );
+template<class T> wrapexcept_s2 wrapexcept_is_convertible( void* );
+
+template<class E, class B, int I = sizeof( wrapexcept_is_convertible<B>( static_cast< E* >( 0 ) ) ) > struct wrapexcept_add_base;
+
+template<class E, class B> struct wrapexcept_add_base<E, B, 1>
+{
+    struct type {};
+};
+
+template<class E, class B> struct wrapexcept_add_base<E, B, 2>
+{
+    typedef B type;
+};
+
+}
+
+template<class E> struct __attribute__((__visibility__("default"))) wrapexcept:
+    public detail::wrapexcept_add_base<E, boost::exception_detail::clone_base>::type,
+    public E,
+    public detail::wrapexcept_add_base<E, boost::exception>::type
+{
+private:
+
+    struct deleter
+    {
+        wrapexcept * p_;
+        ~deleter() { delete p_; }
+    };
+
+private:
+
+    void copy_from( void const* )
+    {
+    }
+
+    void copy_from( boost::exception const* p )
+    {
+        static_cast<boost::exception&>( *this ) = *p;
+    }
+
+public:
+
+    explicit wrapexcept( E const & e ): E( e )
+    {
+        copy_from( &e );
+    }
+
+    explicit wrapexcept( E const & e, boost::source_location const & loc ): E( e )
+    {
+        copy_from( &e );
+
+        set_info( *this, throw_file( loc.file_name() ) );
+        set_info( *this, throw_line( loc.line() ) );
+        set_info( *this, throw_function( loc.function_name() ) );
+    }
+
+    virtual boost::exception_detail::clone_base const * clone() const override
+    {
+        wrapexcept * p = new wrapexcept( *this );
+        deleter del = { p };
+
+        boost::exception_detail::copy_boost_exception( p, this );
+
+        del.p_ = 0;
+        return p;
+    }
+
+    virtual void rethrow() const override
+    {
+        throw *this;
+    }
+};
+
+
+
+template<class E> __attribute__ ((__noreturn__)) void throw_exception( E const & e )
+{
+    throw_exception_assert_compatibility( e );
+    throw wrapexcept<E>( e );
+}
+
+template<class E> __attribute__ ((__noreturn__)) void throw_exception( E const & e, boost::source_location const & loc )
+{
+    throw_exception_assert_compatibility( e );
+    throw wrapexcept<E>( e, loc );
+}
+
+}
+# 34 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+# 1 "/usr/include/boost/core/demangle.hpp" 1 3 4
+# 17 "/usr/include/boost/core/demangle.hpp" 3 4
+        
+# 32 "/usr/include/boost/core/demangle.hpp" 3 4
+# 1 "/usr/include/c++/11/cxxabi.h" 1 3 4
+# 44 "/usr/include/c++/11/cxxabi.h" 3 4
+       
+# 45 "/usr/include/c++/11/cxxabi.h" 3
+
+#pragma GCC visibility push(default)
+
+# 1 "/usr/lib/gcc/aarch64-linux-gnu/11/include/stddef.h" 1 3 4
+# 49 "/usr/include/c++/11/cxxabi.h" 2 3
+
+# 1 "/usr/include/aarch64-linux-gnu/c++/11/bits/cxxabi_tweaks.h" 1 3
+# 34 "/usr/include/aarch64-linux-gnu/c++/11/bits/cxxabi_tweaks.h" 3
+namespace __cxxabiv1
+{
+  extern "C"
+  {
+# 46 "/usr/include/aarch64-linux-gnu/c++/11/bits/cxxabi_tweaks.h" 3
+  __extension__ typedef int __guard __attribute__((mode (__DI__)));
+
+
+  typedef void __cxa_vec_ctor_return_type;
+
+
+  typedef void __cxa_cdtor_return_type;
+
+
+  }
+}
+# 51 "/usr/include/c++/11/cxxabi.h" 2 3
+
+
+
+
+namespace __cxxabiv1
+{
+  extern "C"
+  {
+
+
+  typedef __cxa_cdtor_return_type (*__cxa_cdtor_type)(void *);
+
+
+  void*
+  __cxa_vec_new(size_t __element_count, size_t __element_size,
+  size_t __padding_size, __cxa_cdtor_type __constructor,
+  __cxa_cdtor_type __destructor);
+
+  void*
+  __cxa_vec_new2(size_t __element_count, size_t __element_size,
+   size_t __padding_size, __cxa_cdtor_type __constructor,
+   __cxa_cdtor_type __destructor, void *(*__alloc) (size_t),
+   void (*__dealloc) (void*));
+
+  void*
+  __cxa_vec_new3(size_t __element_count, size_t __element_size,
+   size_t __padding_size, __cxa_cdtor_type __constructor,
+   __cxa_cdtor_type __destructor, void *(*__alloc) (size_t),
+   void (*__dealloc) (void*, size_t));
+
+
+  __cxa_vec_ctor_return_type
+  __cxa_vec_ctor(void* __array_address, size_t __element_count,
+   size_t __element_size, __cxa_cdtor_type __constructor,
+   __cxa_cdtor_type __destructor);
+
+  __cxa_vec_ctor_return_type
+  __cxa_vec_cctor(void* __dest_array, void* __src_array,
+    size_t __element_count, size_t __element_size,
+    __cxa_cdtor_return_type (*__constructor) (void*, void*),
+    __cxa_cdtor_type __destructor);
+
+
+  void
+  __cxa_vec_dtor(void* __array_address, size_t __element_count,
+   size_t __element_size, __cxa_cdtor_type __destructor);
+
+  void
+  __cxa_vec_cleanup(void* __array_address, size_t __element_count, size_t __s,
+      __cxa_cdtor_type __destructor) noexcept;
+
+
+  void
+  __cxa_vec_delete(void* __array_address, size_t __element_size,
+     size_t __padding_size, __cxa_cdtor_type __destructor);
+
+  void
+  __cxa_vec_delete2(void* __array_address, size_t __element_size,
+      size_t __padding_size, __cxa_cdtor_type __destructor,
+      void (*__dealloc) (void*));
+
+  void
+  __cxa_vec_delete3(void* __array_address, size_t __element_size,
+      size_t __padding_size, __cxa_cdtor_type __destructor,
+      void (*__dealloc) (void*, size_t));
+
+  int
+  __cxa_guard_acquire(__guard*);
+
+  void
+  __cxa_guard_release(__guard*) noexcept;
+
+  void
+  __cxa_guard_abort(__guard*) noexcept;
+
+
+  int
+
+  __cxa_atexit(void ( *)(void*), void*, void*) noexcept;
+
+
+
+
+  void
+  __cxa_finalize(void*);
+
+
+  int
+
+  __cxa_thread_atexit(void ( *)(void*), void*, void *) noexcept;
+
+
+
+
+
+  void
+  __cxa_pure_virtual(void) __attribute__ ((__noreturn__));
+
+  void
+  __cxa_deleted_virtual(void) __attribute__ ((__noreturn__));
+
+
+  void
+  __cxa_bad_cast() __attribute__((__noreturn__));
+
+  void
+  __cxa_bad_typeid() __attribute__((__noreturn__));
+
+  void
+  __cxa_throw_bad_array_new_length() __attribute__((__noreturn__));
+# 203 "/usr/include/c++/11/cxxabi.h" 3
+  char*
+  __cxa_demangle(const char* __mangled_name, char* __output_buffer,
+   size_t* __length, int* __status);
+
+
+  }
+}
+
+
+
+
+
+
+namespace __cxxabiv1
+{
+
+  class __fundamental_type_info : public std::type_info
+  {
+  public:
+    explicit
+    __fundamental_type_info(const char* __n) : std::type_info(__n) { }
+
+    virtual
+    ~__fundamental_type_info();
+  };
+
+
+  class __array_type_info : public std::type_info
+  {
+  public:
+    explicit
+    __array_type_info(const char* __n) : std::type_info(__n) { }
+
+    virtual
+    ~__array_type_info();
+  };
+
+
+  class __function_type_info : public std::type_info
+  {
+  public:
+    explicit
+    __function_type_info(const char* __n) : std::type_info(__n) { }
+
+    virtual
+    ~__function_type_info();
+
+  protected:
+
+    virtual bool
+    __is_function_p() const;
+  };
+
+
+  class __enum_type_info : public std::type_info
+  {
+  public:
+    explicit
+    __enum_type_info(const char* __n) : std::type_info(__n) { }
+
+    virtual
+    ~__enum_type_info();
+  };
+
+
+  class __pbase_type_info : public std::type_info
+  {
+  public:
+    unsigned int __flags;
+    const std::type_info* __pointee;
+
+    explicit
+    __pbase_type_info(const char* __n, int __quals,
+        const std::type_info* __type)
+    : std::type_info(__n), __flags(__quals), __pointee(__type)
+    { }
+
+    virtual
+    ~__pbase_type_info();
+
+
+    enum __masks
+      {
+ __const_mask = 0x1,
+ __volatile_mask = 0x2,
+ __restrict_mask = 0x4,
+ __incomplete_mask = 0x8,
+ __incomplete_class_mask = 0x10,
+ __transaction_safe_mask = 0x20,
+ __noexcept_mask = 0x40
+      };
+
+  protected:
+    __pbase_type_info(const __pbase_type_info&);
+
+    __pbase_type_info&
+    operator=(const __pbase_type_info&);
+
+
+    virtual bool
+    __do_catch(const std::type_info* __thr_type, void** __thr_obj,
+        unsigned int __outer) const;
+
+    inline virtual bool
+    __pointer_catch(const __pbase_type_info* __thr_type, void** __thr_obj,
+      unsigned __outer) const;
+  };
+
+  inline bool __pbase_type_info::
+  __pointer_catch (const __pbase_type_info *thrown_type,
+     void **thr_obj,
+     unsigned outer) const
+  {
+    return __pointee->__do_catch (thrown_type->__pointee, thr_obj, outer + 2);
+  }
+
+
+  class __pointer_type_info : public __pbase_type_info
+  {
+  public:
+    explicit
+    __pointer_type_info(const char* __n, int __quals,
+   const std::type_info* __type)
+    : __pbase_type_info (__n, __quals, __type) { }
+
+
+    virtual
+    ~__pointer_type_info();
+
+  protected:
+
+    virtual bool
+    __is_pointer_p() const;
+
+    virtual bool
+    __pointer_catch(const __pbase_type_info* __thr_type, void** __thr_obj,
+      unsigned __outer) const;
+  };
+
+  class __class_type_info;
+
+
+  class __pointer_to_member_type_info : public __pbase_type_info
+  {
+  public:
+    __class_type_info* __context;
+
+    explicit
+    __pointer_to_member_type_info(const char* __n, int __quals,
+      const std::type_info* __type,
+      __class_type_info* __klass)
+    : __pbase_type_info(__n, __quals, __type), __context(__klass) { }
+
+    virtual
+    ~__pointer_to_member_type_info();
+
+  protected:
+    __pointer_to_member_type_info(const __pointer_to_member_type_info&);
+
+    __pointer_to_member_type_info&
+    operator=(const __pointer_to_member_type_info&);
+
+
+    virtual bool
+    __pointer_catch(const __pbase_type_info* __thr_type, void** __thr_obj,
+      unsigned __outer) const;
+  };
+
+
+  class __base_class_type_info
+  {
+  public:
+    const __class_type_info* __base_type;
+
+
+
+    long __offset_flags;
+
+
+    enum __offset_flags_masks
+      {
+ __virtual_mask = 0x1,
+ __public_mask = 0x2,
+ __hwm_bit = 2,
+ __offset_shift = 8
+      };
+
+
+    bool
+    __is_virtual_p() const
+    { return __offset_flags & __virtual_mask; }
+
+    bool
+    __is_public_p() const
+    { return __offset_flags & __public_mask; }
+
+    ptrdiff_t
+    __offset() const
+    {
+
+
+
+      return static_cast<ptrdiff_t>(__offset_flags) >> __offset_shift;
+    }
+  };
+
+
+  class __class_type_info : public std::type_info
+  {
+  public:
+    explicit
+    __class_type_info (const char *__n) : type_info(__n) { }
+
+    virtual
+    ~__class_type_info ();
+
+
+
+
+
+
+    enum __sub_kind
+      {
+
+ __unknown = 0,
+
+
+
+ __not_contained,
+
+
+ __contained_ambig,
+
+
+ __contained_virtual_mask = __base_class_type_info::__virtual_mask,
+
+
+ __contained_public_mask = __base_class_type_info::__public_mask,
+
+
+ __contained_mask = 1 << __base_class_type_info::__hwm_bit,
+
+ __contained_private = __contained_mask,
+ __contained_public = __contained_mask | __contained_public_mask
+      };
+
+    struct __upcast_result;
+    struct __dyncast_result;
+
+  protected:
+
+    virtual bool
+    __do_upcast(const __class_type_info* __dst_type, void**__obj_ptr) const;
+
+    virtual bool
+    __do_catch(const type_info* __thr_type, void** __thr_obj,
+        unsigned __outer) const;
+
+  public:
+
+
+    virtual bool
+    __do_upcast(const __class_type_info* __dst, const void* __obj,
+  __upcast_result& __restrict __result) const;
+
+
+
+
+
+
+
+    inline __sub_kind
+    __find_public_src(ptrdiff_t __src2dst, const void* __obj_ptr,
+        const __class_type_info* __src_type,
+        const void* __src_ptr) const;
+# 486 "/usr/include/c++/11/cxxabi.h" 3
+    virtual bool
+    __do_dyncast(ptrdiff_t __src2dst, __sub_kind __access_path,
+   const __class_type_info* __dst_type, const void* __obj_ptr,
+   const __class_type_info* __src_type, const void* __src_ptr,
+   __dyncast_result& __result) const;
+
+
+
+
+
+    virtual __sub_kind
+    __do_find_public_src(ptrdiff_t __src2dst, const void* __obj_ptr,
+    const __class_type_info* __src_type,
+    const void* __src_ptr) const;
+  };
+
+
+  class __si_class_type_info : public __class_type_info
+  {
+  public:
+    const __class_type_info* __base_type;
+
+    explicit
+    __si_class_type_info(const char *__n, const __class_type_info *__base)
+    : __class_type_info(__n), __base_type(__base) { }
+
+    virtual
+    ~__si_class_type_info();
+
+  protected:
+    __si_class_type_info(const __si_class_type_info&);
+
+    __si_class_type_info&
+    operator=(const __si_class_type_info&);
+
+
+    virtual bool
+    __do_dyncast(ptrdiff_t __src2dst, __sub_kind __access_path,
+   const __class_type_info* __dst_type, const void* __obj_ptr,
+   const __class_type_info* __src_type, const void* __src_ptr,
+   __dyncast_result& __result) const;
+
+    virtual __sub_kind
+    __do_find_public_src(ptrdiff_t __src2dst, const void* __obj_ptr,
+    const __class_type_info* __src_type,
+    const void* __sub_ptr) const;
+
+    virtual bool
+    __do_upcast(const __class_type_info*__dst, const void*__obj,
+  __upcast_result& __restrict __result) const;
+  };
+
+
+  class __vmi_class_type_info : public __class_type_info
+  {
+  public:
+    unsigned int __flags;
+    unsigned int __base_count;
+
+
+
+
+    __base_class_type_info __base_info[1];
+
+    explicit
+    __vmi_class_type_info(const char* __n, int ___flags)
+    : __class_type_info(__n), __flags(___flags), __base_count(0) { }
+
+    virtual
+    ~__vmi_class_type_info();
+
+
+    enum __flags_masks
+      {
+ __non_diamond_repeat_mask = 0x1,
+ __diamond_shaped_mask = 0x2,
+ __flags_unknown_mask = 0x10
+      };
+
+  protected:
+
+    virtual bool
+    __do_dyncast(ptrdiff_t __src2dst, __sub_kind __access_path,
+   const __class_type_info* __dst_type, const void* __obj_ptr,
+   const __class_type_info* __src_type, const void* __src_ptr,
+   __dyncast_result& __result) const;
+
+    virtual __sub_kind
+    __do_find_public_src(ptrdiff_t __src2dst, const void* __obj_ptr,
+    const __class_type_info* __src_type,
+    const void* __src_ptr) const;
+
+    virtual bool
+    __do_upcast(const __class_type_info* __dst, const void* __obj,
+  __upcast_result& __restrict __result) const;
+  };
+
+
+  struct __cxa_exception;
+  struct __cxa_refcounted_exception;
+  struct __cxa_dependent_exception;
+  struct __cxa_eh_globals;
+
+  extern "C"
+  {
+# 599 "/usr/include/c++/11/cxxabi.h" 3
+  void*
+  __dynamic_cast(const void* __src_ptr,
+   const __class_type_info* __src_type,
+   const __class_type_info* __dst_type,
+   ptrdiff_t __src2dst);
+# 612 "/usr/include/c++/11/cxxabi.h" 3
+  __cxa_eh_globals*
+  __cxa_get_globals() noexcept __attribute__ ((__const__));
+
+  __cxa_eh_globals*
+  __cxa_get_globals_fast() noexcept __attribute__ ((__const__));
+
+
+  void
+  __cxa_free_exception(void*) noexcept;
+
+
+  void
+  __cxa_throw(void*, std::type_info*, void ( *) (void *))
+  __attribute__((__noreturn__));
+
+
+  void*
+  __cxa_get_exception_ptr(void*) noexcept __attribute__ ((__pure__));
+
+  void*
+  __cxa_begin_catch(void*) noexcept;
+
+  void
+  __cxa_end_catch();
+
+  void
+  __cxa_rethrow() __attribute__((__noreturn__));
+
+
+
+  std::type_info*
+  __cxa_current_exception_type() noexcept __attribute__ ((__pure__));
+
+
+
+
+  __cxa_dependent_exception*
+  __cxa_allocate_dependent_exception() noexcept;
+
+
+  void
+  __cxa_free_dependent_exception(__cxa_dependent_exception*) noexcept;
+
+  }
+
+
+
+  class __foreign_exception
+  {
+    virtual ~__foreign_exception() throw();
+    virtual void __pure_dummy() = 0;
+  };
+
+}
+# 687 "/usr/include/c++/11/cxxabi.h" 3
+namespace abi = __cxxabiv1;
+
+namespace __gnu_cxx
+{
+# 704 "/usr/include/c++/11/cxxabi.h" 3
+  class recursive_init_error: public std::exception
+  {
+  public:
+    recursive_init_error() noexcept;
+    virtual ~recursive_init_error() noexcept;
+  };
+}
+
+
+#pragma GCC visibility pop
+# 33 "/usr/include/boost/core/demangle.hpp" 2 3 4
+
+
+
+
+
+
+# 1 "/usr/include/c++/11/cstdlib" 1 3 4
+# 39 "/usr/include/c++/11/cstdlib" 3 4
+       
+# 40 "/usr/include/c++/11/cstdlib" 3
+# 40 "/usr/include/boost/core/demangle.hpp" 2 3 4
+
+
+
+
+namespace boost
+{
+
+namespace core
+{
+
+inline char const * demangle_alloc( char const * name ) noexcept;
+inline void demangle_free( char const * name ) noexcept;
+
+class scoped_demangled_name
+{
+private:
+    char const * m_p;
+
+public:
+    explicit scoped_demangled_name( char const * name ) noexcept :
+        m_p( demangle_alloc( name ) )
+    {
+    }
+
+    ~scoped_demangled_name() noexcept
+    {
+        demangle_free( m_p );
+    }
+
+    char const * get() const noexcept
+    {
+        return m_p;
+    }
+
+    scoped_demangled_name( scoped_demangled_name const& ) = delete;
+    scoped_demangled_name& operator= ( scoped_demangled_name const& ) = delete;
+};
+
+
+
+
+inline char const * demangle_alloc( char const * name ) noexcept
+{
+    int status = 0;
+    std::size_t size = 0;
+    return abi::__cxa_demangle( name, __null, &size, &status );
+}
+
+inline void demangle_free( char const * name ) noexcept
+{
+    std::free( const_cast< char* >( name ) );
+}
+
+inline std::string demangle( char const * name )
+{
+    scoped_demangled_name demangled_name( name );
+    char const * p = demangled_name.get();
+    if( !p )
+        p = name;
+    return p;
+}
+# 120 "/usr/include/boost/core/demangle.hpp" 3 4
+}
+
+}
+# 35 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+# 1 "/usr/include/boost/type_traits/conditional.hpp" 1 3 4
+# 14 "/usr/include/boost/type_traits/conditional.hpp" 3 4
+namespace boost {
+
+template <bool b, class T, class U> struct conditional { typedef T type; };
+template <class T, class U> struct conditional<false, T, U> { typedef U type; };
+
+
+
+   template <bool b, class T, class U> using conditional_t = typename conditional<b, T, U>::type;
+
+
+
+}
+# 36 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+# 1 "/usr/include/boost/type_traits/is_const.hpp" 1 3 4
+# 25 "/usr/include/boost/type_traits/is_const.hpp" 3 4
+# 1 "/usr/include/boost/type_traits/integral_constant.hpp" 1 3 4
+# 31 "/usr/include/boost/type_traits/integral_constant.hpp" 3 4
+namespace mpl_{
+
+   template <bool B> struct bool_;
+   template <class I, I val> struct integral_c;
+   struct integral_c_tag;
+}
+
+namespace boost
+{
+   namespace mpl
+   {
+      using ::mpl_::bool_;
+      using ::mpl_::integral_c;
+      using ::mpl_::integral_c_tag;
+   }
+}
+
+
+
+namespace boost{
+
+   template <class T, T val>
+   struct integral_constant
+   {
+      typedef mpl::integral_c_tag tag;
+      typedef T value_type;
+      typedef integral_constant<T, val> type;
+      static const T value = val;
+
+      operator const mpl::integral_c<T, val>& ()const
+      {
+         static const char data[sizeof(long)] = { 0 };
+         static const void* pdata = data;
+         return *(reinterpret_cast<const mpl::integral_c<T, val>*>(pdata));
+      }
+      constexpr operator T()const { return val; }
+   };
+
+   template <class T, T val>
+   T const integral_constant<T, val>::value;
+
+   template <bool val>
+   struct integral_constant<bool, val>
+   {
+      typedef mpl::integral_c_tag tag;
+      typedef bool value_type;
+      typedef integral_constant<bool, val> type;
+      static const bool value = val;
+
+      operator const mpl::bool_<val>& ()const
+      {
+         static const char data[sizeof(long)] = { 0 };
+         static const void* pdata = data;
+         return *(reinterpret_cast<const mpl::bool_<val>*>(pdata));
+      }
+      constexpr operator bool()const { return val; }
+   };
+
+   template <bool val>
+   bool const integral_constant<bool, val>::value;
+
+   typedef integral_constant<bool, true> true_type;
+   typedef integral_constant<bool, false> false_type;
+
+}
+# 26 "/usr/include/boost/type_traits/is_const.hpp" 2 3 4
+
+namespace boost {
+# 36 "/usr/include/boost/type_traits/is_const.hpp" 3 4
+   template <class T>
+   struct is_const : public false_type {};
+   template <class T> struct is_const<T const> : public true_type{};
+   template <class T, std::size_t N> struct is_const<T const[N]> : public true_type{};
+   template <class T> struct is_const<T const[]> : public true_type{};
+
+
+
+}
+# 37 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+# 1 "/usr/include/boost/type_traits/is_reference.hpp" 1 3 4
+# 15 "/usr/include/boost/type_traits/is_reference.hpp" 3 4
+# 1 "/usr/include/boost/type_traits/is_lvalue_reference.hpp" 1 3 4
+# 26 "/usr/include/boost/type_traits/is_lvalue_reference.hpp" 3 4
+namespace boost {
+
+
+
+
+
+   template <class T> struct is_lvalue_reference : public false_type{};
+   template <class T> struct is_lvalue_reference<T&> : public true_type{};
+# 47 "/usr/include/boost/type_traits/is_lvalue_reference.hpp" 3 4
+}
+# 16 "/usr/include/boost/type_traits/is_reference.hpp" 2 3 4
+# 1 "/usr/include/boost/type_traits/is_rvalue_reference.hpp" 1 3 4
+# 15 "/usr/include/boost/type_traits/is_rvalue_reference.hpp" 3 4
+namespace boost {
+
+template <class T> struct is_rvalue_reference : public false_type {};
+
+template <class T> struct is_rvalue_reference<T&&> : public true_type {};
+
+
+}
+# 17 "/usr/include/boost/type_traits/is_reference.hpp" 2 3 4
+
+namespace boost {
+
+template <class T> struct is_reference
+   : public
+   integral_constant<
+      bool,
+      ::boost::is_lvalue_reference<T>::value || ::boost::is_rvalue_reference<T>::value>
+{};
+
+}
+# 38 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+# 1 "/usr/include/boost/type_traits/is_volatile.hpp" 1 3 4
+# 27 "/usr/include/boost/type_traits/is_volatile.hpp" 3 4
+namespace boost {
+# 36 "/usr/include/boost/type_traits/is_volatile.hpp" 3 4
+   template <class T>
+   struct is_volatile : public false_type {};
+   template <class T> struct is_volatile<T volatile> : public true_type{};
+   template <class T, std::size_t N> struct is_volatile<T volatile[N]> : public true_type{};
+   template <class T> struct is_volatile<T volatile[]> : public true_type{};
+
+
+
+}
+# 39 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+# 1 "/usr/include/boost/type_traits/remove_cv.hpp" 1 3 4
+# 18 "/usr/include/boost/type_traits/remove_cv.hpp" 3 4
+namespace boost {
+
+
+template <class T> struct remove_cv{ typedef T type; };
+template <class T> struct remove_cv<T const>{ typedef T type; };
+template <class T> struct remove_cv<T volatile>{ typedef T type; };
+template <class T> struct remove_cv<T const volatile>{ typedef T type; };
+
+
+template <class T, std::size_t N> struct remove_cv<T const[N]>{ typedef T type[N]; };
+template <class T, std::size_t N> struct remove_cv<T const volatile[N]>{ typedef T type[N]; };
+template <class T, std::size_t N> struct remove_cv<T volatile[N]>{ typedef T type[N]; };
+
+template <class T> struct remove_cv<T const[]>{ typedef T type[]; };
+template <class T> struct remove_cv<T const volatile[]>{ typedef T type[]; };
+template <class T> struct remove_cv<T volatile[]>{ typedef T type[]; };
+
+
+
+
+
+   template <class T> using remove_cv_t = typename remove_cv<T>::type;
+
+
+
+}
+# 40 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+# 1 "/usr/include/boost/type_traits/remove_reference.hpp" 1 3 4
+# 15 "/usr/include/boost/type_traits/remove_reference.hpp" 3 4
+namespace boost {
+
+
+namespace detail{
+
+
+
+
+template <class T>
+struct remove_rvalue_ref
+{
+   typedef T type;
+};
+
+template <class T>
+struct remove_rvalue_ref<T&&>
+{
+   typedef T type;
+};
+
+
+}
+
+template <class T> struct remove_reference{ typedef typename boost::detail::remove_rvalue_ref<T>::type type; };
+template <class T> struct remove_reference<T&>{ typedef T type; };
+# 53 "/usr/include/boost/type_traits/remove_reference.hpp" 3 4
+   template <class T> using remove_reference_t = typename remove_reference<T>::type;
+
+
+
+}
+# 41 "/usr/include/boost/type_index/stl_type_index.hpp" 2 3 4
+# 58 "/usr/include/boost/type_index/stl_type_index.hpp" 3 4
+        
+
+
+namespace boost { namespace typeindex {
+
+
+
+
+
+
+class stl_type_index
+    : public type_index_facade<
+        stl_type_index,
+
+
+
+            std::type_info
+
+    >
+{
+public:
+
+
+
+    typedef std::type_info type_info_t;
+
+
+private:
+    const type_info_t* data_;
+
+public:
+    inline stl_type_index() noexcept
+        : data_(&typeid(void))
+    {}
+
+    inline stl_type_index(const type_info_t& data) noexcept
+        : data_(&data)
+    {}
+
+    inline const type_info_t& type_info() const noexcept;
+
+    inline const char* raw_name() const noexcept;
+    inline const char* name() const noexcept;
+    inline std::string pretty_name() const;
+
+    inline std::size_t hash_code() const noexcept;
+    inline bool equal(const stl_type_index& rhs) const noexcept;
+    inline bool before(const stl_type_index& rhs) const noexcept;
+
+    template <class T>
+    inline static stl_type_index type_id() noexcept;
+
+    template <class T>
+    inline static stl_type_index type_id_with_cvr() noexcept;
+
+    template <class T>
+    inline static stl_type_index type_id_runtime(const T& value) noexcept;
+};
+
+inline const stl_type_index::type_info_t& stl_type_index::type_info() const noexcept {
+    return *data_;
+}
+
+
+inline const char* stl_type_index::raw_name() const noexcept {
+
+
+
+    return data_->name();
+
+}
+
+inline const char* stl_type_index::name() const noexcept {
+    return data_->name();
+}
+
+inline std::string stl_type_index::pretty_name() const {
+    static const char cvr_saver_name[] = "boost::typeindex::detail::cvr_saver<";
+    static constexpr std::string::size_type cvr_saver_name_len = sizeof(cvr_saver_name) - 1;
+
+
+
+    const boost::core::scoped_demangled_name demangled_name(data_->name());
+
+    const char* begin = demangled_name.get();
+    if (!begin) {
+        boost::throw_exception(std::runtime_error("Type name demangling failed"));
+    }
+
+    const std::string::size_type len = std::strlen(begin);
+    const char* end = begin + len;
+
+    if (len > cvr_saver_name_len) {
+        const char* b = std::strstr(begin, cvr_saver_name);
+        if (b) {
+            b += cvr_saver_name_len;
+
+
+            while (*b == ' ') {
+                ++ b;
+            }
+
+
+            const char* e = end - 1;
+            while (e > b && *e != '>') {
+                -- e;
+            }
+
+
+            while (e > b && *(e - 1) == ' ') {
+                -- e;
+            }
+
+            if (b < e) {
+
+                begin = b;
+                end = e;
+            }
+        }
+    }
+
+    return std::string(begin, end);
+}
+
+
+inline std::size_t stl_type_index::hash_code() const noexcept {
+
+    return data_->hash_code();
+
+
+
+}
+# 206 "/usr/include/boost/type_index/stl_type_index.hpp" 3 4
+inline bool stl_type_index::equal(const stl_type_index& rhs) const noexcept {
+
+
+
+    return !!(*data_ == *rhs.data_);
+
+}
+
+inline bool stl_type_index::before(const stl_type_index& rhs) const noexcept {
+
+
+
+    return !!data_->before(*rhs.data_);
+
+}
+
+
+
+
+template <class T>
+inline stl_type_index stl_type_index::type_id() noexcept {
+    typedef typename boost::remove_reference<T>::type no_ref_t;
+    typedef typename boost::remove_cv<no_ref_t>::type no_cvr_prefinal_t;
+# 243 "/usr/include/boost/type_index/stl_type_index.hpp" 3 4
+        typedef no_cvr_prefinal_t no_cvr_t;
+
+
+    return typeid(no_cvr_t);
+}
+
+namespace detail {
+    template <class T> class cvr_saver{};
+}
+
+template <class T>
+inline stl_type_index stl_type_index::type_id_with_cvr() noexcept {
+    typedef typename boost::conditional<
+        boost::is_reference<T>::value || boost::is_const<T>::value || boost::is_volatile<T>::value,
+        detail::cvr_saver<T>,
+        T
+    >::type type;
+
+    return typeid(type);
+}
+
+
+template <class T>
+inline stl_type_index stl_type_index::type_id_runtime(const T& value) noexcept {
+
+
+
+    return typeid(value);
+
+}
+
+}}
+# 30 "/usr/include/boost/type_index.hpp" 2 3 4
+# 52 "/usr/include/boost/type_index.hpp" 3 4
+namespace boost { namespace typeindex {
+# 132 "/usr/include/boost/type_index.hpp" 3 4
+    typedef boost::typeindex::stl_type_index type_index;
+# 144 "/usr/include/boost/type_index.hpp" 3 4
+typedef type_index::type_info_t type_info;
+# 210 "/usr/include/boost/type_index.hpp" 3 4
+template <class T>
+inline type_index type_id() noexcept {
+    return type_index::type_id<T>();
+}
+# 230 "/usr/include/boost/type_index.hpp" 3 4
+template <class T>
+inline type_index type_id_with_cvr() noexcept {
+    return type_index::type_id_with_cvr<T>();
+}
+# 255 "/usr/include/boost/type_index.hpp" 3 4
+template <class T>
+inline type_index type_id_runtime(const T& runtime_val) noexcept {
+    return type_index::type_id_runtime(runtime_val);
+}
+
+}}
+# 9 "/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include/framework/Utils.h" 2
+
+
+
+
+
+
+
+
+# 16 "/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include/framework/Utils.h"
+void p();
+
+template<typename T>
+void lookType(const T &param) {
+    using boost::typeindex::type_id_with_cvr;
+    std::cout << "T=" << type_id_with_cvr<T>().pretty_name() << std::endl;
+    std::cout << "param=" << type_id_with_cvr<decltype(param)>().pretty_name() << std::endl;
+}
+
+template<typename E>
+constexpr auto toUType(E e) noexcept {
+    return static_cast<std::underlying_type_t<E>>(e);
+}
+
+class Timer {
+public:
+    void start();
+
+    void end();
+
+    static void printTime(const std::string &file, int line);
+
+private:
+    std::chrono::time_point<std::chrono::system_clock> mStart;
+};
+
+template<typename T>
+void printT(const T &t) {
+    if constexpr (std::is_same_v<T, std::vector<std::vector<int>>>) {
+        for (auto &i: t) {
+            for (auto &j: i) {
+                std::cout << j << " ";
+            }
+            std::cout << "\n";
+        }
+    } else if constexpr(std::is_same_v<T, std::vector<int>>) {
+        for (auto &j: t) {
+            std::cout << j << " ";
+        }
+        std::cout << "\n";
+    }
+}
+
+std::optional<std::string> getExePath();
+
+void operator ""_p(const char *str, size_t size);
+# 4 "/media/psf/Home/Desktop/git/C-/mac/myproject/src/virtual/src/main.cpp" 2
+
+using namespace std;
+
+class Base {
+public:
+    virtual ~Base() {
+        dbg::DebugOutput("/media/psf/Home/Desktop/git/C-/mac/myproject/src/virtual/src/main.cpp", 10, __func__) .print({"1"}, {dbg::type_name<decltype(1)>()}, 1);
+    };
+
+    virtual void show() {
+        "base"_p;
+        cout << this << endl;
+    }
+};
+
+class D : public Base {
+public:
+    D() {}
+
+    void show() override {
+        "D"_p;
+        cout << this << endl;
+        Base::show();
+    }
+
+    ~D() {
+        dbg::DebugOutput("/media/psf/Home/Desktop/git/C-/mac/myproject/src/virtual/src/main.cpp", 30, __func__) .print({"2"}, {dbg::type_name<decltype(2)>()}, 2);
+    }
+};
+
+class A : public D {
+public:
+    ~A() {
+        dbg::DebugOutput("/media/psf/Home/Desktop/git/C-/mac/myproject/src/virtual/src/main.cpp", 37, __func__) .print({"3"}, {dbg::type_name<decltype(3)>()}, 3);
+    }
+};
+
+int main(int argc, char const *argv[]) {
+    Base *b = new A();
+    b->show();
     delete b;
     return 0;
 }

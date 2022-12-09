@@ -156,6 +156,786 @@ framework/fast:
 .PHONY : framework/fast
 
 #=============================================================================
+# Target rules for targets named 22
+
+# Build rule for target.
+22: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 22
+.PHONY : 22
+
+# fast build rule for target.
+22/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/22/CMakeFiles/22.dir/build.make src/DataStructure/22/CMakeFiles/22.dir/build
+.PHONY : 22/fast
+
+#=============================================================================
+# Target rules for targets named 56
+
+# Build rule for target.
+56: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 56
+.PHONY : 56
+
+# fast build rule for target.
+56/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/56/CMakeFiles/56.dir/build.make src/DataStructure/56/CMakeFiles/56.dir/build
+.PHONY : 56/fast
+
+#=============================================================================
+# Target rules for targets named 105
+
+# Build rule for target.
+105: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 105
+.PHONY : 105
+
+# fast build rule for target.
+105/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/105/CMakeFiles/105.dir/build.make src/DataStructure/105/CMakeFiles/105.dir/build
+.PHONY : 105/fast
+
+#=============================================================================
+# Target rules for targets named 129
+
+# Build rule for target.
+129: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 129
+.PHONY : 129
+
+# fast build rule for target.
+129/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/129/CMakeFiles/129.dir/build.make src/DataStructure/129/CMakeFiles/129.dir/build
+.PHONY : 129/fast
+
+#=============================================================================
+# Target rules for targets named 141
+
+# Build rule for target.
+141: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 141
+.PHONY : 141
+
+# fast build rule for target.
+141/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/141/CMakeFiles/141.dir/build.make src/DataStructure/141/CMakeFiles/141.dir/build
+.PHONY : 141/fast
+
+#=============================================================================
+# Target rules for targets named 148
+
+# Build rule for target.
+148: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 148
+.PHONY : 148
+
+# fast build rule for target.
+148/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/148/CMakeFiles/148.dir/build.make src/DataStructure/148/CMakeFiles/148.dir/build
+.PHONY : 148/fast
+
+#=============================================================================
+# Target rules for targets named 211
+
+# Build rule for target.
+211: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 211
+.PHONY : 211
+
+# fast build rule for target.
+211/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/211/CMakeFiles/211.dir/build.make src/DataStructure/211/CMakeFiles/211.dir/build
+.PHONY : 211/fast
+
+#=============================================================================
+# Target rules for targets named 718
+
+# Build rule for target.
+718: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 718
+.PHONY : 718
+
+# fast build rule for target.
+718/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/718/CMakeFiles/718.dir/build.make src/DataStructure/718/CMakeFiles/718.dir/build
+.PHONY : 718/fast
+
+#=============================================================================
+# Target rules for targets named 1277
+
+# Build rule for target.
+1277: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1277
+.PHONY : 1277
+
+# fast build rule for target.
+1277/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/1277/CMakeFiles/1277.dir/build.make src/DataStructure/1277/CMakeFiles/1277.dir/build
+.PHONY : 1277/fast
+
+#=============================================================================
+# Target rules for targets named 26Z
+
+# Build rule for target.
+26Z: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 26Z
+.PHONY : 26Z
+
+# fast build rule for target.
+26Z/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/26Z/CMakeFiles/26Z.dir/build.make src/DataStructure/26Z/CMakeFiles/26Z.dir/build
+.PHONY : 26Z/fast
+
+#=============================================================================
+# Target rules for targets named 6Z
+
+# Build rule for target.
+6Z: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 6Z
+.PHONY : 6Z
+
+# fast build rule for target.
+6Z/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/6Z/CMakeFiles/6Z.dir/build.make src/DataStructure/6Z/CMakeFiles/6Z.dir/build
+.PHONY : 6Z/fast
+
+#=============================================================================
+# Target rules for targets named 38Z
+
+# Build rule for target.
+38Z: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 38Z
+.PHONY : 38Z
+
+# fast build rule for target.
+38Z/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/38Z/CMakeFiles/38Z.dir/build.make src/DataStructure/38Z/CMakeFiles/38Z.dir/build
+.PHONY : 38Z/fast
+
+#=============================================================================
+# Target rules for targets named 1
+
+# Build rule for target.
+1 : cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1
+.PHONY : 1
+
+# fast build rule for target.
+1/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/1/CMakeFiles/1.dir/build.make src/DataStructure/1/CMakeFiles/1.dir/build
+.PHONY : 1/fast
+
+#=============================================================================
+# Target rules for targets named 15
+
+# Build rule for target.
+15: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 15
+.PHONY : 15
+
+# fast build rule for target.
+15/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/15/CMakeFiles/15.dir/build.make src/DataStructure/15/CMakeFiles/15.dir/build
+.PHONY : 15/fast
+
+#=============================================================================
+# Target rules for targets named 20
+
+# Build rule for target.
+20: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 20
+.PHONY : 20
+
+# fast build rule for target.
+20/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/20/CMakeFiles/20.dir/build.make src/DataStructure/20/CMakeFiles/20.dir/build
+.PHONY : 20/fast
+
+#=============================================================================
+# Target rules for targets named 31
+
+# Build rule for target.
+31: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 31
+.PHONY : 31
+
+# fast build rule for target.
+31/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/31/CMakeFiles/31.dir/build.make src/DataStructure/31/CMakeFiles/31.dir/build
+.PHONY : 31/fast
+
+#=============================================================================
+# Target rules for targets named 33
+
+# Build rule for target.
+33: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 33
+.PHONY : 33
+
+# fast build rule for target.
+33/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/33/CMakeFiles/33.dir/build.make src/DataStructure/33/CMakeFiles/33.dir/build
+.PHONY : 33/fast
+
+#=============================================================================
+# Target rules for targets named 46
+
+# Build rule for target.
+46: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 46
+.PHONY : 46
+
+# fast build rule for target.
+46/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/46/CMakeFiles/46.dir/build.make src/DataStructure/46/CMakeFiles/46.dir/build
+.PHONY : 46/fast
+
+#=============================================================================
+# Target rules for targets named 53
+
+# Build rule for target.
+53: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 53
+.PHONY : 53
+
+# fast build rule for target.
+53/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/53/CMakeFiles/53.dir/build.make src/DataStructure/53/CMakeFiles/53.dir/build
+.PHONY : 53/fast
+
+#=============================================================================
+# Target rules for targets named 54
+
+# Build rule for target.
+54: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 54
+.PHONY : 54
+
+# fast build rule for target.
+54/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/54/CMakeFiles/54.dir/build.make src/DataStructure/54/CMakeFiles/54.dir/build
+.PHONY : 54/fast
+
+#=============================================================================
+# Target rules for targets named 60
+
+# Build rule for target.
+60: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 60
+.PHONY : 60
+
+# fast build rule for target.
+60/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/60/CMakeFiles/60.dir/build.make src/DataStructure/60/CMakeFiles/60.dir/build
+.PHONY : 60/fast
+
+#=============================================================================
+# Target rules for targets named 102
+
+# Build rule for target.
+102: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 102
+.PHONY : 102
+
+# fast build rule for target.
+102/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/102/CMakeFiles/102.dir/build.make src/DataStructure/102/CMakeFiles/102.dir/build
+.PHONY : 102/fast
+
+#=============================================================================
+# Target rules for targets named 102_2
+
+# Build rule for target.
+102_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 102_2
+.PHONY : 102_2
+
+# fast build rule for target.
+102_2/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/102_2/CMakeFiles/102_2.dir/build.make src/DataStructure/102_2/CMakeFiles/102_2.dir/build
+.PHONY : 102_2/fast
+
+#=============================================================================
+# Target rules for targets named 102_3
+
+# Build rule for target.
+102_3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 102_3
+.PHONY : 102_3
+
+# fast build rule for target.
+102_3/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/102_3/CMakeFiles/102_3.dir/build.make src/DataStructure/102_3/CMakeFiles/102_3.dir/build
+.PHONY : 102_3/fast
+
+#=============================================================================
+# Target rules for targets named 103
+
+# Build rule for target.
+103: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 103
+.PHONY : 103
+
+# fast build rule for target.
+103/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/103/CMakeFiles/103.dir/build.make src/DataStructure/103/CMakeFiles/103.dir/build
+.PHONY : 103/fast
+
+#=============================================================================
+# Target rules for targets named 103_2
+
+# Build rule for target.
+103_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 103_2
+.PHONY : 103_2
+
+# fast build rule for target.
+103_2/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/103_2/CMakeFiles/103_2.dir/build.make src/DataStructure/103_2/CMakeFiles/103_2.dir/build
+.PHONY : 103_2/fast
+
+#=============================================================================
+# Target rules for targets named 121
+
+# Build rule for target.
+121: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 121
+.PHONY : 121
+
+# fast build rule for target.
+121/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/121/CMakeFiles/121.dir/build.make src/DataStructure/121/CMakeFiles/121.dir/build
+.PHONY : 121/fast
+
+#=============================================================================
+# Target rules for targets named 199
+
+# Build rule for target.
+199: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 199
+.PHONY : 199
+
+# fast build rule for target.
+199/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/199/CMakeFiles/199.dir/build.make src/DataStructure/199/CMakeFiles/199.dir/build
+.PHONY : 199/fast
+
+#=============================================================================
+# Target rules for targets named 200
+
+# Build rule for target.
+200: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 200
+.PHONY : 200
+
+# fast build rule for target.
+200/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/200/CMakeFiles/200.dir/build.make src/DataStructure/200/CMakeFiles/200.dir/build
+.PHONY : 200/fast
+
+#=============================================================================
+# Target rules for targets named 202_2
+
+# Build rule for target.
+202_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 202_2
+.PHONY : 202_2
+
+# fast build rule for target.
+202_2/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/202_2/CMakeFiles/202_2.dir/build.make src/DataStructure/202_2/CMakeFiles/202_2.dir/build
+.PHONY : 202_2/fast
+
+#=============================================================================
+# Target rules for targets named 236
+
+# Build rule for target.
+236: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 236
+.PHONY : 236
+
+# fast build rule for target.
+236/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/236/CMakeFiles/236.dir/build.make src/DataStructure/236/CMakeFiles/236.dir/build
+.PHONY : 236/fast
+
+#=============================================================================
+# Target rules for targets named 1003
+
+# Build rule for target.
+1003: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1003
+.PHONY : 1003
+
+# fast build rule for target.
+1003/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/1003/CMakeFiles/1003.dir/build.make src/DataStructure/1003/CMakeFiles/1003.dir/build
+.PHONY : 1003/fast
+
+#=============================================================================
+# Target rules for targets named 997
+
+# Build rule for target.
+997: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 997
+.PHONY : 997
+
+# fast build rule for target.
+997/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/997/CMakeFiles/997.dir/build.make src/DataStructure/997/CMakeFiles/997.dir/build
+.PHONY : 997/fast
+
+#=============================================================================
+# Target rules for targets named 1791
+
+# Build rule for target.
+1791: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1791
+.PHONY : 1791
+
+# fast build rule for target.
+1791/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/1791/CMakeFiles/1791.dir/build.make src/DataStructure/1791/CMakeFiles/1791.dir/build
+.PHONY : 1791/fast
+
+#=============================================================================
+# Target rules for targets named 1971
+
+# Build rule for target.
+1971: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1971
+.PHONY : 1971
+
+# fast build rule for target.
+1971/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/1971/CMakeFiles/1971.dir/build.make src/DataStructure/1971/CMakeFiles/1971.dir/build
+.PHONY : 1971/fast
+
+#=============================================================================
+# Target rules for targets named 455
+
+# Build rule for target.
+455: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 455
+.PHONY : 455
+
+# fast build rule for target.
+455/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/455/CMakeFiles/455.dir/build.make src/DataStructure/455/CMakeFiles/455.dir/build
+.PHONY : 455/fast
+
+#=============================================================================
+# Target rules for targets named 135
+
+# Build rule for target.
+135: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 135
+.PHONY : 135
+
+# fast build rule for target.
+135/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/135/CMakeFiles/135.dir/build.make src/DataStructure/135/CMakeFiles/135.dir/build
+.PHONY : 135/fast
+
+#=============================================================================
+# Target rules for targets named 605
+
+# Build rule for target.
+605: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 605
+.PHONY : 605
+
+# fast build rule for target.
+605/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/605/CMakeFiles/605.dir/build.make src/DataStructure/605/CMakeFiles/605.dir/build
+.PHONY : 605/fast
+
+#=============================================================================
+# Target rules for targets named 452
+
+# Build rule for target.
+452: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 452
+.PHONY : 452
+
+# fast build rule for target.
+452/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/452/CMakeFiles/452.dir/build.make src/DataStructure/452/CMakeFiles/452.dir/build
+.PHONY : 452/fast
+
+#=============================================================================
+# Target rules for targets named 763
+
+# Build rule for target.
+763: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 763
+.PHONY : 763
+
+# fast build rule for target.
+763/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/763/CMakeFiles/763.dir/build.make src/DataStructure/763/CMakeFiles/763.dir/build
+.PHONY : 763/fast
+
+#=============================================================================
+# Target rules for targets named 122
+
+# Build rule for target.
+122: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 122
+.PHONY : 122
+
+# fast build rule for target.
+122/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/122/CMakeFiles/122.dir/build.make src/DataStructure/122/CMakeFiles/122.dir/build
+.PHONY : 122/fast
+
+#=============================================================================
+# Target rules for targets named 167
+
+# Build rule for target.
+167: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 167
+.PHONY : 167
+
+# fast build rule for target.
+167/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/167/CMakeFiles/167.dir/build.make src/DataStructure/167/CMakeFiles/167.dir/build
+.PHONY : 167/fast
+
+#=============================================================================
+# Target rules for targets named 88
+
+# Build rule for target.
+88: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 88
+.PHONY : 88
+
+# fast build rule for target.
+88/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/88/CMakeFiles/88.dir/build.make src/DataStructure/88/CMakeFiles/88.dir/build
+.PHONY : 88/fast
+
+#=============================================================================
+# Target rules for targets named 142
+
+# Build rule for target.
+142: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 142
+.PHONY : 142
+
+# fast build rule for target.
+142/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/142/CMakeFiles/142.dir/build.make src/DataStructure/142/CMakeFiles/142.dir/build
+.PHONY : 142/fast
+
+#=============================================================================
+# Target rules for targets named 76
+
+# Build rule for target.
+76: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 76
+.PHONY : 76
+
+# fast build rule for target.
+76/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/76/CMakeFiles/76.dir/build.make src/DataStructure/76/CMakeFiles/76.dir/build
+.PHONY : 76/fast
+
+#=============================================================================
+# Target rules for targets named 633
+
+# Build rule for target.
+633: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 633
+.PHONY : 633
+
+# fast build rule for target.
+633/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/633/CMakeFiles/633.dir/build.make src/DataStructure/633/CMakeFiles/633.dir/build
+.PHONY : 633/fast
+
+#=============================================================================
+# Target rules for targets named 680
+
+# Build rule for target.
+680: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 680
+.PHONY : 680
+
+# fast build rule for target.
+680/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/680/CMakeFiles/680.dir/build.make src/DataStructure/680/CMakeFiles/680.dir/build
+.PHONY : 680/fast
+
+#=============================================================================
+# Target rules for targets named 524
+
+# Build rule for target.
+524: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 524
+.PHONY : 524
+
+# fast build rule for target.
+524/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/524/CMakeFiles/524.dir/build.make src/DataStructure/524/CMakeFiles/524.dir/build
+.PHONY : 524/fast
+
+#=============================================================================
+# Target rules for targets named 69
+
+# Build rule for target.
+69: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 69
+.PHONY : 69
+
+# fast build rule for target.
+69/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/69/CMakeFiles/69.dir/build.make src/DataStructure/69/CMakeFiles/69.dir/build
+.PHONY : 69/fast
+
+#=============================================================================
+# Target rules for targets named 34
+
+# Build rule for target.
+34: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 34
+.PHONY : 34
+
+# fast build rule for target.
+34/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/34/CMakeFiles/34.dir/build.make src/DataStructure/34/CMakeFiles/34.dir/build
+.PHONY : 34/fast
+
+#=============================================================================
+# Target rules for targets named 81
+
+# Build rule for target.
+81: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 81
+.PHONY : 81
+
+# fast build rule for target.
+81/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/81/CMakeFiles/81.dir/build.make src/DataStructure/81/CMakeFiles/81.dir/build
+.PHONY : 81/fast
+
+#=============================================================================
+# Target rules for targets named 154
+
+# Build rule for target.
+154: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 154
+.PHONY : 154
+
+# fast build rule for target.
+154/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/154/CMakeFiles/154.dir/build.make src/DataStructure/154/CMakeFiles/154.dir/build
+.PHONY : 154/fast
+
+#=============================================================================
+# Target rules for targets named 540
+
+# Build rule for target.
+540: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 540
+.PHONY : 540
+
+# fast build rule for target.
+540/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/540/CMakeFiles/540.dir/build.make src/DataStructure/540/CMakeFiles/540.dir/build
+.PHONY : 540/fast
+
+#=============================================================================
+# Target rules for targets named quickSort
+
+# Build rule for target.
+quickSort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 quickSort
+.PHONY : quickSort
+
+# fast build rule for target.
+quickSort/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/quickSort/CMakeFiles/quickSort.dir/build.make src/DataStructure/quickSort/CMakeFiles/quickSort.dir/build
+.PHONY : quickSort/fast
+
+#=============================================================================
+# Target rules for targets named 215
+
+# Build rule for target.
+215: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 215
+.PHONY : 215
+
+# fast build rule for target.
+215/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/215/CMakeFiles/215.dir/build.make src/DataStructure/215/CMakeFiles/215.dir/build
+.PHONY : 215/fast
+
+#=============================================================================
+# Target rules for targets named 347
+
+# Build rule for target.
+347: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 347
+.PHONY : 347
+
+# fast build rule for target.
+347/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/347/CMakeFiles/347.dir/build.make src/DataStructure/347/CMakeFiles/347.dir/build
+.PHONY : 347/fast
+
+#=============================================================================
+# Target rules for targets named 451
+
+# Build rule for target.
+451: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 451
+.PHONY : 451
+
+# fast build rule for target.
+451/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/451/CMakeFiles/451.dir/build.make src/DataStructure/451/CMakeFiles/451.dir/build
+.PHONY : 451/fast
+
+#=============================================================================
+# Target rules for targets named 695
+
+# Build rule for target.
+695: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 695
+.PHONY : 695
+
+# fast build rule for target.
+695/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/695/CMakeFiles/695.dir/build.make src/DataStructure/695/CMakeFiles/695.dir/build
+.PHONY : 695/fast
+
+#=============================================================================
+# Target rules for targets named 547
+
+# Build rule for target.
+547: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 547
+.PHONY : 547
+
+# fast build rule for target.
+547/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/547/CMakeFiles/547.dir/build.make src/DataStructure/547/CMakeFiles/547.dir/build
+.PHONY : 547/fast
+
+#=============================================================================
+# Target rules for targets named 417
+
+# Build rule for target.
+417: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 417
+.PHONY : 417
+
+# fast build rule for target.
+417/fast:
+	$(MAKE) $(MAKESILENT) -f src/DataStructure/417/CMakeFiles/417.dir/build.make src/DataStructure/417/CMakeFiles/417.dir/build
+.PHONY : 417/fast
+
+#=============================================================================
 # Target rules for targets named Test
 
 # Build rule for target.
@@ -284,461 +1064,6 @@ addressof: cmake_check_build_system
 addressof/fast:
 	$(MAKE) $(MAKESILENT) -f src/addressof/CMakeFiles/addressof.dir/build.make src/addressof/CMakeFiles/addressof.dir/build
 .PHONY : addressof/fast
-
-#=============================================================================
-# Target rules for targets named 22
-
-# Build rule for target.
-22: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 22
-.PHONY : 22
-
-# fast build rule for target.
-22/fast:
-	$(MAKE) $(MAKESILENT) -f src/22/CMakeFiles/22.dir/build.make src/22/CMakeFiles/22.dir/build
-.PHONY : 22/fast
-
-#=============================================================================
-# Target rules for targets named 56
-
-# Build rule for target.
-56: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 56
-.PHONY : 56
-
-# fast build rule for target.
-56/fast:
-	$(MAKE) $(MAKESILENT) -f src/56/CMakeFiles/56.dir/build.make src/56/CMakeFiles/56.dir/build
-.PHONY : 56/fast
-
-#=============================================================================
-# Target rules for targets named 69
-
-# Build rule for target.
-69: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 69
-.PHONY : 69
-
-# fast build rule for target.
-69/fast:
-	$(MAKE) $(MAKESILENT) -f src/69/CMakeFiles/69.dir/build.make src/69/CMakeFiles/69.dir/build
-.PHONY : 69/fast
-
-#=============================================================================
-# Target rules for targets named 105
-
-# Build rule for target.
-105: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 105
-.PHONY : 105
-
-# fast build rule for target.
-105/fast:
-	$(MAKE) $(MAKESILENT) -f src/105/CMakeFiles/105.dir/build.make src/105/CMakeFiles/105.dir/build
-.PHONY : 105/fast
-
-#=============================================================================
-# Target rules for targets named 129
-
-# Build rule for target.
-129: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 129
-.PHONY : 129
-
-# fast build rule for target.
-129/fast:
-	$(MAKE) $(MAKESILENT) -f src/129/CMakeFiles/129.dir/build.make src/129/CMakeFiles/129.dir/build
-.PHONY : 129/fast
-
-#=============================================================================
-# Target rules for targets named 141
-
-# Build rule for target.
-141: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 141
-.PHONY : 141
-
-# fast build rule for target.
-141/fast:
-	$(MAKE) $(MAKESILENT) -f src/141/CMakeFiles/141.dir/build.make src/141/CMakeFiles/141.dir/build
-.PHONY : 141/fast
-
-#=============================================================================
-# Target rules for targets named 148
-
-# Build rule for target.
-148: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 148
-.PHONY : 148
-
-# fast build rule for target.
-148/fast:
-	$(MAKE) $(MAKESILENT) -f src/148/CMakeFiles/148.dir/build.make src/148/CMakeFiles/148.dir/build
-.PHONY : 148/fast
-
-#=============================================================================
-# Target rules for targets named 211
-
-# Build rule for target.
-211: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 211
-.PHONY : 211
-
-# fast build rule for target.
-211/fast:
-	$(MAKE) $(MAKESILENT) -f src/211/CMakeFiles/211.dir/build.make src/211/CMakeFiles/211.dir/build
-.PHONY : 211/fast
-
-#=============================================================================
-# Target rules for targets named 417
-
-# Build rule for target.
-417: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 417
-.PHONY : 417
-
-# fast build rule for target.
-417/fast:
-	$(MAKE) $(MAKESILENT) -f src/417/CMakeFiles/417.dir/build.make src/417/CMakeFiles/417.dir/build
-.PHONY : 417/fast
-
-#=============================================================================
-# Target rules for targets named 718
-
-# Build rule for target.
-718: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 718
-.PHONY : 718
-
-# fast build rule for target.
-718/fast:
-	$(MAKE) $(MAKESILENT) -f src/718/CMakeFiles/718.dir/build.make src/718/CMakeFiles/718.dir/build
-.PHONY : 718/fast
-
-#=============================================================================
-# Target rules for targets named 1277
-
-# Build rule for target.
-1277: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1277
-.PHONY : 1277
-
-# fast build rule for target.
-1277/fast:
-	$(MAKE) $(MAKESILENT) -f src/1277/CMakeFiles/1277.dir/build.make src/1277/CMakeFiles/1277.dir/build
-.PHONY : 1277/fast
-
-#=============================================================================
-# Target rules for targets named 26Z
-
-# Build rule for target.
-26Z: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 26Z
-.PHONY : 26Z
-
-# fast build rule for target.
-26Z/fast:
-	$(MAKE) $(MAKESILENT) -f src/26Z/CMakeFiles/26Z.dir/build.make src/26Z/CMakeFiles/26Z.dir/build
-.PHONY : 26Z/fast
-
-#=============================================================================
-# Target rules for targets named 6Z
-
-# Build rule for target.
-6Z: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 6Z
-.PHONY : 6Z
-
-# fast build rule for target.
-6Z/fast:
-	$(MAKE) $(MAKESILENT) -f src/6Z/CMakeFiles/6Z.dir/build.make src/6Z/CMakeFiles/6Z.dir/build
-.PHONY : 6Z/fast
-
-#=============================================================================
-# Target rules for targets named 38Z
-
-# Build rule for target.
-38Z: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 38Z
-.PHONY : 38Z
-
-# fast build rule for target.
-38Z/fast:
-	$(MAKE) $(MAKESILENT) -f src/38Z/CMakeFiles/38Z.dir/build.make src/38Z/CMakeFiles/38Z.dir/build
-.PHONY : 38Z/fast
-
-#=============================================================================
-# Target rules for targets named 1
-
-# Build rule for target.
-1 : cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1
-.PHONY : 1
-
-# fast build rule for target.
-1/fast:
-	$(MAKE) $(MAKESILENT) -f src/1/CMakeFiles/1.dir/build.make src/1/CMakeFiles/1.dir/build
-.PHONY : 1/fast
-
-#=============================================================================
-# Target rules for targets named 15
-
-# Build rule for target.
-15: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 15
-.PHONY : 15
-
-# fast build rule for target.
-15/fast:
-	$(MAKE) $(MAKESILENT) -f src/15/CMakeFiles/15.dir/build.make src/15/CMakeFiles/15.dir/build
-.PHONY : 15/fast
-
-#=============================================================================
-# Target rules for targets named 20
-
-# Build rule for target.
-20: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 20
-.PHONY : 20
-
-# fast build rule for target.
-20/fast:
-	$(MAKE) $(MAKESILENT) -f src/20/CMakeFiles/20.dir/build.make src/20/CMakeFiles/20.dir/build
-.PHONY : 20/fast
-
-#=============================================================================
-# Target rules for targets named 31
-
-# Build rule for target.
-31: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 31
-.PHONY : 31
-
-# fast build rule for target.
-31/fast:
-	$(MAKE) $(MAKESILENT) -f src/31/CMakeFiles/31.dir/build.make src/31/CMakeFiles/31.dir/build
-.PHONY : 31/fast
-
-#=============================================================================
-# Target rules for targets named 33
-
-# Build rule for target.
-33: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 33
-.PHONY : 33
-
-# fast build rule for target.
-33/fast:
-	$(MAKE) $(MAKESILENT) -f src/33/CMakeFiles/33.dir/build.make src/33/CMakeFiles/33.dir/build
-.PHONY : 33/fast
-
-#=============================================================================
-# Target rules for targets named 46
-
-# Build rule for target.
-46: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 46
-.PHONY : 46
-
-# fast build rule for target.
-46/fast:
-	$(MAKE) $(MAKESILENT) -f src/46/CMakeFiles/46.dir/build.make src/46/CMakeFiles/46.dir/build
-.PHONY : 46/fast
-
-#=============================================================================
-# Target rules for targets named 53
-
-# Build rule for target.
-53: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 53
-.PHONY : 53
-
-# fast build rule for target.
-53/fast:
-	$(MAKE) $(MAKESILENT) -f src/53/CMakeFiles/53.dir/build.make src/53/CMakeFiles/53.dir/build
-.PHONY : 53/fast
-
-#=============================================================================
-# Target rules for targets named 54
-
-# Build rule for target.
-54: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 54
-.PHONY : 54
-
-# fast build rule for target.
-54/fast:
-	$(MAKE) $(MAKESILENT) -f src/54/CMakeFiles/54.dir/build.make src/54/CMakeFiles/54.dir/build
-.PHONY : 54/fast
-
-#=============================================================================
-# Target rules for targets named 60
-
-# Build rule for target.
-60: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 60
-.PHONY : 60
-
-# fast build rule for target.
-60/fast:
-	$(MAKE) $(MAKESILENT) -f src/60/CMakeFiles/60.dir/build.make src/60/CMakeFiles/60.dir/build
-.PHONY : 60/fast
-
-#=============================================================================
-# Target rules for targets named 102
-
-# Build rule for target.
-102: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 102
-.PHONY : 102
-
-# fast build rule for target.
-102/fast:
-	$(MAKE) $(MAKESILENT) -f src/102/CMakeFiles/102.dir/build.make src/102/CMakeFiles/102.dir/build
-.PHONY : 102/fast
-
-#=============================================================================
-# Target rules for targets named 102_2
-
-# Build rule for target.
-102_2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 102_2
-.PHONY : 102_2
-
-# fast build rule for target.
-102_2/fast:
-	$(MAKE) $(MAKESILENT) -f src/102_2/CMakeFiles/102_2.dir/build.make src/102_2/CMakeFiles/102_2.dir/build
-.PHONY : 102_2/fast
-
-#=============================================================================
-# Target rules for targets named 102_3
-
-# Build rule for target.
-102_3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 102_3
-.PHONY : 102_3
-
-# fast build rule for target.
-102_3/fast:
-	$(MAKE) $(MAKESILENT) -f src/102_3/CMakeFiles/102_3.dir/build.make src/102_3/CMakeFiles/102_3.dir/build
-.PHONY : 102_3/fast
-
-#=============================================================================
-# Target rules for targets named 103
-
-# Build rule for target.
-103: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 103
-.PHONY : 103
-
-# fast build rule for target.
-103/fast:
-	$(MAKE) $(MAKESILENT) -f src/103/CMakeFiles/103.dir/build.make src/103/CMakeFiles/103.dir/build
-.PHONY : 103/fast
-
-#=============================================================================
-# Target rules for targets named 103_2
-
-# Build rule for target.
-103_2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 103_2
-.PHONY : 103_2
-
-# fast build rule for target.
-103_2/fast:
-	$(MAKE) $(MAKESILENT) -f src/103_2/CMakeFiles/103_2.dir/build.make src/103_2/CMakeFiles/103_2.dir/build
-.PHONY : 103_2/fast
-
-#=============================================================================
-# Target rules for targets named 121
-
-# Build rule for target.
-121: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 121
-.PHONY : 121
-
-# fast build rule for target.
-121/fast:
-	$(MAKE) $(MAKESILENT) -f src/121/CMakeFiles/121.dir/build.make src/121/CMakeFiles/121.dir/build
-.PHONY : 121/fast
-
-#=============================================================================
-# Target rules for targets named 199
-
-# Build rule for target.
-199: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 199
-.PHONY : 199
-
-# fast build rule for target.
-199/fast:
-	$(MAKE) $(MAKESILENT) -f src/199/CMakeFiles/199.dir/build.make src/199/CMakeFiles/199.dir/build
-.PHONY : 199/fast
-
-#=============================================================================
-# Target rules for targets named 200
-
-# Build rule for target.
-200: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 200
-.PHONY : 200
-
-# fast build rule for target.
-200/fast:
-	$(MAKE) $(MAKESILENT) -f src/200/CMakeFiles/200.dir/build.make src/200/CMakeFiles/200.dir/build
-.PHONY : 200/fast
-
-#=============================================================================
-# Target rules for targets named 202_2
-
-# Build rule for target.
-202_2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 202_2
-.PHONY : 202_2
-
-# fast build rule for target.
-202_2/fast:
-	$(MAKE) $(MAKESILENT) -f src/202_2/CMakeFiles/202_2.dir/build.make src/202_2/CMakeFiles/202_2.dir/build
-.PHONY : 202_2/fast
-
-#=============================================================================
-# Target rules for targets named 215
-
-# Build rule for target.
-215: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 215
-.PHONY : 215
-
-# fast build rule for target.
-215/fast:
-	$(MAKE) $(MAKESILENT) -f src/215/CMakeFiles/215.dir/build.make src/215/CMakeFiles/215.dir/build
-.PHONY : 215/fast
-
-#=============================================================================
-# Target rules for targets named 236
-
-# Build rule for target.
-236: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 236
-.PHONY : 236
-
-# fast build rule for target.
-236/fast:
-	$(MAKE) $(MAKESILENT) -f src/236/CMakeFiles/236.dir/build.make src/236/CMakeFiles/236.dir/build
-.PHONY : 236/fast
-
-#=============================================================================
-# Target rules for targets named 1003
-
-# Build rule for target.
-1003: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1003
-.PHONY : 1003
-
-# fast build rule for target.
-1003/fast:
-	$(MAKE) $(MAKESILENT) -f src/1003/CMakeFiles/1003.dir/build.make src/1003/CMakeFiles/1003.dir/build
-.PHONY : 1003/fast
 
 #=============================================================================
 # Target rules for targets named Copy_structure
@@ -1677,45 +2002,6 @@ imgui1/fast:
 .PHONY : imgui1/fast
 
 #=============================================================================
-# Target rules for targets named 997
-
-# Build rule for target.
-997: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 997
-.PHONY : 997
-
-# fast build rule for target.
-997/fast:
-	$(MAKE) $(MAKESILENT) -f src/997/CMakeFiles/997.dir/build.make src/997/CMakeFiles/997.dir/build
-.PHONY : 997/fast
-
-#=============================================================================
-# Target rules for targets named 1791
-
-# Build rule for target.
-1791: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1791
-.PHONY : 1791
-
-# fast build rule for target.
-1791/fast:
-	$(MAKE) $(MAKESILENT) -f src/1791/CMakeFiles/1791.dir/build.make src/1791/CMakeFiles/1791.dir/build
-.PHONY : 1791/fast
-
-#=============================================================================
-# Target rules for targets named 1971
-
-# Build rule for target.
-1971: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 1971
-.PHONY : 1971
-
-# fast build rule for target.
-1971/fast:
-	$(MAKE) $(MAKESILENT) -f src/1971/CMakeFiles/1971.dir/build.make src/1971/CMakeFiles/1971.dir/build
-.PHONY : 1971/fast
-
-#=============================================================================
 # Target rules for targets named Disjoint-setDataStructure
 
 # Build rule for target.
@@ -1780,6 +2066,19 @@ unique_ptr/fast:
 	$(MAKE) $(MAKESILENT) -f src/unique_ptr/CMakeFiles/unique_ptr.dir/build.make src/unique_ptr/CMakeFiles/unique_ptr.dir/build
 .PHONY : unique_ptr/fast
 
+#=============================================================================
+# Target rules for targets named conditional
+
+# Build rule for target.
+conditional: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 conditional
+.PHONY : conditional
+
+# fast build rule for target.
+conditional/fast:
+	$(MAKE) $(MAKESILENT) -f src/conditional/CMakeFiles/conditional.dir/build.make src/conditional/CMakeFiles/conditional.dir/build
+.PHONY : conditional/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1797,11 +2096,16 @@ help:
 	@echo "... 103_2"
 	@echo "... 105"
 	@echo "... 121"
+	@echo "... 122"
 	@echo "... 1277"
 	@echo "... 129"
+	@echo "... 135"
 	@echo "... 141"
+	@echo "... 142"
 	@echo "... 148"
 	@echo "... 15"
+	@echo "... 154"
+	@echo "... 167"
 	@echo "... 1791"
 	@echo "... 1971"
 	@echo "... 199"
@@ -1815,16 +2119,32 @@ help:
 	@echo "... 26Z"
 	@echo "... 31"
 	@echo "... 33"
+	@echo "... 34"
+	@echo "... 347"
 	@echo "... 38Z"
 	@echo "... 417"
+	@echo "... 451"
+	@echo "... 452"
+	@echo "... 455"
 	@echo "... 46"
+	@echo "... 524"
 	@echo "... 53"
 	@echo "... 54"
+	@echo "... 540"
+	@echo "... 547"
 	@echo "... 56"
 	@echo "... 60"
+	@echo "... 605"
+	@echo "... 633"
+	@echo "... 680"
 	@echo "... 69"
+	@echo "... 695"
 	@echo "... 6Z"
 	@echo "... 718"
+	@echo "... 76"
+	@echo "... 763"
+	@echo "... 81"
+	@echo "... 88"
 	@echo "... 997"
 	@echo "... Copy_structure"
 	@echo "... DNS"
@@ -1851,6 +2171,7 @@ help:
 	@echo "... char"
 	@echo "... chrnon"
 	@echo "... class_template"
+	@echo "... conditional"
 	@echo "... dbg"
 	@echo "... dynamic_cast"
 	@echo "... enableShard"
@@ -1885,6 +2206,7 @@ help:
 	@echo "... packaged_task"
 	@echo "... popen"
 	@echo "... promise"
+	@echo "... quickSort"
 	@echo "... quoted"
 	@echo "... reference"
 	@echo "... reference_wrapper"

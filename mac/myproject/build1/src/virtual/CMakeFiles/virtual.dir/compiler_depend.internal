@@ -254,4 +254,45 @@ src/virtual/CMakeFiles/virtual.dir/src/main.cpp.o
  /usr/include/linux/close_range.h
  /usr/include/c++/11/optional
  /usr/include/c++/11/variant
+ /media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include/framework/Utils.h
+ /usr/include/boost/type_index.hpp
+ /usr/include/boost/config.hpp
+ /usr/include/boost/config/user.hpp
+ /usr/include/boost/config/detail/select_compiler_config.hpp
+ /usr/include/boost/config/compiler/gcc.hpp
+ /usr/include/c++/11/cstddef
+ /usr/include/boost/config/detail/select_stdlib_config.hpp
+ /usr/include/c++/11/version
+ /usr/include/boost/config/stdlib/libstdcpp3.hpp
+ /usr/include/boost/config/detail/select_platform_config.hpp
+ /usr/include/boost/config/platform/linux.hpp
+ /usr/include/boost/config/detail/posix_features.hpp
+ /usr/include/boost/config/detail/suffix.hpp
+ /usr/include/boost/config/helper_macros.hpp
+ /usr/include/boost/type_index/stl_type_index.hpp
+ /usr/include/boost/type_index/type_index_facade.hpp
+ /usr/include/boost/container_hash/hash_fwd.hpp
+ /usr/include/boost/config/workaround.hpp
+ /usr/include/c++/11/cstring
+ /usr/include/string.h
+ /usr/include/strings.h
+ /usr/include/boost/static_assert.hpp
+ /usr/include/boost/detail/workaround.hpp
+ /usr/include/boost/throw_exception.hpp
+ /usr/include/boost/assert/source_location.hpp
+ /usr/include/boost/current_function.hpp
+ /usr/include/boost/cstdint.hpp
+ /usr/include/boost/exception/exception.hpp
+ /usr/include/boost/core/demangle.hpp
+ /usr/include/c++/11/cxxabi.h
+ /usr/include/aarch64-linux-gnu/c++/11/bits/cxxabi_tweaks.h
+ /usr/include/boost/type_traits/conditional.hpp
+ /usr/include/boost/type_traits/is_const.hpp
+ /usr/include/boost/type_traits/integral_constant.hpp
+ /usr/include/boost/type_traits/is_reference.hpp
+ /usr/include/boost/type_traits/is_lvalue_reference.hpp
+ /usr/include/boost/type_traits/is_rvalue_reference.hpp
+ /usr/include/boost/type_traits/is_volatile.hpp
+ /usr/include/boost/type_traits/remove_cv.hpp
+ /usr/include/boost/type_traits/remove_reference.hpp
 

@@ -135,6 +135,306 @@
   "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/src/sqlite3ppext.cpp"
 },
 {
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/22",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/22/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/22.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/22/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/22/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/56",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/56/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/56.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/56/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/56/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/105",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/105/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/105.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/105/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/105/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/129",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/129/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/129.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/129/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/129/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/141",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/141/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/141.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/141/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/141/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/148",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/148/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/148.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/148/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/148/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/211",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/211/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/211.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/211/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/211/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/718",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/718/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/718.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/718/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/718/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/1277",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1277/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/1277.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1277/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1277/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/26Z",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/26Z/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/26Z.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/26Z/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/26Z/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/6Z",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/6Z/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/6Z.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/6Z/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/6Z/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/38Z",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/38Z/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/38Z.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/38Z/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/38Z/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/1",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/1.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/15",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/15/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/15.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/15/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/15/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/20",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/20/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/20.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/20/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/20/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/31",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/31/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/31.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/31/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/31/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/33",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/33/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/33.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/33/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/33/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/46",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/46/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/46.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/46/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/46/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/53",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/53/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/53.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/53/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/53/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/54",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/54/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/54.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/54/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/54/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/60",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/60/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/60.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/60/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/60/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/102",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/102/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/102.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/102/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/102/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/102_2",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/102_2/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/102_2.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/102_2/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/102_2/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/102_3",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/102_3/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/102_3.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/102_3/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/102_3/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/103",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/103/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/103.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/103/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/103/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/103_2",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/103_2/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/103_2.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/103_2/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/103_2/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/121",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/121/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/121.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/121/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/121/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/199",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/199/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/199.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/199/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/199/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/200",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/200/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/200.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/200/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/200/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/202_2",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/202_2/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/202_2.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/202_2/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/202_2/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/236",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/236/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/236.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/236/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/236/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/1003",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1003/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/1003.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1003/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1003/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/997",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/997/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/997.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/997/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/997/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/1791",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1791/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/1791.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1791/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1791/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/1971",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1971/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/1971.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1971/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/1971/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/455",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/455/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/455.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/455/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/455/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/135",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/135/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/135.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/135/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/135/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/605",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/605/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/605.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/605/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/605/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/452",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/452/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/452.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/452/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/452/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/763",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/763/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/763.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/763/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/763/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/122",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/122/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/122.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/122/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/122/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/167",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/167/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/167.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/167/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/167/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/88",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/88/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/88.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/88/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/88/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/142",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/142/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/142.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/142/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/142/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/76",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/76/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/76.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/76/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/76/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/633",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/633/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/633.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/633/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/633/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/680",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/680/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/680.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/680/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/680/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/524",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/524/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/524.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/524/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/524/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/69",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/69/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/69.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/69/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/69/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/34",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/34/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/34.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/34/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/34/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/81",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/81/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/81.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/81/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/81/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/154",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/154/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/154.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/154/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/154/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/540",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/540/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/540.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/540/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/540/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/quickSort",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/quickSort/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/quickSort.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/quickSort/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/quickSort/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/215",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/215/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/215.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/215/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/215/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/347",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/347/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/347.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/347/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/347/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/451",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/451/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/451.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/451/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/451/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/695",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/695/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess -O0 -g3 -std=gnu++17 -o CMakeFiles/695.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/695/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/695/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/547",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/547/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/547.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/547/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/547/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/DataStructure/417",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/417/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/417.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/417/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/DataStructure/417/src/main.cpp"
+},
+{
   "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/Test",
   "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/Test/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/Test.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/Test/src/main.cpp",
   "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/Test/src/main.cpp"
@@ -183,181 +483,6 @@
   "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/addressof",
   "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/addressof/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/addressof.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/addressof/src/main.cpp",
   "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/addressof/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/22",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/22/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/22.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/22/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/22/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/56",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/56/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/56.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/56/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/56/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/69",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/69/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/69.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/69/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/69/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/105",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/105/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/105.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/105/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/105/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/129",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/129/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/129.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/129/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/129/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/141",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/141/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/141.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/141/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/141/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/148",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/148/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/148.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/148/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/148/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/211",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/211/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/211.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/211/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/211/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/417",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/417/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/417.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/417/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/417/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/718",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/718/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/718.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/718/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/718/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/1277",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/1277/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/1277.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/1277/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/1277/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/26Z",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/26Z/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/26Z.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/26Z/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/26Z/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/6Z",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/6Z/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/6Z.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/6Z/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/6Z/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/38Z",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/38Z/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/38Z.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/38Z/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/38Z/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/1",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/1/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/1.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/1/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/1/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/15",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/15/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/15.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/15/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/15/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/20",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/20/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/20.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/20/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/20/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/31",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/31/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/31.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/31/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/31/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/33",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/33/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/33.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/33/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/33/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/46",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/46/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/46.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/46/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/46/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/53",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/53/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/53.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/53/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/53/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/54",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/54/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/54.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/54/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/54/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/60",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/60/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/60.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/60/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/60/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/102",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/102/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/102.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/102/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/102/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/102_2",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/102_2/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/102_2.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/102_2/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/102_2/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/102_3",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/102_3/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/102_3.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/102_3/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/102_3/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/103",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/103/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/103.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/103/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/103/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/103_2",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/103_2/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/103_2.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/103_2/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/103_2/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/121",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/121/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/121.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/121/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/121/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/199",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/199/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/199.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/199/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/199/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/200",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/200/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/200.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/200/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/200/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/202_2",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/202_2/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/202_2.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/202_2/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/202_2/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/215",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/215/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/215.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/215/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/215/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/236",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/236/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/236.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/236/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/236/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/1003",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/1003/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/1003.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/1003/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/1003/src/main.cpp"
 },
 {
   "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/Copy_structure",
@@ -730,21 +855,6 @@
   "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/imgui/src/window.cpp"
 },
 {
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/997",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/997/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/997.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/997/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/997/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/1791",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/1791/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/1791.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/1791/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/1791/src/main.cpp"
-},
-{
-  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/1971",
-  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/1971/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/1971.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/1971/src/main.cpp",
-  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/1971/src/main.cpp"
-},
-{
   "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/Disjoint-setDataStructure",
   "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/Disjoint-setDataStructure/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/Disjoint-setDataStructure.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/Disjoint-setDataStructure/src/main.cpp",
   "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/Disjoint-setDataStructure/src/main.cpp"
@@ -768,5 +878,10 @@
   "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/unique_ptr",
   "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/unique_ptr/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/unique_ptr.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/unique_ptr/src/main.cpp",
   "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/unique_ptr/src/main.cpp"
+},
+{
+  "directory": "/media/psf/Home/Desktop/git/C-/mac/myproject/build1/src/conditional",
+  "command": "/usr/bin/c++  -I/media/psf/Home/Desktop/git/C-/mac/myproject/src/conditional/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include -I/media/psf/Home/Desktop/git/C-/mac/myproject/external/subprocess/../subprocess  -save-temps=obj -std=gnu++17 -o CMakeFiles/conditional.dir/src/main.cpp.o -c /media/psf/Home/Desktop/git/C-/mac/myproject/src/conditional/src/main.cpp",
+  "file": "/media/psf/Home/Desktop/git/C-/mac/myproject/src/conditional/src/main.cpp"
 }
 ]

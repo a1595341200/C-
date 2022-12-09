@@ -6,6 +6,7 @@ import os
 
 work_path = "/Users/xieyao/Desktop/git/C-/mac/myproject/code_generation"
 
+
 class code_gen():
     def __init__(self, name, subdir=''):
         self.code_template_raw = None
@@ -19,12 +20,14 @@ class code_gen():
             self.path = self.path.replace("code_generation", "src/") + self.name
         else:
             self.path = self.path.replace("code_generation", "src/") + subdir + "/" + self.name
-        self.make_dir(subdir)
-        self.get_cmake_template(name)
-        self.get_code_template()
-        self.out_put_cmake_file(subdir)
-        self.out_put_main_file(subdir)
-        self.add_to_project(subdir)
+        if self.make_dir(subdir):
+            self.get_cmake_template(name)
+            self.get_code_template()
+            self.out_put_cmake_file(subdir)
+            self.out_put_main_file(subdir)
+            self.add_to_project(subdir)
+        else:
+            print("目录已经存在")
 
     def add_to_project(self, subdir):
         fo = open(os.path.abspath(os.path.join(self.path, "../CMakeLists.txt")), "a")
@@ -57,13 +60,15 @@ class code_gen():
     def make_dir(self, subdir):
         if os.path.exists(self.path):
             print("目录", self.path, "已存在")
+            return False
         else:
             os.mkdir(self.path, 0o755)
             os.mkdir(self.path + "/include", 0o755)
             os.mkdir(self.path + "/src", 0o755)
+            return True
 
 
 if __name__ == '__main__':
     dataStructure = "DataStructure"
-    p = code_gen("142", dataStructure)
+    p = code_gen("77", dataStructure)
     # p = code_gen("2")

@@ -387,7 +387,7 @@ _ZNK3dbg11DebugOutput4ansiEPKc:
 	.weak	_ZN3dbg11DebugOutputD2Ev
 	.type	_ZN3dbg11DebugOutputD2Ev, %function
 _ZN3dbg11DebugOutputD2Ev:
-.LFB4583:
+.LFB4758:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -405,7 +405,7 @@ _ZN3dbg11DebugOutputD2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4583:
+.LFE4758:
 	.size	_ZN3dbg11DebugOutputD2Ev, .-_ZN3dbg11DebugOutputD2Ev
 	.weak	_ZN3dbg11DebugOutputD1Ev
 	.set	_ZN3dbg11DebugOutputD1Ev,_ZN3dbg11DebugOutputD2Ev
@@ -424,10 +424,10 @@ _ZN3dbg11DebugOutputD2Ev:
 	.weak	_ZN4BaseD2Ev
 	.type	_ZN4BaseD2Ev, %function
 _ZN4BaseD2Ev:
-.LFB4585:
+.LFB4760:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4585
+	.cfi_lsda 0x1b,.LLSDA4760
 	stp	x29, x30, [sp, -176]!
 	.cfi_def_cfa_offset 176
 	.cfi_offset 29, -176
@@ -454,7 +454,7 @@ _ZN4BaseD2Ev:
 	add	x4, sp, 128
 	adrp	x0, .LC8
 	add	x3, x0, :lo12:.LC8
-	mov	w2, 7
+	mov	w2, 10
 	adrp	x0, .LC9
 	add	x1, x0, :lo12:.LC9
 	mov	x0, x4
@@ -518,15 +518,15 @@ _ZN4BaseD2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4585:
+.LFE4760:
 	.section	.gcc_except_table._ZN4BaseD2Ev,"aG",@progbits,_ZN4BaseD5Ev,comdat
-.LLSDA4585:
+.LLSDA4760:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4585-.LLSDACSB4585
-.LLSDACSB4585:
-.LLSDACSE4585:
+	.uleb128 .LLSDACSE4760-.LLSDACSB4760
+.LLSDACSB4760:
+.LLSDACSE4760:
 	.section	.text._ZN4BaseD2Ev,"axG",@progbits,_ZN4BaseD5Ev,comdat
 	.size	_ZN4BaseD2Ev, .-_ZN4BaseD2Ev
 	.weak	_ZN4BaseD1Ev
@@ -536,7 +536,7 @@ _ZN4BaseD2Ev:
 	.weak	_ZN4BaseD0Ev
 	.type	_ZN4BaseD0Ev, %function
 _ZN4BaseD0Ev:
-.LFB4587:
+.LFB4762:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -555,14 +555,53 @@ _ZN4BaseD0Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4587:
+.LFE4762:
 	.size	_ZN4BaseD0Ev, .-_ZN4BaseD0Ev
+	.section	.rodata
+	.align	3
+.LC11:
+	.string	"base"
+	.section	.text._ZN4Base4showEv,"axG",@progbits,_ZN4Base4showEv,comdat
+	.align	2
+	.weak	_ZN4Base4showEv
+	.type	_ZN4Base4showEv, %function
+_ZN4Base4showEv:
+.LFB4763:
+	.cfi_startproc
+	stp	x29, x30, [sp, -32]!
+	.cfi_def_cfa_offset 32
+	.cfi_offset 29, -32
+	.cfi_offset 30, -24
+	mov	x29, sp
+	str	x0, [sp, 24]
+	mov	x1, 4
+	adrp	x0, .LC11
+	add	x0, x0, :lo12:.LC11
+	bl	_Zli2_pPKcm
+	ldr	x1, [sp, 24]
+	adrp	x0, :got:_ZSt4cout
+	ldr	x0, [x0, #:got_lo12:_ZSt4cout]
+	bl	_ZNSolsEPKv
+	mov	x2, x0
+	adrp	x0, :got:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+	ldr	x1, [x0, #:got_lo12:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_]
+	mov	x0, x2
+	bl	_ZNSolsEPFRSoS_E
+	nop
+	ldp	x29, x30, [sp], 32
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_def_cfa_offset 0
+	ret
+	.cfi_endproc
+.LFE4763:
+	.size	_ZN4Base4showEv, .-_ZN4Base4showEv
 	.section	.text._ZN4BaseC2Ev,"axG",@progbits,_ZN4BaseC5Ev,comdat
 	.align	2
 	.weak	_ZN4BaseC2Ev
 	.type	_ZN4BaseC2Ev, %function
 _ZN4BaseC2Ev:
-.LFB4590:
+.LFB4766:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -576,7 +615,7 @@ _ZN4BaseC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4590:
+.LFE4766:
 	.size	_ZN4BaseC2Ev, .-_ZN4BaseC2Ev
 	.weak	_ZN4BaseC1Ev
 	.set	_ZN4BaseC1Ev,_ZN4BaseC2Ev
@@ -585,7 +624,7 @@ _ZN4BaseC2Ev:
 	.weak	_ZN1DC2Ev
 	.type	_ZN1DC2Ev, %function
 _ZN1DC2Ev:
-.LFB4592:
+.LFB4768:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -606,26 +645,67 @@ _ZN1DC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4592:
+.LFE4768:
 	.size	_ZN1DC2Ev, .-_ZN1DC2Ev
 	.weak	_ZN1DC1Ev
 	.set	_ZN1DC1Ev,_ZN1DC2Ev
 	.section	.rodata
 	.align	3
-.LC11:
+.LC12:
+	.string	"D"
+	.section	.text._ZN1D4showEv,"axG",@progbits,_ZN1D4showEv,comdat
+	.align	2
+	.weak	_ZN1D4showEv
+	.type	_ZN1D4showEv, %function
+_ZN1D4showEv:
+.LFB4770:
+	.cfi_startproc
+	stp	x29, x30, [sp, -32]!
+	.cfi_def_cfa_offset 32
+	.cfi_offset 29, -32
+	.cfi_offset 30, -24
+	mov	x29, sp
+	str	x0, [sp, 24]
+	mov	x1, 1
+	adrp	x0, .LC12
+	add	x0, x0, :lo12:.LC12
+	bl	_Zli2_pPKcm
+	ldr	x1, [sp, 24]
+	adrp	x0, :got:_ZSt4cout
+	ldr	x0, [x0, #:got_lo12:_ZSt4cout]
+	bl	_ZNSolsEPKv
+	mov	x2, x0
+	adrp	x0, :got:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+	ldr	x1, [x0, #:got_lo12:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_]
+	mov	x0, x2
+	bl	_ZNSolsEPFRSoS_E
+	ldr	x0, [sp, 24]
+	bl	_ZN4Base4showEv
+	nop
+	ldp	x29, x30, [sp], 32
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_def_cfa_offset 0
+	ret
+	.cfi_endproc
+.LFE4770:
+	.size	_ZN1D4showEv, .-_ZN1D4showEv
+	.section	.rodata
+	.align	3
+.LC13:
 	.string	"~D"
 	.align	3
-.LC12:
+.LC14:
 	.string	"2"
 	.section	.text._ZN1DD2Ev,"axG",@progbits,_ZN1DD5Ev,comdat
 	.align	2
 	.weak	_ZN1DD2Ev
 	.type	_ZN1DD2Ev, %function
 _ZN1DD2Ev:
-.LFB4595:
+.LFB4772:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4595
+	.cfi_lsda 0x1b,.LLSDA4772
 	stp	x29, x30, [sp, -176]!
 	.cfi_def_cfa_offset 176
 	.cfi_offset 29, -176
@@ -650,15 +730,15 @@ _ZN1DD2Ev:
 	ldr	x0, [sp, 72]
 	str	x1, [x0]
 	add	x4, sp, 128
-	adrp	x0, .LC11
-	add	x3, x0, :lo12:.LC11
-	mov	w2, 15
+	adrp	x0, .LC13
+	add	x3, x0, :lo12:.LC13
+	mov	w2, 30
 	adrp	x0, .LC9
 	add	x1, x0, :lo12:.LC9
 	mov	x0, x4
 	bl	_ZN3dbg11DebugOutputC1EPKciS2_
-	adrp	x0, .LC12
-	add	x0, x0, :lo12:.LC12
+	adrp	x0, .LC14
+	add	x0, x0, :lo12:.LC14
 	str	x0, [sp, 88]
 	add	x0, sp, 88
 	mov	x20, x0
@@ -681,15 +761,15 @@ _ZN1DD2Ev:
 	bl	_ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEDpOS3_
 	add	x19, sp, 96
 	add	x19, x19, 32
-.L33:
+.L35:
 	add	x0, sp, 96
 	cmp	x19, x0
-	beq	.L32
+	beq	.L34
 	sub	x19, x19, #32
 	mov	x0, x19
 	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
-	b	.L33
-.L32:
+	b	.L35
+.L34:
 	add	x0, sp, 128
 	bl	_ZN3dbg11DebugOutputD1Ev
 	ldr	x0, [sp, 72]
@@ -701,9 +781,9 @@ _ZN1DD2Ev:
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L34
+	beq	.L36
 	bl	__stack_chk_fail
-.L34:
+.L36:
 	ldp	x19, x20, [sp, 16]
 	ldp	x21, x22, [sp, 32]
 	ldr	x23, [sp, 48]
@@ -718,15 +798,15 @@ _ZN1DD2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4595:
+.LFE4772:
 	.section	.gcc_except_table._ZN1DD2Ev,"aG",@progbits,_ZN1DD5Ev,comdat
-.LLSDA4595:
+.LLSDA4772:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4595-.LLSDACSB4595
-.LLSDACSB4595:
-.LLSDACSE4595:
+	.uleb128 .LLSDACSE4772-.LLSDACSB4772
+.LLSDACSB4772:
+.LLSDACSE4772:
 	.section	.text._ZN1DD2Ev,"axG",@progbits,_ZN1DD5Ev,comdat
 	.size	_ZN1DD2Ev, .-_ZN1DD2Ev
 	.weak	_ZN1DD1Ev
@@ -736,7 +816,7 @@ _ZN1DD2Ev:
 	.weak	_ZN1DD0Ev
 	.type	_ZN1DD0Ev, %function
 _ZN1DD0Ev:
-.LFB4597:
+.LFB4774:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -755,24 +835,24 @@ _ZN1DD0Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4597:
+.LFE4774:
 	.size	_ZN1DD0Ev, .-_ZN1DD0Ev
 	.section	.rodata
 	.align	3
-.LC13:
+.LC15:
 	.string	"~A"
 	.align	3
-.LC14:
+.LC16:
 	.string	"3"
 	.section	.text._ZN1AD2Ev,"axG",@progbits,_ZN1AD5Ev,comdat
 	.align	2
 	.weak	_ZN1AD2Ev
 	.type	_ZN1AD2Ev, %function
 _ZN1AD2Ev:
-.LFB4599:
+.LFB4776:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4599
+	.cfi_lsda 0x1b,.LLSDA4776
 	stp	x29, x30, [sp, -176]!
 	.cfi_def_cfa_offset 176
 	.cfi_offset 29, -176
@@ -797,15 +877,15 @@ _ZN1AD2Ev:
 	ldr	x0, [sp, 72]
 	str	x1, [x0]
 	add	x4, sp, 128
-	adrp	x0, .LC13
-	add	x3, x0, :lo12:.LC13
-	mov	w2, 21
+	adrp	x0, .LC15
+	add	x3, x0, :lo12:.LC15
+	mov	w2, 37
 	adrp	x0, .LC9
 	add	x1, x0, :lo12:.LC9
 	mov	x0, x4
 	bl	_ZN3dbg11DebugOutputC1EPKciS2_
-	adrp	x0, .LC14
-	add	x0, x0, :lo12:.LC14
+	adrp	x0, .LC16
+	add	x0, x0, :lo12:.LC16
 	str	x0, [sp, 88]
 	add	x0, sp, 88
 	mov	x20, x0
@@ -828,15 +908,15 @@ _ZN1AD2Ev:
 	bl	_ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEDpOS3_
 	add	x19, sp, 96
 	add	x19, x19, 32
-.L38:
+.L40:
 	add	x0, sp, 96
 	cmp	x19, x0
-	beq	.L37
+	beq	.L39
 	sub	x19, x19, #32
 	mov	x0, x19
 	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
-	b	.L38
-.L37:
+	b	.L40
+.L39:
 	add	x0, sp, 128
 	bl	_ZN3dbg11DebugOutputD1Ev
 	ldr	x0, [sp, 72]
@@ -848,9 +928,9 @@ _ZN1AD2Ev:
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L39
+	beq	.L41
 	bl	__stack_chk_fail
-.L39:
+.L41:
 	ldp	x19, x20, [sp, 16]
 	ldp	x21, x22, [sp, 32]
 	ldr	x23, [sp, 48]
@@ -865,15 +945,15 @@ _ZN1AD2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4599:
+.LFE4776:
 	.section	.gcc_except_table._ZN1AD2Ev,"aG",@progbits,_ZN1AD5Ev,comdat
-.LLSDA4599:
+.LLSDA4776:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4599-.LLSDACSB4599
-.LLSDACSB4599:
-.LLSDACSE4599:
+	.uleb128 .LLSDACSE4776-.LLSDACSB4776
+.LLSDACSB4776:
+.LLSDACSE4776:
 	.section	.text._ZN1AD2Ev,"axG",@progbits,_ZN1AD5Ev,comdat
 	.size	_ZN1AD2Ev, .-_ZN1AD2Ev
 	.weak	_ZN1AD1Ev
@@ -883,7 +963,7 @@ _ZN1AD2Ev:
 	.weak	_ZN1AD0Ev
 	.type	_ZN1AD0Ev, %function
 _ZN1AD0Ev:
-.LFB4601:
+.LFB4778:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -902,14 +982,14 @@ _ZN1AD0Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4601:
+.LFE4778:
 	.size	_ZN1AD0Ev, .-_ZN1AD0Ev
 	.section	.text._ZN1AC2Ev,"axG",@progbits,_ZN1AC5Ev,comdat
 	.align	2
 	.weak	_ZN1AC2Ev
 	.type	_ZN1AC2Ev, %function
 _ZN1AC2Ev:
-.LFB4604:
+.LFB4781:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -930,7 +1010,7 @@ _ZN1AC2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4604:
+.LFE4781:
 	.size	_ZN1AC2Ev, .-_ZN1AC2Ev
 	.weak	_ZN1AC1Ev
 	.set	_ZN1AC1Ev,_ZN1AC2Ev
@@ -939,7 +1019,7 @@ _ZN1AC2Ev:
 	.global	main
 	.type	main, %function
 main:
-.LFB4602:
+.LFB4779:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -958,13 +1038,19 @@ main:
 	bl	_ZN1AC1Ev
 	str	x19, [sp, 56]
 	ldr	x0, [sp, 56]
+	ldr	x0, [x0]
+	add	x0, x0, 16
+	ldr	x1, [x0]
+	ldr	x0, [sp, 56]
+	blr	x1
+	ldr	x0, [sp, 56]
 	cmp	x0, 0
-	beq	.L43
+	beq	.L45
 	ldr	x1, [x0]
 	add	x1, x1, 8
 	ldr	x1, [x1]
 	blr	x1
-.L43:
+.L45:
 	mov	w0, 0
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 64
@@ -974,14 +1060,14 @@ main:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4602:
+.LFE4779:
 	.size	main, .-main
 	.section	.text._ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_,"axG",@progbits,_ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_
 	.type	_ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_, %function
 _ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_:
-.LFB4607:
+.LFB4784:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -998,14 +1084,14 @@ _ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4607:
+.LFE4784:
 	.size	_ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_, .-_ZN9__gnu_cxx11char_traitsIcE2eqERKcS3_
 	.section	.text._ZN9__gnu_cxx11char_traitsIcE6lengthEPKc,"axG",@progbits,_ZN9__gnu_cxx11char_traitsIcE6lengthEPKc,comdat
 	.align	2
 	.weak	_ZN9__gnu_cxx11char_traitsIcE6lengthEPKc
 	.type	_ZN9__gnu_cxx11char_traitsIcE6lengthEPKc, %function
 _ZN9__gnu_cxx11char_traitsIcE6lengthEPKc:
-.LFB4606:
+.LFB4783:
 	.cfi_startproc
 	stp	x29, x30, [sp, -64]!
 	.cfi_def_cfa_offset 64
@@ -1019,12 +1105,12 @@ _ZN9__gnu_cxx11char_traitsIcE6lengthEPKc:
 	str	x1, [sp, 56]
 	mov	x1, 0
 	str	xzr, [sp, 48]
-	b	.L48
-.L49:
+	b	.L50
+.L51:
 	ldr	x0, [sp, 48]
 	add	x0, x0, 1
 	str	x0, [sp, 48]
-.L48:
+.L50:
 	ldr	x1, [sp, 24]
 	ldr	x0, [sp, 48]
 	add	x0, x1, x0
@@ -1035,7 +1121,7 @@ _ZN9__gnu_cxx11char_traitsIcE6lengthEPKc:
 	eor	w0, w0, 1
 	and	w0, w0, 255
 	cmp	w0, 0
-	bne	.L49
+	bne	.L51
 	ldr	x0, [sp, 48]
 	mov	x1, x0
 	adrp	x0, :got:__stack_chk_guard
@@ -1044,9 +1130,9 @@ _ZN9__gnu_cxx11char_traitsIcE6lengthEPKc:
 	ldr	x2, [x0]
 	subs	x3, x3, x2
 	mov	x2, 0
-	beq	.L51
+	beq	.L53
 	bl	__stack_chk_fail
-.L51:
+.L53:
 	mov	x0, x1
 	ldp	x29, x30, [sp], 64
 	.cfi_restore 30
@@ -1054,14 +1140,14 @@ _ZN9__gnu_cxx11char_traitsIcE6lengthEPKc:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4606:
+.LFE4783:
 	.size	_ZN9__gnu_cxx11char_traitsIcE6lengthEPKc, .-_ZN9__gnu_cxx11char_traitsIcE6lengthEPKc
 	.section	.text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD2Ev,"axG",@progbits,_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD5Ev,comdat
 	.align	2
 	.weak	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD2Ev
 	.type	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD2Ev, %function
 _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD2Ev:
-.LFB4714:
+.LFB4891:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -1078,7 +1164,7 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD2Ev:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4714:
+.LFE4891:
 	.size	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD2Ev, .-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD2Ev
 	.weak	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD1Ev
 	.set	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD1Ev,_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD2Ev
@@ -1087,7 +1173,7 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD2Ev:
 	.weak	_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_
 	.type	_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_, %function
 _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_:
-.LFB4863:
+.LFB5040:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -1116,14 +1202,14 @@ _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4863:
+.LFE5040:
 	.size	_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_, .-_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_
 	.section	.text._ZSt7forwardIiEOT_RNSt16remove_referenceIS0_E4typeE,"axG",@progbits,_ZSt7forwardIiEOT_RNSt16remove_referenceIS0_E4typeE,comdat
 	.align	2
 	.weak	_ZSt7forwardIiEOT_RNSt16remove_referenceIS0_E4typeE
 	.type	_ZSt7forwardIiEOT_RNSt16remove_referenceIS0_E4typeE, %function
 _ZSt7forwardIiEOT_RNSt16remove_referenceIS0_E4typeE:
-.LFB4871:
+.LFB5048:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -1133,17 +1219,17 @@ _ZSt7forwardIiEOT_RNSt16remove_referenceIS0_E4typeE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4871:
+.LFE5048:
 	.size	_ZSt7forwardIiEOT_RNSt16remove_referenceIS0_E4typeE, .-_ZSt7forwardIiEOT_RNSt16remove_referenceIS0_E4typeE
 	.section	.text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_,"axG",@progbits,_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC5IS3_EEPKcRKS3_,comdat
 	.align	2
 	.weak	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_
 	.type	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_, %function
 _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_:
-.LFB4917:
+.LFB5094:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA4917
+	.cfi_lsda 0x1b,.LLSDA5094
 	stp	x29, x30, [sp, -96]!
 	.cfi_def_cfa_offset 96
 	.cfi_offset 29, -96
@@ -1171,17 +1257,17 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_:
 .LEHE6:
 	ldr	x0, [sp, 48]
 	cmp	x0, 0
-	beq	.L58
+	beq	.L60
 	ldr	x0, [sp, 48]
 .LEHB7:
 	bl	_ZNSt11char_traitsIcE6lengthEPKc
 	mov	x1, x0
 	ldr	x0, [sp, 48]
 	add	x0, x0, x1
-	b	.L59
-.L58:
+	b	.L61
+.L60:
 	mov	x0, 1
-.L59:
+.L61:
 	str	x0, [sp, 80]
 	mov	w3, w20
 	ldr	x2, [sp, 80]
@@ -1189,8 +1275,8 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_:
 	ldr	x0, [sp, 56]
 	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag
 .LEHE7:
-	b	.L63
-.L62:
+	b	.L65
+.L64:
 	mov	x19, x0
 	ldr	x0, [sp, 56]
 	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD1Ev
@@ -1198,16 +1284,16 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_:
 .LEHB8:
 	bl	_Unwind_Resume
 .LEHE8:
-.L63:
+.L65:
 	adrp	x0, :got:__stack_chk_guard
 	ldr	x0, [x0, #:got_lo12:__stack_chk_guard]
 	ldr	x2, [sp, 88]
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L61
+	beq	.L63
 	bl	__stack_chk_fail
-.L61:
+.L63:
 	ldp	x19, x20, [sp, 16]
 	ldp	x29, x30, [sp], 96
 	.cfi_restore 30
@@ -1217,27 +1303,27 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4917:
+.LFE5094:
 	.section	.gcc_except_table._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_,"aG",@progbits,_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC5IS3_EEPKcRKS3_,comdat
-.LLSDA4917:
+.LLSDA5094:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4917-.LLSDACSB4917
-.LLSDACSB4917:
-	.uleb128 .LEHB6-.LFB4917
+	.uleb128 .LLSDACSE5094-.LLSDACSB5094
+.LLSDACSB5094:
+	.uleb128 .LEHB6-.LFB5094
 	.uleb128 .LEHE6-.LEHB6
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB7-.LFB4917
+	.uleb128 .LEHB7-.LFB5094
 	.uleb128 .LEHE7-.LEHB7
-	.uleb128 .L62-.LFB4917
+	.uleb128 .L64-.LFB5094
 	.uleb128 0
-	.uleb128 .LEHB8-.LFB4917
+	.uleb128 .LEHB8-.LFB5094
 	.uleb128 .LEHE8-.LEHB8
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE4917:
+.LLSDACSE5094:
 	.section	.text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_,"axG",@progbits,_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC5IS3_EEPKcRKS3_,comdat
 	.size	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_, .-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_
 	.weak	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1IS3_EEPKcRKS3_
@@ -1247,7 +1333,7 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IS3_EEPKcRKS3_:
 	.weak	_ZN3dbg9type_nameIiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEv
 	.type	_ZN3dbg9type_nameIiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEv, %function
 _ZN3dbg9type_nameIiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEv:
-.LFB4952:
+.LFB5145:
 	.cfi_startproc
 	stp	x29, x30, [sp, -80]!
 	.cfi_def_cfa_offset 80
@@ -1271,9 +1357,9 @@ _ZN3dbg9type_nameIiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEv:
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L66
+	beq	.L68
 	bl	__stack_chk_fail
-.L66:
+.L68:
 	mov	x0, x19
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 80
@@ -1283,14 +1369,14 @@ _ZN3dbg9type_nameIiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4952:
+.LFE5145:
 	.size	_ZN3dbg9type_nameIiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEv, .-_ZN3dbg9type_nameIiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEv
 	.section	.text._ZNKSt16initializer_listIPKcE4sizeEv,"axG",@progbits,_ZNKSt16initializer_listIPKcE4sizeEv,comdat
 	.align	2
 	.weak	_ZNKSt16initializer_listIPKcE4sizeEv
 	.type	_ZNKSt16initializer_listIPKcE4sizeEv, %function
 _ZNKSt16initializer_listIPKcE4sizeEv:
-.LFB4954:
+.LFB5147:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -1301,21 +1387,21 @@ _ZNKSt16initializer_listIPKcE4sizeEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4954:
+.LFE5147:
 	.size	_ZNKSt16initializer_listIPKcE4sizeEv, .-_ZNKSt16initializer_listIPKcE4sizeEv
 	.section	.rodata
 	.align	3
-.LC15:
+.LC17:
 	.string	"\033[33m"
 	.align	3
-.LC16:
+.LC18:
 	.string	"The number of arguments mismatch, please check unprotected comma"
 	.section	.text._ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEDpOS3_,"axG",@progbits,_ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEDpOS3_,comdat
 	.align	2
 	.weak	_ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEDpOS3_
 	.type	_ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEDpOS3_, %function
 _ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEDpOS3_:
-.LFB4953:
+.LFB5146:
 	.cfi_startproc
 	stp	x29, x30, [sp, -80]!
 	.cfi_def_cfa_offset 80
@@ -1335,7 +1421,7 @@ _ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_
 	cset	w0, ne
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L70
+	beq	.L72
 	ldr	x0, [sp, 72]
 	add	x0, x0, 8
 	mov	x1, x0
@@ -1343,16 +1429,16 @@ _ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_
 	ldr	x0, [x0, #:got_lo12:_ZSt4cerr]
 	bl	_ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE
 	mov	x19, x0
-	adrp	x0, .LC15
-	add	x1, x0, :lo12:.LC15
+	adrp	x0, .LC17
+	add	x1, x0, :lo12:.LC17
 	ldr	x0, [sp, 72]
 	bl	_ZNK3dbg11DebugOutput4ansiEPKc
 	mov	x1, x0
 	mov	x0, x19
 	bl	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
 	mov	x2, x0
-	adrp	x0, .LC16
-	add	x1, x0, :lo12:.LC16
+	adrp	x0, .LC18
+	add	x1, x0, :lo12:.LC18
 	mov	x0, x2
 	bl	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
 	mov	x19, x0
@@ -1368,7 +1454,7 @@ _ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_
 	ldr	x1, [x0, #:got_lo12:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_]
 	mov	x0, x2
 	bl	_ZNSolsEPFRSoS_E
-.L70:
+.L72:
 	add	x0, sp, 56
 	bl	_ZNKSt16initializer_listIPKcE5beginEv
 	mov	x19, x0
@@ -1392,14 +1478,14 @@ _ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE4953:
+.LFE5146:
 	.size	_ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEDpOS3_, .-_ZN3dbg11DebugOutput5printIJiEEENS_4lastIDpT_E4typeESt16initializer_listIPKcES7_INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEDpOS3_
 	.section	.text._ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_,"axG",@progbits,_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_,comdat
 	.align	2
 	.weak	_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_
 	.type	_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_, %function
 _ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_:
-.LFB5029:
+.LFB5225:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -1409,14 +1495,14 @@ _ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_ref
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5029:
+.LFE5225:
 	.size	_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_, .-_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_
 	.section	.text._ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_,"axG",@progbits,_ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_,comdat
 	.align	2
 	.weak	_ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_
 	.type	_ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_, %function
 _ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_:
-.LFB5049:
+.LFB5245:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -1444,21 +1530,21 @@ _ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5049:
+.LFE5245:
 	.size	_ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_, .-_ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_
 	.section	.rodata
 	.align	3
-.LC17:
+.LC19:
 	.string	"basic_string::_M_construct null not valid"
 	.section	.text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag,"axG",@progbits,_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag,comdat
 	.align	2
 	.weak	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag
 	.type	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag, %function
 _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag:
-.LFB5048:
+.LFB5244:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA5048
+	.cfi_lsda 0x1b,.LLSDA5244
 	stp	x29, x30, [sp, -80]!
 	.cfi_def_cfa_offset 80
 	.cfi_offset 29, -80
@@ -1479,30 +1565,30 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_S
 	bl	_ZN9__gnu_cxx17__is_null_pointerIKcEEbPT_
 	and	w0, w0, 255
 	cmp	w0, 0
-	beq	.L77
+	beq	.L79
 	ldr	x1, [sp, 48]
 	ldr	x0, [sp, 40]
 	cmp	x1, x0
-	beq	.L77
-	mov	w0, 1
-	b	.L78
-.L77:
-	mov	w0, 0
-.L78:
-	cmp	w0, 0
 	beq	.L79
-	adrp	x0, .LC17
-	add	x0, x0, :lo12:.LC17
+	mov	w0, 1
+	b	.L80
+.L79:
+	mov	w0, 0
+.L80:
+	cmp	w0, 0
+	beq	.L81
+	adrp	x0, .LC19
+	add	x0, x0, :lo12:.LC19
 .LEHB9:
 	bl	_ZSt19__throw_logic_errorPKc
-.L79:
+.L81:
 	ldr	x1, [sp, 40]
 	ldr	x0, [sp, 48]
 	bl	_ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_
 	str	x0, [sp, 64]
 	ldr	x0, [sp, 64]
 	cmp	x0, 15
-	bls	.L80
+	bls	.L82
 	add	x0, sp, 64
 	mov	x2, 0
 	mov	x1, x0
@@ -1516,7 +1602,7 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_S
 	ldr	x0, [sp, 56]
 	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE11_M_capacityEm
 .LEHE9:
-.L80:
+.L82:
 	ldr	x0, [sp, 56]
 .LEHB10:
 	bl	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7_M_dataEv
@@ -1537,25 +1623,25 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_S
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L83
-	b	.L86
-.L84:
+	beq	.L85
+	b	.L88
+.L86:
 	bl	__cxa_begin_catch
 	ldr	x0, [sp, 56]
 .LEHB12:
 	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv
 	bl	__cxa_rethrow
 .LEHE12:
-.L85:
+.L87:
 	mov	x19, x0
 	bl	__cxa_end_catch
 	mov	x0, x19
 .LEHB13:
 	bl	_Unwind_Resume
 .LEHE13:
-.L86:
+.L88:
 	bl	__stack_chk_fail
-.L83:
+.L85:
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp], 80
 	.cfi_restore 30
@@ -1564,44 +1650,44 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_S
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5048:
+.LFE5244:
 	.section	.gcc_except_table._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag,"aG",@progbits,_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag,comdat
 	.align	2
-.LLSDA5048:
+.LLSDA5244:
 	.byte	0xff
 	.byte	0x9b
-	.uleb128 .LLSDATT5048-.LLSDATTD5048
-.LLSDATTD5048:
+	.uleb128 .LLSDATT5244-.LLSDATTD5244
+.LLSDATTD5244:
 	.byte	0x1
-	.uleb128 .LLSDACSE5048-.LLSDACSB5048
-.LLSDACSB5048:
-	.uleb128 .LEHB9-.LFB5048
+	.uleb128 .LLSDACSE5244-.LLSDACSB5244
+.LLSDACSB5244:
+	.uleb128 .LEHB9-.LFB5244
 	.uleb128 .LEHE9-.LEHB9
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB10-.LFB5048
+	.uleb128 .LEHB10-.LFB5244
 	.uleb128 .LEHE10-.LEHB10
-	.uleb128 .L84-.LFB5048
+	.uleb128 .L86-.LFB5244
 	.uleb128 0x1
-	.uleb128 .LEHB11-.LFB5048
+	.uleb128 .LEHB11-.LFB5244
 	.uleb128 .LEHE11-.LEHB11
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB12-.LFB5048
+	.uleb128 .LEHB12-.LFB5244
 	.uleb128 .LEHE12-.LEHB12
-	.uleb128 .L85-.LFB5048
+	.uleb128 .L87-.LFB5244
 	.uleb128 0
-	.uleb128 .LEHB13-.LFB5048
+	.uleb128 .LEHB13-.LFB5244
 	.uleb128 .LEHE13-.LEHB13
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE5048:
+.LLSDACSE5244:
 	.byte	0x1
 	.byte	0
 	.align	2
 	.4byte	0
 
-.LLSDATT5048:
+.LLSDATT5244:
 	.section	.text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag,"axG",@progbits,_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag,comdat
 	.size	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag, .-_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag
 	.section	.text._ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE,"axG",@progbits,_ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE,comdat
@@ -1609,10 +1695,10 @@ _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_S
 	.weak	_ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE
 	.type	_ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE, %function
 _ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE:
-.LFB5110:
+.LFB5312:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA5110
+	.cfi_lsda 0x1b,.LLSDA5312
 	stp	x29, x30, [sp, -96]!
 	.cfi_def_cfa_offset 96
 	.cfi_offset 29, -96
@@ -1661,25 +1747,25 @@ _ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 	ldr	x1, [x0]
 	subs	x2, x2, x1
 	mov	x1, 0
-	beq	.L91
-	b	.L94
-.L92:
+	beq	.L93
+	b	.L96
+.L94:
 	mov	x19, x0
 	add	x0, sp, 48
 	bl	_ZNSaIcED1Ev
 	mov	x0, x19
 .LEHB16:
 	bl	_Unwind_Resume
-.L93:
+.L95:
 	mov	x19, x0
 	add	x0, sp, 56
 	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
 	mov	x0, x19
 	bl	_Unwind_Resume
 .LEHE16:
-.L94:
+.L96:
 	bl	__stack_chk_fail
-.L91:
+.L93:
 	mov	x0, x19
 	ldp	x19, x20, [sp, 16]
 	ldp	x29, x30, [sp], 96
@@ -1690,27 +1776,27 @@ _ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5110:
+.LFE5312:
 	.section	.gcc_except_table._ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE,"aG",@progbits,_ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE,comdat
-.LLSDA5110:
+.LLSDA5312:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE5110-.LLSDACSB5110
-.LLSDACSB5110:
-	.uleb128 .LEHB14-.LFB5110
+	.uleb128 .LLSDACSE5312-.LLSDACSB5312
+.LLSDACSB5312:
+	.uleb128 .LEHB14-.LFB5312
 	.uleb128 .LEHE14-.LEHB14
-	.uleb128 .L92-.LFB5110
+	.uleb128 .L94-.LFB5312
 	.uleb128 0
-	.uleb128 .LEHB15-.LFB5110
+	.uleb128 .LEHB15-.LFB5312
 	.uleb128 .LEHE15-.LEHB15
-	.uleb128 .L93-.LFB5110
+	.uleb128 .L95-.LFB5312
 	.uleb128 0
-	.uleb128 .LEHB16-.LFB5110
+	.uleb128 .LEHB16-.LFB5312
 	.uleb128 .LEHE16-.LEHB16
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE5110:
+.LLSDACSE5312:
 	.section	.text._ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE,"axG",@progbits,_ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE,comdat
 	.size	_ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE, .-_ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8type_tagIT0_EE
 	.section	.text._ZNKSt16initializer_listIPKcE5beginEv,"axG",@progbits,_ZNKSt16initializer_listIPKcE5beginEv,comdat
@@ -1718,7 +1804,7 @@ _ZN3dbg13get_type_nameIJEiEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 	.weak	_ZNKSt16initializer_listIPKcE5beginEv
 	.type	_ZNKSt16initializer_listIPKcE5beginEv, %function
 _ZNKSt16initializer_listIPKcE5beginEv:
-.LFB5111:
+.LFB5313:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -1729,14 +1815,14 @@ _ZNKSt16initializer_listIPKcE5beginEv:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5111:
+.LFE5313:
 	.size	_ZNKSt16initializer_listIPKcE5beginEv, .-_ZNKSt16initializer_listIPKcE5beginEv
 	.section	.text._ZNKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5beginEv,"axG",@progbits,_ZNKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5beginEv,comdat
 	.align	2
 	.weak	_ZNKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5beginEv
 	.type	_ZNKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5beginEv, %function
 _ZNKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5beginEv:
-.LFB5112:
+.LFB5314:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -1747,33 +1833,33 @@ _ZNKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5b
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5112:
+.LFE5314:
 	.size	_ZNKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5beginEv, .-_ZNKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE5beginEv
 	.section	.rodata
 	.align	3
-.LC18:
+.LC20:
 	.string	"\033[36m"
 	.align	3
-.LC19:
+.LC21:
 	.string	" = "
 	.align	3
-.LC20:
+.LC22:
 	.string	"\033[01m"
 	.align	3
-.LC21:
+.LC23:
 	.string	"\033[32m"
 	.align	3
-.LC22:
+.LC24:
 	.string	")"
 	.section	.text._ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_,"axG",@progbits,_ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_,comdat
 	.align	2
 	.weak	_ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_
 	.type	_ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_, %function
 _ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_:
-.LFB5113:
+.LFB5315:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA5113
+	.cfi_lsda 0x1b,.LLSDA5315
 	sub	sp, sp, #912
 	.cfi_def_cfa_offset 912
 	stp	x29, x30, [sp]
@@ -1815,9 +1901,9 @@ _ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11cha
 	bl	_ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE
 	ldrb	w0, [sp, 79]
 	cmp	w0, 0
-	beq	.L100
-	adrp	x0, .LC18
-	add	x1, x0, :lo12:.LC18
+	beq	.L102
+	adrp	x0, .LC20
+	add	x1, x0, :lo12:.LC20
 	ldr	x0, [sp, 56]
 	bl	_ZNK3dbg11DebugOutput4ansiEPKc
 	mov	x1, x0
@@ -1839,13 +1925,13 @@ _ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11cha
 	mov	x0, x19
 	bl	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
 	mov	x2, x0
-	adrp	x0, .LC19
-	add	x1, x0, :lo12:.LC19
+	adrp	x0, .LC21
+	add	x1, x0, :lo12:.LC21
 	mov	x0, x2
 	bl	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
-.L100:
-	adrp	x0, .LC20
-	add	x1, x0, :lo12:.LC20
+.L102:
+	adrp	x0, .LC22
+	add	x1, x0, :lo12:.LC22
 	ldr	x0, [sp, 56]
 	bl	_ZNK3dbg11DebugOutput4ansiEPKc
 	mov	x1, x0
@@ -1876,7 +1962,7 @@ _ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11cha
 	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
 	ldrb	w0, [sp, 79]
 	cmp	w0, 0
-	beq	.L101
+	beq	.L103
 	add	x0, sp, 512
 	add	x2, x0, 16
 	adrp	x0, .LC4
@@ -1885,8 +1971,8 @@ _ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11cha
 .LEHB21:
 	bl	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
 	mov	x19, x0
-	adrp	x0, .LC21
-	add	x1, x0, :lo12:.LC21
+	adrp	x0, .LC23
+	add	x1, x0, :lo12:.LC23
 	ldr	x0, [sp, 56]
 	bl	_ZNK3dbg11DebugOutput4ansiEPKc
 	mov	x1, x0
@@ -1903,11 +1989,11 @@ _ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11cha
 	mov	x0, x19
 	bl	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
 	mov	x2, x0
-	adrp	x0, .LC22
-	add	x1, x0, :lo12:.LC22
+	adrp	x0, .LC24
+	add	x1, x0, :lo12:.LC24
 	mov	x0, x2
 	bl	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
-.L101:
+.L103:
 	add	x0, sp, 512
 	add	x2, x0, 16
 	adrp	x0, :got:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
@@ -1943,36 +2029,36 @@ _ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11cha
 	ldr	x2, [x0]
 	subs	x3, x3, x2
 	mov	x2, 0
-	beq	.L107
-	b	.L112
-.L110:
+	beq	.L109
+	b	.L114
+.L112:
 	mov	x19, x0
 	add	x0, sp, 88
 	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
-	b	.L104
+	b	.L106
+.L113:
+	mov	x19, x0
+	add	x0, sp, 88
+	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
+	b	.L106
 .L111:
 	mov	x19, x0
-	add	x0, sp, 88
-	bl	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
-	b	.L104
-.L109:
-	mov	x19, x0
-.L104:
+.L106:
 	add	x0, sp, 512
 	bl	_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev
-	b	.L106
-.L108:
+	b	.L108
+.L110:
 	mov	x19, x0
-.L106:
+.L108:
 	add	x0, sp, 120
 	bl	_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev
 	mov	x0, x19
 .LEHB23:
 	bl	_Unwind_Resume
 .LEHE23:
-.L112:
+.L114:
 	bl	__stack_chk_fail
-.L107:
+.L109:
 	mov	x0, x1
 	ldr	x19, [sp, 16]
 	ldp	x29, x30, [sp]
@@ -1983,43 +2069,43 @@ _ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11cha
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5113:
+.LFE5315:
 	.section	.gcc_except_table._ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_,"aG",@progbits,_ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_,comdat
-.LLSDA5113:
+.LLSDA5315:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE5113-.LLSDACSB5113
-.LLSDACSB5113:
-	.uleb128 .LEHB17-.LFB5113
+	.uleb128 .LLSDACSE5315-.LLSDACSB5315
+.LLSDACSB5315:
+	.uleb128 .LEHB17-.LFB5315
 	.uleb128 .LEHE17-.LEHB17
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB18-.LFB5113
+	.uleb128 .LEHB18-.LFB5315
 	.uleb128 .LEHE18-.LEHB18
-	.uleb128 .L108-.LFB5113
+	.uleb128 .L110-.LFB5315
 	.uleb128 0
-	.uleb128 .LEHB19-.LFB5113
+	.uleb128 .LEHB19-.LFB5315
 	.uleb128 .LEHE19-.LEHB19
-	.uleb128 .L109-.LFB5113
+	.uleb128 .L111-.LFB5315
 	.uleb128 0
-	.uleb128 .LEHB20-.LFB5113
+	.uleb128 .LEHB20-.LFB5315
 	.uleb128 .LEHE20-.LEHB20
-	.uleb128 .L110-.LFB5113
+	.uleb128 .L112-.LFB5315
 	.uleb128 0
-	.uleb128 .LEHB21-.LFB5113
+	.uleb128 .LEHB21-.LFB5315
 	.uleb128 .LEHE21-.LEHB21
-	.uleb128 .L109-.LFB5113
+	.uleb128 .L111-.LFB5315
 	.uleb128 0
-	.uleb128 .LEHB22-.LFB5113
+	.uleb128 .LEHB22-.LFB5315
 	.uleb128 .LEHE22-.LEHB22
-	.uleb128 .L111-.LFB5113
+	.uleb128 .L113-.LFB5315
 	.uleb128 0
-	.uleb128 .LEHB23-.LFB5113
+	.uleb128 .LEHB23-.LFB5315
 	.uleb128 .LEHE23-.LEHB23
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE5113:
+.LLSDACSE5315:
 	.section	.text._ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_,"axG",@progbits,_ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_,comdat
 	.size	_ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_, .-_ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES3_
 	.section	.text._ZN9__gnu_cxx17__is_null_pointerIKcEEbPT_,"axG",@progbits,_ZN9__gnu_cxx17__is_null_pointerIKcEEbPT_,comdat
@@ -2027,7 +2113,7 @@ _ZN3dbg11DebugOutput10print_implIiEEOT_PKPKcPKNSt7__cxx1112basic_stringIcSt11cha
 	.weak	_ZN9__gnu_cxx17__is_null_pointerIKcEEbPT_
 	.type	_ZN9__gnu_cxx17__is_null_pointerIKcEEbPT_, %function
 _ZN9__gnu_cxx17__is_null_pointerIKcEEbPT_:
-.LFB5150:
+.LFB5354:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -2040,14 +2126,14 @@ _ZN9__gnu_cxx17__is_null_pointerIKcEEbPT_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5150:
+.LFE5354:
 	.size	_ZN9__gnu_cxx17__is_null_pointerIKcEEbPT_, .-_ZN9__gnu_cxx17__is_null_pointerIKcEEbPT_
 	.section	.text._ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_,"axG",@progbits,_ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_,comdat
 	.align	2
 	.weak	_ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_
 	.type	_ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_, %function
 _ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_:
-.LFB5151:
+.LFB5355:
 	.cfi_startproc
 	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
@@ -2057,14 +2143,14 @@ _ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5151:
+.LFE5355:
 	.size	_ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_, .-_ZSt19__iterator_categoryIPKcENSt15iterator_traitsIT_E17iterator_categoryERKS3_
 	.section	.text._ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26random_access_iterator_tag,"axG",@progbits,_ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26random_access_iterator_tag,comdat
 	.align	2
 	.weak	_ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26random_access_iterator_tag
 	.type	_ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26random_access_iterator_tag, %function
 _ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26random_access_iterator_tag:
-.LFB5152:
+.LFB5356:
 	.cfi_startproc
 	sub	sp, sp, #32
 	.cfi_def_cfa_offset 32
@@ -2078,31 +2164,31 @@ _ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26random_
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5152:
+.LFE5356:
 	.size	_ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26random_access_iterator_tag, .-_ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26random_access_iterator_tag
 	.section	.rodata
 	.align	3
-.LC23:
+.LC25:
 	.string	"const char* dbg::type_name_impl() [with T = int]"
 	.section	.text._ZN3dbg14type_name_implIiEEPKcv,"axG",@progbits,_ZN3dbg14type_name_implIiEEPKcv,comdat
 	.align	2
 	.weak	_ZN3dbg14type_name_implIiEEPKcv
 	.type	_ZN3dbg14type_name_implIiEEPKcv, %function
 _ZN3dbg14type_name_implIiEEPKcv:
-.LFB5189:
+.LFB5393:
 	.cfi_startproc
-	adrp	x0, .LC23
-	add	x0, x0, :lo12:.LC23
+	adrp	x0, .LC25
+	add	x0, x0, :lo12:.LC25
 	ret
 	.cfi_endproc
-.LFE5189:
+.LFE5393:
 	.size	_ZN3dbg14type_name_implIiEEPKcv, .-_ZN3dbg14type_name_implIiEEPKcv
 	.section	.text._ZN3dbg12pretty_printIiEENSt9enable_ifIXaantsrNS_6detail12is_containerIRKT_EE5valuentsrSt7is_enumIS4_E5valueEbE4typeERSoS6_,"axG",@progbits,_ZN3dbg12pretty_printIiEENSt9enable_ifIXaantsrNS_6detail12is_containerIRKT_EE5valuentsrSt7is_enumIS4_E5valueEbE4typeERSoS6_,comdat
 	.align	2
 	.weak	_ZN3dbg12pretty_printIiEENSt9enable_ifIXaantsrNS_6detail12is_containerIRKT_EE5valuentsrSt7is_enumIS4_E5valueEbE4typeERSoS6_
 	.type	_ZN3dbg12pretty_printIiEENSt9enable_ifIXaantsrNS_6detail12is_containerIRKT_EE5valuentsrSt7is_enumIS4_E5valueEbE4typeERSoS6_, %function
 _ZN3dbg12pretty_printIiEENSt9enable_ifIXaantsrNS_6detail12is_containerIRKT_EE5valuentsrSt7is_enumIS4_E5valueEbE4typeERSoS6_:
-.LFB5190:
+.LFB5394:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2121,14 +2207,14 @@ _ZN3dbg12pretty_printIiEENSt9enable_ifIXaantsrNS_6detail12is_containerIRKT_EE5va
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5190:
+.LFE5394:
 	.size	_ZN3dbg12pretty_printIiEENSt9enable_ifIXaantsrNS_6detail12is_containerIRKT_EE5valuentsrSt7is_enumIS4_E5valueEbE4typeERSoS6_, .-_ZN3dbg12pretty_printIiEENSt9enable_ifIXaantsrNS_6detail12is_containerIRKT_EE5valuentsrSt7is_enumIS4_E5valueEbE4typeERSoS6_
 	.section	.text._ZN3dbg12pretty_printIiEEvRSoRKT_St17integral_constantIbLb1EE,"axG",@progbits,_ZN3dbg12pretty_printIiEEvRSoRKT_St17integral_constantIbLb1EE,comdat
 	.align	2
 	.weak	_ZN3dbg12pretty_printIiEEvRSoRKT_St17integral_constantIbLb1EE
 	.type	_ZN3dbg12pretty_printIiEEvRSoRKT_St17integral_constantIbLb1EE, %function
 _ZN3dbg12pretty_printIiEEvRSoRKT_St17integral_constantIbLb1EE:
-.LFB5243:
+.LFB5447:
 	.cfi_startproc
 	stp	x29, x30, [sp, -48]!
 	.cfi_def_cfa_offset 48
@@ -2150,38 +2236,41 @@ _ZN3dbg12pretty_printIiEEvRSoRKT_St17integral_constantIbLb1EE:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5243:
+.LFE5447:
 	.size	_ZN3dbg12pretty_printIiEEvRSoRKT_St17integral_constantIbLb1EE, .-_ZN3dbg12pretty_printIiEEvRSoRKT_St17integral_constantIbLb1EE
 	.weak	_ZTV1A
 	.section	.data.rel.ro.local._ZTV1A,"awG",@progbits,_ZTV1A,comdat
 	.align	3
 	.type	_ZTV1A, %object
-	.size	_ZTV1A, 32
+	.size	_ZTV1A, 40
 _ZTV1A:
 	.xword	0
 	.xword	_ZTI1A
 	.xword	_ZN1AD1Ev
 	.xword	_ZN1AD0Ev
+	.xword	_ZN1D4showEv
 	.weak	_ZTV1D
 	.section	.data.rel.ro.local._ZTV1D,"awG",@progbits,_ZTV1D,comdat
 	.align	3
 	.type	_ZTV1D, %object
-	.size	_ZTV1D, 32
+	.size	_ZTV1D, 40
 _ZTV1D:
 	.xword	0
 	.xword	_ZTI1D
 	.xword	_ZN1DD1Ev
 	.xword	_ZN1DD0Ev
+	.xword	_ZN1D4showEv
 	.weak	_ZTV4Base
 	.section	.data.rel.ro.local._ZTV4Base,"awG",@progbits,_ZTV4Base,comdat
 	.align	3
 	.type	_ZTV4Base, %object
-	.size	_ZTV4Base, 32
+	.size	_ZTV4Base, 40
 _ZTV4Base:
 	.xword	0
 	.xword	_ZTI4Base
 	.xword	_ZN4BaseD1Ev
 	.xword	_ZN4BaseD0Ev
+	.xword	_ZN4Base4showEv
 	.weak	_ZTI1A
 	.section	.data.rel.ro._ZTI1A,"awG",@progbits,_ZTI1A,comdat
 	.align	3
@@ -2233,7 +2322,7 @@ _ZTS4Base:
 	.align	2
 	.type	_Z41__static_initialization_and_destruction_0ii, %function
 _Z41__static_initialization_and_destruction_0ii:
-.LFB5350:
+.LFB5554:
 	.cfi_startproc
 	stp	x29, x30, [sp, -32]!
 	.cfi_def_cfa_offset 32
@@ -2244,11 +2333,11 @@ _Z41__static_initialization_and_destruction_0ii:
 	str	w1, [sp, 24]
 	ldr	w0, [sp, 28]
 	cmp	w0, 1
-	bne	.L126
+	bne	.L128
 	ldr	w1, [sp, 24]
 	mov	w0, 65535
 	cmp	w1, w0
-	bne	.L126
+	bne	.L128
 	adrp	x0, _ZStL8__ioinit
 	add	x0, x0, :lo12:_ZStL8__ioinit
 	bl	_ZNSt8ios_base4InitC1Ev
@@ -2259,7 +2348,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	adrp	x0, :got:_ZNSt8ios_base4InitD1Ev
 	ldr	x0, [x0, #:got_lo12:_ZNSt8ios_base4InitD1Ev]
 	bl	__cxa_atexit
-.L126:
+.L128:
 	nop
 	ldp	x29, x30, [sp], 32
 	.cfi_restore 30
@@ -2267,12 +2356,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5350:
+.LFE5554:
 	.size	_Z41__static_initialization_and_destruction_0ii, .-_Z41__static_initialization_and_destruction_0ii
 	.align	2
 	.type	_GLOBAL__sub_I_main, %function
 _GLOBAL__sub_I_main:
-.LFB5351:
+.LFB5572:
 	.cfi_startproc
 	stp	x29, x30, [sp, -16]!
 	.cfi_def_cfa_offset 16
@@ -2288,7 +2377,7 @@ _GLOBAL__sub_I_main:
 	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
-.LFE5351:
+.LFE5572:
 	.size	_GLOBAL__sub_I_main, .-_GLOBAL__sub_I_main
 	.section	.init_array,"aw"
 	.align	3

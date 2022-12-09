@@ -65278,22 +65278,19 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 16 "/media/psf/Home/Desktop/git/C-/mac/myproject/libframework/framework/include/framework/Utils.h"
 void p();
 
-template <typename T>
-void lookType(const T &param)
-{
+template<typename T>
+void lookType(const T &param) {
     using boost::typeindex::type_id_with_cvr;
     std::cout << "T=" << type_id_with_cvr<T>().pretty_name() << std::endl;
     std::cout << "param=" << type_id_with_cvr<decltype(param)>().pretty_name() << std::endl;
 }
 
-template <typename E>
-constexpr auto toUType(E e) noexcept
-{
+template<typename E>
+constexpr auto toUType(E e) noexcept {
     return static_cast<std::underlying_type_t<E>>(e);
 }
 
-class Timer
-{
+class Timer {
 public:
     void start();
 
@@ -65305,23 +65302,26 @@ private:
     std::chrono::time_point<std::chrono::system_clock> mStart;
 };
 
-template <typename T>
-void printT(const T &t)
-{
-    if constexpr (std::is_same_v<T, std::vector<std::vector<int>>>)
-    {
-        for (auto &i : t)
-        {
-            for (auto &j : i)
-            {
+template<typename T>
+void printT(const T &t) {
+    if constexpr (std::is_same_v<T, std::vector<std::vector<int>>>) {
+        for (auto &i: t) {
+            for (auto &j: i) {
                 std::cout << j << " ";
             }
             std::cout << "\n";
         }
+    } else if constexpr(std::is_same_v<T, std::vector<int>>) {
+        for (auto &j: t) {
+            std::cout << j << " ";
+        }
+        std::cout << "\n";
     }
 }
 
 std::optional<std::string> getExePath();
+
+void operator ""_p(const char *str, size_t size);
 # 10 "/media/psf/Home/Desktop/git/C-/mac/myproject/src/looper/src/main.cpp" 2
 
 using namespace std;
