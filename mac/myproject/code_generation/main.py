@@ -1,3 +1,10 @@
+'''
+Description: 
+Author: yao.xie
+Date: 2023-01-03 14:41:37
+LastEditTime: 2023-01-03 14:41:38
+LastEditors: yao.xie
+'''
 # 这是一个示例 Python 脚本。
 
 # 按 ⌃R 执行或将其替换为您的代码。
@@ -67,9 +74,7 @@ class code_gen():
             os.mkdir(self.path + "/src", 0o755)
             return True
 
-
 if __name__ == '__main__':
     dataStructure = "DataStructure"
-    p = code_gen("77", dataStructure)
-    # p = code_gen("2")
-#冒泡排序
+    p = code_gen("RabbitGoesHome", dataStructure)
+    # p = code_gen("RabbitGoesHome")

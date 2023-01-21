@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-set(PROJECT_N gtest)
+set(PROJECT_N gtestT)
 project(${PROJECT_N} VERSION 1.0)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -28,4 +28,5 @@ target_include_directories(${PROJECT_N} PUBLIC
 target_link_libraries(${PROJECT_N} PUBLIC
         framework
         ${GTEST_BOTH_LIBRARIES}
+        gmock
 )

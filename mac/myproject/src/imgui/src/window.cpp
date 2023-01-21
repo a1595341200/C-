@@ -21,12 +21,15 @@
 #pragma comment(lib, "legacy_stdio_definitions")
 #endif
 
-Window::Window(GLFWerrorfun callback) {
+Window::Window(GLFWerrorfun callback)
+{
     glfwSetErrorCallback(callback);
 }
 
-int Window::init() {
-    if (glfwInit() != GLFW_TRUE) {
+int Window::init()
+{
+    if (glfwInit() != GLFW_TRUE)
+    {
         std::cout << "glfwInit fail !" << std::endl;
         return 0;
     }
@@ -42,26 +45,28 @@ int Window::init() {
     mGlslVersion = "#version 150";
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);  // 3.2+ only
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);            // Required on Mac
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // 3.2+ only
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);           // Required on Mac
 #else
     // GL 3.0 + GLSL 130
     mGlslVersion = "#version 130";
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-    //glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);  // 3.2+ only
-    //glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);            // 3.0+ only
+    // glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);  // 3.2+ only
+    // glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);            // 3.0+ only
 #endif
     std::cout << mGlslVersion << std::endl;
     return 1;
 }
 
 bool Window::createWindow(const std::string &name, int width, int height, const char *title, GLFWmonitor *monitor,
-                          GLFWwindow *share) {
+                          GLFWwindow *share)
+{
     mName = name;
     GLFWwindow *window = glfwCreateWindow(width, height, title, monitor, share);
     mWindow = window;
-    if (window == nullptr) {
+    if (window == nullptr)
+    {
         return false;
     }
     glfwMakeContextCurrent(window);
@@ -70,13 +75,13 @@ bool Window::createWindow(const std::string &name, int width, int height, const 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO &io = ImGui::GetIO();
-    (void) io;
-    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
-    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+    (void)io;
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; // Enable Keyboard Controls
+    // io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
-    //ImGui::StyleColorsClassic();
+    // ImGui::StyleColorsClassic();
 
     // Setup Platform/Renderer backends
     ImGui_ImplGlfw_InitForOpenGL(window, true);
@@ -84,13 +89,15 @@ bool Window::createWindow(const std::string &name, int width, int height, const 
     return true;
 }
 
-void Window::show(const std::string &name) {
+void Window::show(const std::string &name)
+{
     bool show_demo_window = false;
     bool show_another_window = false;
     clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
     // Main loop
-    while (!glfwWindowShouldClose(mWindow)) {
+    while (!glfwWindowShouldClose(mWindow))
+    {
         // Poll and handle events (inputs, window resize, etc.)
         // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
         // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application.
@@ -104,19 +111,19 @@ void Window::show(const std::string &name) {
         ImGui::NewFrame();
 
         // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
-//        if (show_demo_window) {
-            ImGui::ShowDemoWindow(&show_demo_window);
-//        }
+        //        if (show_demo_window) {
+        ImGui::ShowDemoWindow(&show_demo_window);
+        //        }
         // 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
 
-//        ShowSimpleWindow(show_demo_window, show_another_window);
+        //        ShowSimpleWindow(show_demo_window, show_another_window);
 
         // 3. Show another simple window.
-//        if (show_another_window) {
-//            showAnotherWindow(show_another_window);
-//        }
+        //        if (show_another_window) {
+        //            showAnotherWindow(show_another_window);
+        //        }
 
-//      //4. show console
+        //      //4. show console
         showConsole();
         Rendering();
     }
@@ -131,37 +138,40 @@ void Window::show(const std::string &name) {
 }
 
 void Window::ShowSimpleWindow(bool &show_demo_window,
-                              bool &show_another_window) {
+                              bool &show_another_window)
+{
     static float f = 0.0f;
     static int counter = 0;
 
     ImGui::Begin(
-            "Hello, world!");                          // Create a window called "Hello, world!" and append into it.
+        "Hello, world!"); // Create a window called "Hello, world!" and append into it.
 
     ImGui::Text(
-            "This is some useful text.");               // Display some text (you can use a format strings too)
-    ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
+        "This is some useful text.");                  // Display some text (you can use a format strings too)
+    ImGui::Checkbox("Demo Window", &show_demo_window); // Edit bools storing our window open/close state
     ImGui::Checkbox("Another Window", &show_another_window);
 
-    ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-    ImGui::ColorEdit3("clear color", (float *) &clear_color); // Edit 3 floats representing a color
+    ImGui::SliderFloat("float", &f, 0.0f, 1.0f);             // Edit 1 float using a slider from 0.0f to 1.0f
+    ImGui::ColorEdit3("clear color", (float *)&clear_color); // Edit 3 floats representing a color
     if (ImGui::Button(
-            "open .")) {
+            "open ."))
+    {
         using subprocess::CompletedProcess;
-        using subprocess::RunBuilder;
         using subprocess::PipeOption;
+        using subprocess::RunBuilder;
         // quick echo it, doesn't capture
         subprocess::run({"open", "."});
         counter++;
     }
     ImGui::SameLine();
-    if (ImGui::Button("login")) {
+    if (ImGui::Button("login"))
+    {
         using subprocess::CompletedProcess;
-        using subprocess::RunBuilder;
         using subprocess::PipeOption;
+        using subprocess::RunBuilder;
         // quick echo it, doesn't capture
         subprocess::run({"python3", "/Users/xieyao/Desktop/git/C-/mac/myproject/playwright/main.py"});
-    }// Buttons return true when clicked (most widgets return true when edited/activated)
+    } // Buttons return true when clicked (most widgets return true when edited/activated)
     ImGui::Text("counter = %d", counter);
 
     ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate,
@@ -169,16 +179,18 @@ void Window::ShowSimpleWindow(bool &show_demo_window,
     ImGui::End();
 }
 
-void Window::showAnotherWindow(bool &show_another_window) {
+void Window::showAnotherWindow(bool &show_another_window)
+{
     ImGui::Begin("Another Window",
-                 &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
+                 &show_another_window); // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
     ImGui::Text("Hello from another window!");
     if (ImGui::Button("Close Me"))
         show_another_window = false;
     ImGui::End();
 }
 
-void Window::Rendering() {
+void Window::Rendering()
+{
     // Rendering
     ImGui::Render();
     int display_w, display_h;
@@ -192,7 +204,8 @@ void Window::Rendering() {
     glfwSwapBuffers(mWindow);
 }
 
-void Window::showConsole() {
+void Window::showConsole()
+{
     static Console c;
     bool b{true};
     c.Draw("test", &b);

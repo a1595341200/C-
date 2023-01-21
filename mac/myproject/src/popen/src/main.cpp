@@ -1,4 +1,3 @@
-
 #include<cstdio>
 int main() {
     FILE *fp = nullptr;

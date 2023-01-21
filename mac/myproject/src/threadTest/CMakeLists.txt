@@ -17,4 +17,4 @@ endforeach()
 add_executable(${PROJECT_N} ${SRCS})
 
 target_include_directories(${PROJECT_N} PUBLIC ${PROJECT_SOURCE_DIR}/include)
-target_link_libraries(${PROJECT_N} PUBLIC framework)
+target_link_libraries(${PROJECT_N} PUBLIC framework gtest)

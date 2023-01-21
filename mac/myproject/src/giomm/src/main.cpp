@@ -1,4 +1,4 @@
-#include <giomm-2.68/giomm.h>
+#include <giomm.h>
 #include <iostream>
 #include <typeinfo>
 

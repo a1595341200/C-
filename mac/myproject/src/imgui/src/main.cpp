@@ -6,14 +6,14 @@
 #include "imgui_impl_glfw.h"
 #include <stdio.h>
 #include "window.h"
-#include <thread>
 
 void test1() {
+    IMGUI_CHECKVERSION();
     Window w([](int error, const char *description) {
         fprintf(stderr, "Glfw Error %d: %s\n", error, description);
     });
     Window::init();
-    w.createWindow("main", 1280, 720, "Dear ImGui GLFW+OpenGL3 example", nullptr, nullptr);
+    w.createWindow("main", 1280, 720, "yao.xie", nullptr, nullptr);
     w.show("main");
 }
 

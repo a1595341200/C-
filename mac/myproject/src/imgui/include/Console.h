@@ -6,6 +6,7 @@
 #define DEV_CONSOLE_H
 
 #include <imgui.h>
+#include <framework/ThreadPool.h>
 
 struct Console {
     char InputBuf[256]{0};
@@ -23,6 +24,8 @@ struct Console {
 
     void ClearLog();
 
+    void doExecCommand(const char *command_line);
+
     void AddLog(const char *fmt, ...) IM_FMTARGS(2);
 
     void Draw(const char *title, bool *p_open);
@@ -30,6 +33,8 @@ struct Console {
     void ExecCommand(const char *command_line);
 
     int TextEditCallback(ImGuiInputTextCallbackData *data);
+
+    std::shared_ptr<ThreadPool> mThreadPool;
 };
 
 #endif //DEV_CONSOLE_H

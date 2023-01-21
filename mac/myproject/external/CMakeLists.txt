@@ -5,8 +5,4 @@ add_subdirectory("subprocess")
 if(!APPLE)
     add_subdirectory("nana")
 endif()
-
-# if(APPLE)
 add_subdirectory("imgui")
-
-# endif()

@@ -18,6 +18,7 @@ public:
 int main(int argc, char const *argv[]) {
     using namespace std::chrono_literals;
     auto res = 1s;
+
     lookType(res);
     std::cout << res.count() << std::endl;
     auto res2 = std::chrono::duration_cast<std::chrono::milliseconds>(1s);

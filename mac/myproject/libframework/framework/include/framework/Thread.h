@@ -8,6 +8,8 @@
 #include <thread>
 #include <memory>
 #include <atomic>
+#include <mutex>
+#include <condition_variable>
 
 class Thread
 {
@@ -16,6 +18,7 @@ public:
     virtual bool threadLoop() = 0;
     virtual ~Thread();
     bool run();
+    void join();
     virtual void requestExit();
     virtual void requestExitAndWait();
 

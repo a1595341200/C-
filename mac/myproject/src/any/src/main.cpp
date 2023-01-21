@@ -20,6 +20,9 @@ public:
 };
 
 int main() {
+    if(true){
+        std::cout<< "" <<std::endl;
+    }
     std::map<int, std::any> m;
     std::any a = 1;
     m[1] = a;

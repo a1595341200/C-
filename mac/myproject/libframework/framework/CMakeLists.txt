@@ -2,55 +2,70 @@ cmake_minimum_required(VERSION 3.10)
 
 set(PROJECT_N framework)
 project(${PROJECT_N} VERSION 1.0)
-find_package(Boost REQUIRED COMPONENTS system)
-find_package(SQLite3 REQUIRED)
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS True)
-
-file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
 add_definitions(-DLOG_PATH=1)
+find_package(Boost REQUIRED COMPONENTS system)
+find_package(SQLite3 REQUIRED)
+FIND_PACKAGE(PkgConfig REQUIRED)
+message(${CMAKE_SYSTEM_NAME})
+if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+        add_subdirectory(interface)
+endif()
 
-message("src files:")
+message("jsoncpp src files:")
 
 foreach(file ${SRCS})
         message(STATUS ${file})
 endforeach()
 
-add_library(${PROJECT_N} SHARED ${SRCS}
-        include/framework/dbg.h
-        include/framework/ThreadPool.h
-        include/framework/Timer.h
-        src/ThreadPool.cpp src/Timer.cpp
-        include/framework/Looper.h include/framework/Message.h src/Message.cpp src/Looper.cpp include/framework/Thread.h src/Thread.cpp include/framework/RunnableHaandler.h src/RunableHandler.cpp include/framework/SubProcess.h src/SubProcess.cpp include/framework/LOG.h src/Log.cpp
-        include/framework/leetcode.h)
+file(GLOB_RECURSE SRCS src/*.cpp)
+
+foreach(file ${SRCS})
+        message(STATUS ${file})
+endforeach()
+
+add_library(${PROJECT_N} SHARED
+        ${SRCS}
+)
+
 target_include_directories(${PROJECT_N} PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         ${Boost_INCLUDE_DIRS}
+        ${CMAKE_BINARY_DIR}/generated
 )
 
 target_link_directories(${PROJECT_N} PUBLIC
         ${Boost_LIBRARY_DIRS}
 )
 
-MESSAGE(STATUS "operation system is ${CMAKE_SYSTEM}")
+message(STATUS "operation system is ${CMAKE_SYSTEM}")
 
 if(APPLE)
-        target_link_libraries(${PROJECT_N}
-                PUBLIC
+        target_link_libraries(${PROJECT_N} PUBLIC
                 ${SQLite3_LIBRARIES}
-                /opt/homebrew/Cellar/libevent/2.1.12/lib/libevent.dylib
+                /opt/homebrew/lib/libevent.dylib
                 subprocess
-                LOG4CPP
+                /opt/homebrew/lib/liblog4cpp.dylib
+                ${GLIBMM_LIBRARIES}
+                ${GIOMM_LIBRARIES}
+#                interface
         )
 elseif(UNIX)
         message("UNIX")
-        target_link_libraries(${PROJECT_N}
-                PUBLIC
+        target_include_directories(${PROJECT_N} PUBLIC
+                ${GLIBMM_INCLUDE_DIRS}
+                ${GIOMM_INCLUDE_DIRS}
+        )
+        target_link_libraries(${PROJECT_N} PUBLIC
                 ${SQLite3_LIBRARIES}
                 /usr/local/lib/libevent.so
                 subprocess
                 /usr/local/lib/liblog4cpp.so
+                /usr/lib/aarch64-linux-gnu/libuuid.so
+                interface
+                ${GLIBMM_LIBRARIES}
+                ${GIOMM_LIBRARIES}
         )
 endif()

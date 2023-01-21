@@ -93,6 +93,7 @@ void test02()
 
 int main()
 {
+//    __builtin_prefecth
     //    test();
     std::cout << std::showbase << std::bitset<16>(10) << std::endl;
 }

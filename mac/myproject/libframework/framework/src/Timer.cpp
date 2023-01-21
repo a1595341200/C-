@@ -1,3 +1,4 @@
+#define TAG "Timer"
 #include <framework/Timer.h>
 #include <iostream>
 

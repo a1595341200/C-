@@ -7,9 +7,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 
+find_package(GTest REQUIRED)
+find_package(GMock)
+
 file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 message("src files:")
+
 foreach(file ${SRCS})
         message(STATUS ${file})
 endforeach()
@@ -17,4 +21,4 @@ endforeach()
 add_executable(${PROJECT_N} ${SRCS})
 
 target_include_directories(${PROJECT_N} PUBLIC ${PROJECT_SOURCE_DIR}/include)
-target_link_libraries(${PROJECT_N} PUBLIC framework)
+target_link_libraries(${PROJECT_N} PUBLIC framework gtest gmock)

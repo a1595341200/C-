@@ -1,6 +1,5 @@
 #include <iostream>
 #include <framework/Utils.h>
-#include <future>
 #include <string>
 
 enum class E : int {
@@ -26,7 +25,7 @@ operator&(E __x, E __y) {
                           static_cast<std::underlying_type_t<E>>(__y));
 }
 
-int main(int argc, char const *argv[]) {
+void test01() {
     int a = toUType(E::A);
     std::cout << toUType(E::A) << std::endl;
     lookType(a);
@@ -39,5 +38,37 @@ int main(int argc, char const *argv[]) {
     auto sv = "sd"sv;
     lookType(s);
     lookType(sv);
+}
+
+class A {
+    void c(){
+        "c"_p;
+    }
+    struct B {
+        void f(A &a) {
+            a.c();
+            std::cout << a.a << std::endl;
+        }
+    };
+
+public:
+    static B g() {
+        return B{};
+    }
+
+private:
+    int a{0};
+};
+
+void test02() {
+    auto b = A::g();
+    A a;
+    b.f(a);
+    lookType(b);
+}
+
+int main(int argc, char const *argv[]) {
+//    test01();
+    test02();
     return 0;
 }

@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
     std::function<void(int, int)> eventcb = [](int a, int b) {
         std::cout << "eventcb : a + b = " << a + b << std::endl;
     };
-    map<std::string, decltype(eventcb)> callback;
+    std::map<std::string, decltype(eventcb)> callback;
     callback.emplace("event", eventcb);
     callback["event"](1, 2);
     s.post();

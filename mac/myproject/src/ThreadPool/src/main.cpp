@@ -1,10 +1,34 @@
 #include <chrono>
 #include <framework/ThreadPool.h>
 #include <iostream>
-int main() {
-    ThreadPool p(6);
-    p.addTask([]() { std::cout << "/* message */" << std::endl; });
-    // std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+#include <gtest/gtest.h>
 
-    return 0;
+TEST(ThreadPool, test) {
+    Timer t;
+    t.start();
+    ThreadPool p(4);
+    std::thread t1([&p]() {
+        for (int i = 0; i < 10; i++) {
+            p.addTask([i]() { std::cout << "/* message */ " << i << std::endl; });
+        }
+    });
+    std::thread t2([&p]() {
+        for (int i = 0; i < 100; i++) {
+            p.addTask([i]() { std::cout << "/* message */ " << i << std::endl; });
+        }
+    });
+    t1.join();
+    t2.join();
+    using namespace std::chrono_literals;
+    std::this_thread::sleep_for(1s);
+    t.end();
+    Task task([]() {
+        std::cout << "/* task */ ";
+    });
+    task();
+}
+
+int main() {
+    testing::InitGoogleTest();
+    return RUN_ALL_TESTS();
 }

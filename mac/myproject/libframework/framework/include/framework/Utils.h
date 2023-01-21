@@ -4,6 +4,7 @@
 //
 //  Created by 谢瑶 on 2022/9/27.
 //
+#define TAG "Utils"
 
 #include <boost/type_index.hpp>
 #include <iostream>
@@ -12,14 +13,19 @@
 #include <chrono>
 #include <vector>
 #include <optional>
-
-void p();
+#include <framework/Log.h>
 
 template<typename T>
 void lookType(const T &param) {
     using boost::typeindex::type_id_with_cvr;
-    std::cout << "T=" << type_id_with_cvr<T>().pretty_name() << std::endl;
-    std::cout << "param=" << type_id_with_cvr<decltype(param)>().pretty_name() << std::endl;
+    LOG() << "T=" << type_id_with_cvr<T>().pretty_name();
+    LOG() << "param=" << type_id_with_cvr<decltype(param)>().pretty_name();
+}
+
+template<typename T>
+void lookType() {
+    using boost::typeindex::type_id_with_cvr;
+    LOG() << "T=" << type_id_with_cvr<T>().pretty_name();
 }
 
 template<typename E>
@@ -41,22 +47,34 @@ private:
 
 template<typename T>
 void printT(const T &t) {
-    lookType(t);
     if constexpr (!std::is_fundamental_v<typename T::value_type>) {
         for (auto &i: t) {
-            for (auto &j: i) {
-                std::cout << j << " ";
+            for (auto j: i) {
+                LOG() << j << " ";
             }
-            std::cout << "\n";
+            LOG() << "\n";
         }
     } else {
         for (auto j: t) {
-            std::cout << j << " ";
+            LOG() << j << " ";
         }
-        std::cout << "\n";
+        LOG() << "\n";
     }
 }
 
 std::optional<std::string> getExePath();
 
 void operator ""_p(const char *str, size_t size);
+
+class Utils {
+public:
+    static std::vector<std::string> split(const std::string &str, const std::string &regex);
+
+    static bool startWith(const std::string &str, const std::string &prefix);
+
+    static bool endWith(const std::string &str, const std::string &suffix);
+
+    static std::string getProcessName();
+
+    static void setProcessName(const std::string &name);
+};

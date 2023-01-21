@@ -12,20 +12,23 @@
 #include <log4cpp/Category.hh>
 #include <sstream>
 
-#define LOG(level) Log(level).stream()
+#ifndef TAG
+#define TAG "null"
+#endif
 
-class Log
-{
+#define LOG() Log(__FILE__,__LINE__,TAG).stream()
+
+class Log {
 public:
-    enum logType
-    {
+    enum logType {
         FILE,
         STREAM,
     };
 
-    explicit Log(int level = 0);
+    Log(const char *file, int line, const std::string &name, int level = log4cpp::Priority::DEBUG);
 
-    static void init(const std::string &name, logType type = STREAM);
+    static void
+    init(const std::string &name, logType type = STREAM, int priority = log4cpp::Priority::DEBUG);
 
     ~Log();
 
@@ -36,8 +39,10 @@ private:
 
     static log4cpp::Appender *makeAppender(logType type);
 
-    static inline std::string nName;
+    static inline std::string mName{"null"};
     std::ostringstream mStream;
+    static inline logType mType{STREAM};
+    int level{log4cpp::Priority::DEBUG};
 };
 
 #endif // DEV_LOG_H

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <framework/Log.h>
 using namespace std;
 class Test {
 public:
@@ -10,7 +11,7 @@ public:
 int main(int argc, char const *argv[])
 {
     Test t;
-    cout<<&t<<endl;
-    cout<<std::addressof(t)<<endl;
+    LOG()<<&t;
+    LOG()<<std::addressof(t);
     return 0;
 }

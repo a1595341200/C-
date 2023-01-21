@@ -1,6 +1,7 @@
 //
 // Created by 谢瑶 on 2022/10/31.
 //
+#define TAG "Message"
 #include "framework/Message.h"
 
 void Message::send() {

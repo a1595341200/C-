@@ -1,0 +1,4 @@
+/media/psf/Home/Desktop/git/C-/mac/myproject/src/examples/hello_world/build/CMakeFiles/hello_world_service.dir
+/media/psf/Home/Desktop/git/C-/mac/myproject/src/examples/hello_world/build/CMakeFiles/hello_world_client.dir
+/media/psf/Home/Desktop/git/C-/mac/myproject/src/examples/hello_world/build/CMakeFiles/edit_cache.dir
+/media/psf/Home/Desktop/git/C-/mac/myproject/src/examples/hello_world/build/CMakeFiles/rebuild_cache.dir

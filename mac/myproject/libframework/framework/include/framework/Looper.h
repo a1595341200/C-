@@ -11,34 +11,42 @@
 #include <atomic>
 #include <chrono>
 #include <memory>
+#include <unordered_set>
+#include <unordered_map>
+#include <mutex>
 
 class Message;
 
-class MessageHandler : public std::enable_shared_from_this<MessageHandler>
-{
+class MessageHandler : virtual public std::enable_shared_from_this<MessageHandler> {
 public:
     virtual ~MessageHandler() = default;
-
     virtual void handleMessage(const std::shared_ptr<Message> &message) = 0;
 };
 
-class LooperCallback : public std::enable_shared_from_this<class LooperCallback>
-{
+class LooperCallback : public std::enable_shared_from_this<class LooperCallback> {
 public:
     virtual ~LooperCallback() = default;
 
     virtual int handleEvent(int fd, short events, void *data) = 0;
 };
 
-class Looper : public std::enable_shared_from_this<Looper>
-{
+class Looper;
+
+struct Invok {
+    std::shared_ptr<MessageHandler> handler;
+    std::shared_ptr<Message> message;
+    size_t index{0};
+    inline static std::shared_ptr<Looper> mLooper{nullptr};
+};
+
+class Looper : public std::enable_shared_from_this<Looper> {
 public:
     virtual ~Looper();
 
 public:
     explicit Looper();
 
-    void pollOnce();
+    void pollOnce(int timeOut = 1);
 
     void sendMessage(const std::shared_ptr<MessageHandler> &handler, const std::shared_ptr<Message> &message);
 
@@ -51,6 +59,9 @@ public:
 
     void exit();
 
+    std::unordered_map<int, Invok> mMessages;
+
+    std::mutex mLock;
 private:
     int addEvent(struct event *ev, const struct timeval *timeout);
 

@@ -1,5 +1,7 @@
+#define TAG "locale"
 #include <iostream>
 #include <locale>
+#include <framework/Log.h>
 
 std::ostream& operator<< (std::ostream& os, std::locale const& loc)
 {
@@ -23,4 +25,5 @@ int main()
     std::wcout.imbue(std::locale());
     // 再次输出同一数字
     std::wcout << 1000.01 << '\n';
+    LOG()<<"test";
 }

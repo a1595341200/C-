@@ -1,16 +1,16 @@
 //
 // Created by 谢瑶 on 2022/11/19.
 //
-
+#define TAG "SubProcess"
 #include <framework/SubProcess.h>
 #include <iostream>
 #include <unistd.h>
-#include <csignal>
 #include <utility>
 #include <sys/fcntl.h>
 #include <sys/wait.h>
 #include <cstring>
 #include <framework/dbg.h>
+#include <signal.h>
 
 SubProcess::SubProcess(const std::string &cmd) : mCommand(cmd)
 {

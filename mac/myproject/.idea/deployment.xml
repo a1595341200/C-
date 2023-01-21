@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="远程开发" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="远程主机 (53f6aa7c-83d9-4258-aae2-ac27be0e2171)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/parallels/clion" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/src/jsoncpp/cmake-build-mac" />
+            <excludedPath local="true" path="$PROJECT_DIR$/linux-build" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug--" />
+            <excludedPath local="true" path="$PROJECT_DIR$/src/jsoncpp/build-linux" />
+            <excludedPath local="true" path="$PROJECT_DIR$/build-linux" />
+            <excludedPath local="true" path="$PROJECT_DIR$/build" />
+            <excludedPath local="true" path="$PROJECT_DIR$/build1" />
+            <excludedPath local="true" path="$PROJECT_DIR$/build2" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-mac" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
