@@ -1,0 +1,6 @@
+/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja /home/parallels/clion/src/jsoncpp
+src files:
+-- /home/parallels/clion/src/jsoncpp/src/main.cpp
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/parallels/clion/src/jsoncpp/build-linux

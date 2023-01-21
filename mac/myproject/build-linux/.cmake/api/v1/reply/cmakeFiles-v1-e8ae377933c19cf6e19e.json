@@ -1,0 +1,1343 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-linux/CMakeFiles/3.21.0/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-linux/CMakeFiles/3.21.0/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-linux/CMakeFiles/3.21.0/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Platform/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeFindCodeBlocks.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/ProcessorCount.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"path" : "external/CMakeLists.txt"
+		},
+		{
+			"path" : "external/subprocess/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "external/imgui/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindOpenGL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "libframework/CMakeLists.txt"
+		},
+		{
+			"path" : "libframework/framework/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindBoost.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-shared.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-static.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindSQLite3.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "libframework/framework/interface/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/Findprotobuf.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "src/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/22/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/56/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/105/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/129/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/141/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/148/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/211/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/718/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/1277/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/26Z/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/6Z/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/38Z/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/33Z/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/1/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/5/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/15/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/20/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/31/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/33/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/53/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/54/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/60/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/102/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/102_2/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/102_3/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/103/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/103_2/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/121/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/199/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/200/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/202_2/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/236/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/300/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/1003/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/997/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/1791/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/1971/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/455/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/135/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/605/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/452/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/763/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/122/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/167/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/88/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/142/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/76/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/633/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/680/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/524/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/69/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/34/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/81/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/154/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/540/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/quickSort/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/215/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/347/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/451/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/695/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/547/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/417/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/46/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/77/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/79/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/934/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/130/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/257/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/47/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/40/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/310/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/311/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/FindStonePair/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DataStructure/RabbitGoesHome/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Test/CMakeLists.txt"
+		},
+		{
+			"path" : "src/EnumClass/CMakeLists.txt"
+		},
+		{
+			"path" : "src/weakPtr/CMakeLists.txt"
+		},
+		{
+			"path" : "src/reference/CMakeLists.txt"
+		},
+		{
+			"path" : "src/orm/CMakeLists.txt"
+		},
+		{
+			"path" : "src/dynamic_cast/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Execute_before_main/CMakeLists.txt"
+		},
+		{
+			"path" : "src/rpc/CMakeLists.txt"
+		},
+		{
+			"path" : "src/asctime/CMakeLists.txt"
+		},
+		{
+			"path" : "src/addressof/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Copy_structure/CMakeLists.txt"
+		},
+		{
+			"path" : "src/memory_model/CMakeLists.txt"
+		},
+		{
+			"path" : "src/asio/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindBoost.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_date_time-1.74.0/boost_date_time-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_date_time-1.74.0/boost_date_time-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_date_time-1.74.0/libboost_date_time-variant-shared.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_date_time-1.74.0/libboost_date_time-variant-static.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-shared.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-static.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_filesystem-1.74.0/boost_filesystem-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_filesystem-1.74.0/boost_filesystem-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_filesystem-1.74.0/libboost_filesystem-variant-shared.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_filesystem-1.74.0/libboost_filesystem-variant-static.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_iostreams-1.74.0/boost_iostreams-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_iostreams-1.74.0/boost_iostreams-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_iostreams-1.74.0/libboost_iostreams-variant-shared.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_iostreams-1.74.0/libboost_iostreams-variant-static.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_thread-1.74.0/boost_thread-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_thread-1.74.0/boost_thread-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_thread-1.74.0/libboost_thread-variant-shared.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_thread-1.74.0/libboost_thread-variant-static.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_atomic-1.74.0/boost_atomic-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_atomic-1.74.0/boost_atomic-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_atomic-1.74.0/libboost_atomic-variant-shared.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_atomic-1.74.0/libboost_atomic-variant-static.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "src/auto/CMakeLists.txt"
+		},
+		{
+			"path" : "src/inline/CMakeLists.txt"
+		},
+		{
+			"path" : "src/any/CMakeLists.txt"
+		},
+		{
+			"path" : "src/backtrace/CMakeLists.txt"
+		},
+		{
+			"path" : "src/dlopen/CMakeLists.txt"
+		},
+		{
+			"path" : "src/dlopen/lib/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DNS/CMakeLists.txt"
+		},
+		{
+			"path" : "src/enableShard/CMakeLists.txt"
+		},
+		{
+			"path" : "src/fstream/CMakeLists.txt"
+		},
+		{
+			"path" : "src/stub/CMakeLists.txt"
+		},
+		{
+			"path" : "src/proxy/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "src/memory/CMakeLists.txt"
+		},
+		{
+			"path" : "src/new/CMakeLists.txt"
+		},
+		{
+			"path" : "src/regex/CMakeLists.txt"
+		},
+		{
+			"path" : "src/register/CMakeLists.txt"
+		},
+		{
+			"path" : "src/rpcexp/CMakeLists.txt"
+		},
+		{
+			"path" : "src/sharedPtr/CMakeLists.txt"
+		},
+		{
+			"path" : "src/sqlite3/CMakeLists.txt"
+		},
+		{
+			"path" : "src/syslog/CMakeLists.txt"
+		},
+		{
+			"path" : "src/ThreadPool/CMakeLists.txt"
+		},
+		{
+			"path" : "src/TimerTest/CMakeLists.txt"
+		},
+		{
+			"path" : "src/tuple/CMakeLists.txt"
+		},
+		{
+			"path" : "src/reference_wrapper/CMakeLists.txt"
+		},
+		{
+			"path" : "src/unordered_set/CMakeLists.txt"
+		},
+		{
+			"path" : "src/type/CMakeLists.txt"
+		},
+		{
+			"path" : "src/typeid/CMakeLists.txt"
+		},
+		{
+			"path" : "src/getline/CMakeLists.txt"
+		},
+		{
+			"path" : "src/json/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Variable_parameter_template/CMakeLists.txt"
+		},
+		{
+			"path" : "src/sizeof.../CMakeLists.txt"
+		},
+		{
+			"path" : "src/folded_expression/CMakeLists.txt"
+		},
+		{
+			"path" : "src/folded_expression2/CMakeLists.txt"
+		},
+		{
+			"path" : "src/fold_expression_empty_packet_processing/CMakeLists.txt"
+		},
+		{
+			"path" : "src/class_template/CMakeLists.txt"
+		},
+		{
+			"path" : "src/visit_struct/CMakeLists.txt"
+		},
+		{
+			"path" : "src/optional/CMakeLists.txt"
+		},
+		{
+			"path" : "src/sscanf/CMakeLists.txt"
+		},
+		{
+			"path" : "src/popen/CMakeLists.txt"
+		},
+		{
+			"path" : "src/protobuf/CMakeLists.txt"
+		},
+		{
+			"path" : "src/gcovr/CMakeLists.txt"
+		},
+		{
+			"path" : "src/async/CMakeLists.txt"
+		},
+		{
+			"path" : "src/inlineStatic/CMakeLists.txt"
+		},
+		{
+			"path" : "src/gtest/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindGTest.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/GoogleTest.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GTestConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GTestTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GTestTargets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GMockTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GMockTargets-none.cmake"
+		},
+		{
+			"path" : "src/dbg/CMakeLists.txt"
+		},
+		{
+			"path" : "src/boostLambda/CMakeLists.txt"
+		},
+		{
+			"path" : "src/giomm/CMakeLists.txt"
+		},
+		{
+			"path" : "src/sqlit3pp/CMakeLists.txt"
+		},
+		{
+			"path" : "src/invocable/CMakeLists.txt"
+		},
+		{
+			"path" : "src/promise/CMakeLists.txt"
+		},
+		{
+			"path" : "src/packaged_task/CMakeLists.txt"
+		},
+		{
+			"path" : "src/libevent/CMakeLists.txt"
+		},
+		{
+			"path" : "src/looper/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindGTest.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/GoogleTest.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GTestConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/media/psf/Home/Downloads/cmake-3.21.0-linux-aarch64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GTestTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GTestTargets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GMockTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/aarch64-linux-gnu/cmake/GTest/GMockTargets-none.cmake"
+		},
+		{
+			"path" : "src/rpc_client/CMakeLists.txt"
+		},
+		{
+			"path" : "src/vec/CMakeLists.txt"
+		},
+		{
+			"path" : "src/stream/CMakeLists.txt"
+		},
+		{
+			"path" : "src/threadTest/CMakeLists.txt"
+		},
+		{
+			"path" : "src/runableHandlerTest/CMakeLists.txt"
+		},
+		{
+			"path" : "src/string/CMakeLists.txt"
+		},
+		{
+			"path" : "src/overload/CMakeLists.txt"
+		},
+		{
+			"path" : "src/quoted/CMakeLists.txt"
+		},
+		{
+			"path" : "src/as_bytes/CMakeLists.txt"
+		},
+		{
+			"path" : "src/atomic/CMakeLists.txt"
+		},
+		{
+			"path" : "src/boolalpha/CMakeLists.txt"
+		},
+		{
+			"path" : "src/match_format/CMakeLists.txt"
+		},
+		{
+			"path" : "src/locale/CMakeLists.txt"
+		},
+		{
+			"path" : "src/strategy/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Observer/CMakeLists.txt"
+		},
+		{
+			"path" : "src/enable_shared_from_this/CMakeLists.txt"
+		},
+		{
+			"path" : "src/from_chars/CMakeLists.txt"
+		},
+		{
+			"path" : "src/mem_fn/CMakeLists.txt"
+		},
+		{
+			"path" : "src/chrnon/CMakeLists.txt"
+		},
+		{
+			"path" : "src/char/CMakeLists.txt"
+		},
+		{
+			"path" : "src/subprocess1/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Throw_an_exception_at_destructor_time/CMakeLists.txt"
+		},
+		{
+			"path" : "src/virtual/CMakeLists.txt"
+		},
+		{
+			"path" : "src/log4cpp/CMakeLists.txt"
+		},
+		{
+			"path" : "src/imgui/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Disjoint-setDataStructure/CMakeLists.txt"
+		},
+		{
+			"path" : "src/stringAssign/CMakeLists.txt"
+		},
+		{
+			"path" : "src/strto/CMakeLists.txt"
+		},
+		{
+			"path" : "src/udl/CMakeLists.txt"
+		},
+		{
+			"path" : "src/unique_ptr/CMakeLists.txt"
+		},
+		{
+			"path" : "src/conditional/CMakeLists.txt"
+		},
+		{
+			"path" : "src/netd/CMakeLists.txt"
+		},
+		{
+			"path" : "src/ptr/CMakeLists.txt"
+		},
+		{
+			"path" : "src/uuid/CMakeLists.txt"
+		},
+		{
+			"path" : "src/netd1/CMakeLists.txt"
+		},
+		{
+			"path" : "src/pythonC++/CMakeLists.txt"
+		},
+		{
+			"path" : "src/ifc/CMakeLists.txt"
+		},
+		{
+			"path" : "src/engineTest/CMakeLists.txt"
+		},
+		{
+			"path" : "src/utils/CMakeLists.txt"
+		},
+		{
+			"path" : "src/DateBaseTest/CMakeLists.txt"
+		},
+		{
+			"path" : "src/align/CMakeLists.txt"
+		},
+		{
+			"path" : "src/tcpServer/CMakeLists.txt"
+		},
+		{
+			"path" : "src/tcpClient/CMakeLists.txt"
+		},
+		{
+			"path" : "src/jsoncpp/CMakeLists.txt"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/jsoncpp/jsoncppConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/jsoncpp/jsoncppConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/jsoncpp/jsoncpp-targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/jsoncpp/jsoncpp-targets-release.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/lib/cmake/jsoncpp/jsoncpp-namespaced-targets.cmake"
+		},
+		{
+			"path" : "src/msgpackTest/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/parallels/clion/build-linux",
+		"source" : "/home/parallels/clion"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

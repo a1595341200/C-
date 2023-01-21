@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+574a355aa133866b559e89e0a8b99440 generated/another-service_proxy.cpp
+98cb873fa9f105e611333492f4ce886d generated/many-types_proxy.cpp

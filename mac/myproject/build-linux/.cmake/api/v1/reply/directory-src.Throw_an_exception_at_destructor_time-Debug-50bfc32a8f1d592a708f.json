@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "src/Throw_an_exception_at_destructor_time",
+		"source" : "src/Throw_an_exception_at_destructor_time"
+	}
+}

@@ -1,0 +1,1 @@
+/usr/bin/g++  -save-temps=obj -O0 -g3 -g CMakeFiles/FindStonePair.dir/src/QuestionB.cpp.o CMakeFiles/FindStonePair.dir/src/QuestionC.cpp.o CMakeFiles/FindStonePair.dir/src/main.cpp.o -o ../../../bin/FindStonePair  -lgtest 
