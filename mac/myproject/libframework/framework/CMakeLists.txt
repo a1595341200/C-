@@ -14,12 +14,6 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         add_subdirectory(interface)
 endif()
 
-message("jsoncpp src files:")
-
-foreach(file ${SRCS})
-        message(STATUS ${file})
-endforeach()
-
 file(GLOB_RECURSE SRCS src/*.cpp)
 
 foreach(file ${SRCS})
@@ -33,7 +27,6 @@ add_library(${PROJECT_N} SHARED
 target_include_directories(${PROJECT_N} PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         ${Boost_INCLUDE_DIRS}
-        ${CMAKE_BINARY_DIR}/generated
 )
 
 target_link_directories(${PROJECT_N} PUBLIC

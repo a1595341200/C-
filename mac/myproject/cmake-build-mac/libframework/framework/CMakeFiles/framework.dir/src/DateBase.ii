@@ -72560,6 +72560,7 @@ DateBase::query(const std::string &table, const std::string &key, bool fuzzy) {
         Log("/Users/xieyao/Desktop/git/C-/mac/myproject/libframework/framework/src/DateBase.cpp",253,"DateBase").stream() << "catch exception [<ex.what()" << "]select failed!";
         return vec;
     }
+    return vec;
 }
 
 std::string DateBase::dump() {
@@ -72584,7 +72585,7 @@ std::string DateBase::dump() {
             }
         }
     } catch (const std::exception &ex) {
-        Log("/Users/xieyao/Desktop/git/C-/mac/myproject/libframework/framework/src/DateBase.cpp",280,"DateBase").stream() << "catch exception [" << ex.what() << "]select failed!";
+        Log("/Users/xieyao/Desktop/git/C-/mac/myproject/libframework/framework/src/DateBase.cpp",281,"DateBase").stream() << "catch exception [" << ex.what() << "]select failed!";
     }
     return std::move(oss).str();
 }

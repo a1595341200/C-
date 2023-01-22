@@ -4,7 +4,6 @@
 //
 //  Created by 谢瑶 on 2022/9/27.
 //
-#define TAG "Utils"
 
 #include <boost/type_index.hpp>
 #include <iostream>

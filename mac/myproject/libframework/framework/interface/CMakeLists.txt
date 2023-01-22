@@ -2,44 +2,73 @@ cmake_minimum_required(VERSION 3.10)
 
 set(PROJECT_N interface)
 project(${PROJECT_N} VERSION 1.0)
-find_package(protobuf REQUIRED)
+
+if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    find_package(Protobuf REQUIRED)
+endif ()
+
 file(GLOB_RECURSE INTERFACE *.xml)
 file(GLOB_RECURSE INTERFACE_PROTOBUF *.proto)
-    
-set(CODEGEN "/media/psf/Home/Desktop/git/C-/mac/myproject/gdbus-codegen-glibmm/gdbus-codegen-glibmm.py")
+set(CODEGEN "${CMAKE_SOURCE_DIR}/gdbus-codegen-glibmm/gdbus-codegen-glibmm.py")
+set(generateDir ${CMAKE_BINARY_DIR}/generated)
 
 IF (NOT CODEGEN)
     MESSAGE(FATAL_ERROR "CODEGEN not specified. Specify path to codegen using -DCODEGEN=<path to code> ")
 ENDIF ()
 
-set(generateDir ${CMAKE_BINARY_DIR}/generated)
-
-
 foreach (face ${INTERFACE})
+    get_filename_component(FILE_NAME ${face} NAME_WE)
     message(STATUS "face = ${face}")
-    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" FILE_NAME ${face})
     message(STATUS "name  = ${FILE_NAME}")
 
-    execute_process(COMMAND echo "start")
-    execute_process(COMMAND mkdir -p ${CMAKE_BINARY_DIR}/generated/)
-    execute_process(COMMAND ${CODEGEN} --generate-cpp-code=${CMAKE_BINARY_DIR}/generated/${FILE_NAME} ${face})
     set(INTERFACE_SRCS ${INTERFACE_SRCS} ${generateDir}/${FILE_NAME}_proxy.cpp ${generateDir}/${FILE_NAME}_stub.cpp ${generateDir}/${FILE_NAME}_common.cpp)
     set(INTERFACE_HEADS ${INTERFACE_HEADS} ${generateDir}/${FILE_NAME}_proxy.h ${generateDir}/${FILE_NAME}_stub.h ${generateDir}/${FILE_NAME}_common.h)
+    add_custom_command(
+            OUTPUT "${generateDir}/${FILE_NAME}_proxy.cpp"
+            "${generateDir}/${FILE_NAME}_stub.cpp"
+            "${generateDir}/${FILE_NAME}_common.cpp"
+            "${generateDir}/${FILE_NAME}_proxy.h"
+            "${generateDir}/${FILE_NAME}_stub.h"
+            "${generateDir}/${FILE_NAME}_common.h"
+            COMMAND  ${CODEGEN}
+            ARGS --generate-cpp-code ${CMAKE_BINARY_DIR}/generated/${FILE_NAME}
+            ${face}
+            DEPENDS ${face}
+            COMMENT "Running C++ gdbus buffer compiler on ${face}"
+            VERBATIM
+    )
 endforeach ()
 
 foreach (proto ${INTERFACE_PROTOBUF})
-    message(STATUS "face = ${proto}")
-    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" FILE_NAME ${proto})
+    get_filename_component(FILE_NAME ${proto} NAME_WE)
     message(STATUS "name  = ${FILE_NAME}")
-#    protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${proto})
-#   protobuf_generate_python(PROTO_PY ${proto})
-#    add_custom_target(pythonTarget ALL DEPENDS ${PROTO_PY})
-#    file(COPY ${PROTO_SRCS} DESTINATION ${CMAKE_BINARY_DIR}/generated)
-#    file(COPY ${PROTO_HDRS} DESTINATION ${CMAKE_BINARY_DIR}/generated)
-    set(INTERFACE_SRCS ${INTERFACE_SRCS} ${PROTO_SRCS})
-    set(INTERFACE_HEADS ${INTERFACE_HEADS} ${PROTO_HDRS})
-#    set(INTERFACE_PYTHON ${INTERFACE_PYTHON} ${PROTO_PY})
+    set(INTERFACE_PROTOBUF_SRCS ${INTERFACE_PROTOBUF_SRCS} ${generateDir}/${FILE_NAME}.pb.cc)
+    set(INTERFACE_PROTOBUF_HEADS ${INTERFACE_PROTOBUF_HEADS} ${generateDir}/${FILE_NAME}.pb.h})
+    add_custom_command(
+            OUTPUT "${generateDir}/${FILE_NAME}.pb.cc"
+            "${generateDir}/${FILE_NAME}.pb.h"
+            COMMAND  ${PROTOBUF_PROTOC_EXECUTABLE}
+            ARGS --cpp_out  ${generateDir}
+            -I ${CMAKE_CURRENT_SOURCE_DIR}
+            ${proto}
+            DEPENDS ${proto}
+            COMMENT "Running C++ protocol buffer compiler on ${proto}"
+            VERBATIM
+    )
+
 endforeach ()
+# 设置文件属性为 GENERATED
+set_source_files_properties(
+        ${INTERFACE_PROTOBUF_SRCS}
+        ${INTERFACE_PROTOBUF_HEADS}
+        PROPERTIES
+        GENERATED TRUE
+        )
+add_custom_target(generate_message ALL
+        DEPENDS ${INTERFACE_PROTOBUF_SRCS}
+        COMMENT "generate message target"
+        VERBATIM
+        )
 
 foreach (file ${INTERFACE_SRCS})
     message(STATUS ${file})
@@ -59,7 +88,11 @@ include_directories(
 
 add_library(${PROJECT_N} SHARED
         ${INTERFACE_SRCS}
+        ${INTERFACE_PROTOBUF_SRCS}
         )
+target_include_directories(${PROJECT_N} PUBLIC
+        ${CMAKE_BINARY_DIR}/generated
+)
 target_link_libraries(${PROJECT_N} PUBLIC
         protobuf
-)
+        )

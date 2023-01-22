@@ -1,7 +1,6 @@
 #define TAG "ThreadPool"
 #include <framework/ThreadPool.h>
 #include <iostream>
-#include <framework/Log.h>
 
 ThreadPool::ThreadPool(int numThreads) {
     for (int i = 0; i < numThreads; i++) {

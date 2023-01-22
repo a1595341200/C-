@@ -253,6 +253,7 @@ DateBase::query(const std::string &table, const std::string &key, bool fuzzy) {
         LOG() << "catch exception [<ex.what()" << "]select failed!";
         return vec;
     }
+    return vec;
 }
 
 std::string DateBase::dump() {
