@@ -1,1 +1,0 @@
-/usr/bin/c++ -O0 -g3 CMakeFiles/RabbitGoesHome.dir/src/QuestionA.cpp.o CMakeFiles/RabbitGoesHome.dir/src/QuestionB.cpp.o CMakeFiles/RabbitGoesHome.dir/src/QuestionD.cpp.o CMakeFiles/RabbitGoesHome.dir/src/QuestionE.cpp.o CMakeFiles/RabbitGoesHome.dir/src/main.cpp.o -o RabbitGoesHome  -lgtest 
