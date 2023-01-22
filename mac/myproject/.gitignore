@@ -2,3 +2,5 @@ build/*
 build2/*
 build1/*
 cmake-build-debug/*
+build-linux/*
+build_linux/*
