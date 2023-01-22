@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC  -save-temps=obj -O0 -g3 -g -shared -Wl,-soname,libpythonC++.so -o ../../lib/libpythonC++.so CMakeFiles/pythonC++.dir/src/main.cpp.o 

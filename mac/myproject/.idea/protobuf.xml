@@ -60,6 +60,64 @@
         <path>$PROJECT_DIR$/grpc/third_party/envoy-api</path>
         <yaml>$PROJECT_DIR$/grpc/third_party/envoy-api/buf.yaml</yaml>
       </module>
+      <module>
+        <dependencies>
+          <set>
+            <option value="buf.build/beta/prometheus" />
+            <option value="buf.build/cncf/xds" />
+            <option value="buf.build/gogo/protobuf" />
+            <option value="buf.build/googleapis/googleapis:d1a849b8f8304950832335723096e954" />
+            <option value="buf.build/opencensus/opencensus" />
+            <option value="buf.build/opentelemetry/opentelemetry" />
+          </set>
+        </dependencies>
+        <lockedDependencies>
+          <dependency>
+            <commit>a91b42d18a994cd4b07b37f365f87cf9</commit>
+            <owner>beta</owner>
+            <remote>buf.build</remote>
+            <repository>prometheus</repository>
+          </dependency>
+          <dependency>
+            <commit>0492166643854ea08814f4349286f9cb</commit>
+            <owner>cncf</owner>
+            <remote>buf.build</remote>
+            <repository>xds</repository>
+          </dependency>
+          <dependency>
+            <commit>dc09a417d27241f7b069feae2cd74a0e</commit>
+            <owner>envoyproxy</owner>
+            <remote>buf.build</remote>
+            <repository>protoc-gen-validate</repository>
+          </dependency>
+          <dependency>
+            <commit>4df00b267f944190a229ce3695781e99</commit>
+            <owner>gogo</owner>
+            <remote>buf.build</remote>
+            <repository>protobuf</repository>
+          </dependency>
+          <dependency>
+            <commit>d1a849b8f8304950832335723096e954</commit>
+            <owner>googleapis</owner>
+            <remote>buf.build</remote>
+            <repository>googleapis</repository>
+          </dependency>
+          <dependency>
+            <commit>d1d7ccd1281e4f42ab7ce9a7d2b29e33</commit>
+            <owner>opencensus</owner>
+            <remote>buf.build</remote>
+            <repository>opencensus</repository>
+          </dependency>
+          <dependency>
+            <commit>187ea5573ff044faa892a5d244cb2b48</commit>
+            <owner>opentelemetry</owner>
+            <remote>buf.build</remote>
+            <repository>opentelemetry</repository>
+          </dependency>
+        </lockedDependencies>
+        <path>$PROJECT_DIR$/grpc/third_party/envoy-api</path>
+        <yaml>$PROJECT_DIR$/grpc/third_party/envoy-api/buf.yaml</yaml>
+      </module>
     </modules>
   </component>
 </project>
