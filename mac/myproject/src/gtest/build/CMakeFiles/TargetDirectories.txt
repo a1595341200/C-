@@ -1,4 +1,0 @@
-/Users/xieyao/Desktop/git/C-/mac/myproject/src/gtest/build/CMakeFiles/test.dir
-/Users/xieyao/Desktop/git/C-/mac/myproject/src/gtest/build/CMakeFiles/rebuild_cache.dir
-/Users/xieyao/Desktop/git/C-/mac/myproject/src/gtest/build/CMakeFiles/edit_cache.dir
-/Users/xieyao/Desktop/git/C-/mac/myproject/src/gtest/build/CMakeFiles/gtest.dir
