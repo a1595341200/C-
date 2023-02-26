@@ -6,7 +6,6 @@
 #define DEV_MACROS_H
 template<typename T>
 inline auto StructSchema();
-
 template<typename T>
 inline std::string GetTableName();
 

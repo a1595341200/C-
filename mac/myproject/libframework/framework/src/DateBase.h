@@ -5,12 +5,8 @@
 #ifndef DEV_DATEBASE_H
 #define DEV_DATEBASE_H
 
-
-
 class DateBase {
 
 };
-
-
 
 #endif //DEV_DATEBASE_H

@@ -14,15 +14,22 @@ namespace Json {
 
 // writer.h
 class StreamWriter;
+
 class StreamWriterBuilder;
+
 class Writer;
+
 class FastWriter;
+
 class StyledWriter;
+
 class StyledStreamWriter;
 
 // reader.h
 class Reader;
+
 class CharReader;
+
 class CharReaderBuilder;
 
 // json_features.h
@@ -30,12 +37,19 @@ class Features;
 
 // value.h
 using ArrayIndex = unsigned int;
+
 class StaticString;
+
 class Path;
+
 class PathArgument;
+
 class Value;
+
 class ValueIteratorBase;
+
 class ValueIterator;
+
 class ValueConstIterator;
 
 } // namespace Json

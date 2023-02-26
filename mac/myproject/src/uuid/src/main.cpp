@@ -9,12 +9,10 @@
 #include <framework/Utils.h>
 using namespace std;
 
-int main(int argc, char const *argv[])
-{
-    for (int i = 0; i < 10; i++)
-    {
-        auto s = UUID::generate();
-        printf("%s size %d\n", s.c_str(), s.size());
-    }
-    return 0;
+int main(int argc, char const *argv[]) {
+	for (int i = 0; i < 10; i++) {
+		auto s = UUID::generate();
+		printf("%s size %d\n", s.c_str(), s.size());
+	}
+	return 0;
 }

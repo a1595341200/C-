@@ -1,44 +1,48 @@
+//
+// Created by 谢瑶 on 2023/2/21.
+//
 #include <iostream>
 #include <vector>
-#include <queue>
-
+#include <unordered_map>
+#include <framework/dbg.h>
 using namespace std;
 
-class Solution
-{
+class Solution {
 public:
-    vector<string> generateParenthesis(int n)
-    {
-        std::string s;
-        vector<string> ans;
-        generateParenthesisHelper(s, ans, n, n);
-    }
+	void recursion(int depath, int n, vector<string> &ans) {
+		if (depath == n) {
+			ans.emplace_back(cur);
+			return;
+		}
+		if (hash['('] > 0) {
+			cur += '(';
+			hash['(']--;
+			recursion(depath + 1, n, ans);
+			cur.pop_back();
+			hash['(']++;
+		}
+		if (hash['('] < hash[')']) {
+			cur += ')';
+			hash[')']--;
+			recursion(depath + 1, n, ans);
+			cur.pop_back();
+			hash[')']++;
+		}
+	}
 
-    void generateParenthesisHelper(string &s, vector<string> &ans, int left, int right)
-    {
-        if (left == 0 && right == 0)
-        {
-            ans.push_back(s);
-            return;
-        }
+	vector<string> generateParenthesis(int n) {
+		hash = {{'(', n}, {')', n}};
+		vector<string> ans;
+		recursion(0, n * 2, ans);
+		return ans;
+	}
 
-        if (left)
-        {
-            s.push_back('(');
-            generateParenthesisHelper(s, ans, left - 1, right);
-            s.pop_back();
-        }
-
-        if (right > left)
-        {
-            s.push_back(')');
-            generateParenthesisHelper(s, ans, left, right - 1);
-            s.pop_back();
-        }
-    }
+private:
+	string cur;
+	unordered_map<char, int> hash;
 };
-int main(int argc, char const *argv[])
-{
-    std::cout << "Hello World!" << std::endl;
-    return 0;
+
+int main() {
+	auto r = Solution().generateParenthesis(1);
+	dbg(r);
 }

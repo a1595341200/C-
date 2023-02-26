@@ -11,16 +11,13 @@
 
 class E : public Engine {
 public:
-    enum {
-        ASTATE,
-        BSTATE,
-    };
-
-    E(const std::string &name, const std::shared_ptr<Looper> &looper);
-
-    void sengMessage(std::shared_ptr<Message> msg);
-
-    std::map<int, std::shared_ptr<IState>> mStateMap;
+	enum {
+		ASTATE,
+		BSTATE,
+	};
+	E(const std::string &name, const std::shared_ptr<Looper> &looper);
+	void sengMessage(std::shared_ptr<Message> msg);
+	std::map<int, std::shared_ptr<IState>> mStateMap;
 };
 
 #endif //DEV_E_H

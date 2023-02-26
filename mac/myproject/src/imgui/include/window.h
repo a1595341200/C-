@@ -12,35 +12,28 @@
 
 class Window {
 public:
-    explicit Window(GLFWerrorfun callback);
-
-    virtual ~Window() = default;
-
-    static int init();
-
-    bool createWindow(const std::string &name,
-                      int width,
-                      int height,
-                      const char *title, GLFWmonitor
-                      *monitor,
-                      GLFWwindow *share
-    );
-
-    void show(const std::string &name);
+	explicit Window(GLFWerrorfun callback);
+	virtual ~Window() = default;
+	static int init();
+	bool createWindow(const std::string &name,
+					  int width,
+					  int height,
+					  const char *title, GLFWmonitor
+					  *monitor,
+					  GLFWwindow *share
+					 );
+	void show(const std::string &name);
 
 private:
-    static inline std::string mGlslVersion;
-    GLFWwindow * mWindow;
-    static inline std::string mName;
-    ImVec4 clear_color;
-
-    void ShowSimpleWindow(bool& show_demo_window,
-                          bool& show_another_window);
-    void showAnotherWindow(bool& show_another_window);
-
-    void showConsole();
-
-    void Rendering();
+	static inline std::string mGlslVersion;
+	GLFWwindow *mWindow;
+	static inline std::string mName;
+	ImVec4 clear_color;
+	void ShowSimpleWindow(bool &show_demo_window,
+						  bool &show_another_window);
+	void showAnotherWindow(bool &show_another_window);
+	void showConsole();
+	void Rendering();
 };
 
 #endif //DEV_WINDOW_H

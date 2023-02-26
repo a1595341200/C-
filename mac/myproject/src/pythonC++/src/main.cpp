@@ -1,3 +1,3 @@
-extern "C"{
-    void test(){};
+extern "C" {
+void test() {} ;
 }

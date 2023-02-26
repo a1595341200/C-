@@ -9,8 +9,7 @@
 #ifndef DEV_QUESTIOND_H
 #define DEV_QUESTIOND_H
 #include <vector>
-namespace QuestionD
-{
-    std::vector<std::vector<std::pair<int, int>>> rabbitGoesHome(int m, int n, const std::vector<std::vector<int>> &grid);
+namespace QuestionD {
+std::vector<std::vector<std::pair<int, int>>> rabbitGoesHome(int m, int n, const std::vector<std::vector<int>> &grid);
 };
 #endif

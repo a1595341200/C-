@@ -10,6 +10,7 @@ LastEditors: yao.xie
 # 按 ⌃R 执行或将其替换为您的代码。
 # 按 双击 ⇧ 在所有地方搜索类、文件、工具窗口、操作和设置。
 import os
+from pathlib import Path
 
 work_path = "/Users/xieyao/Desktop/git/C-/mac/myproject/code_generation"
 
@@ -33,6 +34,7 @@ class code_gen():
             self.out_put_cmake_file(subdir)
             self.out_put_main_file(subdir)
             self.add_to_project(subdir)
+            pass
         else:
             print("目录已经存在")
 
@@ -69,12 +71,20 @@ class code_gen():
             print("目录", self.path, "已存在")
             return False
         else:
-            os.mkdir(self.path, 0o755)
-            os.mkdir(self.path + "/include", 0o755)
-            os.mkdir(self.path + "/src", 0o755)
+            path1 = Path(self.path)
+            if path1.parent.exists():
+                pass
+            else:
+                os.makedirs(self.path, 0o755)
+                with open(os.path.abspath(os.path.join(path1.parent, "../CMakeLists.txt")), "a") as fo:
+                    fo.write("add_subdirectory(\"" + path1.parent.name + "\")\n")
+            os.makedirs(self.path + "/include", 0o755)
+            os.makedirs(self.path + "/src", 0o755)
             return True
+
 
 if __name__ == '__main__':
     dataStructure = "DataStructure"
-    p = code_gen("RabbitGoesHome", dataStructure)
-    # p = code_gen("RabbitGoesHome")
+    designMode = "DesignMode"
+    # p = code_gen("53c", designMode)
+    p = code_gen("netLink")

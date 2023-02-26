@@ -11,9 +11,8 @@
 
 #include <vector>
 
-namespace QuestionA
-{
-    int rabbitGoesHome(int m, int n, const std::vector<std::vector<int>> &grid);
+namespace QuestionA {
+int rabbitGoesHome(int m, int n, const std::vector<std::vector<int>> &grid);
 };
 
 #endif // DEV_QUESTIONA_H

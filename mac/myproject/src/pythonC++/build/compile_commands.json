@@ -1,7 +1,7 @@
 [
-{
-  "directory": "/Users/xieyao/Desktop/git/C-/mac/myproject/src/pythonC++/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DpythonC___EXPORTS -I/opt/homebrew/Frameworks/Python.framework/Versions/3.11/include/python3.11 -I/Users/xieyao/Desktop/git/C-/mac/myproject/src/pythonC++/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fPIC -std=gnu++17 -o CMakeFiles/pythonC++.dir/src/main.cpp.o -c /Users/xieyao/Desktop/git/C-/mac/myproject/src/pythonC++/src/main.cpp",
-  "file": "/Users/xieyao/Desktop/git/C-/mac/myproject/src/pythonC++/src/main.cpp"
-}
+  {
+    "directory": "/Users/xieyao/Desktop/git/C-/mac/myproject/src/pythonC++/build",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DpythonC___EXPORTS -I/opt/homebrew/Frameworks/Python.framework/Versions/3.11/include/python3.11 -I/Users/xieyao/Desktop/git/C-/mac/myproject/src/pythonC++/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fPIC -std=gnu++17 -o CMakeFiles/pythonC++.dir/src/main.cpp.o -c /Users/xieyao/Desktop/git/C-/mac/myproject/src/pythonC++/src/main.cpp",
+    "file": "/Users/xieyao/Desktop/git/C-/mac/myproject/src/pythonC++/src/main.cpp"
+  }
 ]

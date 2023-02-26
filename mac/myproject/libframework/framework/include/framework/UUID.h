@@ -13,41 +13,41 @@
 #define DEV_UUID_H
 #include <uuid/uuid.h>
 #include <string>
-class UUID
-{
+
+class UUID {
 public:
-    static std::string generate()
-    {
-        uuid_t uuid;
+	static std::string generate() {
+		uuid_t uuid;
 #ifdef _WIN32
-        // define something for Windows (32-bit and 64-bit, this part is common)
+		// define something for Windows (32-bit and 64-bit, this part is common)
 
 #elif _WIN64
-        // define something for Windows (64-bit only)
+		// define something for Windows (64-bit only)
 #elif __APPLE__
 
 #elif TARGET_IPHONE_SIMULATOR
-        // iOS Simulator
+		// iOS Simulator
 #elif TARGET_OS_IPHONE
-        // iOS device
+		// iOS device
 #elif TARGET_OS_MAC
-        // Other kinds of Mac OS
-        uuid_string_t str;
+		// Other kinds of Mac OS
+		uuid_string_t str;
 #elif __ANDROID__
-        // android
+		// android
 #elif __linux__
-        // linux
-        char str[37] = {};
+		// linux
+		char str[37] = {};
 #elif __unix__ // all unices not caught above
-        // Unix
+		// Unix
 #elif defined(_POSIX_VERSION)
-        // POSIX
+		// POSIX
 #else
 #error "Unknown"
 #endif
-        uuid_generate(uuid);
-        uuid_unparse(uuid, str);
-        return str;
-    }
+		uuid_generate(uuid);
+		uuid_unparse(uuid, str);
+		return str;
+	}
 };
+
 #endif // DEV_UUID_H

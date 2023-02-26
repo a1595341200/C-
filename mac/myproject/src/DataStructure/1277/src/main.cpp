@@ -27,17 +27,18 @@ using namespace std;
 
 class base {
 public:
-    virtual ~base() = default;
+	virtual ~base() = default;
 };
-class b : public base{
+
+class b : public base {
 public:
-    void p(){
-        cout << "111" << endl;
-    }
+	void p() {
+		cout << "111" << endl;
+	}
 };
 
 int main(int argc, char const *argv[]) {
-    base *b1 = new b();
-    dynamic_cast<b *>(b1)->p();
-    return 0;
+	base *b1 = new b();
+	dynamic_cast<b *>(b1)->p();
+	return 0;
 }

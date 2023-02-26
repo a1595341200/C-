@@ -12,12 +12,11 @@ using namespace std;
  */
 
 template<typename... Args>
-auto sum(Args... args)
-{
-    return (args && ...);
+auto sum(Args... args) {
+	return (args && ...);
 }
-int main(int argc, char const *argv[])
-{
-    std::cout << std::boolalpha << sum();
-    return 0;
+
+int main(int argc, char const *argv[]) {
+	std::cout << std::boolalpha << sum();
+	return 0;
 }

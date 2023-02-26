@@ -10,9 +10,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 message("src files:")
-foreach(file ${SRCS})
-        message(STATUS ${file})
-endforeach()
+foreach (file ${SRCS})
+    message(STATUS ${file})
+endforeach ()
 
 add_executable(${PROJECT_N} ${SRCS} src/ifc.cpp)
 

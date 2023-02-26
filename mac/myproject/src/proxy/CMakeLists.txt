@@ -7,13 +7,13 @@ PKG_CHECK_MODULES(GLIBMM REQUIRED glibmm-2.4)
 PKG_CHECK_MODULES(GIOMM REQUIRED giomm-2.4)
 
 SET(SOURCES
-    testproxymain.cpp
-)
+        testproxymain.cpp
+        )
 
 SET(HEADERS
-    testproxymain.h
-    tools.h
-)
+        testproxymain.h
+        tools.h
+        )
 
 include_directories(
         ${GLIBMM_INCLUDE_DIRS}
@@ -23,10 +23,10 @@ include_directories(
 ADD_EXECUTABLE(proxytest ${SOURCES})
 
 target_link_libraries(proxytest PUBLIC
-    framework
+        framework
         ${GLIBMM_LIBRARIES}
         ${GIOMM_LIBRARIES}
         ${GLIBMM_LIBRARIES}
         ${GIOMM_LIBRARIES}
         interface
-)
+        )

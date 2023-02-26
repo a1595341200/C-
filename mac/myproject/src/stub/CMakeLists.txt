@@ -6,15 +6,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 SET(SOURCES
         teststubmain.cpp
-)
+        )
 
 SET(HEADERS
         teststubmain.h
         tools.h
-)
+        )
 
 ADD_EXECUTABLE(stubtest ${SOURCES})
 
 target_link_libraries(stubtest PUBLIC
         framework
-)
+        )

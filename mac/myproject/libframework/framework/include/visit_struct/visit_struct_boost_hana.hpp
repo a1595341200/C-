@@ -57,84 +57,83 @@ namespace traits {
 // Also it's worth noting that hana doesn't apparently support structs with reference members, and test code fails compilation
 // with "error: cannot create pointer to reference member" in gcc-6. So this is probably overkill.
 
-template <typename A, typename S>
+template<typename A, typename S>
 struct accessor_value_type {
-  using test1 = decltype(std::declval<A>()(std::declval<S&>()));
-  using test2 = decltype(std::declval<A>()(std::declval<S&&>()));
-  
-  using type = typename std::conditional<std::is_same<test1, test2>::value,
-                        test1,
-                        typename std::remove_reference<test1>::type>::type;
+	using test1 = decltype(std::declval<A>()(std::declval<S &>()));
+	using test2 = decltype(std::declval<A>()(std::declval<S &&>()));
+
+	using type = typename std::conditional<std::is_same<test1, test2>::value,
+										   test1,
+										   typename std::remove_reference<test1>::type>::type;
 };
 
-template <typename A, typename S>
+template<typename A, typename S>
 using accessor_value_t = typename accessor_value_type<A, S>::type;
 
 // Hana bindings start here
 
 namespace hana = boost::hana;
 
-template <typename S>
-struct visitable<S, typename std::enable_if<hana::Struct<S>::value>::type>
-{
-  static constexpr size_t field_count = decltype(hana::length(hana::accessors<S>()))::value;
+template<typename S>
+struct visitable<S, typename std::enable_if<hana::Struct<S>::value>::type> {
+	static constexpr size_t field_count = decltype(hana::length(hana::accessors<S>()))::value;
 
-  // Note: U should be qualified S (const and references) S, interface should ensure that
-  template <typename V, typename U>
-  static constexpr void apply(V && v, U && u) {
-    hana::for_each(hana::accessors<S>(), [&v, &u](auto pair) {
-      std::forward<V>(v)(hana::to<char const *>(hana::first(pair)), hana::second(pair)(std::forward<U>(u)));
-    });
-  }
+	// Note: U should be qualified S (const and references) S, interface should ensure that
+	template<typename V, typename U>
+	static constexpr void apply(V &&v, U &&u) {
+		hana::for_each(hana::accessors<S>(), [&v, &u](auto pair) {
+			std::forward<V>(v)(hana::to<char const *>(hana::first(pair)), hana::second(pair)(std::forward<U>(u)));
+		});
+	}
 
-  template <typename V, typename U1, typename U2>
-  static constexpr void apply(V && v, U1 && u1, U2 && u2) {
-    hana::for_each(hana::accessors<S>(), [&v, &u1, &u2](auto pair) {
-      std::forward<V>(v)(hana::to<char const *>(hana::first(pair)),
-                         hana::second(pair)(std::forward<U1>(u1)),
-                         hana::second(pair)(std::forward<U2>(u2)));
-    });
-  }
+	template<typename V, typename U1, typename U2>
+	static constexpr void apply(V &&v, U1 &&u1, U2 &&u2) {
+		hana::for_each(hana::accessors<S>(), [&v, &u1, &u2](auto pair) {
+			std::forward<V>(v)(hana::to<char const *>(hana::first(pair)),
+							   hana::second(pair)(std::forward<U1>(u1)),
+							   hana::second(pair)(std::forward<U2>(u2)));
+		});
+	}
 
-  template <typename V>
-  static constexpr void visit_types(V && v) {
-    hana::for_each(hana::accessors<S>(), [&v](auto pair) {
-      using member_type = accessor_value_t<decltype(hana::second(pair)), S>;
-      std::forward<V>(v)(hana::to<char const *>(hana::first(pair)),
-                         visit_struct::type_c<member_type>{});
-    });
-  }
+	template<typename V>
+	static constexpr void visit_types(V &&v) {
+		hana::for_each(hana::accessors<S>(), [&v](auto pair) {
+			using member_type = accessor_value_t<decltype(hana::second(pair)), S>;
+			std::forward<V>(v)(hana::to<char const *>(hana::first(pair)),
+							   visit_struct::type_c<member_type>{});
+		});
+	}
 
-  template <typename V>
-  static constexpr void visit_accessors(V && v) {
-    hana::for_each(hana::accessors<S>(), [&v](auto pair) {
-      std::forward<V>(v)(hana::to<char const *>(hana::first(pair)),
-                         hana::second(pair));
-    });
-  }
+	template<typename V>
+	static constexpr void visit_accessors(V &&v) {
+		hana::for_each(hana::accessors<S>(), [&v](auto pair) {
+			std::forward<V>(v)(hana::to<char const *>(hana::first(pair)),
+							   hana::second(pair));
+		});
+	}
 
-  template <int idx, typename T>
-  static constexpr auto get_value(std::integral_constant<int, idx>, T && t) ->
-    decltype(hana::second(hana::at(hana::accessors<S>(), hana::size_c<idx>)) (std::forward<T>(t))) {
-    return hana::second(hana::at(hana::accessors<S>(), hana::size_c<idx>)) (std::forward<T>(t));
-  }
+	template<int idx, typename T>
+	static constexpr auto get_value(std::integral_constant<int, idx>, T &&t) ->
+	decltype(hana::second(hana::at(hana::accessors<S>(), hana::size_c<idx>))(std::forward<T>(t))) {
+		return hana::second(hana::at(hana::accessors<S>(), hana::size_c<idx>))(std::forward<T>(t));
+	}
 
-  template <int idx>
-  static constexpr auto get_name(std::integral_constant<int, idx>) -> const char * {
-    return hana::to<const char *>(hana::first(hana::at(hana::accessors<S>(), hana::size_c<idx>)));
-  }
+	template<int idx>
+	static constexpr auto get_name(std::integral_constant<int, idx>) -> const char * {
+		return hana::to<const char *>(hana::first(hana::at(hana::accessors<S>(), hana::size_c<idx>)));
+	}
 
-  template <int idx>
-  static constexpr auto get_accessor(std::integral_constant<int, idx>) ->
-    decltype(hana::second(hana::at(hana::accessors<S>(), hana::size_c<idx>))) {
-    return hana::second(hana::at(hana::accessors<S>(), hana::size_c<idx>));
-  }
+	template<int idx>
+	static constexpr auto get_accessor(std::integral_constant<int, idx>) ->
+	decltype(hana::second(hana::at(hana::accessors<S>(), hana::size_c<idx>))) {
+		return hana::second(hana::at(hana::accessors<S>(), hana::size_c<idx>));
+	}
 
-  template <int idx>
-  static auto type_at(std::integral_constant<int, idx>) ->
-    visit_struct::type_c<accessor_value_t<decltype(hana::second(hana::at(hana::accessors<S>(), hana::size_c<idx>))), S>>;
-
-  static constexpr bool value = true;
+	template<int idx>
+	static auto type_at(std::integral_constant<int, idx>) ->
+	visit_struct::type_c<accessor_value_t<decltype(hana::second(hana::at(hana::accessors<S>(), hana::size_c<idx>))),
+										  S>>;
+	static constexpr bool value = true;
 };
 
 } // end namespace traits

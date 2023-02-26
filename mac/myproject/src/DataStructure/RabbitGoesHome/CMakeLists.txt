@@ -10,9 +10,9 @@ set(CMAKE_CXX_FLAGS "-O0 -g3")
 file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 message("RabbitGoesHome src files:")
-foreach(file ${SRCS})
-        message(STATUS ${file})
-endforeach()
+foreach (file ${SRCS})
+    message(STATUS ${file})
+endforeach ()
 
 add_executable(${PROJECT_N} ${SRCS})
 

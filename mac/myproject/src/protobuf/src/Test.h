@@ -11,17 +11,16 @@
 class Test : public Yao::Xie::TestStub {
 public:
 
-    void start();
-
-    void getName(const Glib::ustring &Param1, MethodInvocation &invocation) override;
+	void start();
+	void getName(const Glib::ustring &Param1, MethodInvocation &invocation) override;
 };
 
 class Proxy {
 public:
-    Proxy(const std::string& path = "/");
-    void start();
-    void doAction();
-    Glib::RefPtr<Yao::Xie::TestProxy> mProxy;
+	Proxy(const std::string &path = "/");
+	void start();
+	void doAction();
+	Glib::RefPtr<Yao::Xie::TestProxy> mProxy;
 };
 
 #endif //DEV_TEST_H

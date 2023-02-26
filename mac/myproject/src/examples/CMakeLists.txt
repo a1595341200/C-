@@ -3,16 +3,16 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required(VERSION 2.8)
 
 set(EXAMPLE_CONFIG_FILES
-    "config/vsomeip.json"
-    "config/vsomeip-local.json"
-    "config/vsomeip-tcp-client.json"
-    "config/vsomeip-tcp-service.json"
-    "config/vsomeip-udp-client.json"
-    "config/vsomeip-udp-service.json"
-)
+        "config/vsomeip.json"
+        "config/vsomeip-local.json"
+        "config/vsomeip-tcp-client.json"
+        "config/vsomeip-tcp-service.json"
+        "config/vsomeip-udp-client.json"
+        "config/vsomeip-udp-service.json"
+        )
 
 add_subdirectory("hello_world")
 add_subdirectory("routingmanagerd")
@@ -32,9 +32,9 @@ target_link_libraries(notify-sample ${VSOMEIP_NAME} ${Boost_LIBRARIES} ${DL_LIBR
 
 # add_dependencies(examples request-sample response-sample subscribe-sample notify-sample)
 
-install (
-    TARGETS request-sample response-sample subscribe-sample notify-sample
-    RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT bin
+install(
+        TARGETS request-sample response-sample subscribe-sample notify-sample
+        RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT bin
 )
 
 ###################################################################################################

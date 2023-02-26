@@ -11,17 +11,14 @@ class E;
 
 class B : public IState {
 public:
-    B(E *e);
-
-    void enter() override;
-
-    void exit() override;
-
-    bool processMessage(std::shared_ptr<Message> msg) override;
-
-    std::string toString() override;
+	B(E *e);
+	void enter() override;
+	void exit() override;
+	bool processMessage(std::shared_ptr<Message> msg) override;
+	std::string toString() override;
 
 private:
-    E *mE;
+	E *mE;
 };
+
 #endif //DEV_B_H

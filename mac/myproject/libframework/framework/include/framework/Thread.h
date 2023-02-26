@@ -11,22 +11,23 @@
 #include <mutex>
 #include <condition_variable>
 
-class Thread
-{
+class Thread {
 public:
-    explicit Thread(std::chrono::milliseconds inteval) : mInteval(inteval) {}
-    virtual bool threadLoop() = 0;
-    virtual ~Thread();
-    bool run();
-    void join();
-    virtual void requestExit();
-    virtual void requestExitAndWait();
+	explicit Thread(std::chrono::milliseconds inteval) : mInteval(inteval) {}
+
+	virtual bool threadLoop() = 0;
+	virtual ~Thread();
+	bool run();
+	void join();
+	virtual void requestExit();
+	virtual void requestExitAndWait();
 
 private:
-    void _threadLoop();
-    std::unique_ptr<std::thread> mThread;
-    std::atomic_bool mStop{false};
-    std::atomic_bool mQuit{false};
-    std::chrono::milliseconds mInteval;
+	void _threadLoop();
+	std::unique_ptr<std::thread> mThread;
+	std::atomic_bool mStop{false};
+	std::atomic_bool mQuit{false};
+	std::chrono::milliseconds mInteval;
 };
+
 #endif // DEV_THREAD_H

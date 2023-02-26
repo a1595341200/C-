@@ -43,10 +43,10 @@
 // release builds we abort, for a core-dump or debugger.
 #define JSON_FAIL_MESSAGE(message)                                             \
   {                                                                            \
-    OStringStream oss;                                                         \
-    oss << message;                                                            \
-    assert(false && oss.str().c_str());                                        \
-    abort();                                                                   \
+	OStringStream oss;                                                         \
+	oss << message;                                                            \
+	assert(false && oss.str().c_str());                                        \
+	abort();                                                                   \
   }
 
 #endif

@@ -1,44 +1,39 @@
 //
-//  main.cpp
-//  20
+// Created by 谢瑶 on 2023/2/21.
 //
-//  Created by 谢瑶 on 2022/8/11.
-//
-
 #include <iostream>
 #include <stack>
-#include <map>
+#include <unordered_set>
+#include <unordered_map>
 using namespace std;
+
 class Solution {
 public:
-    map<char,char> m={{'[',']'},{'(',')'},{'{','}'}};
-    bool isValid(string s) {
-        if(s.empty()){
-            return false;
-        }
-        stack<char> st;
-        for(auto c : s) {
-            char ch = 0;
-            if(!st.empty()){
-                ch = st.top();
-                if(m.count(c)==0){
-                    if(ch != m[c]){
-                        return false;
-                    }else {
-                        st.pop();
-                    }
-                }else {
-                    st.push(c);
-                }
-            }else {
-                st.push(c);
-            }
-        }
-        return true;
-    }
+	bool isValid(string s) {
+		stack<char> stack;
+		unordered_set<char> hash{'(', '[', '{'};
+		unordered_map<char, char> match{{')', '('}, {']', '['}, {'}', '{'}};
+		for (int i = 0; i < s.size(); ++i) {
+			if (hash.count(s[i])) {
+				stack.emplace(s[i]);
+			} else {
+				if (!stack.empty()) {
+					auto c = stack.top();
+					stack.pop();
+					if (c != match[s[i]]) {
+						return false;
+					}
+				} else {
+					return false;
+				}
+			}
+		}
+		return stack.empty() ? true : false;
+	}
 };
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+
+int main() {
+	auto r = Solution().isValid("())");
+	cout << r << endl;
+	return 0;
 }

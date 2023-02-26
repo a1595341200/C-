@@ -5,8 +5,7 @@
 #include <unordered_set>
 using namespace std;
 
-int main()
-{
-    vector<int> s;
-    return 0;
+int main() {
+	vector<int> s;
+	return 0;
 }

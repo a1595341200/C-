@@ -5,12 +5,8 @@
 #ifndef DEV_DBUSCONNECT_H
 #define DEV_DBUSCONNECT_H
 
-
-
 class DbusConnect {
 
 };
-
-
 
 #endif //DEV_DBUSCONNECT_H

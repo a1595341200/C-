@@ -15,28 +15,24 @@
 
 class DbusConnection {
 public:
-    DbusConnection(const std::string &name);
+	DbusConnection(const std::string &name);
+	~DbusConnection();
+	void start();
+	void notify();
 
-    ~DbusConnection();
+	template<class T>
+	void addServices(T &t, const std::string &path = "/") {
+		t.register_object(mConnection, path);
+	}
 
-    void start();
-
-    void notify();
-
-    template<class T>
-    void addServices(T &t, const std::string &path = "/") {
-        t.register_object(mConnection, path);
-    }
-
-    guint id;
-    Glib::RefPtr<Gio::DBus::Connection> mConnection;
-    std::string mBusName;
-    Glib::RefPtr<Glib::MainLoop> mLoop;
-    std::mutex mLock;
-    std::condition_variable mCv;
-    std::unique_ptr<std::thread> mT;
-    std::function<void()> mF;
+	guint id;
+	Glib::RefPtr<Gio::DBus::Connection> mConnection;
+	std::string mBusName;
+	Glib::RefPtr<Glib::MainLoop> mLoop;
+	std::mutex mLock;
+	std::condition_variable mCv;
+	std::unique_ptr<std::thread> mT;
+	std::function<void()> mF;
 };
-
 
 #endif //DEV_DBUSCONNECT_H

@@ -12,9 +12,9 @@ file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 include_directories(${PYTHON_INCLUDE_DIRS})
 message("src files:")
-foreach(file ${SRCS})
-        message(STATUS ${file})
-endforeach()
+foreach (file ${SRCS})
+    message(STATUS ${file})
+endforeach ()
 
 add_library(${PROJECT_N} SHARED ${SRCS})
 

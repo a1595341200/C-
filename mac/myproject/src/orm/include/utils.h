@@ -5,13 +5,13 @@
 #ifndef DEV_UTILS_H
 #define DEV_UTILS_H
 #include <string>
-void ConvertUtf8StringToString(const std::string& utf8Str, std::string& str)
-{
-    str = utf8Str;
+
+void ConvertUtf8StringToString(const std::string &utf8Str, std::string &str) {
+	str = utf8Str;
 }
-void ConvertStringToUTF8String(const std::string& str, std::string& utf8Str)
-{
-    utf8Str=str;
+
+void ConvertStringToUTF8String(const std::string &str, std::string &utf8Str) {
+	utf8Str = str;
 }
 
 //void ConvertWstringToUTF8String(const std::wstring& wstr, std::string& str)

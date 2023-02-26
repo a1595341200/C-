@@ -11,9 +11,8 @@
 
 #include <vector>
 
-namespace QuestionB
-{
-    std::pair<int, int> findStonePair(const std::vector<int> &stones, int d);
+namespace QuestionB {
+std::pair<int, int> findStonePair(const std::vector<int> &stones, int d);
 };
 
 #endif // DEV_QUESTIONB_H

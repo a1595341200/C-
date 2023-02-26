@@ -10,9 +10,8 @@
 #define DEV_QUESTIONB_H
 #include <vector>
 
-namespace QuestionB
-{
-    int rabbitGoesHome(int m, int n, const std::vector<std::vector<int>> &grid);
+namespace QuestionB {
+int rabbitGoesHome(int m, int n, const std::vector<std::vector<int>> &grid);
 };
 
 #endif // DEV_QUESTIONB_H

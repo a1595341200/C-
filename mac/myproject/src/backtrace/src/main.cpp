@@ -6,46 +6,46 @@
 #define BT_BUF_SIZE 100
 
 void myfunc3(void) {
-    int nptrs;
-    void *buffer[BT_BUF_SIZE];
-    char **strings;
+	int nptrs;
+	void *buffer[BT_BUF_SIZE];
+	char **strings;
 
-    nptrs = backtrace(buffer, BT_BUF_SIZE);
-    printf("backtrace() returned %d addresses\n", nptrs);
+	nptrs = backtrace(buffer, BT_BUF_SIZE);
+	printf("backtrace() returned %d addresses\n", nptrs);
 
-    /* The call backtrace_symbols_fd(buffer, nptrs, STDOUT_FILENO)
-       would produce similar output to the following: */
+	/* The call backtrace_symbols_fd(buffer, nptrs, STDOUT_FILENO)
+	   would produce similar output to the following: */
 
-    strings = backtrace_symbols(buffer, nptrs);
-    if (strings == NULL) {
-        perror("backtrace_symbols");
-        exit(EXIT_FAILURE);
-    }
+	strings = backtrace_symbols(buffer, nptrs);
+	if (strings == NULL) {
+		perror("backtrace_symbols");
+		exit(EXIT_FAILURE);
+	}
 
-    for (int j = 0; j < nptrs; j++)
-        printf("%s\n", strings[j]);
+	for (int j = 0; j < nptrs; j++)
+		printf("%s\n", strings[j]);
 
-    free(strings);
+	free(strings);
 }
 
 static void /* "static" means don't export the symbol... */
 myfunc2(void) {
-    myfunc3();
+	myfunc3();
 }
 
 void myfunc(int ncalls) {
-    if (ncalls > 1)
-        myfunc(ncalls - 1);
-    else
-        myfunc2();
+	if (ncalls > 1)
+		myfunc(ncalls - 1);
+	else
+		myfunc2();
 }
 
 int main(int argc, char *argv[]) {
-    if (argc != 2) {
-        fprintf(stderr, "%s num-calls\n", argv[0]);
-        exit(EXIT_FAILURE);
-    }
+	if (argc != 2) {
+		fprintf(stderr, "%s num-calls\n", argv[0]);
+		exit(EXIT_FAILURE);
+	}
 
-    myfunc(atoi(argv[1]));
-    exit(EXIT_SUCCESS);
+	myfunc(atoi(argv[1]));
+	exit(EXIT_SUCCESS);
 }

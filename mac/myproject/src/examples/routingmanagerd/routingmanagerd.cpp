@@ -30,17 +30,19 @@ static std::recursive_mutex sighandler_mutex;
 #endif
 
 #ifndef VSOMEIP_ENABLE_SIGNAL_HANDLING
+
 /*
  * Handle signal to stop the daemon
  */
 void routingmanagerd_stop(int _signal) {
-    // Do not log messages in signal handler as this can cause deadlock in boost logger
-    if (_signal == SIGINT || _signal == SIGTERM) {
-        stop_application = true;
-    }
-    std::unique_lock<std::recursive_mutex> its_lock(sighandler_mutex);
-    sighandler_condition.notify_one();
+	// Do not log messages in signal handler as this can cause deadlock in boost logger
+	if (_signal == SIGINT || _signal == SIGTERM) {
+		stop_application = true;
+	}
+	std::unique_lock<std::recursive_mutex> its_lock(sighandler_mutex);
+	sighandler_condition.notify_one();
 }
+
 #endif
 
 /*
@@ -48,63 +50,63 @@ void routingmanagerd_stop(int _signal) {
  */
 int routingmanagerd_process(bool _is_quiet) {
 #ifdef USE_DLT
-    if (!_is_quiet)
-        DLT_REGISTER_APP(VSOMEIP_LOG_DEFAULT_APPLICATION_ID, VSOMEIP_LOG_DEFAULT_APPLICATION_NAME);
+	if (!_is_quiet)
+		DLT_REGISTER_APP(VSOMEIP_LOG_DEFAULT_APPLICATION_ID, VSOMEIP_LOG_DEFAULT_APPLICATION_NAME);
 #else
-    (void)_is_quiet;
+	(void) _is_quiet;
 #endif
 
-    std::shared_ptr<vsomeip::runtime> its_runtime
-        = vsomeip::runtime::get();
+	std::shared_ptr<vsomeip::runtime> its_runtime
+		= vsomeip::runtime::get();
 
-    if (!its_runtime) {
-        return -1;
-    }
+	if (!its_runtime) {
+		return -1;
+	}
 
-    // Create the application object
-    its_application = its_runtime->create_application("routingmanagerd");
+	// Create the application object
+	its_application = its_runtime->create_application("routingmanagerd");
 #ifndef VSOMEIP_ENABLE_SIGNAL_HANDLING
-    std::thread sighandler_thread([]() {
-        // Unblock signals for this thread only
-        sigset_t handler_mask;
-        sigemptyset(&handler_mask);
-        sigaddset(&handler_mask, SIGTERM);
-        sigaddset(&handler_mask, SIGINT);
-        sigaddset(&handler_mask, SIGSEGV);
-        sigaddset(&handler_mask, SIGABRT);
-        pthread_sigmask(SIG_UNBLOCK, &handler_mask, NULL);
+	std::thread sighandler_thread([]() {
+		// Unblock signals for this thread only
+		sigset_t handler_mask;
+		sigemptyset(&handler_mask);
+		sigaddset(&handler_mask, SIGTERM);
+		sigaddset(&handler_mask, SIGINT);
+		sigaddset(&handler_mask, SIGSEGV);
+		sigaddset(&handler_mask, SIGABRT);
+		pthread_sigmask(SIG_UNBLOCK, &handler_mask, NULL);
 
-        // Handle the following signals
-        signal(SIGINT, routingmanagerd_stop);
-        signal(SIGTERM, routingmanagerd_stop);
+		// Handle the following signals
+		signal(SIGINT, routingmanagerd_stop);
+		signal(SIGTERM, routingmanagerd_stop);
 
-        while (!stop_sighandler) {
-            std::unique_lock<std::recursive_mutex> its_lock(sighandler_mutex);
-            sighandler_condition.wait(its_lock);
-            if (stop_application) {
-                its_application->stop();
-                return;
-            }
-        }
-    });
+		while (!stop_sighandler) {
+			std::unique_lock<std::recursive_mutex> its_lock(sighandler_mutex);
+			sighandler_condition.wait(its_lock);
+			if (stop_application) {
+				its_application->stop();
+				return;
+			}
+		}
+	});
 #endif
-    if (its_application->init()) {
-        if (its_application->is_routing()) {
-            its_application->start();
+	if (its_application->init()) {
+		if (its_application->is_routing()) {
+			its_application->start();
 #ifndef VSOMEIP_ENABLE_SIGNAL_HANDLING
-            sighandler_thread.join();
+			sighandler_thread.join();
 #endif
-            return 0;
-        }
-        VSOMEIP_ERROR << "routingmanagerd has not been configured as routing - abort";
-    }
+			return 0;
+		}
+		VSOMEIP_ERROR << "routingmanagerd has not been configured as routing - abort";
+	}
 #ifndef VSOMEIP_ENABLE_SIGNAL_HANDLING
-    std::unique_lock<std::recursive_mutex> its_lock(sighandler_mutex);
-    stop_sighandler = true;
-    sighandler_condition.notify_one();
-    sighandler_thread.join();
+	std::unique_lock<std::recursive_mutex> its_lock(sighandler_mutex);
+	stop_sighandler = true;
+	sighandler_condition.notify_one();
+	sighandler_thread.join();
 #endif
-    return -1;
+	return -1;
 }
 
 /*
@@ -117,50 +119,50 @@ int routingmanagerd_process(bool _is_quiet) {
  */
 int main(int argc, char **argv) {
 #ifndef VSOMEIP_ENABLE_SIGNAL_HANDLING
-    // Block all signals
-    sigset_t mask;
-    sigfillset(&mask);
-    sigprocmask(SIG_SETMASK, &mask, NULL);
+	// Block all signals
+	sigset_t mask;
+	sigfillset(&mask);
+	sigprocmask(SIG_SETMASK, &mask, NULL);
 #endif
-    bool must_daemonize(false);
-    bool is_quiet(false);
-    if (argc > 1) {
-        for (int i = 0; i < argc; i++) {
-            std::string its_argument(argv[i]);
-            if (its_argument == "-d" || its_argument == "--daemonize") {
-                must_daemonize = true;
-            } else if (its_argument == "-q" || its_argument == "--quiet") {
-                is_quiet = true;
-            } else if (its_argument == "-h" || its_argument == "--help") {
-                std::cout << "usage: "
-                        << argv[0] << " [-h|--help][-d|--daemonize][-q|--quiet]"
-                        << std::endl;
-                return 0;
-            }
-        }
-    }
+	bool must_daemonize(false);
+	bool is_quiet(false);
+	if (argc > 1) {
+		for (int i = 0; i < argc; i++) {
+			std::string its_argument(argv[i]);
+			if (its_argument == "-d" || its_argument == "--daemonize") {
+				must_daemonize = true;
+			} else if (its_argument == "-q" || its_argument == "--quiet") {
+				is_quiet = true;
+			} else if (its_argument == "-h" || its_argument == "--help") {
+				std::cout << "usage: "
+						  << argv[0] << " [-h|--help][-d|--daemonize][-q|--quiet]"
+						  << std::endl;
+				return 0;
+			}
+		}
+	}
 
-    /* Fork the process if processing shall be done in the background */
-    if (must_daemonize) {
-        pid_t its_process, its_signature;
+	/* Fork the process if processing shall be done in the background */
+	if (must_daemonize) {
+		pid_t its_process, its_signature;
 
-        its_process = fork();
+		its_process = fork();
 
-        if (its_process < 0) {
-            return EXIT_FAILURE;
-        }
+		if (its_process < 0) {
+			return EXIT_FAILURE;
+		}
 
-        if (its_process > 0) {
-            return EXIT_SUCCESS;
-        }
+		if (its_process > 0) {
+			return EXIT_SUCCESS;
+		}
 
-        umask(0111);
+		umask(0111);
 
-        its_signature = setsid();
-        if (its_signature < 0) {
-            return EXIT_FAILURE;
-        }
-    }
+		its_signature = setsid();
+		if (its_signature < 0) {
+			return EXIT_FAILURE;
+		}
+	}
 
-    return routingmanagerd_process(is_quiet);
+	return routingmanagerd_process(is_quiet);
 }

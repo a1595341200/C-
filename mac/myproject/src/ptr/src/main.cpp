@@ -7,47 +7,47 @@ using namespace std;
 
 class Test {
 public:
-    void show(const std::string &name) {
-        std::cout << name << " " << mName << std::endl;
-    }
+	void show(const std::string &name) {
+		std::cout << name << " " << mName << std::endl;
+	}
 
-    int getId() {
-        return 1;
-    }
+	int getId() {
+		return 1;
+	}
 
 private:
-    std::string mName{"123"};
+	std::string mName{"123"};
 };
 
 template<typename T, typename U>
 void test(T U::*t) {
-    lookType(U());
-    lookType(t);
-    Test p;
-    (p.*t)("1");
+	lookType(U());
+	lookType(t);
+	Test p;
+	(p.*t)("1");
 }
 
 template<typename T>
 void test1(T t) {
-    lookType(t);
-    Test p;
-    (p.*t)("2");
+	lookType(t);
+	Test p;
+	(p.*t)("2");
 }
 
 template<typename T, typename U, typename ... Args>
 auto test2(T U::* t, Args... args) -> std::enable_if_t<!std::is_same_v<decltype((U().*t)(
-        std::forward<Args>(args)...)), void>, decltype((U().*t)(
-        std::forward<Args>(args)...))> {
-    lookType(t);
-    Test p;
-    return (p.*t)(std::forward<Args>(args)...);
+	std::forward<Args>(args)...)), void>, decltype((U().*t)(
+	std::forward<Args>(args)...))> {
+	lookType(t);
+	Test p;
+	return (p.*t)(std::forward<Args>(args)...);
 }
 
 template<typename T, typename U, typename ... Args>
 std::enable_if_t<std::is_invocable_v<T, Args ...>> test3(T U::* t, Args... args) {
-    lookType(t);
-    Test p;
-    (p.*t)(std::forward<Args>(args)...);
+	lookType(t);
+	Test p;
+	(p.*t)(std::forward<Args>(args)...);
 }
 
 template<typename T, typename U, typename ... Args>
@@ -55,10 +55,10 @@ void test4(T U::* t, Args... args) {
 //    lookType(t);
 //    lookType(decltype(t)());
 //    lookType(U());
-    using boost::typeindex::type_id_with_cvr;
-    lookType<decltype(t)>();
-    lookType<T *>();
-    std::cout << "11212 " << std::is_invocable_v<decltype(t), U *, Args ...> << std::endl;
+	using boost::typeindex::type_id_with_cvr;
+	lookType<decltype(t)>();
+	lookType<T *>();
+	std::cout << "11212 " << std::is_invocable_v<decltype(t), U *, Args ...> << std::endl;
 }
 
 int main(int argc, char const *argv[]) {
@@ -75,10 +75,10 @@ int main(int argc, char const *argv[]) {
 //    auto qa = std::bind(&Test::show, &t, std::placeholders::_1);
 //    qa("4");
 //    lookType(rt);
-    std::optional<std::string> op;
-    op = "s"s;
-    if (op) {
-        std::cout << std::boolalpha << true << std::endl;
-    }
-    return 0;
+	std::optional<std::string> op;
+	op = "s"s;
+	if (op) {
+		std::cout << std::boolalpha << true << std::endl;
+	}
+	return 0;
 }
