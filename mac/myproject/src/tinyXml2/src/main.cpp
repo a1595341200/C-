@@ -65,7 +65,7 @@ int test_tinyxml2_create() {
 #ifdef _MSC_VER
 	const char* file_name = "E:/GitCode/Messy_Test/testdata/test.xml";
 #else
-	const char *file_name = "testdata/test.xml";
+	const char *file_name = "test.xml";
 #endif
 
 	ret = doc.SaveFile(file_name);
@@ -81,7 +81,7 @@ int test_tinyxml2_parse() {
 #ifdef _MSC_VER
 	const char* file_name = "E:/GitCode/Messy_Test/testdata/test_tinyxml2.xml";
 #else
-	const char *file_name = "testdata/test_tinyxml2.xml";
+	const char *file_name = "test_tinyxml2.xml";
 #endif
 
 	tinyxml2::XMLDocument doc;
@@ -146,5 +146,7 @@ int test_tinyxml2_parse() {
 }
 
 int main() {
-
+	test_tinyxml2_create();
+	test_tinyxml2_parse();
+	pthread_testcancel();
 }
