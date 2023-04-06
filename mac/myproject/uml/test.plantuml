@@ -1,7 +1,0 @@
-@startuml
-abstract class A {
-    +A()
-    #test()
-    -int a
-}
-@enduml

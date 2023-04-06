@@ -1,7 +1,0 @@
-[
-  {
-    "directory": "/home/parallels/clion/src/jsoncpp/build-linux",
-    "command": "/usr/bin/g++ -I/home/parallels/clion/src/jsoncpp/include -I/usr/local -g -std=gnu++17 -o CMakeFiles/jsoncpp.dir/src/main.cpp.o -c /home/parallels/clion/src/jsoncpp/src/main.cpp",
-    "file": "/home/parallels/clion/src/jsoncpp/src/main.cpp"
-  }
-]

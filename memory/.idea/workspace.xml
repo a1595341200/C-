@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="memory" targetName="memory" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7bb7cdbc-18b6-4e75-b7fe-f76ce20788b8" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/../mac/AliOS-Things" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/fmt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/.idea/other.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/.idea/protobuf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/.idea/protobuf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/code_generation/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/code_generation/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/code_generation/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/code_generation/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/external/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/external/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/libframework/framework/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/libframework/framework/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/src/DataStructure/53a/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/src/DataStructure/53a/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/src/DataStructure/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/src/DataStructure/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/src/DesignMode/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/src/DesignMode/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/src/rpc/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/src/rpc/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/src/tinyXml2/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/src/tinyXml2/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/myproject/src/tuple/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/myproject/src/tuple/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../type/type.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2021" />
+    <option name="minorVersion" value="3" />
+  </component>
+  <component name="ProjectId" id="2NulKnGunfM4M4hjwYiwUlnvmmu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="memory" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="memory" TARGET_NAME="memory" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="memory" RUN_TARGET_NAME="memory">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="7bb7cdbc-18b6-4e75-b7fe-f76ce20788b8" name="变更" comment="" />
+      <created>1680521788620</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680521788620</updated>
+      <workItem from="1680521789875" duration="5519000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

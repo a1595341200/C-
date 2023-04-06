@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++11 -rdynamic CMakeFiles/hello_world_client.dir/hello_world_client_main.cpp.o -o hello_world_client 

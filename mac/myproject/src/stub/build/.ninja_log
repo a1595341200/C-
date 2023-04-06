@@ -1,9 +1,0 @@
-# ninja log v5
-1	254	1666676710364463122	generated/many-types_stub.cpp	6d0b5a649c916038
-1	254	1666676710364463122	generated/many-types_stub.h	6d0b5a649c916038
-1	254	1666676710364463122	generated/many-types_common.cpp	6d0b5a649c916038
-1	254	1666676710364463122	generated/many-types_common.h	6d0b5a649c916038
-1	254	1666676710364463122	/Users/xieyao/Desktop/git/C-/mac/myproject/gdbus-codegen-glibmm/tests/integration/stub/build/generated/many-types_stub.cpp	6d0b5a649c916038
-1	254	1666676710364463122	/Users/xieyao/Desktop/git/C-/mac/myproject/gdbus-codegen-glibmm/tests/integration/stub/build/generated/many-types_stub.h	6d0b5a649c916038
-1	254	1666676710364463122	/Users/xieyao/Desktop/git/C-/mac/myproject/gdbus-codegen-glibmm/tests/integration/stub/build/generated/many-types_common.cpp	6d0b5a649c916038
-1	254	1666676710364463122	/Users/xieyao/Desktop/git/C-/mac/myproject/gdbus-codegen-glibmm/tests/integration/stub/build/generated/many-types_common.h	6d0b5a649c916038

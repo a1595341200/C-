@@ -1,3 +1,0 @@
-/home/parallels/clion/src/jsoncpp/build-linux/CMakeFiles/rebuild_cache.dir
-/home/parallels/clion/src/jsoncpp/build-linux/CMakeFiles/jsoncpp.dir
-/home/parallels/clion/src/jsoncpp/build-linux/CMakeFiles/edit_cache.dir

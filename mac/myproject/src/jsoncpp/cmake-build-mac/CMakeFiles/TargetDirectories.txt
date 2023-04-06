@@ -1,3 +1,0 @@
-/Users/xieyao/Desktop/git/C-/mac/myproject/src/jsoncpp/cmake-build-mac/CMakeFiles/rebuild_cache.dir
-/Users/xieyao/Desktop/git/C-/mac/myproject/src/jsoncpp/cmake-build-mac/CMakeFiles/edit_cache.dir
-/Users/xieyao/Desktop/git/C-/mac/myproject/src/jsoncpp/cmake-build-mac/CMakeFiles/jsoncpp.dir
