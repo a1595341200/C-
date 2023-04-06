@@ -46,16 +46,11 @@ void Server::SendTCPMessage(const std::string &str) {
 
   TCP::MessageHead head{1, size};
   char buf[15000]{0};
-  std::string str1{"hi"};
-  int a;
-  auto data = pack(a);
-
-  std::string u;
-  // unpack(data, u);
+  
 
   sendHead(head);
 
-  sendn(const_cast<char *>(data.data()), head.size);
+  // sendn(const_cast<char *>(data.data()), head.size);
 }
 
 void Server::init() {
