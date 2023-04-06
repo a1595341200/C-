@@ -1,4 +1,4 @@
-{  
+{
     "tasks": [
         {
             "type": "shell",
@@ -6,7 +6,7 @@
             "command": "bash -c ; rm -rf ${workspaceFolder}/build ; mkdir build"
         },
         {
-            "dependsOn":[
+            "dependsOn": [
                 "reset"
             ],
             "type": "shell",
@@ -18,22 +18,21 @@
                 "cd",
                 "${workspaceFolder}/build",
                 ";",
-                "/usr/bin/cmake","-DCMAKE_BUILD_TYPE=Debug","..",
+                "/usr/bin/cmake",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "..",
                 ";",
                 "/usr/bin/make"
             ],
-            "options": {
-            },
-            "problemMatcher": [
-                
-            ],
+            "options": {},
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
         },
         {
-            "dependsOn":[
+            "dependsOn": [
                 "reset"
             ],
             "type": "shell",
@@ -50,11 +49,8 @@
                 ";",
                 "/usr/bin/make"
             ],
-            "options": {
-            },
-            "problemMatcher": [
-                
-            ],
+            "options": {},
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true

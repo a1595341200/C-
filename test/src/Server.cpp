@@ -3,7 +3,7 @@
  * @Author: yao.xie
  * @Date: 2023-03-27 15:22:25
  * @LastEditors: yao.xie
- * @LastEditTime: 2023-04-04 15:11:46
+ * @LastEditTime: 2023-04-06 14:46:00
  */
 #include "Server.h"
 #include <stdexcept>
@@ -46,16 +46,11 @@ void Server::SendTCPMessage(const std::string &str) {
 
   TCP::MessageHead head{1, size};
   char buf[15000]{0};
-  std::string str1{"hi"};
-  int a;
-  auto data = pack(a);
-
-  std::string u;
-  // unpack(data, u);
+  
 
   sendHead(head);
 
-  sendn(const_cast<char *>(data.data()), head.size);
+  // sendn(const_cast<char *>(data.data()), head.size);
 }
 
 void Server::init() {
