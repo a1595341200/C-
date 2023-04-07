@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/C-/c-/boost/boostAsio
+CMAKE_SOURCE_DIR = /home/user/桌面/git/C-/boost/boostAsio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/C-/c-/boost/boostAsio/build
+CMAKE_BINARY_DIR = /home/user/桌面/git/C-/boost/boostAsio/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/boostAsio.dir/clean
 CMakeFiles/boostAsio.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/boostAsio.dir/build.make CMakeFiles/boostAsio.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/boostAsio.dir/build.make CMakeFiles/boostAsio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/C-/c-/boost/boostAsio/build/CMakeFiles --progress-num=1,2 "Built target boostAsio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/桌面/git/C-/boost/boostAsio/build/CMakeFiles --progress-num=1,2 "Built target boostAsio"
 .PHONY : CMakeFiles/boostAsio.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/boostAsio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/C-/c-/boost/boostAsio/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/桌面/git/C-/boost/boostAsio/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/boostAsio.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/C-/c-/boost/boostAsio/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/桌面/git/C-/boost/boostAsio/build/CMakeFiles 0
 .PHONY : CMakeFiles/boostAsio.dir/rule
 
 # Convenience name for target.

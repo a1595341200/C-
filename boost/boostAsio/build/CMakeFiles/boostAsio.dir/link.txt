@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/boostAsio.dir/src/main.cpp.o -o boostAsio   -L/mnt/d/boost_1_81_0/stage/lib 
+/usr/bin/c++ CMakeFiles/boostAsio.dir/src/main.cpp.o -o boostAsio   -L/home/user/boost_1_81_0/stage/lib 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/d/boost_1_81_0 -I/mnt/d/C-/c-/boost/boostAsio/include
+CXX_INCLUDES = -I/home/user/boost_1_81_0 -I/home/user/桌面/git/C-/boost/boostAsio/include
 
 CXX_FLAGS = -std=gnu++17
 

@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/C-/c-/boost/boostAsio
+# Install script for directory: /home/user/桌面/git/C-/boost/boostAsio
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/d/C-/c-/boost/boostAsio/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/user/桌面/git/C-/boost/boostAsio/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
