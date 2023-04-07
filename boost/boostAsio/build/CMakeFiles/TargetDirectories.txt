@@ -1,0 +1,3 @@
+/mnt/d/C-/c-/boost/boostAsio/build/CMakeFiles/boostAsio.dir
+/mnt/d/C-/c-/boost/boostAsio/build/CMakeFiles/edit_cache.dir
+/mnt/d/C-/c-/boost/boostAsio/build/CMakeFiles/rebuild_cache.dir
