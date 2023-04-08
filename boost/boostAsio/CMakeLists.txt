@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.10)
 set(PROJECT_N boostAsio)
 project(${PROJECT_N} VERSION 1.0)
 
+set(BOOST "/home/user/")
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
@@ -21,7 +23,7 @@ ENDMACRO()
 
 # using said macro.
 header_directories(INCLUDES ${PROJECT_SOURCE_DIR}/include/ hpp)
-include_directories("/mnt/d/boost_1_81_0")
+include_directories(${BOOST}boost_1_81_0)
 
 message("src files:")
 foreach(file ${SRCS})
@@ -32,7 +34,7 @@ message("include directories:")
 foreach(dir ${INCLUDES})
         message(STATUS ${dir})
 endforeach()
-link_directories("/mnt/d/boost_1_81_0/stage/lib")
+link_directories(${BOOST}boost_1_81_0/stage/lib)
 add_executable(${PROJECT_N} ${SRCS})
 
 target_include_directories(${PROJECT_N} PUBLIC include)

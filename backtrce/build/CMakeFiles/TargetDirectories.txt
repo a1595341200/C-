@@ -1,0 +1,3 @@
+/mnt/d/C-/C-/backtrce/build/CMakeFiles/backtrace.dir
+/mnt/d/C-/C-/backtrce/build/CMakeFiles/edit_cache.dir
+/mnt/d/C-/C-/backtrce/build/CMakeFiles/rebuild_cache.dir
