@@ -21,7 +21,16 @@ ENDMACRO()
 
 # using said macro.
 header_directories(INCLUDES ${PROJECT_SOURCE_DIR}/include/ hpp)
-include_directories("/mnt/d/boost_1_81_0")
+
+if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    message("system mac")
+    include_directories("/opt/homebrew/include")
+    link_directories("/opt/homebrew/lib")
+else()
+    include_directories("/mnt/d/boost_1_81_0")
+    link_directories("/mnt/d/boost_1_81_0/stage/lib")
+endif()
+
 
 message("src files:")
 foreach(file ${SRCS})
@@ -32,7 +41,6 @@ message("include directories:")
 foreach(dir ${INCLUDES})
         message(STATUS ${dir})
 endforeach()
-link_directories("/mnt/d/boost_1_81_0/stage/lib")
 add_executable(${PROJECT_N} ${SRCS})
 
 target_include_directories(${PROJECT_N} PUBLIC include)

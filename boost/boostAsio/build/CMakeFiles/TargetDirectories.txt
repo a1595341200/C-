@@ -1,3 +1,0 @@
-/home/user/桌面/git/C-/boost/boostAsio/build/CMakeFiles/boostAsio.dir
-/home/user/桌面/git/C-/boost/boostAsio/build/CMakeFiles/edit_cache.dir
-/home/user/桌面/git/C-/boost/boostAsio/build/CMakeFiles/rebuild_cache.dir
