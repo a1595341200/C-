@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.10)
 set(PROJECT_N boostAsio)
 project(${PROJECT_N} VERSION 1.0)
 
+set(BOOST "/home/user/")
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
