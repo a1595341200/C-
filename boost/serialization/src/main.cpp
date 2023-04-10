@@ -4,6 +4,7 @@
 #include <boost/serialization/vector.hpp>
 #include <cassert>
 #include <iostream>
+#include <my.hpp>
 #include <sstream>
 
 std::string serialize(const std::vector<std::string> &data) {
@@ -21,7 +22,7 @@ std::vector<std::string> deserialize(const std::string &serialized_data) {
   return deserialized_data;
 }
 
-int main() {
+void test1() {
   // Test serialization and deserialization of a vector of strings
   std::vector<std::string> data = {"hello", "world", "boost"};
   std::string serialized_data = serialize(data);
@@ -31,6 +32,10 @@ int main() {
   assert(data == deserialized_data);
 
   std::cout << "Serialization and deserialization successful!" << std::endl;
+}
 
+int main() {
+  ;
+  test2::test2();
   return 0;
 }
