@@ -1,8 +1,8 @@
 /*
  * @Author: yao.xie a1595341200@qq.com
  * @Date: 2023-04-10 14:02:03
- * @LastEditors: 谢瑶 
- * @LastEditTime: 2023-04-11 01:54:02
+ * @LastEditors: yao.xie a1595341200@qq.com
+ * @LastEditTime: 2023-04-11 10:13:30
  * @FilePath: /boost/queue/src/main.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -14,6 +14,7 @@
 #include <locked.hpp>
 #include <algorithm>
 #include <future>
+#include <boost.hpp>
 struct Test {
     int a{};
     int a1{};
@@ -47,17 +48,17 @@ auto measure(T &&func, Args &&...args) -> std::future<typename std::result_of<T(
     (*task)();
     auto end = std::chrono::high_resolution_clock::now();
     auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
-    printf("执行时间: % .3f seconds.\n", elapsed.count() * 1e-6);
+    printf("执行时间: % .3f seconds.\n", elapsed.count() * 1e-9);
     return res;
 }
 void test_lock_queue() {
-    Lock::CircularBuffer<Test> queue(5);
+    Lock::CircularBuffer<int> queue(5);
     std::vector<std::thread> threads;
     for (int i = 0; i < 1; ++i) {
         threads.emplace_back([ &queue, i ] {
             for (int j = 0; j < 1000; ++j) {
-                // queue.push(i * 1000 + j);
-                queue.push(Test{});
+                queue.push(i * 1000 + j);
+                // queue.push(Test{});
             }
         });
     }
@@ -66,8 +67,7 @@ void test_lock_queue() {
     for (int i = 0; i < 10; ++i) {
         usleep(1);
         std::cout << "size " << queue.size() << std::endl;
-        queue.pop();
-        // std::cout << res.back() << std::endl;
+        std::cout << queue.pop() << std::endl;
     }
     // std::sort(res.begin(), res.end());
     // for (auto &i : res) {
@@ -78,12 +78,13 @@ void test_lock_queue() {
     }
 }
 void test_lock_free_queue() {
-    CircularBuffer<Test> queue(5);
+    CircularBuffer<int> queue(5);
     std::vector<std::thread> threads;
     for (int i = 0; i < 1; ++i) {
         threads.emplace_back([ &queue, i ] {
             for (int j = 0; j < 1000; ++j) {
-                queue.push(Test{});
+                // queue.push(Test{});
+                queue.push(i * 1000 + j);
             }
         });
     }
@@ -93,8 +94,8 @@ void test_lock_free_queue() {
     for (int i = 0; i < 10; ++i) {
         usleep(1);
         std::cout << "size " << queue.size() << std::endl;
-        queue.pop();
-        // std::cout << res.back() << std::endl;
+
+        std::cout << queue.pop() << std::endl;
     }
     // std::sort(res.begin(), res.end());
     // for (auto &i : res) {
@@ -166,11 +167,13 @@ void test1() {
 
 int main() {
     int i = 0;
-    while (i < 10) {
+    while (i < 1) {
         i++;
         std::cout << " ---- " << std::endl;
         measure([] { test_lock_free_queue(); });
         measure([] { test_lock_queue(); });
+        measure([] { test_lock_boost(); });
     }
     // test_lock_queue();
+    // frontTest();
 }

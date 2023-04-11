@@ -57,7 +57,7 @@ CommentPragmas: "^ NOLINT:"
 ConstructorInitializerAllOnOneLineOrOnePerLine: false
 ConstructorInitializerIndentWidth: 4
 ContinuationIndentWidth: 4
-Cpp11BracedListStyle: false
+Cpp11BracedListStyle: true
 # DeriveLineEnding: true
 DerivePointerAlignment: false
 DisableFormat: false
@@ -152,12 +152,12 @@ SpaceBeforeParens: ControlStatements
 SpaceInEmptyParentheses: false
 SpacesBeforeTrailingComments: 1
 SpacesInAngles: false
-# SpacesInConditionalStatement: false
+SpacesInConditionalStatement: false
 SpacesInContainerLiterals: false
-# SpacesInCStyleCastParentheses: false
+SpacesInCStyleCastParentheses: false
 SpacesInParentheses: false
-SpacesInSquareBrackets: true
-# SpaceBeforeSquareBrackets: false
+SpacesInSquareBrackets: false
+SpaceBeforeSquareBrackets: false
 Standard: Auto
 # StatementMacros:
 #   - Q_UNUSED
