@@ -1,12 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
 
-set(PROJECT_N boostAsio)
+set(PROJECT_N json)
 project(${PROJECT_N} VERSION 1.0)
-
-set(BOOST "/home/user/")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 file(GLOB_RECURSE SRCS ${PROJECT_SOURCE_DIR}/src/*.cpp)
 set(CMAKE_CXX_FLAGS "-g3")
 # a macro that gets all of the header containing directories. 
@@ -23,16 +22,6 @@ ENDMACRO()
 
 # using said macro.
 header_directories(INCLUDES ${PROJECT_SOURCE_DIR}/include/ hpp)
-
-if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-    message("system mac")
-    include_directories("/opt/homebrew/include")
-    link_directories("/opt/homebrew/lib")
-else()
-    include_directories("/home/user/boost_1_81_0")
-    link_directories("/home/user/boost_1_81_0/stage/lib")
-endif()
-
 
 message("src files:")
 foreach(file ${SRCS})

@@ -109,5 +109,7 @@
         "__nullptr": "cpp",
         "__string": "cpp",
         "filesystem": "cpp"
-    }
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
 }
